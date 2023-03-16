@@ -143,7 +143,7 @@ class CFG(Module):
                     dds.profile.eq(self.data.profile),
                     dds.osk.eq(1),
                     dds.drhold.eq(0),
-                    dds.drctl.eq(0),
+                    dds.drctl.eq(1),
             ]
 
 

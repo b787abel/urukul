@@ -16,6 +16,18 @@ Needs [migen](https://github.com/m-labs/migen) and [Xilinx ISE](https://www.xili
 make
 ```
 
+Not so simple!! 
+
+1. Start the nix develop environment (can be found in artiq manual (developing artiq) 
+```
+nix develop git+https://github.com/m-labs/artiq.git\?ref=release-7
+```
+2. Source the Xilinx ISE command line tools. Note that on this PC a symbolic link must be created as ISE is installed at /scratch/tools/Xilinx 
+```
+source /opt/Xilinx/14.7/ISE_DS/settings64.sh
+```
+3. make 
+
 ## Flashing
 
 With Digilent [JTAG HS2](https://store.digilentinc.com/jtag-hs2-programming-cable/) cable:
