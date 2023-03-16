@@ -76,6 +76,7 @@ class CFG(Module):
     | Name      | Width | Function                                        |
     |-----------+-------+-------------------------------------------------|
     | RF_SW     | 4     | Activates RF switch per channel                 |
+    | DRCTL     | 4     | Controls ther DRCTL, digital ramp control       |
     | LED       | 4     | Activates the red LED per channel               |
     | PROFILE   | 3     | Controls DDS[0:3].PROFILE[0:2]                  |
     | DUMMY     | 1     | Reserved (used in a previous revision)          |
@@ -98,6 +99,7 @@ class CFG(Module):
     def __init__(self, platform, n=4):
         self.data = Record([
             ("rf_sw", n),
+            ("drctl", n),
             ("led", n),
 
             ("profile", 3),
@@ -137,13 +139,13 @@ class CFG(Module):
             self.comb += [
                     sw.oe.eq(0),
                     dds.rf_sw.eq(sw.io | self.data.rf_sw[i]),
+                    dds.drctl.eq(self.data.drctl[i]),
                     dds.led[0].eq(dds.rf_sw),  # green
                     dds.led[1].eq(self.data.led[i] | (self.en_9910 & (
                         dds.smp_err | ~dds.pll_lock))),  # red
                     dds.profile.eq(self.data.profile),
                     dds.osk.eq(1),
                     dds.drhold.eq(0),
-                    dds.drctl.eq(1),
             ]
 
 
@@ -171,7 +173,7 @@ class Status(Module):
             ("pll_lock", n),
             ("ifc_mode", 4),
             ("proto_rev", 7),
-            ("dummy", 1)
+            ("dummy", 5)
         ])
         self.comb += [
                 self.data.ifc_mode.eq(platform.lookup_request("ifc_mode")),
@@ -445,7 +447,7 @@ class Urukul(Module):
 
         cfg = CFG(platform)
         stat = Status(platform)
-        sr = SR(24)
+        sr = SR(28)
         assert len(cfg.data) <= len(sr.di)
         assert len(stat.data) <= len(sr.do)
         self.submodules += cfg, stat, sr
