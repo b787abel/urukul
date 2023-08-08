@@ -1,0 +1,847 @@
+" XPLAOPT Version 9.99.99.99
+" Created on Tue Mar 14 15:29:21 2023
+" 140 Mcells, 317 PLApts, 1 Levels, 406 Fanins
+" XPLAOPT -run s -it b -i urukul.blx -dev XC2C256-6FT256 -reg -xor a -mode 0 
+"         -th 36 -fi 32 -bfi 38 -pre keep -unused pullup -terminate keeper -no_output_files 
+MODULE urukul
+
+	att_clk  pin E9 ;  " 2 pt.
+ 	att_le<0>  pin E10 ;  " 2 pt.
+ 	att_le<1>  pin P8 ;  " 2 pt.
+ 	att_le<2>  pin C8 ;  " 2 pt.
+ 	att_le<3>  pin K4 ;  " 2 pt.
+ 	att_rst_n  pin N9 ;  " 1 pt.
+ 	att_s_in<0>  pin B7 ;  " 1 pt.
+ 	att_s_in<1>  pin D8 ;  " 1 pt.
+ 	att_s_in<2>  pin D7 ;  " 1 pt.
+ 	att_s_in<3>  pin L5 ;  " 1 pt.
+ 	att_s_out<0>  pin C10 ; 
+ 	att_s_out<1>  pin C9 ; 
+ 	att_s_out<2>  pin E8 ; 
+ 	att_s_out<3>  pin R9 ; 
+ 	clk_div  pin E5 ;  " 1 pt.
+ 	clk_in_sel  pin G5 ;  " 1 pt.
+ 	clk_mmcx_osc_sel  pin C11 ;  " 1 pt.
+ 	clk_osc_en_n  pin B6 ;  " 1 pt.
+ 	dds_common_io_reset  pin B9 ;  " 1 pt.
+ 	dds_common_master_reset  pin F16 ;  " 1 pt.
+ 	dds_cs_n  pin B3 ;  " 4 pt.
+ 	dds_cs_n_1  pin J4 ;  " 4 pt.
+ 	dds_cs_n_2  pin H1 ;  " 4 pt.
+ 	dds_cs_n_3  pin G4 ;  " 3 pt.
+ 	dds_drctl  pin C14 ;  " 1 pt.
+ 	dds_drctl_1  pin C4 ;  " 1 pt.
+ 	dds_drctl_2  pin K1 ;  " 1 pt.
+ 	dds_drctl_3  pin N1 ;  " 1 pt.
+ 	dds_drhold  pin E13 ;  " 0 pt.
+ 	dds_drhold_1  pin C7 ;  " 0 pt.
+ 	dds_drhold_2  pin L4 ;  " 0 pt.
+ 	dds_drhold_3  pin N4 ;  " 0 pt.
+ 	dds_drover  pin D11 ; 
+ 	dds_io_update  pin B1 ;  " 2 pt.
+ 	dds_io_update_1  pin P4 ;  " 2 pt.
+ 	dds_io_update_2  pin H5 ;  " 2 pt.
+ 	dds_io_update_3  pin E3 ;  " 2 pt.
+ 	dds_led<0>  pin E11 ;  " 1 pt.
+ 	dds_led<1>  pin B10 ;  " 2 pt.
+ 	dds_led_1<0>  pin A13 ;  " 1 pt.
+ 	dds_led_1<1>  pin A11 ;  " 2 pt.
+ 	dds_led_2<0>  pin A14 ;  " 1 pt.
+ 	dds_led_2<1>  pin B14 ;  " 2 pt.
+ 	dds_led_3<0>  pin A12 ;  " 1 pt.
+ 	dds_led_3<1>  pin B11 ;  " 2 pt.
+ 	dds_osk  pin C13 ;  " 1 pt.
+ 	dds_osk_1  pin C3 ;  " 1 pt.
+ 	dds_osk_2  pin L1 ;  " 1 pt.
+ 	dds_osk_3  pin N2 ;  " 1 pt.
+ 	dds_pll_lock  pin E4 ; 
+ 	dds_pll_lock_1  pin K2 ; 
+ 	dds_pll_lock_2  pin N7 ; 
+ 	dds_pll_lock_3  pin P7 ; 
+ 	dds_profile<0>  pin A9 ;  " 1 pt.
+ 	dds_profile<1>  pin B8 ;  " 1 pt.
+ 	dds_profile<2>  pin A8 ;  " 1 pt.
+ 	dds_profile_1<0>  pin D3 ;  " 1 pt.
+ 	dds_profile_1<1>  pin D2 ;  " 1 pt.
+ 	dds_profile_1<2>  pin E2 ;  " 1 pt.
+ 	dds_profile_2<0>  pin M1 ;  " 1 pt.
+ 	dds_profile_2<1>  pin M6 ;  " 1 pt.
+ 	dds_profile_2<2>  pin M5 ;  " 1 pt.
+ 	dds_profile_3<0>  pin N3 ;  " 1 pt.
+ 	dds_profile_3<1>  pin P1 ;  " 1 pt.
+ 	dds_profile_3<2>  pin P2 ;  " 1 pt.
+ 	dds_reset  pin B13 ;  " 2 pt.
+ 	dds_reset_1  pin F2 ;  " 2 pt.
+ 	dds_reset_2  pin R10 ;  " 2 pt.
+ 	dds_reset_3  pin T8 ;  " 2 pt.
+ 	dds_rf_sw  pin D13 ;  " 1 pt.
+ 	dds_rf_sw_1  pin C12 ;  " 1 pt.
+ 	dds_rf_sw_2  pin D10 ;  " 1 pt.
+ 	dds_rf_sw_3  pin D9 ;  " 1 pt.
+ 	dds_sck  pin A2 ;  " 3 pt.
+ 	dds_sck_1  pin K3 ;  " 3 pt.
+ 	dds_sck_2  pin H4 ;  " 3 pt.
+ 	dds_sck_3  pin H2 ;  " 3 pt.
+ 	dds_sdi  pin B2 ;  " 3 pt.
+ 	dds_sdi_1  pin K5 ;  " 3 pt.
+ 	dds_sdi_2  pin H3 ;  " 3 pt.
+ 	dds_sdi_3  pin F5 ;  " 3 pt.
+ 	dds_sdo  pin A3 ; 
+ 	dds_sdo_1  pin J3 ; 
+ 	dds_sdo_2  pin J2 ; 
+ 	dds_sdo_3  pin G3 ; 
+ 	dds_smp_err  pin D4 ; 
+ 	dds_smp_err_1  pin J1 ; 
+ 	dds_smp_err_2  pin P6 ; 
+ 	dds_smp_err_3  pin N6 ; 
+ 	dds_sync_clk_out_en  pin T5 ;  " 2 pt.
+ 	dds_sync_sync_out_en  pin R6 ;  " 2 pt.
+ 	dds_sync_sync_sel  pin T10 ;  " 1 pt.
+ 	eem_io  pin M2 ; 
+ 	eem_io_1  pin R13 ; 
+ 	eem_io_10  pin R3 ;  " 1 pt.
+ 	eem_io_11  pin R2 ; 
+ 	eem_io_12  pin R1 ; 
+ 	eem_io_13  pin T1 ; 
+ 	eem_io_14  pin T2 ; 
+ 	eem_io_15  pin T3 ; 
+ 	eem_io_2  pin T16 ;  " 10 pt.
+ 	eem_io_3  pin R16 ; 
+ 	eem_io_4  pin R15 ; 
+ 	eem_io_5  pin R14 ; 
+ 	eem_io_6  pin R12 ; 
+ 	eem_io_7  pin T15 ; 
+ 	eem_io_8  pin M3 ; 
+ 	eem_io_9  pin J5 ; 
+ 	eem_oe  pin P15 ;  " 0 pt.
+ 	eem_oe_1  pin M15 ;  " 0 pt.
+ 	eem_oe_10  pin R4 ;  " 1 pt.
+ 	eem_oe_11  pin R5 ;  " 0 pt.
+ 	eem_oe_12  pin M7 ;  " 0 pt.
+ 	eem_oe_13  pin R8 ;  " 0 pt.
+ 	eem_oe_14  pin T7 ;  " 0 pt.
+ 	eem_oe_15  pin M8 ;  " 0 pt.
+ 	eem_oe_2  pin K15 ;  " 1 pt.
+ 	eem_oe_3  pin N16 ;  " 0 pt.
+ 	eem_oe_4  pin L15 ;  " 0 pt.
+ 	eem_oe_5  pin M16 ;  " 0 pt.
+ 	eem_oe_6  pin L16 ;  " 0 pt.
+ 	eem_oe_7  pin P16 ;  " 0 pt.
+ 	eem_oe_8  pin R7 ;  " 0 pt.
+ 	eem_oe_9  pin T4 ;  " 0 pt.
+ 	fsen  pin N15 ;  " 1 pt.
+ 	ifc_mode<0>  pin E14 ; 
+ 	ifc_mode<1>  pin B16 ; 
+ 	ifc_mode<2>  pin A16 ; 
+ 	ifc_mode<3>  pin B15 ; 
+ 	tp  pin A4 ;  " 4 pt.
+ 	tp_1  pin A5 ;  " 3 pt.
+ 	tp_2  pin B5 ;  " 3 pt.
+ 	tp_3  pin A6 ;  " 1 pt.
+ 	tp_4  pin A7 ;  " 1 pt.
+ 	variant  pin A15 ; 
+ 
+
+	le_clk  node ;  " 2 pt.
+ 	sr_di<0>  node ;  " 1 pt.
+ 	sr_di<12>  node ;  " 1 pt.
+ 	sr_di<13>  node ;  " 1 pt.
+ 	sr_di<14>  node ;  " 1 pt.
+ 	sr_di<15>  node ;  " 1 pt.
+ 	sr_di<16>  node ;  " 1 pt.
+ 	sr_di<1>  node ;  " 1 pt.
+ 	sr_di<22>  node ;  " 1 pt.
+ 	sr_di<23>  node ;  " 1 pt.
+ 	sr_di<2>  node ;  " 1 pt.
+ 	sr_di<3>  node ;  " 1 pt.
+ 	sr_di<4>  node ;  " 1 pt.
+ 	sr_di<5>  node ;  " 1 pt.
+ 	sr_di<6>  node ;  " 1 pt.
+ 	sr_di<7>  node ;  " 1 pt.
+ 	sr_sdo  node ;  " 1 pt.
+ 	sr_sr<0>  node ;  " 1 pt.
+ 	sr_sr<10>  node ;  " 7 pt.
+ 	sr_sr<11>  node ;  " 7 pt.
+ 	sr_sr<12>  node ;  " 7 pt.
+ 	sr_sr<13>  node ;  " 7 pt.
+ 	sr_sr<14>  node ;  " 6 pt.
+ 	sr_sr<15>  node ;  " 7 pt.
+ 	sr_sr<16>  node ;  " 7 pt.
+ 	sr_sr<17>  node ;  " 5 pt.
+ 	sr_sr<18>  node ;  " 5 pt.
+ 	sr_sr<19>  node ;  " 5 pt.
+ 	sr_sr<1>  node ;  " 9 pt.
+ 	sr_sr<20>  node ;  " 6 pt.
+ 	sr_sr<21>  node ;  " 5 pt.
+ 	sr_sr<22>  node ;  " 5 pt.
+ 	sr_sr<23>  node ;  " 5 pt.
+ 	sr_sr<2>  node ;  " 9 pt.
+ 	sr_sr<3>  node ;  " 9 pt.
+ 	sr_sr<4>  node ;  " 9 pt.
+ 	sr_sr<5>  node ;  " 7 pt.
+ 	sr_sr<6>  node ;  " 7 pt.
+ 	sr_sr<7>  node ;  " 7 pt.
+ 	sr_sr<8>  node ;  " 7 pt.
+ 	sr_sr<9>  node ;  " 7 pt.
+ 
+
+xpla property 'USER_SLEW_RATE dds_sync_sync_out_en eem_io_2 clk_div dds_profile_3<2> dds_profile_3<0> 
+	dds_profile_3<1> dds_reset dds_common_master_reset dds_rf_sw dds_rf_sw_1 dds_rf_sw_2 dds_rf_sw_3 
+	clk_in_sel clk_mmcx_osc_sel tp_1 tp_2 eem_oe_10 eem_io_10 att_le<0> att_le<1> att_le<2> att_le<3> 
+	dds_sync_sync_sel dds_common_io_reset clk_osc_en_n dds_io_update_1 dds_io_update_2 dds_io_update_3 
+	dds_io_update dds_led_1<1> dds_led<1> dds_led_2<1> dds_led_3<1> dds_sck_1 dds_sck_2 dds_sck_3 
+	dds_sdi_1 dds_sdi_2 dds_sdi_3 att_clk att_rst_n att_s_in<0> att_s_in<1> att_s_in<2> att_s_in<3> 
+	dds_cs_n_1 dds_cs_n_2 dds_cs_n_3 tp dds_cs_n dds_led<0> dds_led_1<0> dds_led_2<0> dds_led_3<0> 
+	dds_reset_3 dds_reset_2 dds_reset_1 dds_sync_clk_out_en eem_oe_2 dds_profile<2> dds_profile_2<2> 
+	dds_profile_1<2> dds_profile_2<0> dds_profile_1<0> dds_profile<0> dds_profile_2<1> dds_profile<1> 
+	dds_profile_1<1> dds_sck dds_sdi tp_3 tp_4 fsen dds_osk dds_osk_3 dds_osk_2 dds_osk_1 dds_drctl 
+	dds_drctl_3 dds_drctl_2 dds_drctl_1 eem_oe eem_oe_9 eem_oe_8 eem_oe_13 eem_oe_12 eem_oe_11 
+	dds_drhold dds_drhold_3 dds_drhold_2 dds_drhold_1 eem_oe_7 eem_oe_6 eem_oe_5 eem_oe_4 eem_oe_3 
+	eem_oe_1 eem_oe_15 eem_oe_14 '; 
+xpla property 'GLOBAL_CLK eem_io '; 
+xpla property 'POWER_UP_HIGH att_le<0> att_le<1> att_le<2> att_le<3> att_rst_n le_clk '; 
+xpla property 'unused_pullup'; 
+xpla property 'timespec  le_clk.Q sr_sr<10>.D 2.000000'; 
+xpla property 'timespec  sr_sr<9>.Q sr_sr<10>.D 2.000000'; 
+xpla property 'timespec  le_clk.Q sr_sr<12>.D 2.000000'; 
+xpla property 'timespec  sr_sr<11>.Q sr_sr<12>.D 2.000000'; 
+xpla property 'timespec  le_clk.Q sr_sr<13>.D 2.000000'; 
+xpla property 'timespec  sr_sr<12>.Q sr_sr<13>.D 2.000000'; 
+xpla property 'timespec  le_clk.Q sr_sr<14>.D 2.000000'; 
+xpla property 'timespec  sr_sr<13>.Q sr_sr<14>.D 2.000000'; 
+xpla property 'timespec  le_clk.Q sr_sr<15>.D 2.000000'; 
+xpla property 'timespec  sr_sr<14>.Q sr_sr<15>.D 2.000000'; 
+xpla property 'timespec  le_clk.Q sr_sr<16>.D 2.000000'; 
+xpla property 'timespec  sr_sr<15>.Q sr_sr<16>.D 2.000000'; 
+xpla property 'timespec  sr_sr<16>.Q sr_sr<17>.D 2.000000'; 
+xpla property 'timespec  le_clk.Q sr_sr<17>.D 2.000000'; 
+xpla property 'timespec  sr_sr<17>.Q sr_sr<18>.D 2.000000'; 
+xpla property 'timespec  le_clk.Q sr_sr<18>.D 2.000000'; 
+xpla property 'timespec  sr_sr<18>.Q sr_sr<19>.D 2.000000'; 
+xpla property 'timespec  le_clk.Q sr_sr<19>.D 2.000000'; 
+xpla property 'timespec  sr_sr<0>.Q sr_sr<1>.D 2.000000'; 
+xpla property 'timespec  le_clk.Q sr_sr<1>.D 2.000000'; 
+xpla property 'timespec  le_clk.Q sr_sr<20>.D 2.000000'; 
+xpla property 'timespec  sr_sr<19>.Q sr_sr<20>.D 2.000000'; 
+xpla property 'timespec  sr_sr<20>.Q sr_sr<21>.D 2.000000'; 
+xpla property 'timespec  le_clk.Q sr_sr<21>.D 2.000000'; 
+xpla property 'timespec  sr_sr<21>.Q sr_sr<22>.D 2.000000'; 
+xpla property 'timespec  le_clk.Q sr_sr<22>.D 2.000000'; 
+xpla property 'timespec  sr_sr<22>.Q sr_sr<23>.D 2.000000'; 
+xpla property 'timespec  le_clk.Q sr_sr<23>.D 2.000000'; 
+xpla property 'timespec  le_clk.Q sr_sr<2>.D 2.000000'; 
+xpla property 'timespec  sr_sr<1>.Q sr_sr<2>.D 2.000000'; 
+xpla property 'timespec  le_clk.Q sr_sr<3>.D 2.000000'; 
+xpla property 'timespec  sr_sr<2>.Q sr_sr<3>.D 2.000000'; 
+xpla property 'timespec  le_clk.Q sr_sr<4>.D 2.000000'; 
+xpla property 'timespec  sr_sr<3>.Q sr_sr<4>.D 2.000000'; 
+xpla property 'timespec  le_clk.Q sr_sr<5>.D 2.000000'; 
+xpla property 'timespec  sr_sr<4>.Q sr_sr<5>.D 2.000000'; 
+xpla property 'timespec  le_clk.Q sr_sr<6>.D 2.000000'; 
+xpla property 'timespec  sr_sr<5>.Q sr_sr<6>.D 2.000000'; 
+xpla property 'timespec  le_clk.Q sr_sr<7>.D 2.000000'; 
+xpla property 'timespec  sr_sr<6>.Q sr_sr<7>.D 2.000000'; 
+xpla property 'timespec  le_clk.Q sr_sr<8>.D 2.000000'; 
+xpla property 'timespec  sr_sr<7>.Q sr_sr<8>.D 2.000000'; 
+xpla property 'timespec  le_clk.Q sr_sr<9>.D 2.000000'; 
+xpla property 'timespec  sr_sr<8>.Q sr_sr<9>.D 2.000000'; 
+xpla property 'timespec  sr_sr<23>.Q sr_sdo.D 1.000000'; 
+xpla property 'timespec  le_clk.Q sr_sr<11>.D 2.000000'; 
+xpla property 'timespec  sr_sr<10>.Q sr_sr<11>.D 2.000000'; 
+xpla property 'IOSTD dds_sync_sync_out_en 0 -1';
+xpla property 'IOSTD ifc_mode<2> 0 -1';
+xpla property 'IOSTD ifc_mode<1> 0 -1';
+xpla property 'IOSTD eem_io_2 0 -1';
+xpla property 'IOSTD clk_div 0 -1';
+xpla property 'IOSTD eem_io_3 0 -1';
+xpla property 'IOSTD eem_io_4 0 -1';
+xpla property 'IOSTD eem_io_1 0 -1';
+xpla property 'IOSTD eem_io 0 -1';
+xpla property 'IOSTD dds_profile_3<2> 0 -1';
+xpla property 'IOSTD dds_profile_3<0> 0 -1';
+xpla property 'IOSTD dds_profile_3<1> 0 -1';
+xpla property 'IOSTD dds_reset 0 -1';
+xpla property 'IOSTD dds_common_master_reset 0 -1';
+xpla property 'IOSTD dds_rf_sw 0 -1';
+xpla property 'IOSTD eem_io_12 0 -1';
+xpla property 'IOSTD dds_rf_sw_1 0 -1';
+xpla property 'IOSTD eem_io_13 0 -1';
+xpla property 'IOSTD dds_rf_sw_2 0 -1';
+xpla property 'IOSTD eem_io_14 0 -1';
+xpla property 'IOSTD dds_rf_sw_3 0 -1';
+xpla property 'IOSTD eem_io_15 0 -1';
+xpla property 'IOSTD clk_in_sel 0 -1';
+xpla property 'IOSTD clk_mmcx_osc_sel 0 -1';
+xpla property 'IOSTD tp_1 0 -1';
+xpla property 'IOSTD tp_2 0 -1';
+xpla property 'IOSTD eem_oe_10 0 -1';
+xpla property 'IOSTD eem_io_10 0 -1';
+xpla property 'IOSTD eem_io_6 0 -1';
+xpla property 'IOSTD eem_io_5 0 -1';
+xpla property 'IOSTD variant 0 -1';
+xpla property 'IOSTD ifc_mode<0> 0 -1';
+xpla property 'IOSTD dds_smp_err_1 0 -1';
+xpla property 'IOSTD dds_pll_lock_1 0 -1';
+xpla property 'IOSTD dds_smp_err 0 -1';
+xpla property 'IOSTD dds_pll_lock 0 -1';
+xpla property 'IOSTD dds_smp_err_2 0 -1';
+xpla property 'IOSTD dds_pll_lock_2 0 -1';
+xpla property 'IOSTD dds_smp_err_3 0 -1';
+xpla property 'IOSTD dds_pll_lock_3 0 -1';
+xpla property 'IOSTD dds_sdo_3 0 -1';
+xpla property 'IOSTD dds_sdo_1 0 -1';
+xpla property 'IOSTD dds_sdo 0 -1';
+xpla property 'IOSTD dds_sdo_2 0 -1';
+xpla property 'IOSTD att_s_out<3> 0 -1';
+xpla property 'IOSTD eem_io_7 0 -1';
+xpla property 'IOSTD eem_io_8 0 -1';
+xpla property 'IOSTD eem_io_9 0 -1';
+xpla property 'IOSTD eem_io_11 0 -1';
+xpla property 'IOSTD ifc_mode<3> 0 -1';
+xpla property 'IOSTD att_le<0> 0 -1';
+xpla property 'IOSTD att_le<1> 0 -1';
+xpla property 'IOSTD att_le<2> 0 -1';
+xpla property 'IOSTD att_le<3> 0 -1';
+xpla property 'IOSTD dds_sync_sync_sel 0 -1';
+xpla property 'IOSTD dds_common_io_reset 0 -1';
+xpla property 'IOSTD clk_osc_en_n 0 -1';
+xpla property 'IOSTD dds_io_update_1 0 -1';
+xpla property 'IOSTD dds_io_update_2 0 -1';
+xpla property 'IOSTD dds_io_update_3 0 -1';
+xpla property 'IOSTD dds_io_update 0 -1';
+xpla property 'IOSTD dds_led_1<1> 0 -1';
+xpla property 'IOSTD dds_led<1> 0 -1';
+xpla property 'IOSTD dds_led_2<1> 0 -1';
+xpla property 'IOSTD dds_led_3<1> 0 -1';
+xpla property 'IOSTD dds_sck_1 0 -1';
+xpla property 'IOSTD dds_sck_2 0 -1';
+xpla property 'IOSTD dds_sck_3 0 -1';
+xpla property 'IOSTD dds_sdi_1 0 -1';
+xpla property 'IOSTD dds_sdi_2 0 -1';
+xpla property 'IOSTD dds_sdi_3 0 -1';
+xpla property 'IOSTD att_clk 0 -1';
+xpla property 'IOSTD att_rst_n 0 -1';
+xpla property 'IOSTD att_s_in<0> 0 -1';
+xpla property 'IOSTD att_s_in<1> 0 -1';
+xpla property 'IOSTD att_s_out<0> 0 -1';
+xpla property 'IOSTD att_s_in<2> 0 -1';
+xpla property 'IOSTD att_s_out<1> 0 -1';
+xpla property 'IOSTD att_s_in<3> 0 -1';
+xpla property 'IOSTD att_s_out<2> 0 -1';
+xpla property 'IOSTD dds_cs_n_1 0 -1';
+xpla property 'IOSTD dds_cs_n_2 0 -1';
+xpla property 'IOSTD dds_cs_n_3 0 -1';
+xpla property 'IOSTD tp 0 -1';
+xpla property 'IOSTD dds_cs_n 0 -1';
+xpla property 'IOSTD dds_led<0> 0 -1';
+xpla property 'IOSTD dds_led_1<0> 0 -1';
+xpla property 'IOSTD dds_led_2<0> 0 -1';
+xpla property 'IOSTD dds_led_3<0> 0 -1';
+xpla property 'IOSTD dds_reset_3 0 -1';
+xpla property 'IOSTD dds_reset_2 0 -1';
+xpla property 'IOSTD dds_reset_1 0 -1';
+xpla property 'IOSTD dds_sync_clk_out_en 0 -1';
+xpla property 'IOSTD eem_oe_2 0 -1';
+xpla property 'IOSTD dds_profile<2> 0 -1';
+xpla property 'IOSTD dds_profile_2<2> 0 -1';
+xpla property 'IOSTD dds_profile_1<2> 0 -1';
+xpla property 'IOSTD dds_profile_2<0> 0 -1';
+xpla property 'IOSTD dds_profile_1<0> 0 -1';
+xpla property 'IOSTD dds_profile<0> 0 -1';
+xpla property 'IOSTD dds_profile_2<1> 0 -1';
+xpla property 'IOSTD dds_profile<1> 0 -1';
+xpla property 'IOSTD dds_profile_1<1> 0 -1';
+xpla property 'IOSTD dds_sck 0 -1';
+xpla property 'IOSTD dds_sdi 0 -1';
+xpla property 'IOSTD tp_3 0 -1';
+xpla property 'IOSTD tp_4 0 -1';
+xpla property 'IOSTD dds_drover 0 -1';
+xpla property 'IOSTD fsen 0 -1';
+xpla property 'IOSTD dds_osk 0 -1';
+xpla property 'IOSTD dds_osk_3 0 -1';
+xpla property 'IOSTD dds_osk_2 0 -1';
+xpla property 'IOSTD dds_osk_1 0 -1';
+xpla property 'IOSTD dds_drctl 0 -1';
+xpla property 'IOSTD dds_drctl_3 0 -1';
+xpla property 'IOSTD dds_drctl_2 0 -1';
+xpla property 'IOSTD dds_drctl_1 0 -1';
+xpla property 'IOSTD eem_oe 0 -1';
+xpla property 'IOSTD eem_oe_9 0 -1';
+xpla property 'IOSTD eem_oe_8 0 -1';
+xpla property 'IOSTD eem_oe_13 0 -1';
+xpla property 'IOSTD eem_oe_12 0 -1';
+xpla property 'IOSTD eem_oe_11 0 -1';
+xpla property 'IOSTD dds_drhold 0 -1';
+xpla property 'IOSTD dds_drhold_3 0 -1';
+xpla property 'IOSTD dds_drhold_2 0 -1';
+xpla property 'IOSTD dds_drhold_1 0 -1';
+xpla property 'IOSTD eem_oe_7 0 -1';
+xpla property 'IOSTD eem_oe_6 0 -1';
+xpla property 'IOSTD eem_oe_5 0 -1';
+xpla property 'IOSTD eem_oe_4 0 -1';
+xpla property 'IOSTD eem_oe_3 0 -1';
+xpla property 'IOSTD eem_oe_1 0 -1';
+xpla property 'IOSTD eem_oe_15 0 -1';
+xpla property 'IOSTD eem_oe_14 0 -1';
+EQUATIONS 
+
+ att_clk = !eem_io_3 & eem_io_4 & eem_io & !eem_io_5
+      # ifc_mode<1> & !eem_io_3 & eem_io_4 & eem_io
+    ;		"--- [PT=2, FI=5, LVL=1] ---
+ att_le<0>.AP = !ifc_mode<1> & eem_io_5
+      # !eem_io_4
+      # eem_io_3;		"--- [PT=3, FI=4, LVL=1] ---
+ att_le<0>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ att_le<0>.T = !eem_io_3 & eem_io_4 & !eem_io_5 & att_le<0>.Q
+      # ifc_mode<1> & !eem_io_3 & eem_io_4 & att_le<0>.Q
+    ;		"--- [PT=2, FI=5, LVL=1] ---
+ att_le<1>.AP = !ifc_mode<1> & eem_io_5
+      # !eem_io_4
+      # eem_io_3;		"--- [PT=3, FI=4, LVL=1] ---
+ att_le<1>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ att_le<1>.T = !eem_io_3 & eem_io_4 & !eem_io_5 & att_le<1>.Q
+      # ifc_mode<1> & !eem_io_3 & eem_io_4 & att_le<1>.Q
+    ;		"--- [PT=2, FI=5, LVL=1] ---
+ att_le<2>.AP = !ifc_mode<1> & eem_io_5
+      # !eem_io_4
+      # eem_io_3;		"--- [PT=3, FI=4, LVL=1] ---
+ att_le<2>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ att_le<2>.T = !eem_io_3 & eem_io_4 & !eem_io_5 & att_le<2>.Q
+      # ifc_mode<1> & !eem_io_3 & eem_io_4 & att_le<2>.Q
+    ;		"--- [PT=2, FI=5, LVL=1] ---
+ att_le<3>.AP = !ifc_mode<1> & eem_io_5
+      # !eem_io_4
+      # eem_io_3;		"--- [PT=3, FI=4, LVL=1] ---
+ att_le<3>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ att_le<3>.T = !eem_io_3 & eem_io_4 & !eem_io_5 & att_le<3>.Q
+      # ifc_mode<1> & !eem_io_3 & eem_io_4 & att_le<3>.Q
+    ;		"--- [PT=2, FI=5, LVL=1] ---
+ att_rst_n.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ att_rst_n.D = !sr_sr<19>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ att_s_in<0> = eem_io_1;		"--- [PT=1, FI=1, LVL=1] ---
+ att_s_in<1> = att_s_out<0>;		"--- [PT=1, FI=1, LVL=1] ---
+ att_s_in<2> = att_s_out<1>;		"--- [PT=1, FI=1, LVL=1] ---
+ att_s_in<3> = att_s_out<2>;		"--- [PT=1, FI=1, LVL=1] ---
+! clk_div = !sr_di<22>.Q & sr_di<23>.Q;		"--- [PT=1, FI=2, LVL=1] ---
+ clk_div.OE = ifc_mode<0> & !sr_di<22>.Q
+      # variant & !sr_di<22>.Q
+      # sr_di<23>.Q;		"--- [PT=3, FI=4, LVL=1] ---
+ clk_in_sel.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ clk_in_sel.D = sr_sr<17>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ clk_mmcx_osc_sel.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ clk_mmcx_osc_sel.D = sr_sr<21>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+! clk_osc_en_n = !clk_in_sel.Q & !clk_mmcx_osc_sel.Q
+    ;		"--- [PT=1, FI=2, LVL=1] ---
+ dds_common_io_reset.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_common_io_reset.D = sr_sr<20>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_common_master_reset.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_common_master_reset.D = sr_sr<19>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+! dds_cs_n = eem_io_3 & eem_io_4 & !eem_io_5 & sr_di<13>.Q
+      # ifc_mode<1> & eem_io_3 & eem_io_4 & sr_di<13>.Q
+      # !ifc_mode<1> & !eem_io_3 & !eem_io_4 & eem_io_5
+      # ifc_mode<1> & eem_io_5 & !sr_di<13>.Q;		"--- [PT=4, FI=5, LVL=1] ---
+! dds_cs_n_1 = eem_io_3 & eem_io_4 & !eem_io_5 & sr_di<14>.Q
+      # ifc_mode<1> & eem_io_3 & eem_io_4 & sr_di<14>.Q
+      # !ifc_mode<1> & eem_io_3 & !eem_io_4 & eem_io_5
+      # ifc_mode<1> & eem_io_5 & !sr_di<14>.Q;		"--- [PT=4, FI=5, LVL=1] ---
+! dds_cs_n_2 = eem_io_3 & eem_io_4 & !eem_io_5 & sr_di<15>.Q
+      # ifc_mode<1> & eem_io_3 & eem_io_4 & sr_di<15>.Q
+      # !ifc_mode<1> & !eem_io_3 & eem_io_4 & eem_io_5
+      # ifc_mode<1> & eem_io_5 & !sr_di<15>.Q;		"--- [PT=4, FI=5, LVL=1] ---
+! dds_cs_n_3 = !ifc_mode<1> & eem_io_3 & eem_io_4 & eem_io_5
+      # ifc_mode<1> & eem_io_5 & !sr_di<16>.Q
+      # eem_io_3 & eem_io_4 & sr_di<16>.Q;		"--- [PT=3, FI=5, LVL=1] ---
+ dds_drctl = 1;
+ dds_drctl_1 = 1;
+ dds_drctl_2 = 1;
+ dds_drctl_3 = 1;
+ dds_drhold = 0;
+ dds_drhold_1 = 0;
+ dds_drhold_2 = 0;
+ dds_drhold_3 = 0;
+ dds_io_update = sr_di<13>.Q & sr_di<12>.Q
+      # eem_io_6 & !sr_di<13>.Q;		"--- [PT=2, FI=3, LVL=1] ---
+ dds_io_update_1 = sr_di<14>.Q & sr_di<12>.Q
+      # eem_io_6 & !sr_di<14>.Q;		"--- [PT=2, FI=3, LVL=1] ---
+ dds_io_update_2 = sr_di<15>.Q & sr_di<12>.Q
+      # eem_io_6 & !sr_di<15>.Q;		"--- [PT=2, FI=3, LVL=1] ---
+ dds_io_update_3 = sr_di<16>.Q & sr_di<12>.Q
+      # eem_io_6 & !sr_di<16>.Q;		"--- [PT=2, FI=3, LVL=1] ---
+! dds_led<0> = !eem_io_12 & !sr_di<0>.Q;		"--- [PT=1, FI=2, LVL=1] ---
+! dds_led<1> = !dds_smp_err & dds_pll_lock & !sr_di<4>.Q
+      # !variant & !ifc_mode<0> & !sr_di<4>.Q;		"--- [PT=2, FI=5, LVL=1] ---
+! dds_led_1<0> = !eem_io_13 & !sr_di<1>.Q;		"--- [PT=1, FI=2, LVL=1] ---
+! dds_led_1<1> = !dds_smp_err_1 & dds_pll_lock_1 & !sr_di<5>.Q
+      # !variant & !ifc_mode<0> & !sr_di<5>.Q;		"--- [PT=2, FI=5, LVL=1] ---
+! dds_led_2<0> = !eem_io_14 & !sr_di<2>.Q;		"--- [PT=1, FI=2, LVL=1] ---
+! dds_led_2<1> = !dds_smp_err_2 & dds_pll_lock_2 & !sr_di<6>.Q
+      # !variant & !ifc_mode<0> & !sr_di<6>.Q;		"--- [PT=2, FI=5, LVL=1] ---
+! dds_led_3<0> = !eem_io_15 & !sr_di<3>.Q;		"--- [PT=1, FI=2, LVL=1] ---
+! dds_led_3<1> = !dds_smp_err_3 & dds_pll_lock_3 & !sr_di<7>.Q
+      # !variant & !ifc_mode<0> & !sr_di<7>.Q;		"--- [PT=2, FI=5, LVL=1] ---
+ dds_osk = 1;
+ dds_osk_1 = 1;
+ dds_osk_2 = 1;
+ dds_osk_3 = 1;
+ dds_profile<0>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_profile<0>.D = sr_sr<8>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_profile<1>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_profile<1>.D = sr_sr<9>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_profile<2>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_profile<2>.D = sr_sr<10>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_profile_1<0>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_profile_1<0>.D = sr_sr<8>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_profile_1<1>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_profile_1<1>.D = sr_sr<9>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_profile_1<2>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_profile_1<2>.D = sr_sr<10>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_profile_2<0>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_profile_2<0>.D = sr_sr<8>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_profile_2<1>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_profile_2<1>.D = sr_sr<9>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_profile_2<2>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_profile_2<2>.D = sr_sr<10>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_profile_3<0>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_profile_3<0>.D = sr_sr<8>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_profile_3<1>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_profile_3<1>.D = sr_sr<9>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_profile_3<2>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_profile_3<2>.D = sr_sr<10>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_reset = !variant & !ifc_mode<0> & eem_io_7
+      # dds_common_master_reset.Q;		"--- [PT=2, FI=4, LVL=1] ---
+ dds_reset_1 = !variant & !ifc_mode<0> & eem_io_7
+      # dds_common_master_reset.Q;		"--- [PT=2, FI=4, LVL=1] ---
+ dds_reset_2 = !variant & !ifc_mode<0> & eem_io_7
+      # dds_common_master_reset.Q;		"--- [PT=2, FI=4, LVL=1] ---
+ dds_reset_3 = !variant & !ifc_mode<0> & eem_io_7
+      # dds_common_master_reset.Q;		"--- [PT=2, FI=4, LVL=1] ---
+! dds_rf_sw = !eem_io_12 & !sr_di<0>.Q;		"--- [PT=1, FI=2, LVL=1] ---
+! dds_rf_sw_1 = !eem_io_13 & !sr_di<1>.Q;		"--- [PT=1, FI=2, LVL=1] ---
+! dds_rf_sw_2 = !eem_io_14 & !sr_di<2>.Q;		"--- [PT=1, FI=2, LVL=1] ---
+! dds_rf_sw_3 = !eem_io_15 & !sr_di<3>.Q;		"--- [PT=1, FI=2, LVL=1] ---
+ dds_sck = ifc_mode<1> & eem_io_2.PIN & !sr_di<13>.Q
+      # eem_io & sr_di<13>.Q
+      # !ifc_mode<1> & eem_io;		"--- [PT=3, FI=4, LVL=1] ---
+ dds_sck_1 = ifc_mode<1> & eem_io_2.PIN & !sr_di<14>.Q
+      # eem_io & sr_di<14>.Q
+      # !ifc_mode<1> & eem_io;		"--- [PT=3, FI=4, LVL=1] ---
+ dds_sck_2 = ifc_mode<1> & eem_io_2.PIN & !sr_di<15>.Q
+      # eem_io & sr_di<15>.Q
+      # !ifc_mode<1> & eem_io;		"--- [PT=3, FI=4, LVL=1] ---
+ dds_sck_3 = ifc_mode<1> & eem_io_2.PIN & !sr_di<16>.Q
+      # eem_io & sr_di<16>.Q
+      # !ifc_mode<1> & eem_io;		"--- [PT=3, FI=4, LVL=1] ---
+ dds_sdi = ifc_mode<1> & eem_io_8 & !sr_di<13>.Q
+      # eem_io_1 & sr_di<13>.Q
+      # !ifc_mode<1> & eem_io_1;		"--- [PT=3, FI=4, LVL=1] ---
+ dds_sdi_1 = ifc_mode<1> & eem_io_9 & !sr_di<14>.Q
+      # eem_io_1 & sr_di<14>.Q
+      # !ifc_mode<1> & eem_io_1;		"--- [PT=3, FI=4, LVL=1] ---
+ dds_sdi_2 = ifc_mode<1> & eem_io_10.PIN & !sr_di<15>.Q
+      # eem_io_1 & sr_di<15>.Q
+      # !ifc_mode<1> & eem_io_1;		"--- [PT=3, FI=4, LVL=1] ---
+ dds_sdi_3 = ifc_mode<1> & eem_io_11 & !sr_di<16>.Q
+      # eem_io_1 & sr_di<16>.Q
+      # !ifc_mode<1> & eem_io_1;		"--- [PT=3, FI=4, LVL=1] ---
+ dds_sync_clk_out_en = ifc_mode<2> & !ifc_mode<1> & ifc_mode<0>
+      # ifc_mode<2> & !ifc_mode<1> & variant;		"--- [PT=2, FI=4, LVL=1] ---
+ dds_sync_sync_out_en = ifc_mode<2> & !ifc_mode<1> & ifc_mode<0>
+      # ifc_mode<2> & !ifc_mode<1> & variant;		"--- [PT=2, FI=4, LVL=1] ---
+ dds_sync_sync_sel.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ dds_sync_sync_sel.D = sr_sr<18>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ eem_io_10 = eem_io_6;		"--- [PT=1, FI=1, LVL=1] ---
+ eem_io_10.OE = ifc_mode<2> & !ifc_mode<1>;		"--- [PT=1, FI=2, LVL=1] ---
+ eem_io_2 = !ifc_mode<1> & !eem_io_3 & eem_io_4 & eem_io_5 & dds_sdo_2
+    
+      # !ifc_mode<1> & !eem_io_3 & !eem_io_4 & eem_io_5 & dds_sdo
+      # !ifc_mode<1> & eem_io_3 & !eem_io_4 & eem_io_5 & dds_sdo_1
+      # !ifc_mode<1> & eem_io_3 & eem_io_4 & eem_io_5 & dds_sdo_3
+      # eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sdo.Q
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sdo.Q
+      # !eem_io_3 & eem_io_4 & !eem_io_5 & att_s_out<3>
+      # ifc_mode<1> & !eem_io_3 & eem_io_4 & att_s_out<3>
+      # eem_io_3 & eem_io_4 & !eem_io_5 & dds_sdo
+      # ifc_mode<1> & eem_io_3 & eem_io_4 & dds_sdo
+    ;		"--- [PT=10, FI=10, LVL=1] ---
+ eem_io_2.OE = !ifc_mode<1>;		"--- [PT=1, FI=1, LVL=1] ---
+ eem_oe = 0;
+ eem_oe_1 = 0;
+ eem_oe_10 = ifc_mode<2> & !ifc_mode<1>;		"--- [PT=1, FI=2, LVL=1] ---
+ eem_oe_11 = 0;
+ eem_oe_12 = 0;
+ eem_oe_13 = 0;
+ eem_oe_14 = 0;
+ eem_oe_15 = 0;
+ eem_oe_2 = !ifc_mode<1>;		"--- [PT=1, FI=1, LVL=1] ---
+ eem_oe_3 = 0;
+ eem_oe_4 = 0;
+ eem_oe_5 = 0;
+ eem_oe_6 = 0;
+ eem_oe_7 = 0;
+ eem_oe_8 = 0;
+ eem_oe_9 = 0;
+ fsen = 1;
+ le_clk.AP = !ifc_mode<1> & eem_io_5
+      # eem_io_4
+      # !eem_io_3;		"--- [PT=3, FI=4, LVL=1] ---
+ le_clk.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ le_clk.T = eem_io_3 & !eem_io_4 & !eem_io_5 & le_clk.Q
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & le_clk.Q
+    ;		"--- [PT=2, FI=5, LVL=1] ---
+ sr_di<0>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<0>.D = sr_sr<0>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<12>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<12>.D = sr_sr<12>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<13>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<13>.D = sr_sr<13>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<14>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<14>.D = sr_sr<14>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<15>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<15>.D = sr_sr<15>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<16>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<16>.D = sr_sr<16>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<1>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<1>.D = sr_sr<1>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<22>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<22>.D = sr_sr<22>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<23>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<23>.D = sr_sr<23>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<2>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<2>.D = sr_sr<2>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<3>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<3>.D = sr_sr<3>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<4>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<4>.D = sr_sr<4>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<5>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<5>.D = sr_sr<5>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<6>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<6>.D = sr_sr<6>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<7>.CLK = le_clk.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_di<7>.D = sr_sr<7>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sdo.CE = eem_io_3 & !eem_io_4 & !eem_io_5
+      # ifc_mode<1> & eem_io_3 & !eem_io_4;		"--- [PT=2, FI=4, LVL=1] ---
+! sr_sdo.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sdo.D = sr_sr<23>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<0>.CE = eem_io_3 & !eem_io_4 & !eem_io_5
+      # ifc_mode<1> & eem_io_3 & !eem_io_4;		"--- [PT=2, FI=4, LVL=1] ---
+ sr_sr<0>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<0>.D = eem_io_1;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<10>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<10>.D = eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<9>.Q & !le_clk.Q
+    
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<9>.Q & !le_clk.Q
+      # eem_io_3 & !eem_io_4 & !eem_io_5 & dds_pll_lock_1 & le_clk.Q
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & dds_pll_lock_1 & le_clk.Q
+    
+      # !ifc_mode<1> & eem_io_5 & sr_sr<10>.Q
+      # eem_io_4 & sr_sr<10>.Q
+      # !eem_io_3 & sr_sr<10>.Q;		"--- [PT=7, FI=8, LVL=1] ---
+ sr_sr<11>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<11>.D = eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<10>.Q & !le_clk.Q
+    
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<10>.Q & !le_clk.Q
+      # eem_io_3 & !eem_io_4 & !eem_io_5 & dds_pll_lock_2 & le_clk.Q
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & dds_pll_lock_2 & le_clk.Q
+    
+      # !ifc_mode<1> & eem_io_5 & sr_sr<11>.Q
+      # eem_io_4 & sr_sr<11>.Q
+      # !eem_io_3 & sr_sr<11>.Q;		"--- [PT=7, FI=8, LVL=1] ---
+ sr_sr<12>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<12>.D = eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<11>.Q & !le_clk.Q
+    
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<11>.Q & !le_clk.Q
+      # eem_io_3 & !eem_io_4 & !eem_io_5 & dds_pll_lock_3 & le_clk.Q
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & dds_pll_lock_3 & le_clk.Q
+    
+      # !ifc_mode<1> & eem_io_5 & sr_sr<12>.Q
+      # eem_io_4 & sr_sr<12>.Q
+      # !eem_io_3 & sr_sr<12>.Q;		"--- [PT=7, FI=8, LVL=1] ---
+ sr_sr<13>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<13>.D = eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<12>.Q & !le_clk.Q
+    
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<12>.Q & !le_clk.Q
+      # eem_io_3 & !eem_io_4 & !eem_io_5 & ifc_mode<0> & le_clk.Q
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & ifc_mode<0> & le_clk.Q
+      # !ifc_mode<1> & eem_io_5 & sr_sr<13>.Q
+      # eem_io_4 & sr_sr<13>.Q
+      # !eem_io_3 & sr_sr<13>.Q;		"--- [PT=7, FI=8, LVL=1] ---
+ sr_sr<14>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<14>.D = eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<13>.Q & !le_clk.Q
+    
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<13>.Q & !le_clk.Q
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & le_clk.Q
+      # !ifc_mode<1> & eem_io_5 & sr_sr<14>.Q
+      # eem_io_4 & sr_sr<14>.Q
+      # !eem_io_3 & sr_sr<14>.Q;		"--- [PT=6, FI=7, LVL=1] ---
+ sr_sr<15>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<15>.D = eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<14>.Q & !le_clk.Q
+    
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<14>.Q & !le_clk.Q
+      # ifc_mode<2> & eem_io_3 & !eem_io_4 & !eem_io_5 & le_clk.Q
+      # ifc_mode<2> & ifc_mode<1> & eem_io_3 & !eem_io_4 & le_clk.Q
+      # !ifc_mode<1> & eem_io_5 & sr_sr<15>.Q
+      # eem_io_4 & sr_sr<15>.Q
+      # !eem_io_3 & sr_sr<15>.Q;		"--- [PT=7, FI=8, LVL=1] ---
+ sr_sr<16>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<16>.D = eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<15>.Q & !le_clk.Q
+    
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<15>.Q & !le_clk.Q
+      # eem_io_3 & !eem_io_4 & !eem_io_5 & ifc_mode<3> & le_clk.Q
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & ifc_mode<3> & le_clk.Q
+      # !ifc_mode<1> & eem_io_5 & sr_sr<16>.Q
+      # eem_io_4 & sr_sr<16>.Q
+      # !eem_io_3 & sr_sr<16>.Q;		"--- [PT=7, FI=8, LVL=1] ---
+ sr_sr<17>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<17>.D = eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<16>.Q & !le_clk.Q
+    
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<16>.Q & !le_clk.Q
+      # !ifc_mode<1> & eem_io_5 & sr_sr<17>.Q
+      # eem_io_4 & sr_sr<17>.Q
+      # !eem_io_3 & sr_sr<17>.Q;		"--- [PT=5, FI=7, LVL=1] ---
+ sr_sr<18>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<18>.D = eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<17>.Q & !le_clk.Q
+    
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<17>.Q & !le_clk.Q
+      # !ifc_mode<1> & eem_io_5 & sr_sr<18>.Q
+      # eem_io_4 & sr_sr<18>.Q
+      # !eem_io_3 & sr_sr<18>.Q;		"--- [PT=5, FI=7, LVL=1] ---
+ sr_sr<19>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<19>.D = eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<18>.Q & !le_clk.Q
+    
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<18>.Q & !le_clk.Q
+      # !ifc_mode<1> & eem_io_5 & sr_sr<19>.Q
+      # eem_io_4 & sr_sr<19>.Q
+      # !eem_io_3 & sr_sr<19>.Q;		"--- [PT=5, FI=7, LVL=1] ---
+ sr_sr<1>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<1>.D = eem_io_3 & !eem_io_4 & !eem_io_5 & le_clk.Q & sr_di<0>.Q
+    
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & le_clk.Q & sr_di<0>.Q
+      # eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<0>.Q & !le_clk.Q
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<0>.Q & !le_clk.Q
+      # eem_io_3 & !eem_io_4 & eem_io_12 & !eem_io_5 & le_clk.Q
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & eem_io_12 & le_clk.Q
+      # !ifc_mode<1> & eem_io_5 & sr_sr<1>.Q
+      # eem_io_4 & sr_sr<1>.Q
+      # !eem_io_3 & sr_sr<1>.Q;		"--- [PT=9, FI=9, LVL=1] ---
+ sr_sr<20>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<20>.T = eem_io_3 & !eem_io_4 & !eem_io_5 & !sr_sr<19>.Q & sr_sr<20>.Q
+     & !le_clk.Q
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & !sr_sr<19>.Q & sr_sr<20>.Q & !
+    le_clk.Q
+      # eem_io_3 & !eem_io_4 & !eem_io_5 & !sr_sr<20>.Q & le_clk.Q
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & !sr_sr<20>.Q & le_clk.Q
+      # eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<19>.Q & !sr_sr<20>.Q
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<19>.Q & !sr_sr<20>.Q
+    ;		"--- [PT=6, FI=7, LVL=1] ---
+ sr_sr<21>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<21>.D = eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<20>.Q & !le_clk.Q
+    
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<20>.Q & !le_clk.Q
+      # !ifc_mode<1> & eem_io_5 & sr_sr<21>.Q
+      # eem_io_4 & sr_sr<21>.Q
+      # !eem_io_3 & sr_sr<21>.Q;		"--- [PT=5, FI=7, LVL=1] ---
+ sr_sr<22>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<22>.D = eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<21>.Q & !le_clk.Q
+    
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<21>.Q & !le_clk.Q
+      # !ifc_mode<1> & eem_io_5 & sr_sr<22>.Q
+      # eem_io_4 & sr_sr<22>.Q
+      # !eem_io_3 & sr_sr<22>.Q;		"--- [PT=5, FI=7, LVL=1] ---
+ sr_sr<23>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<23>.D = eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<22>.Q & !le_clk.Q
+    
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<22>.Q & !le_clk.Q
+      # !ifc_mode<1> & eem_io_5 & sr_sr<23>.Q
+      # eem_io_4 & sr_sr<23>.Q
+      # !eem_io_3 & sr_sr<23>.Q;		"--- [PT=5, FI=7, LVL=1] ---
+ sr_sr<2>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<2>.D = eem_io_3 & !eem_io_4 & !eem_io_5 & le_clk.Q & sr_di<1>.Q
+    
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & le_clk.Q & sr_di<1>.Q
+      # eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<1>.Q & !le_clk.Q
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<1>.Q & !le_clk.Q
+      # eem_io_3 & !eem_io_4 & eem_io_13 & !eem_io_5 & le_clk.Q
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & eem_io_13 & le_clk.Q
+      # !ifc_mode<1> & eem_io_5 & sr_sr<2>.Q
+      # eem_io_4 & sr_sr<2>.Q
+      # !eem_io_3 & sr_sr<2>.Q;		"--- [PT=9, FI=9, LVL=1] ---
+ sr_sr<3>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<3>.D = eem_io_3 & !eem_io_4 & !eem_io_5 & le_clk.Q & sr_di<2>.Q
+    
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & le_clk.Q & sr_di<2>.Q
+      # eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<2>.Q & !le_clk.Q
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<2>.Q & !le_clk.Q
+      # eem_io_3 & !eem_io_4 & eem_io_14 & !eem_io_5 & le_clk.Q
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & eem_io_14 & le_clk.Q
+      # !ifc_mode<1> & eem_io_5 & sr_sr<3>.Q
+      # eem_io_4 & sr_sr<3>.Q
+      # !eem_io_3 & sr_sr<3>.Q;		"--- [PT=9, FI=9, LVL=1] ---
+ sr_sr<4>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<4>.D = eem_io_3 & !eem_io_4 & !eem_io_5 & le_clk.Q & sr_di<3>.Q
+    
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & le_clk.Q & sr_di<3>.Q
+      # eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<3>.Q & !le_clk.Q
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<3>.Q & !le_clk.Q
+      # eem_io_3 & !eem_io_4 & eem_io_15 & !eem_io_5 & le_clk.Q
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & eem_io_15 & le_clk.Q
+      # !ifc_mode<1> & eem_io_5 & sr_sr<4>.Q
+      # eem_io_4 & sr_sr<4>.Q
+      # !eem_io_3 & sr_sr<4>.Q;		"--- [PT=9, FI=9, LVL=1] ---
+ sr_sr<5>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<5>.D = eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<4>.Q & !le_clk.Q
+    
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<4>.Q & !le_clk.Q
+      # eem_io_3 & !eem_io_4 & !eem_io_5 & dds_smp_err & le_clk.Q
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & dds_smp_err & le_clk.Q
+      # !ifc_mode<1> & eem_io_5 & sr_sr<5>.Q
+      # eem_io_4 & sr_sr<5>.Q
+      # !eem_io_3 & sr_sr<5>.Q;		"--- [PT=7, FI=8, LVL=1] ---
+ sr_sr<6>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<6>.D = eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<5>.Q & !le_clk.Q
+    
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<5>.Q & !le_clk.Q
+      # eem_io_3 & !eem_io_4 & !eem_io_5 & dds_smp_err_1 & le_clk.Q
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & dds_smp_err_1 & le_clk.Q
+      # !ifc_mode<1> & eem_io_5 & sr_sr<6>.Q
+      # eem_io_4 & sr_sr<6>.Q
+      # !eem_io_3 & sr_sr<6>.Q;		"--- [PT=7, FI=8, LVL=1] ---
+ sr_sr<7>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<7>.D = eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<6>.Q & !le_clk.Q
+    
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<6>.Q & !le_clk.Q
+      # eem_io_3 & !eem_io_4 & !eem_io_5 & dds_smp_err_2 & le_clk.Q
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & dds_smp_err_2 & le_clk.Q
+      # !ifc_mode<1> & eem_io_5 & sr_sr<7>.Q
+      # eem_io_4 & sr_sr<7>.Q
+      # !eem_io_3 & sr_sr<7>.Q;		"--- [PT=7, FI=8, LVL=1] ---
+ sr_sr<8>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<8>.D = eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<7>.Q & !le_clk.Q
+    
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<7>.Q & !le_clk.Q
+      # eem_io_3 & !eem_io_4 & !eem_io_5 & dds_smp_err_3 & le_clk.Q
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & dds_smp_err_3 & le_clk.Q
+      # !ifc_mode<1> & eem_io_5 & sr_sr<8>.Q
+      # eem_io_4 & sr_sr<8>.Q
+      # !eem_io_3 & sr_sr<8>.Q;		"--- [PT=7, FI=8, LVL=1] ---
+ sr_sr<9>.CLK = eem_io;		"--- [PT=1, FI=1, LVL=1] ---
+ sr_sr<9>.D = eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<8>.Q & !le_clk.Q
+    
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<8>.Q & !le_clk.Q
+      # eem_io_3 & !eem_io_4 & !eem_io_5 & dds_pll_lock & le_clk.Q
+      # ifc_mode<1> & eem_io_3 & !eem_io_4 & dds_pll_lock & le_clk.Q
+      # !ifc_mode<1> & eem_io_5 & sr_sr<9>.Q
+      # eem_io_4 & sr_sr<9>.Q
+      # !eem_io_3 & sr_sr<9>.Q;		"--- [PT=7, FI=8, LVL=1] ---
+! tp = eem_io_3 & eem_io_4 & !eem_io_5 & sr_di<13>.Q
+      # ifc_mode<1> & eem_io_3 & eem_io_4 & sr_di<13>.Q
+      # !ifc_mode<1> & !eem_io_3 & !eem_io_4 & eem_io_5
+      # ifc_mode<1> & eem_io_5 & !sr_di<13>.Q;		"--- [PT=4, FI=5, LVL=1] ---
+ tp_1 = ifc_mode<1> & eem_io_2.PIN & !sr_di<13>.Q
+      # eem_io & sr_di<13>.Q
+      # !ifc_mode<1> & eem_io;		"--- [PT=3, FI=4, LVL=1] ---
+ tp_2 = ifc_mode<1> & eem_io_8 & !sr_di<13>.Q
+      # eem_io_1 & sr_di<13>.Q
+      # !ifc_mode<1> & eem_io_1;		"--- [PT=3, FI=4, LVL=1] ---
+ tp_3 = dds_sdo;		"--- [PT=1, FI=1, LVL=1] ---
+ tp_4 = dds_drover;		"--- [PT=1, FI=1, LVL=1] ---
+END

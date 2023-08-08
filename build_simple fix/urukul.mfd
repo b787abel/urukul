@@ -1,0 +1,1641 @@
+MDF Database:  version 1.0
+MDF_INFO | urukul | XC2C256-6-FT256
+MACROCELL | 2 | 3 | att_clk_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 5 | ifc_mode<1>  | eem_io_3  | eem_io_4  | eem_io  | eem_io_5
+INPUTP | 5 | 161 | 116 | 113 | 48 | 105
+EQ | 2 | 
+   att_clk = ifc_mode<1> & !eem_io_3 & eem_io_4 & eem_io
+	# !eem_io_3 & eem_io_4 & eem_io & !eem_io_5;	// (2 pt, 5 inp)
+
+MACROCELL | 2 | 15 | att_le<0>_MC
+ATTRIBUTES | 2168750854 | 0
+OUTPUTMC | 1 | 2 | 15
+INPUTS | 5 | ifc_mode<1>  | eem_io_3  | eem_io_4  | att_le<0>  | eem_io_5
+INPUTMC | 1 | 2 | 15
+INPUTP | 4 | 161 | 116 | 113 | 105
+LCT | 1 | 1 | Internal_Name
+EQ | 4 | 
+   att_le<0>.T := ifc_mode<1> & !eem_io_3 & eem_io_4 & att_le<0>
+	# !eem_io_3 & eem_io_4 & !eem_io_5 & att_le<0>;	// (2 pt, 5 inp)
+   att_le<0>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+    att_le<0>.AP = !N_PZ_449;	// CTS	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 5 | 12 | N_PZ_449_MC
+ATTRIBUTES | 536871680 | 0
+INPUTS | 4 | ifc_mode<1>  | eem_io_3  | eem_io_4  | eem_io_5
+INPUTP | 4 | 161 | 116 | 113 | 105
+EQ | 2 | 
+   N_PZ_449 = ifc_mode<1> & !eem_io_3 & eem_io_4
+	# !eem_io_3 & eem_io_4 & !eem_io_5;	// (2 pt, 4 inp)
+
+MACROCELL | 15 | 11 | att_le<1>_MC
+ATTRIBUTES | 2168750854 | 0
+OUTPUTMC | 1 | 15 | 11
+INPUTS | 5 | ifc_mode<1>  | eem_io_3  | eem_io_4  | att_le<1>  | eem_io_5
+INPUTMC | 1 | 15 | 11
+INPUTP | 4 | 161 | 116 | 113 | 105
+LCT | 1 | 1 | Internal_Name
+EQ | 4 | 
+   att_le<1>.T := ifc_mode<1> & !eem_io_3 & eem_io_4 & att_le<1>
+	# !eem_io_3 & eem_io_4 & !eem_io_5 & att_le<1>;	// (2 pt, 5 inp)
+   att_le<1>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+    att_le<1>.AP = !N_PZ_449;	// CTS	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 2 | 12 | att_le<2>_MC
+ATTRIBUTES | 2168750854 | 0
+OUTPUTMC | 1 | 2 | 12
+INPUTS | 5 | ifc_mode<1>  | eem_io_3  | eem_io_4  | att_le<2>  | eem_io_5
+INPUTMC | 1 | 2 | 12
+INPUTP | 4 | 161 | 116 | 113 | 105
+LCT | 1 | 1 | Internal_Name
+EQ | 4 | 
+   att_le<2>.T := ifc_mode<1> & !eem_io_3 & eem_io_4 & att_le<2>
+	# !eem_io_3 & eem_io_4 & !eem_io_5 & att_le<2>;	// (2 pt, 5 inp)
+   att_le<2>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+    att_le<2>.AP = !N_PZ_449;	// CTS	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 6 | 0 | att_le<3>_MC
+ATTRIBUTES | 2168750854 | 0
+OUTPUTMC | 1 | 6 | 0
+INPUTS | 5 | ifc_mode<1>  | eem_io_3  | eem_io_4  | att_le<3>  | eem_io_5
+INPUTMC | 1 | 6 | 0
+INPUTP | 4 | 161 | 116 | 113 | 105
+LCT | 1 | 1 | Internal_Name
+EQ | 4 | 
+   att_le<3>.T := ifc_mode<1> & !eem_io_3 & eem_io_4 & att_le<3>
+	# !eem_io_3 & eem_io_4 & !eem_io_5 & att_le<3>;	// (2 pt, 5 inp)
+   att_le<3>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+    att_le<3>.AP = !N_PZ_449;	// CTS	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 15 | 4 | att_rst_n_MC
+ATTRIBUTES | 142869254 | 0
+INPUTS | 1 | sr_sr<19>
+INPUTMC | 1 | 3 | 10
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   att_rst_n := !sr_sr<19>;	// (1 pt, 1 inp)
+    att_rst_n.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 10 | sr_sr<19>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 4 | 3 | 10 | 15 | 4 | 3 | 9 | 11 | 4
+INPUTS | 7 | eem_io_3  | sr_sr<19>  | eem_io_4  | ifc_mode<1>  | eem_io_5  | sr_sr<18>  | le_clk
+INPUTMC | 3 | 3 | 10 | 2 | 6 | 0 | 10
+INPUTP | 4 | 116 | 113 | 161 | 105
+EQ | 8 | 
+   sr_sr<19> := !eem_io_3 & sr_sr<19>
+	# eem_io_4 & sr_sr<19>
+	# !ifc_mode<1> & eem_io_5 & sr_sr<19>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<18> & 
+	!le_clk
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<18> & 
+	!le_clk;	// (5 pt, 7 inp)
+   sr_sr<19>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 2 | 6 | sr_sr<18>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 3 | 2 | 6 | 3 | 10 | 15 | 2
+INPUTS | 7 | eem_io_3  | sr_sr<18>  | eem_io_4  | ifc_mode<1>  | eem_io_5  | sr_sr<17>  | le_clk
+INPUTMC | 3 | 2 | 6 | 2 | 7 | 0 | 10
+INPUTP | 4 | 116 | 113 | 161 | 105
+EQ | 8 | 
+   sr_sr<18> := !eem_io_3 & sr_sr<18>
+	# eem_io_4 & sr_sr<18>
+	# !ifc_mode<1> & eem_io_5 & sr_sr<18>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<17> & 
+	!le_clk
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<17> & 
+	!le_clk;	// (5 pt, 7 inp)
+   sr_sr<18>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 2 | 7 | sr_sr<17>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 3 | 2 | 7 | 2 | 6 | 3 | 5
+INPUTS | 7 | eem_io_3  | sr_sr<17>  | eem_io_4  | ifc_mode<1>  | eem_io_5  | sr_sr<16>  | le_clk
+INPUTMC | 3 | 2 | 7 | 3 | 3 | 0 | 10
+INPUTP | 4 | 116 | 113 | 161 | 105
+EQ | 8 | 
+   sr_sr<17> := !eem_io_3 & sr_sr<17>
+	# eem_io_4 & sr_sr<17>
+	# !ifc_mode<1> & eem_io_5 & sr_sr<17>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sr<16> & 
+	!le_clk
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sr<16> & 
+	!le_clk;	// (5 pt, 7 inp)
+   sr_sr<17>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 3 | 3 | sr_sr<16>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 3 | 3 | 3 | 2 | 7 | 4 | 6
+INPUTS | 8 | eem_io_3  | sr_sr<16>  | eem_io_4  | ifc_mode<1>  | eem_io_5  | ifc_mode<3>  | le_clk  | sr_sr<15>
+INPUTMC | 3 | 3 | 3 | 0 | 10 | 0 | 4
+INPUTP | 5 | 116 | 113 | 161 | 105 | 166
+EQ | 12 | 
+   sr_sr<16> := !eem_io_3 & sr_sr<16>
+	# eem_io_4 & sr_sr<16>
+	# !ifc_mode<1> & eem_io_5 & sr_sr<16>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & ifc_mode<3> & 
+	le_clk
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & !le_clk & 
+	sr_sr<15>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & ifc_mode<3> & 
+	le_clk
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & !le_clk & 
+	sr_sr<15>;	// (7 pt, 8 inp)
+   sr_sr<16>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 0 | 10 | le_clk_MC
+ATTRIBUTES | 2168488708 | 0
+OUTPUTMC | 24 | 0 | 10 | 2 | 10 | 2 | 9 | 2 | 8 | 1 | 14 | 1 | 6 | 1 | 7 | 1 | 8 | 1 | 9 | 1 | 10 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 8 | 0 | 9 | 0 | 4 | 3 | 3 | 2 | 7 | 2 | 6 | 3 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6
+INPUTS | 5 | ifc_mode<1>  | eem_io_3  | eem_io_4  | le_clk  | eem_io_5
+INPUTMC | 1 | 0 | 10
+INPUTP | 4 | 161 | 116 | 113 | 105
+LCT | 1 | 1 | Internal_Name
+EQ | 4 | 
+   le_clk.T := ifc_mode<1> & eem_io_3 & !eem_io_4 & le_clk
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & le_clk;	// (2 pt, 5 inp)
+   le_clk.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+    le_clk.AP = !N_PZ_445;	// CTS	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 0 | 1 | N_PZ_445_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 2 | 13 | 3 | 4 | 0
+INPUTS | 4 | ifc_mode<1>  | eem_io_3  | eem_io_4  | eem_io_5
+INPUTP | 4 | 161 | 116 | 113 | 105
+EQ | 2 | 
+   N_PZ_445 = ifc_mode<1> & eem_io_3 & !eem_io_4
+	# eem_io_3 & !eem_io_4 & !eem_io_5;	// (2 pt, 4 inp)
+
+MACROCELL | 0 | 4 | sr_sr<15>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 3 | 0 | 4 | 3 | 3 | 3 | 1
+INPUTS | 8 | eem_io_3  | sr_sr<15>  | eem_io_4  | ifc_mode<1>  | eem_io_5  | le_clk  | ifc_mode<2>  | sr_sr<14>
+INPUTMC | 3 | 0 | 4 | 0 | 10 | 0 | 9
+INPUTP | 5 | 116 | 113 | 161 | 105 | 167
+EQ | 12 | 
+   sr_sr<15> := !eem_io_3 & sr_sr<15>
+	# eem_io_4 & sr_sr<15>
+	# !ifc_mode<1> & eem_io_5 & sr_sr<15>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & le_clk & 
+	ifc_mode<2>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & !le_clk & 
+	sr_sr<14>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & le_clk & 
+	ifc_mode<2>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & !le_clk & 
+	sr_sr<14>;	// (7 pt, 8 inp)
+   sr_sr<15>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 0 | 9 | sr_sr<14>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 3 | 0 | 9 | 0 | 4 | 4 | 7
+INPUTS | 7 | eem_io_3  | sr_sr<14>  | eem_io_4  | ifc_mode<1>  | eem_io_5  | le_clk  | sr_sr<13>
+INPUTMC | 3 | 0 | 9 | 0 | 10 | 0 | 8
+INPUTP | 4 | 116 | 113 | 161 | 105
+EQ | 9 | 
+   sr_sr<14> := !eem_io_3 & sr_sr<14>
+	# eem_io_4 & sr_sr<14>
+	# !ifc_mode<1> & eem_io_5 & sr_sr<14>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & le_clk
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & !le_clk & 
+	sr_sr<13>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & !le_clk & 
+	sr_sr<13>;	// (6 pt, 7 inp)
+   sr_sr<14>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 0 | 8 | sr_sr<13>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 3 | 0 | 8 | 0 | 9 | 4 | 8
+INPUTS | 8 | eem_io_3  | sr_sr<13>  | eem_io_4  | ifc_mode<1>  | eem_io_5  | le_clk  | ifc_mode<0>  | sr_sr<12>
+INPUTMC | 3 | 0 | 8 | 0 | 10 | 0 | 7
+INPUTP | 5 | 116 | 113 | 161 | 105 | 159
+EQ | 12 | 
+   sr_sr<13> := !eem_io_3 & sr_sr<13>
+	# eem_io_4 & sr_sr<13>
+	# !ifc_mode<1> & eem_io_5 & sr_sr<13>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & le_clk & 
+	ifc_mode<0>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & !le_clk & 
+	sr_sr<12>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & le_clk & 
+	ifc_mode<0>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & !le_clk & 
+	sr_sr<12>;	// (7 pt, 8 inp)
+   sr_sr<13>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 0 | 7 | sr_sr<12>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 3 | 0 | 7 | 0 | 8 | 4 | 9
+INPUTS | 8 | eem_io_3  | sr_sr<12>  | eem_io_4  | ifc_mode<1>  | eem_io_5  | le_clk  | dds_pll_lock_3  | sr_sr<11>
+INPUTMC | 3 | 0 | 7 | 0 | 10 | 0 | 6
+INPUTP | 5 | 116 | 113 | 161 | 105 | 76
+EQ | 12 | 
+   sr_sr<12> := !eem_io_3 & sr_sr<12>
+	# eem_io_4 & sr_sr<12>
+	# !ifc_mode<1> & eem_io_5 & sr_sr<12>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & le_clk & 
+	dds_pll_lock_3
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & !le_clk & 
+	sr_sr<11>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & le_clk & 
+	dds_pll_lock_3
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & !le_clk & 
+	sr_sr<11>;	// (7 pt, 8 inp)
+   sr_sr<12>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 0 | 6 | sr_sr<11>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 0 | 6 | 0 | 7
+INPUTS | 8 | eem_io_3  | sr_sr<11>  | eem_io_4  | ifc_mode<1>  | eem_io_5  | le_clk  | dds_pll_lock_2  | sr_sr<10>
+INPUTMC | 3 | 0 | 6 | 0 | 10 | 0 | 13
+INPUTP | 5 | 116 | 113 | 161 | 105 | 78
+EQ | 12 | 
+   sr_sr<11> := !eem_io_3 & sr_sr<11>
+	# eem_io_4 & sr_sr<11>
+	# !ifc_mode<1> & eem_io_5 & sr_sr<11>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & le_clk & 
+	dds_pll_lock_2
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & !le_clk & 
+	sr_sr<10>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & le_clk & 
+	dds_pll_lock_2
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & !le_clk & 
+	sr_sr<10>;	// (7 pt, 8 inp)
+   sr_sr<11>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 0 | 13 | sr_sr<10>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 6 | 0 | 13 | 0 | 6 | 2 | 13 | 1 | 15 | 5 | 14 | 5 | 1
+INPUTS | 8 | eem_io_3  | sr_sr<10>  | eem_io_4  | ifc_mode<1>  | eem_io_5  | le_clk  | dds_pll_lock_1  | sr_sr<9>
+INPUTMC | 3 | 0 | 13 | 0 | 10 | 1 | 10
+INPUTP | 5 | 116 | 113 | 161 | 105 | 34
+EQ | 12 | 
+   sr_sr<10> := !eem_io_3 & sr_sr<10>
+	# eem_io_4 & sr_sr<10>
+	# !ifc_mode<1> & eem_io_5 & sr_sr<10>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & le_clk & 
+	dds_pll_lock_1
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & !le_clk & 
+	sr_sr<9>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & le_clk & 
+	dds_pll_lock_1
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & !le_clk & 
+	sr_sr<9>;	// (7 pt, 8 inp)
+   sr_sr<10>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 1 | 10 | sr_sr<9>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 6 | 1 | 10 | 0 | 13 | 2 | 11 | 1 | 5 | 7 | 3 | 4 | 4
+INPUTS | 8 | eem_io_3  | sr_sr<9>  | eem_io_4  | ifc_mode<1>  | eem_io_5  | le_clk  | dds_pll_lock  | sr_sr<8>
+INPUTMC | 3 | 1 | 10 | 0 | 10 | 1 | 9
+INPUTP | 5 | 116 | 113 | 161 | 105 | 10
+EQ | 12 | 
+   sr_sr<9> := !eem_io_3 & sr_sr<9>
+	# eem_io_4 & sr_sr<9>
+	# !ifc_mode<1> & eem_io_5 & sr_sr<9>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & le_clk & 
+	dds_pll_lock
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & !le_clk & 
+	sr_sr<8>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & le_clk & 
+	dds_pll_lock
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & !le_clk & 
+	sr_sr<8>;	// (7 pt, 8 inp)
+   sr_sr<9>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 1 | 9 | sr_sr<8>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 6 | 1 | 9 | 1 | 10 | 10 | 14 | 1 | 0 | 4 | 14 | 5 | 0
+INPUTS | 8 | eem_io_3  | sr_sr<8>  | eem_io_4  | ifc_mode<1>  | eem_io_5  | le_clk  | dds_smp_err_3  | sr_sr<7>
+INPUTMC | 3 | 1 | 9 | 0 | 10 | 1 | 8
+INPUTP | 5 | 116 | 113 | 161 | 105 | 69
+EQ | 12 | 
+   sr_sr<8> := !eem_io_3 & sr_sr<8>
+	# eem_io_4 & sr_sr<8>
+	# !ifc_mode<1> & eem_io_5 & sr_sr<8>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & le_clk & 
+	dds_smp_err_3
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & !le_clk & 
+	sr_sr<7>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & le_clk & 
+	dds_smp_err_3
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & !le_clk & 
+	sr_sr<7>;	// (7 pt, 8 inp)
+   sr_sr<8>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 1 | 8 | sr_sr<7>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 3 | 1 | 8 | 1 | 9 | 5 | 6
+INPUTS | 8 | eem_io_3  | sr_sr<7>  | eem_io_4  | ifc_mode<1>  | eem_io_5  | le_clk  | dds_smp_err_2  | sr_sr<6>
+INPUTMC | 3 | 1 | 8 | 0 | 10 | 1 | 7
+INPUTP | 5 | 116 | 113 | 161 | 105 | 74
+EQ | 12 | 
+   sr_sr<7> := !eem_io_3 & sr_sr<7>
+	# eem_io_4 & sr_sr<7>
+	# !ifc_mode<1> & eem_io_5 & sr_sr<7>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & le_clk & 
+	dds_smp_err_2
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & !le_clk & 
+	sr_sr<6>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & le_clk & 
+	dds_smp_err_2
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & !le_clk & 
+	sr_sr<6>;	// (7 pt, 8 inp)
+   sr_sr<7>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 1 | 7 | sr_sr<6>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 3 | 1 | 7 | 1 | 8 | 5 | 7
+INPUTS | 8 | eem_io_3  | sr_sr<6>  | eem_io_4  | ifc_mode<1>  | eem_io_5  | le_clk  | dds_smp_err_1  | sr_sr<5>
+INPUTMC | 3 | 1 | 7 | 0 | 10 | 1 | 6
+INPUTP | 5 | 116 | 113 | 161 | 105 | 28
+EQ | 12 | 
+   sr_sr<6> := !eem_io_3 & sr_sr<6>
+	# eem_io_4 & sr_sr<6>
+	# !ifc_mode<1> & eem_io_5 & sr_sr<6>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & le_clk & 
+	dds_smp_err_1
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & !le_clk & 
+	sr_sr<5>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & le_clk & 
+	dds_smp_err_1
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & !le_clk & 
+	sr_sr<5>;	// (7 pt, 8 inp)
+   sr_sr<6>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 1 | 6 | sr_sr<5>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 3 | 1 | 6 | 1 | 7 | 5 | 8
+INPUTS | 8 | eem_io_3  | sr_sr<5>  | eem_io_4  | ifc_mode<1>  | eem_io_5  | le_clk  | dds_smp_err  | sr_sr<4>
+INPUTMC | 3 | 1 | 6 | 0 | 10 | 1 | 14
+INPUTP | 5 | 116 | 113 | 161 | 105 | 5
+EQ | 12 | 
+   sr_sr<5> := !eem_io_3 & sr_sr<5>
+	# eem_io_4 & sr_sr<5>
+	# !ifc_mode<1> & eem_io_5 & sr_sr<5>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & le_clk & 
+	dds_smp_err
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & !le_clk & 
+	sr_sr<4>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & le_clk & 
+	dds_smp_err
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & !le_clk & 
+	sr_sr<4>;	// (7 pt, 8 inp)
+   sr_sr<5>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 1 | 14 | sr_sr<4>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 3 | 1 | 14 | 1 | 6 | 5 | 9
+INPUTS | 9 | eem_io_3  | sr_sr<4>  | eem_io_4  | ifc_mode<1>  | eem_io_5  | le_clk  | sr_sr<3>  | eem_io_15  | sr_di<3>
+INPUTMC | 4 | 1 | 14 | 0 | 10 | 2 | 8 | 1 | 13
+INPUTP | 5 | 116 | 113 | 161 | 105 | 73
+EQ | 12 | 
+   !sr_sr<4> := !eem_io_3 & !sr_sr<4>
+	# eem_io_4 & !sr_sr<4>
+	# !ifc_mode<1> & eem_io_5 & !sr_sr<4>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & !le_clk & 
+	!sr_sr<3>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & !le_clk & 
+	!sr_sr<3>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & le_clk & 
+	!eem_io_15 & !sr_di<3>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & le_clk & 
+	!eem_io_15 & !sr_di<3>;	// (7 pt, 9 inp)
+   sr_sr<4>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 2 | 8 | sr_sr<3>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 3 | 2 | 8 | 1 | 13 | 1 | 14
+INPUTS | 9 | eem_io_3  | sr_sr<3>  | eem_io_4  | ifc_mode<1>  | eem_io_5  | le_clk  | sr_sr<2>  | eem_io_14  | sr_di<2>
+INPUTMC | 4 | 2 | 8 | 0 | 10 | 2 | 9 | 5 | 10
+INPUTP | 5 | 116 | 113 | 161 | 105 | 62
+EQ | 12 | 
+   !sr_sr<3> := !eem_io_3 & !sr_sr<3>
+	# eem_io_4 & !sr_sr<3>
+	# !ifc_mode<1> & eem_io_5 & !sr_sr<3>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & !le_clk & 
+	!sr_sr<2>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & !le_clk & 
+	!sr_sr<2>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & le_clk & 
+	!eem_io_14 & !sr_di<2>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & le_clk & 
+	!eem_io_14 & !sr_di<2>;	// (7 pt, 9 inp)
+   sr_sr<3>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 2 | 9 | sr_sr<2>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 3 | 2 | 9 | 5 | 10 | 2 | 8
+INPUTS | 9 | eem_io_3  | sr_sr<2>  | eem_io_4  | ifc_mode<1>  | eem_io_5  | le_clk  | sr_sr<1>  | eem_io_13  | sr_di<1>
+INPUTMC | 4 | 2 | 9 | 0 | 10 | 2 | 10 | 4 | 11
+INPUTP | 5 | 116 | 113 | 161 | 105 | 61
+EQ | 12 | 
+   !sr_sr<2> := !eem_io_3 & !sr_sr<2>
+	# eem_io_4 & !sr_sr<2>
+	# !ifc_mode<1> & eem_io_5 & !sr_sr<2>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & !le_clk & 
+	!sr_sr<1>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & !le_clk & 
+	!sr_sr<1>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & le_clk & 
+	!eem_io_13 & !sr_di<1>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & le_clk & 
+	!eem_io_13 & !sr_di<1>;	// (7 pt, 9 inp)
+   sr_sr<2>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 2 | 10 | sr_sr<1>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 3 | 2 | 10 | 4 | 11 | 2 | 9
+INPUTS | 9 | eem_io_3  | sr_sr<1>  | eem_io_4  | ifc_mode<1>  | eem_io_5  | le_clk  | sr_sr<0>  | eem_io_12  | sr_di<0>
+INPUTMC | 4 | 2 | 10 | 0 | 10 | 13 | 3 | 4 | 10
+INPUTP | 5 | 116 | 113 | 161 | 105 | 53
+EQ | 12 | 
+   !sr_sr<1> := !eem_io_3 & !sr_sr<1>
+	# eem_io_4 & !sr_sr<1>
+	# !ifc_mode<1> & eem_io_5 & !sr_sr<1>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & !le_clk & 
+	!sr_sr<0>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & !le_clk & 
+	!sr_sr<0>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & le_clk & 
+	!eem_io_12 & !sr_di<0>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & le_clk & 
+	!eem_io_12 & !sr_di<0>;	// (7 pt, 9 inp)
+   sr_sr<1>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 13 | 3 | sr_sr<0>_MC
+ATTRIBUTES | 2155905088 | 4
+OUTPUTMC | 2 | 4 | 10 | 2 | 10
+INPUTS | 1 | N_PZ_445
+INPUTMC | 1 | 0 | 1
+EQ | 5 | 
+   
+// Direct Input Register
+sr_sr<0> := eem_io_1;	// (0 pt, 0 inp)
+   sr_sr<0>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+    sr_sr<0>.CE = N_PZ_445;	// (1 pt, 1 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 4 | 10 | sr_di<0>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 3 | 2 | 10 | 2 | 14 | 8 | 10
+INPUTS | 1 | sr_sr<0>
+INPUTMC | 1 | 13 | 3
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   sr_di<0> := sr_sr<0>;	// (1 pt, 1 inp)
+    sr_di<0>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 4 | 11 | sr_di<1>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 3 | 2 | 9 | 8 | 13 | 8 | 4
+INPUTS | 1 | sr_sr<1>
+INPUTMC | 1 | 2 | 10
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   sr_di<1> := sr_sr<1>;	// (1 pt, 1 inp)
+    sr_di<1>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 5 | 10 | sr_di<2>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 3 | 2 | 8 | 8 | 11 | 10 | 3
+INPUTS | 1 | sr_sr<2>
+INPUTMC | 1 | 2 | 9
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   sr_di<2> := sr_sr<2>;	// (1 pt, 1 inp)
+    sr_di<2>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 1 | 13 | sr_di<3>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 3 | 1 | 14 | 8 | 15 | 10 | 15
+INPUTS | 1 | sr_sr<3>
+INPUTMC | 1 | 2 | 8
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   sr_di<3> := sr_sr<3>;	// (1 pt, 1 inp)
+    sr_di<3>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 2 | att_s_in<0>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | eem_io_1
+INPUTP | 1 | 107
+EQ | 1 | 
+   att_s_in<0> = eem_io_1;	// (1 pt, 1 inp)
+
+MACROCELL | 2 | 5 | att_s_in<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | att_s_out<0>
+INPUTP | 1 | 194
+EQ | 1 | 
+   att_s_in<1> = att_s_out<0>;	// (1 pt, 1 inp)
+
+MACROCELL | 2 | 1 | att_s_in<2>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | att_s_out<1>
+INPUTP | 1 | 192
+EQ | 1 | 
+   att_s_in<2> = att_s_out<1>;	// (1 pt, 1 inp)
+
+MACROCELL | 4 | 15 | att_s_in<3>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | att_s_out<2>
+INPUTP | 1 | 211
+EQ | 1 | 
+   att_s_in<3> = att_s_out<2>;	// (1 pt, 1 inp)
+
+MACROCELL | 1 | 11 | clk_div_MC
+ATTRIBUTES | 1141113602 | 0
+INPUTS | 2 | sr_di<22>  | sr_di<23>
+INPUTMC | 2 | 4 | 5 | 4 | 3
+LCT | 1 | 5 | Internal_Name
+EQ | 2 | 
+   !clk_div = !sr_di<22> & sr_di<23>;	// (1 pt, 2 inp)
+    clk_div.OE = !N_PZ_442;	// CTE	(1 pt, 1 inp)
+
+MACROCELL | 4 | 5 | sr_di<22>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 2 | 1 | 11 | 5 | 11
+INPUTS | 1 | sr_sr<22>
+INPUTMC | 1 | 3 | 7
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   sr_di<22> := sr_sr<22>;	// (1 pt, 1 inp)
+    sr_di<22>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 7 | sr_sr<22>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 3 | 3 | 7 | 4 | 5 | 3 | 6
+INPUTS | 7 | eem_io_3  | sr_sr<22>  | eem_io_4  | ifc_mode<1>  | eem_io_5  | le_clk  | sr_sr<21>
+INPUTMC | 3 | 3 | 7 | 0 | 10 | 3 | 8
+INPUTP | 4 | 116 | 113 | 161 | 105
+EQ | 8 | 
+   sr_sr<22> := !eem_io_3 & sr_sr<22>
+	# eem_io_4 & sr_sr<22>
+	# !ifc_mode<1> & eem_io_5 & sr_sr<22>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & !le_clk & 
+	sr_sr<21>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & !le_clk & 
+	sr_sr<21>;	// (5 pt, 7 inp)
+   sr_sr<22>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 3 | 8 | sr_sr<21>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 3 | 3 | 8 | 3 | 7 | 8 | 14
+INPUTS | 7 | eem_io_3  | sr_sr<21>  | eem_io_4  | ifc_mode<1>  | eem_io_5  | le_clk  | sr_sr<20>
+INPUTMC | 3 | 3 | 8 | 0 | 10 | 3 | 9
+INPUTP | 4 | 116 | 113 | 161 | 105
+EQ | 8 | 
+   sr_sr<21> := !eem_io_3 & sr_sr<21>
+	# eem_io_4 & sr_sr<21>
+	# !ifc_mode<1> & eem_io_5 & sr_sr<21>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & !le_clk & 
+	sr_sr<20>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & !le_clk & 
+	sr_sr<20>;	// (5 pt, 7 inp)
+   sr_sr<21>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 3 | 9 | sr_sr<20>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 3 | 3 | 9 | 3 | 8 | 10 | 11
+INPUTS | 7 | eem_io_3  | sr_sr<20>  | eem_io_4  | ifc_mode<1>  | eem_io_5  | sr_sr<19>  | le_clk
+INPUTMC | 3 | 3 | 9 | 3 | 10 | 0 | 10
+INPUTP | 4 | 116 | 113 | 161 | 105
+EQ | 8 | 
+   !sr_sr<20> := !eem_io_3 & !sr_sr<20>
+	# eem_io_4 & !sr_sr<20>
+	# !ifc_mode<1> & eem_io_5 & !sr_sr<20>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & !sr_sr<19> & 
+	!le_clk
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & !sr_sr<19> & 
+	!le_clk;	// (5 pt, 7 inp)
+   sr_sr<20>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 4 | 3 | sr_di<23>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 2 | 1 | 11 | 5 | 11
+INPUTS | 1 | sr_sr<23>
+INPUTMC | 1 | 3 | 6
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   sr_di<23> := sr_sr<23>;	// (1 pt, 1 inp)
+    sr_di<23>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 6 | sr_sr<23>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 3 | 3 | 6 | 4 | 3 | 4 | 0
+INPUTS | 7 | eem_io_3  | sr_sr<23>  | eem_io_4  | ifc_mode<1>  | eem_io_5  | le_clk  | sr_sr<22>
+INPUTMC | 3 | 3 | 6 | 0 | 10 | 3 | 7
+INPUTP | 4 | 116 | 113 | 161 | 105
+EQ | 8 | 
+   sr_sr<23> := !eem_io_3 & sr_sr<23>
+	# eem_io_4 & sr_sr<23>
+	# !ifc_mode<1> & eem_io_5 & sr_sr<23>
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & !le_clk & 
+	sr_sr<22>
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & !le_clk & 
+	sr_sr<22>;	// (5 pt, 7 inp)
+   sr_sr<23>.CLK  =  eem_io;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 5 | 11 | N_PZ_442_MC
+ATTRIBUTES | 536871680 | 0
+INPUTS | 4 | sr_di<22>  | sr_di<23>  | ifc_mode<0>  | variant
+INPUTMC | 2 | 4 | 5 | 4 | 3
+INPUTP | 2 | 159 | 171
+EQ | 2 | 
+   N_PZ_442 = sr_di<22> & !sr_di<23>
+	# !ifc_mode<0> & !sr_di<23> & !variant;	// (2 pt, 4 inp)
+
+MACROCELL | 3 | 5 | clk_in_sel_MC
+ATTRIBUTES | 2290352898 | 0
+OUTPUTMC | 1 | 0 | 14
+INPUTS | 1 | sr_sr<17>
+INPUTMC | 1 | 2 | 7
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   clk_in_sel := sr_sr<17>;	// (1 pt, 1 inp)
+    clk_in_sel.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 8 | 14 | clk_mmcx_osc_sel_MC
+ATTRIBUTES | 2290352898 | 0
+OUTPUTMC | 1 | 0 | 14
+INPUTS | 1 | sr_sr<21>
+INPUTMC | 1 | 3 | 8
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   clk_mmcx_osc_sel := sr_sr<21>;	// (1 pt, 1 inp)
+    clk_mmcx_osc_sel.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 0 | 14 | clk_osc_en_n_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | clk_in_sel  | clk_mmcx_osc_sel
+INPUTMC | 2 | 3 | 5 | 8 | 14
+EQ | 1 | 
+   !clk_osc_en_n = !clk_in_sel & !clk_mmcx_osc_sel;	// (1 pt, 2 inp)
+
+MACROCELL | 10 | 11 | dds_common_io_reset_MC
+ATTRIBUTES | 142869250 | 0
+INPUTS | 1 | sr_sr<20>
+INPUTMC | 1 | 3 | 9
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   dds_common_io_reset := sr_sr<20>;	// (1 pt, 1 inp)
+    dds_common_io_reset.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 11 | 4 | dds_common_master_reset_MC
+ATTRIBUTES | 2290352898 | 0
+OUTPUTMC | 4 | 8 | 0 | 3 | 0 | 15 | 1 | 15 | 10
+INPUTS | 1 | sr_sr<19>
+INPUTMC | 1 | 3 | 10
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   dds_common_master_reset := sr_sr<19>;	// (1 pt, 1 inp)
+    dds_common_master_reset.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 0 | 0 | dds_cs_n_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 5 | ifc_mode<1>  | eem_io_5  | sr_di<13>  | eem_io_3  | eem_io_4
+INPUTMC | 1 | 4 | 8
+INPUTP | 4 | 161 | 105 | 116 | 113
+EQ | 4 | 
+   !dds_cs_n = ifc_mode<1> & eem_io_5 & !sr_di<13>
+	# ifc_mode<1> & eem_io_3 & eem_io_4 & sr_di<13>
+	# !ifc_mode<1> & !eem_io_3 & !eem_io_4 & eem_io_5
+	# eem_io_3 & eem_io_4 & !eem_io_5 & sr_di<13>;	// (4 pt, 5 inp)
+
+MACROCELL | 4 | 8 | sr_di<13>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 7 | 0 | 0 | 1 | 12 | 0 | 3 | 1 | 3 | 0 | 5 | 0 | 12 | 0 | 11
+INPUTS | 1 | sr_sr<13>
+INPUTMC | 1 | 0 | 8
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   sr_di<13> := sr_sr<13>;	// (1 pt, 1 inp)
+    sr_di<13>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 6 | 10 | dds_cs_n_1_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 5 | ifc_mode<1>  | eem_io_5  | sr_di<14>  | eem_io_3  | eem_io_4
+INPUTMC | 1 | 4 | 7
+INPUTP | 4 | 161 | 105 | 116 | 113
+EQ | 4 | 
+   !dds_cs_n_1 = ifc_mode<1> & eem_io_5 & !sr_di<14>
+	# ifc_mode<1> & eem_io_3 & eem_io_4 & sr_di<14>
+	# !ifc_mode<1> & eem_io_3 & !eem_io_4 & eem_io_5
+	# eem_io_3 & eem_io_4 & !eem_io_5 & sr_di<14>;	// (4 pt, 5 inp)
+
+MACROCELL | 4 | 7 | sr_di<14>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 4 | 6 | 10 | 5 | 2 | 6 | 2 | 6 | 4
+INPUTS | 1 | sr_sr<14>
+INPUTMC | 1 | 0 | 9
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   sr_di<14> := sr_sr<14>;	// (1 pt, 1 inp)
+    sr_di<14>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 14 | dds_cs_n_2_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 5 | ifc_mode<1>  | eem_io_5  | sr_di<15>  | eem_io_3  | eem_io_4
+INPUTMC | 1 | 3 | 1
+INPUTP | 4 | 161 | 105 | 116 | 113
+EQ | 4 | 
+   !dds_cs_n_2 = ifc_mode<1> & eem_io_5 & !sr_di<15>
+	# ifc_mode<1> & eem_io_3 & eem_io_4 & sr_di<15>
+	# !ifc_mode<1> & !eem_io_3 & eem_io_4 & eem_io_5
+	# eem_io_3 & eem_io_4 & !eem_io_5 & sr_di<15>;	// (4 pt, 5 inp)
+
+MACROCELL | 3 | 1 | sr_di<15>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 4 | 3 | 14 | 3 | 15 | 3 | 12 | 3 | 13
+INPUTS | 1 | sr_sr<15>
+INPUTMC | 1 | 0 | 4
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   sr_di<15> := sr_sr<15>;	// (1 pt, 1 inp)
+    sr_di<15>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 2 | dds_cs_n_3_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 5 | ifc_mode<1>  | eem_io_5  | sr_di<16>  | eem_io_3  | eem_io_4
+INPUTMC | 1 | 4 | 6
+INPUTP | 4 | 161 | 105 | 116 | 113
+EQ | 3 | 
+   !dds_cs_n_3 = ifc_mode<1> & eem_io_5 & !sr_di<16>
+	# eem_io_3 & eem_io_4 & sr_di<16>
+	# !ifc_mode<1> & eem_io_3 & eem_io_4 & eem_io_5;	// (3 pt, 5 inp)
+
+MACROCELL | 4 | 6 | sr_di<16>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 4 | 3 | 2 | 1 | 2 | 3 | 11 | 3 | 4
+INPUTS | 1 | sr_sr<16>
+INPUTMC | 1 | 3 | 3
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   sr_di<16> := sr_sr<16>;	// (1 pt, 1 inp)
+    sr_di<16>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 9 | 2 | dds_drctl_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   !dds_drctl = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 0 | 2 | dds_drctl_1_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   !dds_drctl_1 = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 6 | 11 | dds_drctl_2_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   !dds_drctl_2 = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 4 | 12 | dds_drctl_3_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   !dds_drctl_3 = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 8 | 12 | dds_drhold_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   dds_drhold = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 0 | 15 | dds_drhold_1_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   dds_drhold_1 = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 4 | 13 | dds_drhold_2_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   dds_drhold_2 = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 4 | 1 | dds_drhold_3_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   dds_drhold_3 = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 1 | 12 | dds_io_update_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 3 | sr_di<13>  | sr_di<12>  | eem_io_6
+INPUTMC | 2 | 4 | 8 | 4 | 9
+INPUTP | 1 | 102
+EQ | 2 | 
+   dds_io_update = sr_di<13> & sr_di<12>
+	# !sr_di<13> & eem_io_6;	// (2 pt, 3 inp)
+
+MACROCELL | 4 | 9 | sr_di<12>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 4 | 1 | 12 | 5 | 2 | 3 | 15 | 1 | 2
+INPUTS | 1 | sr_sr<12>
+INPUTMC | 1 | 0 | 7
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   sr_di<12> := sr_sr<12>;	// (1 pt, 1 inp)
+    sr_di<12>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 5 | 2 | dds_io_update_1_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 3 | sr_di<14>  | sr_di<12>  | eem_io_6
+INPUTMC | 2 | 4 | 7 | 4 | 9
+INPUTP | 1 | 102
+EQ | 2 | 
+   dds_io_update_1 = sr_di<14> & sr_di<12>
+	# !sr_di<14> & eem_io_6;	// (2 pt, 3 inp)
+
+MACROCELL | 3 | 15 | dds_io_update_2_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 3 | sr_di<15>  | sr_di<12>  | eem_io_6
+INPUTMC | 2 | 3 | 1 | 4 | 9
+INPUTP | 1 | 102
+EQ | 2 | 
+   dds_io_update_2 = sr_di<15> & sr_di<12>
+	# !sr_di<15> & eem_io_6;	// (2 pt, 3 inp)
+
+MACROCELL | 1 | 2 | dds_io_update_3_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 3 | sr_di<16>  | sr_di<12>  | eem_io_6
+INPUTMC | 2 | 4 | 6 | 4 | 9
+INPUTP | 1 | 102
+EQ | 2 | 
+   dds_io_update_3 = sr_di<16> & sr_di<12>
+	# !sr_di<16> & eem_io_6;	// (2 pt, 3 inp)
+
+MACROCELL | 2 | 14 | dds_led<0>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | eem_io_12  | sr_di<0>
+INPUTMC | 1 | 4 | 10
+INPUTP | 1 | 53
+EQ | 1 | 
+   !dds_led<0> = !eem_io_12 & !sr_di<0>;	// (1 pt, 2 inp)
+
+MACROCELL | 10 | 4 | dds_led<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 5 | ifc_mode<0>  | variant  | sr_di<4>  | dds_pll_lock  | dds_smp_err
+INPUTMC | 1 | 5 | 9
+INPUTP | 4 | 159 | 171 | 10 | 5
+EQ | 2 | 
+   !dds_led<1> = !ifc_mode<0> & !variant & !sr_di<4>
+	# dds_pll_lock & !dds_smp_err & !sr_di<4>;	// (2 pt, 5 inp)
+
+MACROCELL | 5 | 9 | sr_di<4>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 1 | 10 | 4
+INPUTS | 1 | sr_sr<4>
+INPUTMC | 1 | 1 | 14
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   sr_di<4> := sr_sr<4>;	// (1 pt, 1 inp)
+    sr_di<4>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 8 | 13 | dds_led_1<0>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | eem_io_13  | sr_di<1>
+INPUTMC | 1 | 4 | 11
+INPUTP | 1 | 61
+EQ | 1 | 
+   !dds_led_1<0> = !eem_io_13 & !sr_di<1>;	// (1 pt, 2 inp)
+
+MACROCELL | 10 | 2 | dds_led_1<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 5 | ifc_mode<0>  | variant  | sr_di<5>  | dds_pll_lock_1  | dds_smp_err_1
+INPUTMC | 1 | 5 | 8
+INPUTP | 4 | 159 | 171 | 34 | 28
+EQ | 2 | 
+   !dds_led_1<1> = !ifc_mode<0> & !variant & !sr_di<5>
+	# dds_pll_lock_1 & !dds_smp_err_1 & !sr_di<5>;	// (2 pt, 5 inp)
+
+MACROCELL | 5 | 8 | sr_di<5>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 1 | 10 | 2
+INPUTS | 1 | sr_sr<5>
+INPUTMC | 1 | 1 | 6
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   sr_di<5> := sr_sr<5>;	// (1 pt, 1 inp)
+    sr_di<5>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 8 | 11 | dds_led_2<0>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | eem_io_14  | sr_di<2>
+INPUTMC | 1 | 5 | 10
+INPUTP | 1 | 62
+EQ | 1 | 
+   !dds_led_2<0> = !eem_io_14 & !sr_di<2>;	// (1 pt, 2 inp)
+
+MACROCELL | 8 | 1 | dds_led_2<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 5 | ifc_mode<0>  | variant  | sr_di<6>  | dds_pll_lock_2  | dds_smp_err_2
+INPUTMC | 1 | 5 | 7
+INPUTP | 4 | 159 | 171 | 78 | 74
+EQ | 2 | 
+   !dds_led_2<1> = !ifc_mode<0> & !variant & !sr_di<6>
+	# dds_pll_lock_2 & !dds_smp_err_2 & !sr_di<6>;	// (2 pt, 5 inp)
+
+MACROCELL | 5 | 7 | sr_di<6>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 1 | 8 | 1
+INPUTS | 1 | sr_sr<6>
+INPUTMC | 1 | 1 | 7
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   sr_di<6> := sr_sr<6>;	// (1 pt, 1 inp)
+    sr_di<6>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 8 | 15 | dds_led_3<0>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | eem_io_15  | sr_di<3>
+INPUTMC | 1 | 1 | 13
+INPUTP | 1 | 73
+EQ | 1 | 
+   !dds_led_3<0> = !eem_io_15 & !sr_di<3>;	// (1 pt, 2 inp)
+
+MACROCELL | 10 | 0 | dds_led_3<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 5 | ifc_mode<0>  | variant  | sr_di<7>  | dds_pll_lock_3  | dds_smp_err_3
+INPUTMC | 1 | 5 | 6
+INPUTP | 4 | 159 | 171 | 76 | 69
+EQ | 2 | 
+   !dds_led_3<1> = !ifc_mode<0> & !variant & !sr_di<7>
+	# dds_pll_lock_3 & !dds_smp_err_3 & !sr_di<7>;	// (2 pt, 5 inp)
+
+MACROCELL | 5 | 6 | sr_di<7>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 1 | 10 | 0
+INPUTS | 1 | sr_sr<7>
+INPUTMC | 1 | 1 | 8
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   sr_di<7> := sr_sr<7>;	// (1 pt, 1 inp)
+    sr_di<7>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 8 | 2 | dds_osk_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   !dds_osk = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 1 | 1 | dds_osk_1_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   !dds_osk_1 = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 6 | 3 | dds_osk_2_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   !dds_osk_2 = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 4 | 2 | dds_osk_3_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   !dds_osk_3 = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 10 | 14 | dds_profile<0>_MC
+ATTRIBUTES | 142869250 | 0
+INPUTS | 1 | sr_sr<8>
+INPUTMC | 1 | 1 | 9
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   dds_profile<0> := sr_sr<8>;	// (1 pt, 1 inp)
+    dds_profile<0>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 11 | dds_profile<1>_MC
+ATTRIBUTES | 142869250 | 0
+INPUTS | 1 | sr_sr<9>
+INPUTMC | 1 | 1 | 10
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   dds_profile<1> := sr_sr<9>;	// (1 pt, 1 inp)
+    dds_profile<1>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 13 | dds_profile<2>_MC
+ATTRIBUTES | 142869250 | 0
+INPUTS | 1 | sr_sr<10>
+INPUTMC | 1 | 0 | 13
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   dds_profile<2> := sr_sr<10>;	// (1 pt, 1 inp)
+    dds_profile<2>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 1 | 0 | dds_profile_1<0>_MC
+ATTRIBUTES | 142869250 | 0
+INPUTS | 1 | sr_sr<8>
+INPUTMC | 1 | 1 | 9
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   dds_profile_1<0> := sr_sr<8>;	// (1 pt, 1 inp)
+    dds_profile_1<0>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 1 | 5 | dds_profile_1<1>_MC
+ATTRIBUTES | 142869250 | 0
+INPUTS | 1 | sr_sr<9>
+INPUTMC | 1 | 1 | 10
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   dds_profile_1<1> := sr_sr<9>;	// (1 pt, 1 inp)
+    dds_profile_1<1>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 1 | 15 | dds_profile_1<2>_MC
+ATTRIBUTES | 142869250 | 0
+INPUTS | 1 | sr_sr<10>
+INPUTMC | 1 | 0 | 13
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   dds_profile_1<2> := sr_sr<10>;	// (1 pt, 1 inp)
+    dds_profile_1<2>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 4 | 14 | dds_profile_2<0>_MC
+ATTRIBUTES | 142869250 | 0
+INPUTS | 1 | sr_sr<8>
+INPUTMC | 1 | 1 | 9
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   dds_profile_2<0> := sr_sr<8>;	// (1 pt, 1 inp)
+    dds_profile_2<0>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 7 | 3 | dds_profile_2<1>_MC
+ATTRIBUTES | 142869250 | 0
+INPUTS | 1 | sr_sr<9>
+INPUTMC | 1 | 1 | 10
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   dds_profile_2<1> := sr_sr<9>;	// (1 pt, 1 inp)
+    dds_profile_2<1>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 5 | 14 | dds_profile_2<2>_MC
+ATTRIBUTES | 142869250 | 0
+INPUTS | 1 | sr_sr<10>
+INPUTMC | 1 | 0 | 13
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   dds_profile_2<2> := sr_sr<10>;	// (1 pt, 1 inp)
+    dds_profile_2<2>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 5 | 0 | dds_profile_3<0>_MC
+ATTRIBUTES | 142869250 | 0
+INPUTS | 1 | sr_sr<8>
+INPUTMC | 1 | 1 | 9
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   dds_profile_3<0> := sr_sr<8>;	// (1 pt, 1 inp)
+    dds_profile_3<0>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 4 | 4 | dds_profile_3<1>_MC
+ATTRIBUTES | 142869250 | 0
+INPUTS | 1 | sr_sr<9>
+INPUTMC | 1 | 1 | 10
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   dds_profile_3<1> := sr_sr<9>;	// (1 pt, 1 inp)
+    dds_profile_3<1>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 5 | 1 | dds_profile_3<2>_MC
+ATTRIBUTES | 142869250 | 0
+INPUTS | 1 | sr_sr<10>
+INPUTMC | 1 | 0 | 13
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   dds_profile_3<2> := sr_sr<10>;	// (1 pt, 1 inp)
+    dds_profile_3<2>.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 8 | 0 | dds_reset_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | dds_common_master_reset  | ifc_mode<0>  | variant  | eem_io_7
+INPUTMC | 1 | 11 | 4
+INPUTP | 3 | 159 | 171 | 104
+EQ | 2 | 
+   dds_reset = dds_common_master_reset
+	# !ifc_mode<0> & !variant & eem_io_7;	// (2 pt, 4 inp)
+
+MACROCELL | 3 | 0 | dds_reset_1_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | dds_common_master_reset  | ifc_mode<0>  | variant  | eem_io_7
+INPUTMC | 1 | 11 | 4
+INPUTP | 3 | 159 | 171 | 104
+EQ | 2 | 
+   dds_reset_1 = dds_common_master_reset
+	# !ifc_mode<0> & !variant & eem_io_7;	// (2 pt, 4 inp)
+
+MACROCELL | 15 | 1 | dds_reset_2_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | dds_common_master_reset  | ifc_mode<0>  | variant  | eem_io_7
+INPUTMC | 1 | 11 | 4
+INPUTP | 3 | 159 | 171 | 104
+EQ | 2 | 
+   dds_reset_2 = dds_common_master_reset
+	# !ifc_mode<0> & !variant & eem_io_7;	// (2 pt, 4 inp)
+
+MACROCELL | 15 | 10 | dds_reset_3_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | dds_common_master_reset  | ifc_mode<0>  | variant  | eem_io_7
+INPUTMC | 1 | 11 | 4
+INPUTP | 3 | 159 | 171 | 104
+EQ | 2 | 
+   dds_reset_3 = dds_common_master_reset
+	# !ifc_mode<0> & !variant & eem_io_7;	// (2 pt, 4 inp)
+
+MACROCELL | 8 | 10 | dds_rf_sw_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | eem_io_12  | sr_di<0>
+INPUTMC | 1 | 4 | 10
+INPUTP | 1 | 53
+EQ | 1 | 
+   !dds_rf_sw = !eem_io_12 & !sr_di<0>;	// (1 pt, 2 inp)
+
+MACROCELL | 8 | 4 | dds_rf_sw_1_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | eem_io_13  | sr_di<1>
+INPUTMC | 1 | 4 | 11
+INPUTP | 1 | 61
+EQ | 1 | 
+   !dds_rf_sw_1 = !eem_io_13 & !sr_di<1>;	// (1 pt, 2 inp)
+
+MACROCELL | 10 | 3 | dds_rf_sw_2_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | eem_io_14  | sr_di<2>
+INPUTMC | 1 | 5 | 10
+INPUTP | 1 | 62
+EQ | 1 | 
+   !dds_rf_sw_2 = !eem_io_14 & !sr_di<2>;	// (1 pt, 2 inp)
+
+MACROCELL | 10 | 15 | dds_rf_sw_3_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | eem_io_15  | sr_di<3>
+INPUTMC | 1 | 1 | 13
+INPUTP | 1 | 73
+EQ | 1 | 
+   !dds_rf_sw_3 = !eem_io_15 & !sr_di<3>;	// (1 pt, 2 inp)
+
+MACROCELL | 0 | 3 | dds_sck_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | ifc_mode<1>  | eem_io  | sr_di<13>  | eem_io_2.PIN
+INPUTMC | 1 | 4 | 8
+INPUTP | 3 | 161 | 48 | 114
+EQ | 3 | 
+   dds_sck = !ifc_mode<1> & eem_io
+	# eem_io & sr_di<13>
+	# ifc_mode<1> & !sr_di<13> & eem_io_2.PIN;	// (3 pt, 4 inp)
+
+MACROCELL | 6 | 2 | dds_sck_1_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | ifc_mode<1>  | eem_io  | sr_di<14>  | eem_io_2.PIN
+INPUTMC | 1 | 4 | 7
+INPUTP | 3 | 161 | 48 | 114
+EQ | 3 | 
+   dds_sck_1 = !ifc_mode<1> & eem_io
+	# eem_io & sr_di<14>
+	# ifc_mode<1> & !sr_di<14> & eem_io_2.PIN;	// (3 pt, 4 inp)
+
+MACROCELL | 3 | 12 | dds_sck_2_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | ifc_mode<1>  | eem_io  | sr_di<15>  | eem_io_2.PIN
+INPUTMC | 1 | 3 | 1
+INPUTP | 3 | 161 | 48 | 114
+EQ | 3 | 
+   dds_sck_2 = !ifc_mode<1> & eem_io
+	# eem_io & sr_di<15>
+	# ifc_mode<1> & !sr_di<15> & eem_io_2.PIN;	// (3 pt, 4 inp)
+
+MACROCELL | 3 | 11 | dds_sck_3_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | ifc_mode<1>  | eem_io  | sr_di<16>  | eem_io_2.PIN
+INPUTMC | 1 | 4 | 6
+INPUTP | 3 | 161 | 48 | 114
+EQ | 3 | 
+   dds_sck_3 = !ifc_mode<1> & eem_io
+	# eem_io & sr_di<16>
+	# ifc_mode<1> & !sr_di<16> & eem_io_2.PIN;	// (3 pt, 4 inp)
+
+MACROCELL | 1 | 3 | dds_sdi_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | ifc_mode<1>  | eem_io_1  | sr_di<13>  | eem_io_8
+INPUTMC | 1 | 4 | 8
+INPUTP | 3 | 161 | 107 | 50
+EQ | 3 | 
+   dds_sdi = !ifc_mode<1> & eem_io_1
+	# eem_io_1 & sr_di<13>
+	# ifc_mode<1> & !sr_di<13> & eem_io_8;	// (3 pt, 4 inp)
+
+MACROCELL | 6 | 4 | dds_sdi_1_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | ifc_mode<1>  | eem_io_1  | sr_di<14>  | eem_io_9
+INPUTMC | 1 | 4 | 7
+INPUTP | 3 | 161 | 107 | 29
+EQ | 3 | 
+   dds_sdi_1 = !ifc_mode<1> & eem_io_1
+	# eem_io_1 & sr_di<14>
+	# ifc_mode<1> & !sr_di<14> & eem_io_9;	// (3 pt, 4 inp)
+
+MACROCELL | 3 | 13 | dds_sdi_2_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | ifc_mode<1>  | eem_io_1  | sr_di<15>  | eem_io_10.PIN
+INPUTMC | 1 | 3 | 1
+INPUTP | 3 | 161 | 107 | 70
+EQ | 3 | 
+   dds_sdi_2 = !ifc_mode<1> & eem_io_1
+	# eem_io_1 & sr_di<15>
+	# ifc_mode<1> & !sr_di<15> & eem_io_10.PIN;	// (3 pt, 4 inp)
+
+MACROCELL | 3 | 4 | dds_sdi_3_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | ifc_mode<1>  | eem_io_1  | sr_di<16>  | eem_io_11
+INPUTMC | 1 | 4 | 6
+INPUTP | 3 | 161 | 107 | 60
+EQ | 3 | 
+   dds_sdi_3 = !ifc_mode<1> & eem_io_1
+	# eem_io_1 & sr_di<16>
+	# ifc_mode<1> & !sr_di<16> & eem_io_11;	// (3 pt, 4 inp)
+
+MACROCELL | 7 | 12 | dds_sync_clk_out_en_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | ifc_mode<1>  | ifc_mode<2>  | ifc_mode<0>  | variant
+INPUTP | 4 | 161 | 167 | 159 | 171
+EQ | 2 | 
+   dds_sync_clk_out_en = !ifc_mode<1> & ifc_mode<2> & ifc_mode<0>
+	# !ifc_mode<1> & ifc_mode<2> & variant;	// (2 pt, 4 inp)
+
+MACROCELL | 7 | 0 | dds_sync_sync_out_en_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | ifc_mode<1>  | ifc_mode<2>  | ifc_mode<0>  | variant
+INPUTP | 4 | 161 | 167 | 159 | 171
+EQ | 2 | 
+   dds_sync_sync_out_en = !ifc_mode<1> & ifc_mode<2> & ifc_mode<0>
+	# !ifc_mode<1> & ifc_mode<2> & variant;	// (2 pt, 4 inp)
+
+MACROCELL | 15 | 2 | dds_sync_sync_sel_MC
+ATTRIBUTES | 142869250 | 0
+INPUTS | 1 | sr_sr<18>
+INPUTMC | 1 | 2 | 6
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   dds_sync_sync_sel := sr_sr<18>;	// (1 pt, 1 inp)
+    dds_sync_sync_sel.CLK = le_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 7 | 2 | eem_io_10_MC
+ATTRIBUTES | 1141113602 | 2
+INPUTS | 1 | eem_io_6
+INPUTP | 1 | 102
+LCT | 1 | 5 | Internal_Name
+EQ | 2 | 
+   eem_io_10 = eem_io_6;	// (1 pt, 1 inp)
+    eem_io_10.OE = !ifc_mode<1> & ifc_mode<2>;	// CTE	(1 pt, 2 inp)
+
+MACROCELL | 12 | 1 | eem_io_2_MC
+ATTRIBUTES | 1141113602 | 2
+INPUTS | 10 | ifc_mode<1>  | eem_io_3  | eem_io_4  | dds_sdo  | sr_sdo  | att_s_out<3>  | eem_io_5  | dds_sdo_3  | dds_sdo_1  | dds_sdo_2
+INPUTMC | 1 | 4 | 0
+INPUTP | 9 | 161 | 116 | 113 | 215 | 91 | 105 | 18 | 31 | 30
+LCT | 1 | 5 | Internal_Name
+EQ | 16 | 
+   eem_io_2 = ifc_mode<1> & eem_io_3 & eem_io_4 & dds_sdo
+	# ifc_mode<1> & eem_io_3 & !eem_io_4 & sr_sdo
+	# ifc_mode<1> & !eem_io_3 & eem_io_4 & 
+	att_s_out<3>
+	# eem_io_3 & eem_io_4 & !eem_io_5 & dds_sdo
+	# eem_io_3 & !eem_io_4 & !eem_io_5 & sr_sdo
+	# !eem_io_3 & eem_io_4 & !eem_io_5 & att_s_out<3>
+	# !ifc_mode<1> & eem_io_3 & eem_io_4 & eem_io_5 & 
+	dds_sdo_3
+	# !ifc_mode<1> & eem_io_3 & !eem_io_4 & eem_io_5 & 
+	dds_sdo_1
+	# !ifc_mode<1> & !eem_io_3 & eem_io_4 & eem_io_5 & 
+	dds_sdo_2
+	# !ifc_mode<1> & !eem_io_3 & !eem_io_4 & eem_io_5 & 
+	dds_sdo;	// (10 pt, 10 inp)
+    eem_io_2.OE = !ifc_mode<1>;	// CTE	(1 pt, 1 inp)
+
+MACROCELL | 4 | 0 | sr_sdo_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 1 | 12 | 1
+INPUTS | 2 | sr_sr<23>  | N_PZ_445
+INPUTMC | 2 | 3 | 6 | 0 | 1
+EQ | 3 | 
+   sr_sdo := sr_sr<23>;	// (1 pt, 1 inp)
+   sr_sdo.CLK  =  !eem_io;	// GCK	(0 pt, 0 inp)
+    sr_sdo.CE = N_PZ_445;	// (1 pt, 1 inp)
+GLOBALS | 1 | 2 | eem_io
+
+MACROCELL | 13 | 0 | eem_oe_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   eem_oe = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 12 | 5 | eem_oe_1_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   eem_oe_1 = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 5 | 13 | eem_oe_10_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | ifc_mode<1>  | ifc_mode<2>
+INPUTP | 2 | 161 | 167
+EQ | 1 | 
+   eem_oe_10 = !ifc_mode<1> & ifc_mode<2>;	// (1 pt, 2 inp)
+
+MACROCELL | 5 | 15 | eem_oe_11_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   eem_oe_11 = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 7 | 15 | eem_oe_12_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   eem_oe_12 = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 15 | 12 | eem_oe_13_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   eem_oe_13 = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 15 | 13 | eem_oe_14_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   eem_oe_14 = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 15 | 5 | eem_oe_15_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   eem_oe_15 = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 14 | 10 | eem_oe_2_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | ifc_mode<1>
+INPUTP | 1 | 161
+EQ | 1 | 
+   eem_oe_2 = !ifc_mode<1>;	// (1 pt, 1 inp)
+
+MACROCELL | 12 | 13 | eem_oe_3_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   eem_oe_3 = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 14 | 0 | eem_oe_4_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   eem_oe_4 = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 14 | 3 | eem_oe_5_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   eem_oe_5 = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 14 | 5 | eem_oe_6_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   eem_oe_6 = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 12 | 12 | eem_oe_7_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   eem_oe_7 = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 7 | 14 | eem_oe_8_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   eem_oe_8 = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 7 | 10 | eem_oe_9_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   eem_oe_9 = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 12 | 4 | fsen_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   !fsen = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 0 | 5 | tp_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 5 | ifc_mode<1>  | eem_io_5  | sr_di<13>  | eem_io_3  | eem_io_4
+INPUTMC | 1 | 4 | 8
+INPUTP | 4 | 161 | 105 | 116 | 113
+EQ | 4 | 
+   !tp = ifc_mode<1> & eem_io_5 & !sr_di<13>
+	# ifc_mode<1> & eem_io_3 & eem_io_4 & sr_di<13>
+	# !ifc_mode<1> & !eem_io_3 & !eem_io_4 & eem_io_5
+	# eem_io_3 & eem_io_4 & !eem_io_5 & sr_di<13>;	// (4 pt, 5 inp)
+
+MACROCELL | 0 | 12 | tp_1_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | ifc_mode<1>  | eem_io  | sr_di<13>  | eem_io_2.PIN
+INPUTMC | 1 | 4 | 8
+INPUTP | 3 | 161 | 48 | 114
+EQ | 3 | 
+   tp_1 = !ifc_mode<1> & eem_io
+	# eem_io & sr_di<13>
+	# ifc_mode<1> & !sr_di<13> & eem_io_2.PIN;	// (3 pt, 4 inp)
+
+MACROCELL | 0 | 11 | tp_2_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | ifc_mode<1>  | eem_io_1  | sr_di<13>  | eem_io_8
+INPUTMC | 1 | 4 | 8
+INPUTP | 3 | 161 | 107 | 50
+EQ | 3 | 
+   tp_2 = !ifc_mode<1> & eem_io_1
+	# eem_io_1 & sr_di<13>
+	# ifc_mode<1> & !sr_di<13> & eem_io_8;	// (3 pt, 4 inp)
+
+MACROCELL | 2 | 0 | tp_3_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | dds_sdo
+INPUTP | 1 | 215
+EQ | 1 | 
+   tp_3 = dds_sdo;	// (1 pt, 1 inp)
+
+MACROCELL | 2 | 4 | tp_4_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | dds_drover
+INPUTP | 1 | 183
+EQ | 1 | 
+   tp_4 = dds_drover;	// (1 pt, 1 inp)
+
+PIN | ifc_mode<1> | 64 | 0 | LVCMOS33 | 161 | 51 | 2 | 3 | 2 | 15 | 5 | 12 | 15 | 11 | 2 | 12 | 6 | 0 | 0 | 10 | 0 | 1 | 2 | 10 | 2 | 9 | 2 | 8 | 1 | 14 | 1 | 6 | 1 | 7 | 1 | 8 | 1 | 9 | 1 | 10 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 8 | 0 | 9 | 0 | 4 | 3 | 3 | 2 | 7 | 2 | 6 | 3 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 0 | 0 | 6 | 10 | 3 | 14 | 3 | 2 | 0 | 3 | 6 | 2 | 3 | 12 | 3 | 11 | 1 | 3 | 6 | 4 | 3 | 13 | 3 | 4 | 7 | 12 | 7 | 0 | 12 | 1 | 5 | 13 | 14 | 10 | 0 | 5 | 0 | 12 | 0 | 11
+PIN | eem_io_3 | 64 | 0 | LVCMOS33 | 116 | 37 | 2 | 3 | 2 | 15 | 5 | 12 | 15 | 11 | 2 | 12 | 6 | 0 | 0 | 10 | 0 | 1 | 2 | 10 | 2 | 9 | 2 | 8 | 1 | 14 | 1 | 6 | 1 | 7 | 1 | 8 | 1 | 9 | 1 | 10 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 8 | 0 | 9 | 0 | 4 | 3 | 3 | 2 | 7 | 2 | 6 | 3 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 0 | 0 | 6 | 10 | 3 | 14 | 3 | 2 | 12 | 1 | 0 | 5
+PIN | eem_io_4 | 64 | 0 | LVCMOS33 | 113 | 37 | 2 | 3 | 2 | 15 | 5 | 12 | 15 | 11 | 2 | 12 | 6 | 0 | 0 | 10 | 0 | 1 | 2 | 10 | 2 | 9 | 2 | 8 | 1 | 14 | 1 | 6 | 1 | 7 | 1 | 8 | 1 | 9 | 1 | 10 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 8 | 0 | 9 | 0 | 4 | 3 | 3 | 2 | 7 | 2 | 6 | 3 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 0 | 0 | 6 | 10 | 3 | 14 | 3 | 2 | 12 | 1 | 0 | 5
+PIN | eem_io | 4160 | 0 | LVCMOS33 | 48 | 36 | 2 | 3 | 0 | 3 | 6 | 2 | 3 | 12 | 3 | 11 | 0 | 12 | 2 | 15 | 15 | 11 | 2 | 12 | 6 | 0 | 0 | 10 | 13 | 3 | 2 | 10 | 2 | 9 | 2 | 8 | 1 | 14 | 1 | 6 | 1 | 7 | 1 | 8 | 1 | 9 | 1 | 10 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 8 | 0 | 9 | 0 | 4 | 3 | 3 | 2 | 7 | 2 | 6 | 3 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 4 | 0
+PIN | eem_io_5 | 64 | 0 | LVCMOS33 | 105 | 37 | 2 | 3 | 2 | 15 | 5 | 12 | 15 | 11 | 2 | 12 | 6 | 0 | 0 | 10 | 0 | 1 | 2 | 10 | 2 | 9 | 2 | 8 | 1 | 14 | 1 | 6 | 1 | 7 | 1 | 8 | 1 | 9 | 1 | 10 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 8 | 0 | 9 | 0 | 4 | 3 | 3 | 2 | 7 | 2 | 6 | 3 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 0 | 0 | 6 | 10 | 3 | 14 | 3 | 2 | 12 | 1 | 0 | 5
+PIN | ifc_mode<3> | 64 | 0 | LVCMOS33 | 166 | 1 | 3 | 3
+PIN | ifc_mode<2> | 64 | 0 | LVCMOS33 | 167 | 4 | 0 | 4 | 7 | 12 | 7 | 0 | 5 | 13
+PIN | ifc_mode<0> | 64 | 0 | LVCMOS33 | 159 | 12 | 0 | 8 | 5 | 11 | 10 | 4 | 10 | 2 | 8 | 1 | 10 | 0 | 8 | 0 | 3 | 0 | 15 | 1 | 15 | 10 | 7 | 12 | 7 | 0
+PIN | dds_pll_lock_3 | 64 | 64 | LVCMOS33 | 76 | 2 | 0 | 7 | 10 | 0
+PIN | dds_pll_lock_2 | 64 | 64 | LVCMOS33 | 78 | 2 | 0 | 6 | 8 | 1
+PIN | dds_pll_lock_1 | 64 | 64 | LVCMOS33 | 34 | 2 | 0 | 13 | 10 | 2
+PIN | dds_pll_lock | 64 | 64 | LVCMOS33 | 10 | 2 | 1 | 10 | 10 | 4
+PIN | dds_smp_err_3 | 64 | 64 | LVCMOS33 | 69 | 2 | 1 | 9 | 10 | 0
+PIN | dds_smp_err_2 | 64 | 64 | LVCMOS33 | 74 | 2 | 1 | 8 | 8 | 1
+PIN | dds_smp_err_1 | 64 | 64 | LVCMOS33 | 28 | 2 | 1 | 7 | 10 | 2
+PIN | dds_smp_err | 64 | 64 | LVCMOS33 | 5 | 2 | 1 | 6 | 10 | 4
+PIN | eem_io_12 | 64 | 0 | LVCMOS33 | 53 | 3 | 2 | 10 | 2 | 14 | 8 | 10
+PIN | eem_io_13 | 64 | 0 | LVCMOS33 | 61 | 3 | 2 | 9 | 8 | 13 | 8 | 4
+PIN | eem_io_14 | 64 | 0 | LVCMOS33 | 62 | 3 | 2 | 8 | 8 | 11 | 10 | 3
+PIN | eem_io_15 | 64 | 0 | LVCMOS33 | 73 | 3 | 1 | 14 | 8 | 15 | 10 | 15
+PIN | eem_io_1 | 64 | 0 | LVCMOS33 | 107 | 7 | 2 | 2 | 1 | 3 | 6 | 4 | 3 | 13 | 3 | 4 | 0 | 11 | 13 | 3
+PIN | att_s_out<0> | 64 | 0 | LVCMOS33 | 194 | 1 | 2 | 5
+PIN | att_s_out<1> | 64 | 0 | LVCMOS33 | 192 | 1 | 2 | 1
+PIN | att_s_out<2> | 64 | 0 | LVCMOS33 | 211 | 1 | 4 | 15
+PIN | att_s_out<3> | 64 | 0 | LVCMOS33 | 91 | 1 | 12 | 1
+PIN | variant | 64 | 0 | LVCMOS33 | 171 | 11 | 5 | 11 | 10 | 4 | 10 | 2 | 8 | 1 | 10 | 0 | 8 | 0 | 3 | 0 | 15 | 1 | 15 | 10 | 7 | 12 | 7 | 0
+PIN | dds_drover | 64 | 0 | LVCMOS33 | 183 | 1 | 2 | 4
+PIN | eem_io_6 | 64 | 0 | LVCMOS33 | 102 | 5 | 1 | 12 | 5 | 2 | 3 | 15 | 1 | 2 | 7 | 2
+PIN | eem_io_7 | 64 | 0 | LVCMOS33 | 104 | 4 | 8 | 0 | 3 | 0 | 15 | 1 | 15 | 10
+PIN | eem_io_8 | 64 | 0 | LVCMOS33 | 50 | 2 | 1 | 3 | 0 | 11
+PIN | eem_io_9 | 64 | 0 | LVCMOS33 | 29 | 1 | 6 | 4
+PIN | eem_io_11 | 64 | 0 | LVCMOS33 | 60 | 1 | 3 | 4
+PIN | dds_sdo | 64 | 64 | LVCMOS33 | 215 | 2 | 12 | 1 | 2 | 0
+PIN | dds_sdo_1 | 64 | 64 | LVCMOS33 | 31 | 1 | 12 | 1
+PIN | dds_sdo_2 | 64 | 64 | LVCMOS33 | 30 | 1 | 12 | 1
+PIN | dds_sdo_3 | 64 | 64 | LVCMOS33 | 18 | 1 | 12 | 1
+PIN | att_clk | 536871040 | 0 | LVCMOS33 | 205
+PIN | att_le<0> | 536871040 | 0 | LVCMOS33 | 197
+PIN | att_le<1> | 536871040 | 0 | LVCMOS33 | 87
+PIN | att_le<2> | 536871040 | 0 | LVCMOS33 | 200
+PIN | att_le<3> | 536871040 | 0 | LVCMOS33 | 41
+PIN | att_rst_n | 536871040 | 0 | LVCMOS33 | 90
+PIN | att_s_in<0> | 536871040 | 0 | LVCMOS33 | 206
+PIN | att_s_in<1> | 536871040 | 0 | LVCMOS33 | 203
+PIN | att_s_in<2> | 536871040 | 0 | LVCMOS33 | 207
+PIN | att_s_in<3> | 536871040 | 0 | LVCMOS33 | 42
+PIN | clk_div | 536871040 | 0 | LVCMOS33 | 7
+PIN | clk_in_sel | 536871040 | 0 | LVCMOS33 | 20
+PIN | clk_mmcx_osc_sel | 536871040 | 0 | LVCMOS33 | 178
+PIN | clk_osc_en_n | 536871040 | 0 | LVCMOS33 | 210
+PIN | dds_common_io_reset | 536871040 | 0 | LVCMOS33 | 191
+PIN | dds_common_master_reset | 536871040 | 0 | LVCMOS33 | 148
+PIN | dds_cs_n | 536871040 | 0 | LVCMOS33 | 222
+PIN | dds_cs_n_1 | 536871040 | 0 | LVCMOS33 | 33
+PIN | dds_cs_n_2 | 536871040 | 0 | LVCMOS33 | 24
+PIN | dds_cs_n_3 | 536871040 | 0 | LVCMOS33 | 17
+PIN | dds_drctl | 536871040 | 0 | LVCMOS33 | 163
+PIN | dds_drctl_1 | 536871040 | 0 | LVCMOS33 | 218
+PIN | dds_drctl_2 | 536871040 | 0 | LVCMOS33 | 32
+PIN | dds_drctl_3 | 536871040 | 0 | LVCMOS33 | 45
+PIN | dds_drhold | 536871040 | 0 | LVCMOS33 | 176
+PIN | dds_drhold_1 | 536871040 | 0 | LVCMOS33 | 209
+PIN | dds_drhold_2 | 536871040 | 0 | LVCMOS33 | 44
+PIN | dds_drhold_3 | 536871040 | 0 | LVCMOS33 | 52
+PIN | dds_io_update | 536871040 | 0 | LVCMOS33 | 8
+PIN | dds_io_update_1 | 536871040 | 0 | LVCMOS33 | 58
+PIN | dds_io_update_2 | 536871040 | 0 | LVCMOS33 | 26
+PIN | dds_io_update_3 | 536871040 | 0 | LVCMOS33 | 3
+PIN | dds_led<0> | 536871040 | 0 | LVCMOS33 | 198
+PIN | dds_led<1> | 536871040 | 0 | LVCMOS33 | 186
+PIN | dds_led_1<0> | 536871040 | 0 | LVCMOS33 | 177
+PIN | dds_led_1<1> | 536871040 | 0 | LVCMOS33 | 184
+PIN | dds_led_2<0> | 536871040 | 0 | LVCMOS33 | 175
+PIN | dds_led_2<1> | 536871040 | 0 | LVCMOS33 | 169
+PIN | dds_led_3<0> | 536871040 | 0 | LVCMOS33 | 179
+PIN | dds_led_3<1> | 536871040 | 0 | LVCMOS33 | 182
+PIN | dds_osk | 536871040 | 0 | LVCMOS33 | 170
+PIN | dds_osk_1 | 536871040 | 0 | LVCMOS33 | 2
+PIN | dds_osk_2 | 536871040 | 0 | LVCMOS33 | 37
+PIN | dds_osk_3 | 536871040 | 0 | LVCMOS33 | 51
+PIN | dds_profile<0> | 536871040 | 0 | LVCMOS33 | 195
+PIN | dds_profile<1> | 536871040 | 0 | LVCMOS33 | 201
+PIN | dds_profile<2> | 536871040 | 0 | LVCMOS33 | 199
+PIN | dds_profile_1<0> | 536871040 | 0 | LVCMOS33 | 1
+PIN | dds_profile_1<1> | 536871040 | 0 | LVCMOS33 | 6
+PIN | dds_profile_1<2> | 536871040 | 0 | LVCMOS33 | 13
+PIN | dds_profile_2<0> | 536871040 | 0 | LVCMOS33 | 43
+PIN | dds_profile_2<1> | 536871040 | 0 | LVCMOS33 | 71
+PIN | dds_profile_2<2> | 536871040 | 0 | LVCMOS33 | 66
+PIN | dds_profile_3<0> | 536871040 | 0 | LVCMOS33 | 54
+PIN | dds_profile_3<1> | 536871040 | 0 | LVCMOS33 | 49
+PIN | dds_profile_3<2> | 536871040 | 0 | LVCMOS33 | 55
+PIN | dds_reset | 536871040 | 0 | LVCMOS33 | 168
+PIN | dds_reset_1 | 536871040 | 0 | LVCMOS33 | 15
+PIN | dds_reset_2 | 536871040 | 0 | LVCMOS33 | 93
+PIN | dds_reset_3 | 536871040 | 0 | LVCMOS33 | 88
+PIN | dds_rf_sw | 536871040 | 0 | LVCMOS33 | 174
+PIN | dds_rf_sw_1 | 536871040 | 0 | LVCMOS33 | 172
+PIN | dds_rf_sw_2 | 536871040 | 0 | LVCMOS33 | 185
+PIN | dds_rf_sw_3 | 536871040 | 0 | LVCMOS33 | 196
+PIN | dds_sck | 536871040 | 0 | LVCMOS33 | 217
+PIN | dds_sck_1 | 536871040 | 0 | LVCMOS33 | 38
+PIN | dds_sck_2 | 536871040 | 0 | LVCMOS33 | 22
+PIN | dds_sck_3 | 536871040 | 0 | LVCMOS33 | 21
+PIN | dds_sdi | 536871040 | 0 | LVCMOS33 | 4
+PIN | dds_sdi_1 | 536871040 | 0 | LVCMOS33 | 35
+PIN | dds_sdi_2 | 536871040 | 0 | LVCMOS33 | 23
+PIN | dds_sdi_3 | 536871040 | 0 | LVCMOS33 | 19
+PIN | dds_sync_clk_out_en | 536871040 | 0 | LVCMOS33 | 77
+PIN | dds_sync_sync_out_en | 536871040 | 0 | LVCMOS33 | 68
+PIN | dds_sync_sync_sel | 536871040 | 0 | LVCMOS33 | 92
+PIN | eem_oe | 536871040 | 0 | LVCMOS33 | 112
+PIN | eem_oe_1 | 536871040 | 0 | LVCMOS33 | 118
+PIN | eem_oe_10 | 536871040 | 0 | LVCMOS33 | 65
+PIN | eem_oe_11 | 536871040 | 0 | LVCMOS33 | 67
+PIN | eem_oe_12 | 536871040 | 0 | LVCMOS33 | 80
+PIN | eem_oe_13 | 536871040 | 0 | LVCMOS33 | 86
+PIN | eem_oe_14 | 536871040 | 0 | LVCMOS33 | 84
+PIN | eem_oe_15 | 536871040 | 0 | LVCMOS33 | 89
+PIN | eem_oe_2 | 536871040 | 0 | LVCMOS33 | 131
+PIN | eem_oe_3 | 536871040 | 0 | LVCMOS33 | 121
+PIN | eem_oe_4 | 536871040 | 0 | LVCMOS33 | 124
+PIN | eem_oe_5 | 536871040 | 0 | LVCMOS33 | 127
+PIN | eem_oe_6 | 536871040 | 0 | LVCMOS33 | 129
+PIN | eem_oe_7 | 536871040 | 0 | LVCMOS33 | 120
+PIN | eem_oe_8 | 536871040 | 0 | LVCMOS33 | 79
+PIN | eem_oe_9 | 536871040 | 0 | LVCMOS33 | 75
+PIN | fsen | 536871040 | 0 | LVCMOS33 | 117
+PIN | tp | 536871040 | 0 | LVCMOS33 | 214
+PIN | tp_1 | 536871040 | 0 | LVCMOS33 | 212
+PIN | tp_2 | 536871040 | 0 | LVCMOS33 | 213
+PIN | tp_3 | 536871040 | 0 | LVCMOS33 | 208
+PIN | tp_4 | 536871040 | 0 | LVCMOS33 | 204
+PIN | eem_io_10 | 536870976 | 0 | LVCMOS33 | 70 | 1 | 3 | 13
+PIN | eem_io_2 | 536870976 | 0 | LVCMOS33 | 114 | 5 | 0 | 3 | 6 | 2 | 3 | 12 | 3 | 11 | 0 | 12

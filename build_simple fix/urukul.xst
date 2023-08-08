@@ -1,0 +1,6 @@
+run
+-ifn urukul.prj
+-top urukul
+-ifmt MIXED
+-ofn urukul.ngc
+-p xc2c256-6-ft256

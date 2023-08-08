@@ -1,0 +1,3312 @@
+                         Detailed Path Analysis Report
+                         -----------------------------
+
+Design:     urukul
+Device:     XC2C256-6-FT256
+Speed File: Version 14.0 Advance Product Specification
+Program:    Timing Report Generator:  version P.20131013
+Date:       Tue Mar 14 15:29:23 2023
+
+Output will be sorted by decreasing path delays.
+Logical Path    Delay Type                              Delay        Cumulative
+------------    ----------                              -----        ----------
+                              ********************
+                              * Pad to Pad (tPD) *
+                              ********************
+From: ifc_mode<0> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<0>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: N_PZ_442  tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+Thru: clk_div.OE tF + tCT                               :  3.1ns        (7.3ns)
+  To: clk_div   tEN + tOUT33                            :  4.7ns       (12.0ns)
+
+From: variant   -                                       :  0.0ns        (0.0ns)
+Thru: variant.ZIA tIN + tIN33                           :  2.9ns        (2.9ns)
+Thru: N_PZ_442  tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+Thru: clk_div.OE tF + tCT                               :  3.1ns        (7.3ns)
+  To: clk_div   tEN + tOUT33                            :  4.7ns       (12.0ns)
+
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: eem_io_10.OE tCT                                  :  1.4ns        (4.3ns)
+  To: eem_io_10 tEN + tOUT33                            :  4.7ns        (9.0ns)
+
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: eem_io_2.OE tCT                                   :  1.4ns        (4.3ns)
+  To: eem_io_2  tEN + tOUT33                            :  4.7ns        (9.0ns)
+
+From: ifc_mode<2> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<2>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: eem_io_10.OE tCT                                  :  1.4ns        (4.3ns)
+  To: eem_io_10 tEN + tOUT33                            :  4.7ns        (9.0ns)
+
+From: att_s_out<3> -                                    :  0.0ns        (0.0ns)
+Thru: att_s_out<3>.ZIA tIN + tIN33                      :  2.9ns        (2.9ns)
+Thru: eem_io_2.Q tLOGI1 + tLOGI2 + tPDI                 :  1.3ns        (4.2ns)
+  To: eem_io_2  tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: dds_pll_lock -                                    :  0.0ns        (0.0ns)
+Thru: dds_pll_lock.ZIA tIN + tIN33                      :  2.9ns        (2.9ns)
+Thru: dds_led<1>.Q tLOGI1 + tLOGI2 + tPDI               :  1.3ns        (4.2ns)
+  To: dds_led<1> tOUT + tOUT33                          :  3.5ns        (7.7ns)
+
+From: dds_pll_lock_1 -                                  :  0.0ns        (0.0ns)
+Thru: dds_pll_lock_1.ZIA tIN + tIN33                    :  2.9ns        (2.9ns)
+Thru: dds_led_1<1>.Q tLOGI1 + tLOGI2 + tPDI             :  1.3ns        (4.2ns)
+  To: dds_led_1<1> tOUT + tOUT33                        :  3.5ns        (7.7ns)
+
+From: dds_pll_lock_2 -                                  :  0.0ns        (0.0ns)
+Thru: dds_pll_lock_2.ZIA tIN + tIN33                    :  2.9ns        (2.9ns)
+Thru: dds_led_2<1>.Q tLOGI1 + tLOGI2 + tPDI             :  1.3ns        (4.2ns)
+  To: dds_led_2<1> tOUT + tOUT33                        :  3.5ns        (7.7ns)
+
+From: dds_pll_lock_3 -                                  :  0.0ns        (0.0ns)
+Thru: dds_pll_lock_3.ZIA tIN + tIN33                    :  2.9ns        (2.9ns)
+Thru: dds_led_3<1>.Q tLOGI1 + tLOGI2 + tPDI             :  1.3ns        (4.2ns)
+  To: dds_led_3<1> tOUT + tOUT33                        :  3.5ns        (7.7ns)
+
+From: dds_sdo   -                                       :  0.0ns        (0.0ns)
+Thru: dds_sdo.ZIA tIN + tIN33                           :  2.9ns        (2.9ns)
+Thru: eem_io_2.Q tLOGI1 + tLOGI2 + tPDI                 :  1.3ns        (4.2ns)
+  To: eem_io_2  tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: dds_sdo_1 -                                       :  0.0ns        (0.0ns)
+Thru: dds_sdo_1.ZIA tIN + tIN33                         :  2.9ns        (2.9ns)
+Thru: eem_io_2.Q tLOGI1 + tLOGI2 + tPDI                 :  1.3ns        (4.2ns)
+  To: eem_io_2  tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: dds_sdo_2 -                                       :  0.0ns        (0.0ns)
+Thru: dds_sdo_2.ZIA tIN + tIN33                         :  2.9ns        (2.9ns)
+Thru: eem_io_2.Q tLOGI1 + tLOGI2 + tPDI                 :  1.3ns        (4.2ns)
+  To: eem_io_2  tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: dds_sdo_3 -                                       :  0.0ns        (0.0ns)
+Thru: dds_sdo_3.ZIA tIN + tIN33                         :  2.9ns        (2.9ns)
+Thru: eem_io_2.Q tLOGI1 + tLOGI2 + tPDI                 :  1.3ns        (4.2ns)
+  To: eem_io_2  tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: dds_smp_err -                                     :  0.0ns        (0.0ns)
+Thru: dds_smp_err.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_led<1>.Q tLOGI1 + tLOGI2 + tPDI               :  1.3ns        (4.2ns)
+  To: dds_led<1> tOUT + tOUT33                          :  3.5ns        (7.7ns)
+
+From: dds_smp_err_1 -                                   :  0.0ns        (0.0ns)
+Thru: dds_smp_err_1.ZIA tIN + tIN33                     :  2.9ns        (2.9ns)
+Thru: dds_led_1<1>.Q tLOGI1 + tLOGI2 + tPDI             :  1.3ns        (4.2ns)
+  To: dds_led_1<1> tOUT + tOUT33                        :  3.5ns        (7.7ns)
+
+From: dds_smp_err_2 -                                   :  0.0ns        (0.0ns)
+Thru: dds_smp_err_2.ZIA tIN + tIN33                     :  2.9ns        (2.9ns)
+Thru: dds_led_2<1>.Q tLOGI1 + tLOGI2 + tPDI             :  1.3ns        (4.2ns)
+  To: dds_led_2<1> tOUT + tOUT33                        :  3.5ns        (7.7ns)
+
+From: dds_smp_err_3 -                                   :  0.0ns        (0.0ns)
+Thru: dds_smp_err_3.ZIA tIN + tIN33                     :  2.9ns        (2.9ns)
+Thru: dds_led_3<1>.Q tLOGI1 + tLOGI2 + tPDI             :  1.3ns        (4.2ns)
+  To: dds_led_3<1> tOUT + tOUT33                        :  3.5ns        (7.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.ZIA tIN + tIN33                            :  2.9ns        (2.9ns)
+Thru: att_clk.Q tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: att_clk   tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.ZIA tIN + tIN33                            :  2.9ns        (2.9ns)
+Thru: dds_sck.Q tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: dds_sck   tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.ZIA tIN + tIN33                            :  2.9ns        (2.9ns)
+Thru: dds_sck_1.Q tLOGI1 + tLOGI2 + tPDI                :  1.3ns        (4.2ns)
+  To: dds_sck_1 tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.ZIA tIN + tIN33                            :  2.9ns        (2.9ns)
+Thru: dds_sck_2.Q tLOGI1 + tLOGI2 + tPDI                :  1.3ns        (4.2ns)
+  To: dds_sck_2 tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.ZIA tIN + tIN33                            :  2.9ns        (2.9ns)
+Thru: dds_sck_3.Q tLOGI1 + tLOGI2 + tPDI                :  1.3ns        (4.2ns)
+  To: dds_sck_3 tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.ZIA tIN + tIN33                            :  2.9ns        (2.9ns)
+Thru: tp_1.Q    tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: tp_1      tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_1  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_1.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_sdi.Q tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: dds_sdi   tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_1  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_1.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_sdi_1.Q tLOGI1 + tLOGI2 + tPDI                :  1.3ns        (4.2ns)
+  To: dds_sdi_1 tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_1  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_1.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_sdi_2.Q tLOGI1 + tLOGI2 + tPDI                :  1.3ns        (4.2ns)
+  To: dds_sdi_2 tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_1  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_1.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_sdi_3.Q tLOGI1 + tLOGI2 + tPDI                :  1.3ns        (4.2ns)
+  To: dds_sdi_3 tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_1  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_1.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: tp_2.Q    tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: tp_2      tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_10 -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_10.ZIA tIN + tIN33                         :  2.9ns        (2.9ns)
+Thru: dds_sdi_2.Q tLOGI1 + tLOGI2 + tPDI                :  1.3ns        (4.2ns)
+  To: dds_sdi_2 tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_11 -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_11.ZIA tIN + tIN33                         :  2.9ns        (2.9ns)
+Thru: dds_sdi_3.Q tLOGI1 + tLOGI2 + tPDI                :  1.3ns        (4.2ns)
+  To: dds_sdi_3 tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_2  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_2.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_sck.Q tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: dds_sck   tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_2  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_2.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_sck_1.Q tLOGI1 + tLOGI2 + tPDI                :  1.3ns        (4.2ns)
+  To: dds_sck_1 tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_2  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_2.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_sck_2.Q tLOGI1 + tLOGI2 + tPDI                :  1.3ns        (4.2ns)
+  To: dds_sck_2 tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_2  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_2.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_sck_3.Q tLOGI1 + tLOGI2 + tPDI                :  1.3ns        (4.2ns)
+  To: dds_sck_3 tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_2  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_2.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: tp_1.Q    tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: tp_1      tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: att_clk.Q tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: att_clk   tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_cs_n.Q tLOGI1 + tLOGI2 + tPDI                 :  1.3ns        (4.2ns)
+  To: dds_cs_n  tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_cs_n_1.Q tLOGI1 + tLOGI2 + tPDI               :  1.3ns        (4.2ns)
+  To: dds_cs_n_1 tOUT + tOUT33                          :  3.5ns        (7.7ns)
+
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_cs_n_2.Q tLOGI1 + tLOGI2 + tPDI               :  1.3ns        (4.2ns)
+  To: dds_cs_n_2 tOUT + tOUT33                          :  3.5ns        (7.7ns)
+
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_cs_n_3.Q tLOGI1 + tLOGI2 + tPDI               :  1.3ns        (4.2ns)
+  To: dds_cs_n_3 tOUT + tOUT33                          :  3.5ns        (7.7ns)
+
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: eem_io_2.Q tLOGI1 + tLOGI2 + tPDI                 :  1.3ns        (4.2ns)
+  To: eem_io_2  tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: tp.Q      tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: tp        tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: att_clk.Q tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: att_clk   tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_cs_n.Q tLOGI1 + tLOGI2 + tPDI                 :  1.3ns        (4.2ns)
+  To: dds_cs_n  tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_cs_n_1.Q tLOGI1 + tLOGI2 + tPDI               :  1.3ns        (4.2ns)
+  To: dds_cs_n_1 tOUT + tOUT33                          :  3.5ns        (7.7ns)
+
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_cs_n_2.Q tLOGI1 + tLOGI2 + tPDI               :  1.3ns        (4.2ns)
+  To: dds_cs_n_2 tOUT + tOUT33                          :  3.5ns        (7.7ns)
+
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_cs_n_3.Q tLOGI1 + tLOGI2 + tPDI               :  1.3ns        (4.2ns)
+  To: dds_cs_n_3 tOUT + tOUT33                          :  3.5ns        (7.7ns)
+
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: eem_io_2.Q tLOGI1 + tLOGI2 + tPDI                 :  1.3ns        (4.2ns)
+  To: eem_io_2  tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: tp.Q      tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: tp        tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: att_clk.Q tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: att_clk   tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_cs_n.Q tLOGI1 + tLOGI2 + tPDI                 :  1.3ns        (4.2ns)
+  To: dds_cs_n  tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_cs_n_1.Q tLOGI1 + tLOGI2 + tPDI               :  1.3ns        (4.2ns)
+  To: dds_cs_n_1 tOUT + tOUT33                          :  3.5ns        (7.7ns)
+
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_cs_n_2.Q tLOGI1 + tLOGI2 + tPDI               :  1.3ns        (4.2ns)
+  To: dds_cs_n_2 tOUT + tOUT33                          :  3.5ns        (7.7ns)
+
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_cs_n_3.Q tLOGI1 + tLOGI2 + tPDI               :  1.3ns        (4.2ns)
+  To: dds_cs_n_3 tOUT + tOUT33                          :  3.5ns        (7.7ns)
+
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: eem_io_2.Q tLOGI1 + tLOGI2 + tPDI                 :  1.3ns        (4.2ns)
+  To: eem_io_2  tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: tp.Q      tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: tp        tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_6  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_6.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_io_update.Q tLOGI1 + tLOGI2 + tPDI            :  1.3ns        (4.2ns)
+  To: dds_io_update tOUT + tOUT33                       :  3.5ns        (7.7ns)
+
+From: eem_io_6  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_6.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_io_update_1.Q tLOGI1 + tLOGI2 + tPDI          :  1.3ns        (4.2ns)
+  To: dds_io_update_1 tOUT + tOUT33                     :  3.5ns        (7.7ns)
+
+From: eem_io_6  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_6.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_io_update_2.Q tLOGI1 + tLOGI2 + tPDI          :  1.3ns        (4.2ns)
+  To: dds_io_update_2 tOUT + tOUT33                     :  3.5ns        (7.7ns)
+
+From: eem_io_6  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_6.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_io_update_3.Q tLOGI1 + tLOGI2 + tPDI          :  1.3ns        (4.2ns)
+  To: dds_io_update_3 tOUT + tOUT33                     :  3.5ns        (7.7ns)
+
+From: eem_io_7  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_7.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_reset.Q tLOGI1 + tLOGI2 + tPDI                :  1.3ns        (4.2ns)
+  To: dds_reset tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_7  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_7.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_reset_1.Q tLOGI1 + tLOGI2 + tPDI              :  1.3ns        (4.2ns)
+  To: dds_reset_1 tOUT + tOUT33                         :  3.5ns        (7.7ns)
+
+From: eem_io_7  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_7.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_reset_2.Q tLOGI1 + tLOGI2 + tPDI              :  1.3ns        (4.2ns)
+  To: dds_reset_2 tOUT + tOUT33                         :  3.5ns        (7.7ns)
+
+From: eem_io_7  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_7.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_reset_3.Q tLOGI1 + tLOGI2 + tPDI              :  1.3ns        (4.2ns)
+  To: dds_reset_3 tOUT + tOUT33                         :  3.5ns        (7.7ns)
+
+From: eem_io_8  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_8.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_sdi.Q tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: dds_sdi   tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_8  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_8.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: tp_2.Q    tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: tp_2      tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: eem_io_9  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_9.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: dds_sdi_1.Q tLOGI1 + tLOGI2 + tPDI                :  1.3ns        (4.2ns)
+  To: dds_sdi_1 tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: ifc_mode<0> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<0>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_led<1>.Q tLOGI1 + tLOGI2 + tPDI               :  1.3ns        (4.2ns)
+  To: dds_led<1> tOUT + tOUT33                          :  3.5ns        (7.7ns)
+
+From: ifc_mode<0> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<0>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_led_1<1>.Q tLOGI1 + tLOGI2 + tPDI             :  1.3ns        (4.2ns)
+  To: dds_led_1<1> tOUT + tOUT33                        :  3.5ns        (7.7ns)
+
+From: ifc_mode<0> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<0>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_led_2<1>.Q tLOGI1 + tLOGI2 + tPDI             :  1.3ns        (4.2ns)
+  To: dds_led_2<1> tOUT + tOUT33                        :  3.5ns        (7.7ns)
+
+From: ifc_mode<0> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<0>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_led_3<1>.Q tLOGI1 + tLOGI2 + tPDI             :  1.3ns        (4.2ns)
+  To: dds_led_3<1> tOUT + tOUT33                        :  3.5ns        (7.7ns)
+
+From: ifc_mode<0> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<0>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_reset.Q tLOGI1 + tLOGI2 + tPDI                :  1.3ns        (4.2ns)
+  To: dds_reset tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: ifc_mode<0> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<0>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_reset_1.Q tLOGI1 + tLOGI2 + tPDI              :  1.3ns        (4.2ns)
+  To: dds_reset_1 tOUT + tOUT33                         :  3.5ns        (7.7ns)
+
+From: ifc_mode<0> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<0>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_reset_2.Q tLOGI1 + tLOGI2 + tPDI              :  1.3ns        (4.2ns)
+  To: dds_reset_2 tOUT + tOUT33                         :  3.5ns        (7.7ns)
+
+From: ifc_mode<0> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<0>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_reset_3.Q tLOGI1 + tLOGI2 + tPDI              :  1.3ns        (4.2ns)
+  To: dds_reset_3 tOUT + tOUT33                         :  3.5ns        (7.7ns)
+
+From: ifc_mode<0> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<0>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_sync_clk_out_en.Q tLOGI1 + tLOGI2 + tPDI      :  1.3ns        (4.2ns)
+  To: dds_sync_clk_out_en tOUT + tOUT33                 :  3.5ns        (7.7ns)
+
+From: ifc_mode<0> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<0>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_sync_sync_out_en.Q tLOGI1 + tLOGI2 + tPDI     :  1.3ns        (4.2ns)
+  To: dds_sync_sync_out_en tOUT + tOUT33                :  3.5ns        (7.7ns)
+
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: att_clk.Q tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: att_clk   tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_cs_n.Q tLOGI1 + tLOGI2 + tPDI                 :  1.3ns        (4.2ns)
+  To: dds_cs_n  tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_cs_n_1.Q tLOGI1 + tLOGI2 + tPDI               :  1.3ns        (4.2ns)
+  To: dds_cs_n_1 tOUT + tOUT33                          :  3.5ns        (7.7ns)
+
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_cs_n_2.Q tLOGI1 + tLOGI2 + tPDI               :  1.3ns        (4.2ns)
+  To: dds_cs_n_2 tOUT + tOUT33                          :  3.5ns        (7.7ns)
+
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_cs_n_3.Q tLOGI1 + tLOGI2 + tPDI               :  1.3ns        (4.2ns)
+  To: dds_cs_n_3 tOUT + tOUT33                          :  3.5ns        (7.7ns)
+
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_sck.Q tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: dds_sck   tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_sck_1.Q tLOGI1 + tLOGI2 + tPDI                :  1.3ns        (4.2ns)
+  To: dds_sck_1 tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_sck_2.Q tLOGI1 + tLOGI2 + tPDI                :  1.3ns        (4.2ns)
+  To: dds_sck_2 tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_sck_3.Q tLOGI1 + tLOGI2 + tPDI                :  1.3ns        (4.2ns)
+  To: dds_sck_3 tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_sdi.Q tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: dds_sdi   tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_sdi_1.Q tLOGI1 + tLOGI2 + tPDI                :  1.3ns        (4.2ns)
+  To: dds_sdi_1 tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_sdi_2.Q tLOGI1 + tLOGI2 + tPDI                :  1.3ns        (4.2ns)
+  To: dds_sdi_2 tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_sdi_3.Q tLOGI1 + tLOGI2 + tPDI                :  1.3ns        (4.2ns)
+  To: dds_sdi_3 tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_sync_clk_out_en.Q tLOGI1 + tLOGI2 + tPDI      :  1.3ns        (4.2ns)
+  To: dds_sync_clk_out_en tOUT + tOUT33                 :  3.5ns        (7.7ns)
+
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_sync_sync_out_en.Q tLOGI1 + tLOGI2 + tPDI     :  1.3ns        (4.2ns)
+  To: dds_sync_sync_out_en tOUT + tOUT33                :  3.5ns        (7.7ns)
+
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: tp.Q      tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: tp        tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: tp_1.Q    tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: tp_1      tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: tp_2.Q    tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: tp_2      tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: ifc_mode<2> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<2>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_sync_clk_out_en.Q tLOGI1 + tLOGI2 + tPDI      :  1.3ns        (4.2ns)
+  To: dds_sync_clk_out_en tOUT + tOUT33                 :  3.5ns        (7.7ns)
+
+From: ifc_mode<2> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<2>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: dds_sync_sync_out_en.Q tLOGI1 + tLOGI2 + tPDI     :  1.3ns        (4.2ns)
+  To: dds_sync_sync_out_en tOUT + tOUT33                :  3.5ns        (7.7ns)
+
+From: variant   -                                       :  0.0ns        (0.0ns)
+Thru: variant.ZIA tIN + tIN33                           :  2.9ns        (2.9ns)
+Thru: dds_led<1>.Q tLOGI1 + tLOGI2 + tPDI               :  1.3ns        (4.2ns)
+  To: dds_led<1> tOUT + tOUT33                          :  3.5ns        (7.7ns)
+
+From: variant   -                                       :  0.0ns        (0.0ns)
+Thru: variant.ZIA tIN + tIN33                           :  2.9ns        (2.9ns)
+Thru: dds_led_1<1>.Q tLOGI1 + tLOGI2 + tPDI             :  1.3ns        (4.2ns)
+  To: dds_led_1<1> tOUT + tOUT33                        :  3.5ns        (7.7ns)
+
+From: variant   -                                       :  0.0ns        (0.0ns)
+Thru: variant.ZIA tIN + tIN33                           :  2.9ns        (2.9ns)
+Thru: dds_led_2<1>.Q tLOGI1 + tLOGI2 + tPDI             :  1.3ns        (4.2ns)
+  To: dds_led_2<1> tOUT + tOUT33                        :  3.5ns        (7.7ns)
+
+From: variant   -                                       :  0.0ns        (0.0ns)
+Thru: variant.ZIA tIN + tIN33                           :  2.9ns        (2.9ns)
+Thru: dds_led_3<1>.Q tLOGI1 + tLOGI2 + tPDI             :  1.3ns        (4.2ns)
+  To: dds_led_3<1> tOUT + tOUT33                        :  3.5ns        (7.7ns)
+
+From: variant   -                                       :  0.0ns        (0.0ns)
+Thru: variant.ZIA tIN + tIN33                           :  2.9ns        (2.9ns)
+Thru: dds_reset.Q tLOGI1 + tLOGI2 + tPDI                :  1.3ns        (4.2ns)
+  To: dds_reset tOUT + tOUT33                           :  3.5ns        (7.7ns)
+
+From: variant   -                                       :  0.0ns        (0.0ns)
+Thru: variant.ZIA tIN + tIN33                           :  2.9ns        (2.9ns)
+Thru: dds_reset_1.Q tLOGI1 + tLOGI2 + tPDI              :  1.3ns        (4.2ns)
+  To: dds_reset_1 tOUT + tOUT33                         :  3.5ns        (7.7ns)
+
+From: variant   -                                       :  0.0ns        (0.0ns)
+Thru: variant.ZIA tIN + tIN33                           :  2.9ns        (2.9ns)
+Thru: dds_reset_2.Q tLOGI1 + tLOGI2 + tPDI              :  1.3ns        (4.2ns)
+  To: dds_reset_2 tOUT + tOUT33                         :  3.5ns        (7.7ns)
+
+From: variant   -                                       :  0.0ns        (0.0ns)
+Thru: variant.ZIA tIN + tIN33                           :  2.9ns        (2.9ns)
+Thru: dds_reset_3.Q tLOGI1 + tLOGI2 + tPDI              :  1.3ns        (4.2ns)
+  To: dds_reset_3 tOUT + tOUT33                         :  3.5ns        (7.7ns)
+
+From: variant   -                                       :  0.0ns        (0.0ns)
+Thru: variant.ZIA tIN + tIN33                           :  2.9ns        (2.9ns)
+Thru: dds_sync_clk_out_en.Q tLOGI1 + tLOGI2 + tPDI      :  1.3ns        (4.2ns)
+  To: dds_sync_clk_out_en tOUT + tOUT33                 :  3.5ns        (7.7ns)
+
+From: variant   -                                       :  0.0ns        (0.0ns)
+Thru: variant.ZIA tIN + tIN33                           :  2.9ns        (2.9ns)
+Thru: dds_sync_sync_out_en.Q tLOGI1 + tLOGI2 + tPDI     :  1.3ns        (4.2ns)
+  To: dds_sync_sync_out_en tOUT + tOUT33                :  3.5ns        (7.7ns)
+
+From: att_s_out<0> -                                    :  0.0ns        (0.0ns)
+Thru: att_s_out<0>.ZIA tIN + tIN33                      :  2.9ns        (2.9ns)
+Thru: att_s_in<1>.Q tLOGI1 + tPDI                       :  1.0ns        (3.9ns)
+  To: att_s_in<1> tOUT + tOUT33                         :  3.5ns        (7.4ns)
+
+From: att_s_out<1> -                                    :  0.0ns        (0.0ns)
+Thru: att_s_out<1>.ZIA tIN + tIN33                      :  2.9ns        (2.9ns)
+Thru: att_s_in<2>.Q tLOGI1 + tPDI                       :  1.0ns        (3.9ns)
+  To: att_s_in<2> tOUT + tOUT33                         :  3.5ns        (7.4ns)
+
+From: att_s_out<2> -                                    :  0.0ns        (0.0ns)
+Thru: att_s_out<2>.ZIA tIN + tIN33                      :  2.9ns        (2.9ns)
+Thru: att_s_in<3>.Q tLOGI1 + tPDI                       :  1.0ns        (3.9ns)
+  To: att_s_in<3> tOUT + tOUT33                         :  3.5ns        (7.4ns)
+
+From: dds_drover -                                      :  0.0ns        (0.0ns)
+Thru: dds_drover.ZIA tIN + tIN33                        :  2.9ns        (2.9ns)
+Thru: tp_4.Q    tLOGI1 + tPDI                           :  1.0ns        (3.9ns)
+  To: tp_4      tOUT + tOUT33                           :  3.5ns        (7.4ns)
+
+From: dds_sdo   -                                       :  0.0ns        (0.0ns)
+Thru: dds_sdo.ZIA tIN + tIN33                           :  2.9ns        (2.9ns)
+Thru: tp_3.Q    tLOGI1 + tPDI                           :  1.0ns        (3.9ns)
+  To: tp_3      tOUT + tOUT33                           :  3.5ns        (7.4ns)
+
+From: eem_io_1  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_1.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: att_s_in<0>.Q tLOGI1 + tPDI                       :  1.0ns        (3.9ns)
+  To: att_s_in<0> tOUT + tOUT33                         :  3.5ns        (7.4ns)
+
+From: eem_io_12 -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_12.ZIA tIN + tIN33                         :  2.9ns        (2.9ns)
+Thru: dds_led<0>.Q tLOGI1 + tPDI                        :  1.0ns        (3.9ns)
+  To: dds_led<0> tOUT + tOUT33                          :  3.5ns        (7.4ns)
+
+From: eem_io_12 -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_12.ZIA tIN + tIN33                         :  2.9ns        (2.9ns)
+Thru: dds_rf_sw.Q tLOGI1 + tPDI                         :  1.0ns        (3.9ns)
+  To: dds_rf_sw tOUT + tOUT33                           :  3.5ns        (7.4ns)
+
+From: eem_io_13 -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_13.ZIA tIN + tIN33                         :  2.9ns        (2.9ns)
+Thru: dds_led_1<0>.Q tLOGI1 + tPDI                      :  1.0ns        (3.9ns)
+  To: dds_led_1<0> tOUT + tOUT33                        :  3.5ns        (7.4ns)
+
+From: eem_io_13 -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_13.ZIA tIN + tIN33                         :  2.9ns        (2.9ns)
+Thru: dds_rf_sw_1.Q tLOGI1 + tPDI                       :  1.0ns        (3.9ns)
+  To: dds_rf_sw_1 tOUT + tOUT33                         :  3.5ns        (7.4ns)
+
+From: eem_io_14 -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_14.ZIA tIN + tIN33                         :  2.9ns        (2.9ns)
+Thru: dds_led_2<0>.Q tLOGI1 + tPDI                      :  1.0ns        (3.9ns)
+  To: dds_led_2<0> tOUT + tOUT33                        :  3.5ns        (7.4ns)
+
+From: eem_io_14 -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_14.ZIA tIN + tIN33                         :  2.9ns        (2.9ns)
+Thru: dds_rf_sw_2.Q tLOGI1 + tPDI                       :  1.0ns        (3.9ns)
+  To: dds_rf_sw_2 tOUT + tOUT33                         :  3.5ns        (7.4ns)
+
+From: eem_io_15 -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_15.ZIA tIN + tIN33                         :  2.9ns        (2.9ns)
+Thru: dds_led_3<0>.Q tLOGI1 + tPDI                      :  1.0ns        (3.9ns)
+  To: dds_led_3<0> tOUT + tOUT33                        :  3.5ns        (7.4ns)
+
+From: eem_io_15 -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_15.ZIA tIN + tIN33                         :  2.9ns        (2.9ns)
+Thru: dds_rf_sw_3.Q tLOGI1 + tPDI                       :  1.0ns        (3.9ns)
+  To: dds_rf_sw_3 tOUT + tOUT33                         :  3.5ns        (7.4ns)
+
+From: eem_io_6  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_6.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: eem_io_10.Q tLOGI1 + tPDI                         :  1.0ns        (3.9ns)
+  To: eem_io_10 tOUT + tOUT33                           :  3.5ns        (7.4ns)
+
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: eem_oe_10.Q tLOGI1 + tPDI                         :  1.0ns        (3.9ns)
+  To: eem_oe_10 tOUT + tOUT33                           :  3.5ns        (7.4ns)
+
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: eem_oe_2.Q tLOGI1 + tPDI                          :  1.0ns        (3.9ns)
+  To: eem_oe_2  tOUT + tOUT33                           :  3.5ns        (7.4ns)
+
+From: ifc_mode<2> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<2>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: eem_oe_10.Q tLOGI1 + tPDI                         :  1.0ns        (3.9ns)
+  To: eem_oe_10 tOUT + tOUT33                           :  3.5ns        (7.4ns)
+
+                       *********************************
+                       * Clock Pad to Output Pad (tCO) *
+                       *********************************
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<22> tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: N_PZ_442  tF + tLOGI1 + tLOGI2 + tPDI             :  3.0ns        (9.2ns)
+Thru: clk_div.OE tF + tCT                               :  3.1ns       (12.3ns)
+  To: clk_div   tEN + tOUT33                            :  4.7ns       (17.0ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<13> tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_cs_n.Q tF + tLOGI1 + tLOGI2 + tPDI            :  3.0ns        (9.2ns)
+  To: dds_cs_n  tOUT + tOUT33                           :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<14> tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_cs_n_1.Q tF + tLOGI1 + tLOGI2 + tPDI          :  3.0ns        (9.2ns)
+  To: dds_cs_n_1 tOUT + tOUT33                          :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<15> tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_cs_n_2.Q tF + tLOGI1 + tLOGI2 + tPDI          :  3.0ns        (9.2ns)
+  To: dds_cs_n_2 tOUT + tOUT33                          :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<16> tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_cs_n_3.Q tF + tLOGI1 + tLOGI2 + tPDI          :  3.0ns        (9.2ns)
+  To: dds_cs_n_3 tOUT + tOUT33                          :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<13> tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_io_update.Q tF + tLOGI1 + tLOGI2 + tPDI       :  3.0ns        (9.2ns)
+  To: dds_io_update tOUT + tOUT33                       :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<14> tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_io_update_1.Q tF + tLOGI1 + tLOGI2 + tPDI     :  3.0ns        (9.2ns)
+  To: dds_io_update_1 tOUT + tOUT33                     :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<15> tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_io_update_2.Q tF + tLOGI1 + tLOGI2 + tPDI     :  3.0ns        (9.2ns)
+  To: dds_io_update_2 tOUT + tOUT33                     :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<16> tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_io_update_3.Q tF + tLOGI1 + tLOGI2 + tPDI     :  3.0ns        (9.2ns)
+  To: dds_io_update_3 tOUT + tOUT33                     :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<4>  tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_led<1>.Q tF + tLOGI1 + tLOGI2 + tPDI          :  3.0ns        (9.2ns)
+  To: dds_led<1> tOUT + tOUT33                          :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<5>  tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_led_1<1>.Q tF + tLOGI1 + tLOGI2 + tPDI        :  3.0ns        (9.2ns)
+  To: dds_led_1<1> tOUT + tOUT33                        :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<6>  tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_led_2<1>.Q tF + tLOGI1 + tLOGI2 + tPDI        :  3.0ns        (9.2ns)
+  To: dds_led_2<1> tOUT + tOUT33                        :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<7>  tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_led_3<1>.Q tF + tLOGI1 + tLOGI2 + tPDI        :  3.0ns        (9.2ns)
+  To: dds_led_3<1> tOUT + tOUT33                        :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: dds_common_master_reset tF + tCT + tCOI           :  3.5ns        (6.2ns)
+Thru: dds_reset.Q tF + tLOGI1 + tLOGI2 + tPDI           :  3.0ns        (9.2ns)
+  To: dds_reset tOUT + tOUT33                           :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: dds_common_master_reset tF + tCT + tCOI           :  3.5ns        (6.2ns)
+Thru: dds_reset_1.Q tF + tLOGI1 + tLOGI2 + tPDI         :  3.0ns        (9.2ns)
+  To: dds_reset_1 tOUT + tOUT33                         :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: dds_common_master_reset tF + tCT + tCOI           :  3.5ns        (6.2ns)
+Thru: dds_reset_2.Q tF + tLOGI1 + tLOGI2 + tPDI         :  3.0ns        (9.2ns)
+  To: dds_reset_2 tOUT + tOUT33                         :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: dds_common_master_reset tF + tCT + tCOI           :  3.5ns        (6.2ns)
+Thru: dds_reset_3.Q tF + tLOGI1 + tLOGI2 + tPDI         :  3.0ns        (9.2ns)
+  To: dds_reset_3 tOUT + tOUT33                         :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<13> tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_sck.Q tF + tLOGI1 + tLOGI2 + tPDI             :  3.0ns        (9.2ns)
+  To: dds_sck   tOUT + tOUT33                           :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<14> tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_sck_1.Q tF + tLOGI1 + tLOGI2 + tPDI           :  3.0ns        (9.2ns)
+  To: dds_sck_1 tOUT + tOUT33                           :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<15> tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_sck_2.Q tF + tLOGI1 + tLOGI2 + tPDI           :  3.0ns        (9.2ns)
+  To: dds_sck_2 tOUT + tOUT33                           :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<16> tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_sck_3.Q tF + tLOGI1 + tLOGI2 + tPDI           :  3.0ns        (9.2ns)
+  To: dds_sck_3 tOUT + tOUT33                           :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<13> tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_sdi.Q tF + tLOGI1 + tLOGI2 + tPDI             :  3.0ns        (9.2ns)
+  To: dds_sdi   tOUT + tOUT33                           :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<14> tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_sdi_1.Q tF + tLOGI1 + tLOGI2 + tPDI           :  3.0ns        (9.2ns)
+  To: dds_sdi_1 tOUT + tOUT33                           :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<15> tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_sdi_2.Q tF + tLOGI1 + tLOGI2 + tPDI           :  3.0ns        (9.2ns)
+  To: dds_sdi_2 tOUT + tOUT33                           :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<16> tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_sdi_3.Q tF + tLOGI1 + tLOGI2 + tPDI           :  3.0ns        (9.2ns)
+  To: dds_sdi_3 tOUT + tOUT33                           :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<13> tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: tp.Q      tF + tLOGI1 + tLOGI2 + tPDI             :  3.0ns        (9.2ns)
+  To: tp        tOUT + tOUT33                           :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<13> tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: tp_1.Q    tF + tLOGI1 + tLOGI2 + tPDI             :  3.0ns        (9.2ns)
+  To: tp_1      tOUT + tOUT33                           :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<13> tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: tp_2.Q    tF + tLOGI1 + tLOGI2 + tPDI             :  3.0ns        (9.2ns)
+  To: tp_2      tOUT + tOUT33                           :  3.5ns       (12.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: clk_in_sel tF + tCT + tCOI                        :  3.5ns        (6.2ns)
+Thru: clk_osc_en_n.Q tF + tLOGI1 + tPDI                 :  2.7ns        (8.9ns)
+  To: clk_osc_en_n tOUT + tOUT33                        :  3.5ns       (12.4ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<0>  tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_led<0>.Q tF + tLOGI1 + tPDI                   :  2.7ns        (8.9ns)
+  To: dds_led<0> tOUT + tOUT33                          :  3.5ns       (12.4ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<1>  tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_led_1<0>.Q tF + tLOGI1 + tPDI                 :  2.7ns        (8.9ns)
+  To: dds_led_1<0> tOUT + tOUT33                        :  3.5ns       (12.4ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<2>  tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_led_2<0>.Q tF + tLOGI1 + tPDI                 :  2.7ns        (8.9ns)
+  To: dds_led_2<0> tOUT + tOUT33                        :  3.5ns       (12.4ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<3>  tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_led_3<0>.Q tF + tLOGI1 + tPDI                 :  2.7ns        (8.9ns)
+  To: dds_led_3<0> tOUT + tOUT33                        :  3.5ns       (12.4ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<0>  tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_rf_sw.Q tF + tLOGI1 + tPDI                    :  2.7ns        (8.9ns)
+  To: dds_rf_sw tOUT + tOUT33                           :  3.5ns       (12.4ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<1>  tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_rf_sw_1.Q tF + tLOGI1 + tPDI                  :  2.7ns        (8.9ns)
+  To: dds_rf_sw_1 tOUT + tOUT33                         :  3.5ns       (12.4ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<2>  tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_rf_sw_2.Q tF + tLOGI1 + tPDI                  :  2.7ns        (8.9ns)
+  To: dds_rf_sw_2 tOUT + tOUT33                         :  3.5ns       (12.4ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: sr_di<3>  tF + tCT + tCOI                         :  3.5ns        (6.2ns)
+Thru: dds_rf_sw_3.Q tF + tLOGI1 + tPDI                  :  2.7ns        (8.9ns)
+  To: dds_rf_sw_3 tOUT + tOUT33                         :  3.5ns       (12.4ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: att_rst_n.Q tF + tCT + tCOI                       :  3.5ns        (6.2ns)
+  To: att_rst_n tOUT + tOUT33                           :  3.5ns        (9.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: clk_in_sel.Q tF + tCT + tCOI                      :  3.5ns        (6.2ns)
+  To: clk_in_sel tOUT + tOUT33                          :  3.5ns        (9.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: clk_mmcx_osc_sel.Q tF + tCT + tCOI                :  3.5ns        (6.2ns)
+  To: clk_mmcx_osc_sel tOUT + tOUT33                    :  3.5ns        (9.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: dds_common_io_reset.Q tF + tCT + tCOI             :  3.5ns        (6.2ns)
+  To: dds_common_io_reset tOUT + tOUT33                 :  3.5ns        (9.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: dds_common_master_reset.Q tF + tCT + tCOI         :  3.5ns        (6.2ns)
+  To: dds_common_master_reset tOUT + tOUT33             :  3.5ns        (9.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: dds_profile<0>.Q tF + tCT + tCOI                  :  3.5ns        (6.2ns)
+  To: dds_profile<0> tOUT + tOUT33                      :  3.5ns        (9.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: dds_profile<1>.Q tF + tCT + tCOI                  :  3.5ns        (6.2ns)
+  To: dds_profile<1> tOUT + tOUT33                      :  3.5ns        (9.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: dds_profile<2>.Q tF + tCT + tCOI                  :  3.5ns        (6.2ns)
+  To: dds_profile<2> tOUT + tOUT33                      :  3.5ns        (9.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: dds_profile_1<0>.Q tF + tCT + tCOI                :  3.5ns        (6.2ns)
+  To: dds_profile_1<0> tOUT + tOUT33                    :  3.5ns        (9.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: dds_profile_1<1>.Q tF + tCT + tCOI                :  3.5ns        (6.2ns)
+  To: dds_profile_1<1> tOUT + tOUT33                    :  3.5ns        (9.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: dds_profile_1<2>.Q tF + tCT + tCOI                :  3.5ns        (6.2ns)
+  To: dds_profile_1<2> tOUT + tOUT33                    :  3.5ns        (9.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: dds_profile_2<0>.Q tF + tCT + tCOI                :  3.5ns        (6.2ns)
+  To: dds_profile_2<0> tOUT + tOUT33                    :  3.5ns        (9.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: dds_profile_2<1>.Q tF + tCT + tCOI                :  3.5ns        (6.2ns)
+  To: dds_profile_2<1> tOUT + tOUT33                    :  3.5ns        (9.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: dds_profile_2<2>.Q tF + tCT + tCOI                :  3.5ns        (6.2ns)
+  To: dds_profile_2<2> tOUT + tOUT33                    :  3.5ns        (9.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: dds_profile_3<0>.Q tF + tCT + tCOI                :  3.5ns        (6.2ns)
+  To: dds_profile_3<0> tOUT + tOUT33                    :  3.5ns        (9.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: dds_profile_3<1>.Q tF + tCT + tCOI                :  3.5ns        (6.2ns)
+  To: dds_profile_3<1> tOUT + tOUT33                    :  3.5ns        (9.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: dds_profile_3<2>.Q tF + tCT + tCOI                :  3.5ns        (6.2ns)
+  To: dds_profile_3<2> tOUT + tOUT33                    :  3.5ns        (9.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: le_clk    tCOI                                    :  0.4ns        (2.7ns)
+Thru: dds_sync_sync_sel.Q tF + tCT + tCOI               :  3.5ns        (6.2ns)
+  To: dds_sync_sync_sel tOUT + tOUT33                   :  3.5ns        (9.7ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: sr_sdo    tCOI                                    :  0.4ns        (2.7ns)
+Thru: eem_io_2.Q tF + tLOGI1 + tLOGI2 + tPDI            :  3.0ns        (5.7ns)
+  To: eem_io_2  tOUT + tOUT33                           :  3.5ns        (9.2ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: att_le<0>.Q tCOI                                  :  0.4ns        (2.7ns)
+  To: att_le<0> tOUT + tOUT33                           :  3.5ns        (6.2ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: att_le<1>.Q tCOI                                  :  0.4ns        (2.7ns)
+  To: att_le<1> tOUT + tOUT33                           :  3.5ns        (6.2ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: att_le<2>.Q tCOI                                  :  0.4ns        (2.7ns)
+  To: att_le<2> tOUT + tOUT33                           :  3.5ns        (6.2ns)
+
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+Thru: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+Thru: att_le<3>.Q tCOI                                  :  0.4ns        (2.7ns)
+  To: att_le<3> tOUT + tOUT33                           :  3.5ns        (6.2ns)
+
+                           *************************
+                           * Clock to Setup (tCYC) *
+                           *************************
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<0>.Q to sr_di<0>.D has multiple clock origins.
+From: sr_sr<0>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_di<0>.D tF + tLOGI1 + tSUI + skew              :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB3__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<10>.Q to dds_profile<2>.D has multiple clock origins.
+From: sr_sr<10> tCOI                                    :  0.4ns        (0.4ns)
+  To: dds_profile<2>.D tF + tLOGI1 + tSUI + skew        :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB2__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<10>.Q to dds_profile_1<2>.D has multiple clock origins.
+From: sr_sr<10> tCOI                                    :  0.4ns        (0.4ns)
+  To: dds_profile_1<2>.D tF + tLOGI1 + tSUI + skew      :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB6__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<10>.Q to dds_profile_2<2>.D has multiple clock origins.
+From: sr_sr<10> tCOI                                    :  0.4ns        (0.4ns)
+  To: dds_profile_2<2>.D tF + tLOGI1 + tSUI + skew      :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB6__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<10>.Q to dds_profile_3<2>.D has multiple clock origins.
+From: sr_sr<10> tCOI                                    :  0.4ns        (0.4ns)
+  To: dds_profile_3<2>.D tF + tLOGI1 + tSUI + skew      :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<12>.Q to sr_di<12>.D has multiple clock origins.
+From: sr_sr<12> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_di<12>.D tF + tLOGI1 + tSUI + skew             :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<13>.Q to sr_di<13>.D has multiple clock origins.
+From: sr_sr<13> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_di<13>.D tF + tLOGI1 + tSUI + skew             :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<14>.Q to sr_di<14>.D has multiple clock origins.
+From: sr_sr<14> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_di<14>.D tF + tLOGI1 + tSUI + skew             :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB4__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<15>.Q to sr_di<15>.D has multiple clock origins.
+From: sr_sr<15> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_di<15>.D tF + tLOGI1 + tSUI + skew             :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<16>.Q to sr_di<16>.D has multiple clock origins.
+From: sr_sr<16> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_di<16>.D tF + tLOGI1 + tSUI + skew             :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB4__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<17>.Q to clk_in_sel.D has multiple clock origins.
+From: sr_sr<17> tCOI                                    :  0.4ns        (0.4ns)
+  To: clk_in_sel.D tF + tLOGI1 + tSUI + skew            :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB16__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<18>.Q to dds_sync_sync_sel.D has multiple clock origins.
+From: sr_sr<18> tCOI                                    :  0.4ns        (0.4ns)
+  To: dds_sync_sync_sel.D tF + tLOGI1 + tSUI + skew     :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB16__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<19>.Q to att_rst_n.D has multiple clock origins.
+From: sr_sr<19> tCOI                                    :  0.4ns        (0.4ns)
+  To: att_rst_n.D tF + tLOGI1 + tSUI + skew             :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB12__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<19>.Q to dds_common_master_reset.D has multiple clock origins.
+From: sr_sr<19> tCOI                                    :  0.4ns        (0.4ns)
+  To: dds_common_master_reset.D tF + tLOGI1 + tSUI + skew :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<1>.Q to sr_di<1>.D has multiple clock origins.
+From: sr_sr<1>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_di<1>.D tF + tLOGI1 + tSUI + skew              :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB11__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<20>.Q to dds_common_io_reset.D has multiple clock origins.
+From: sr_sr<20> tCOI                                    :  0.4ns        (0.4ns)
+  To: dds_common_io_reset.D tF + tLOGI1 + tSUI + skew   :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB9__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<21>.Q to clk_mmcx_osc_sel.D has multiple clock origins.
+From: sr_sr<21> tCOI                                    :  0.4ns        (0.4ns)
+  To: clk_mmcx_osc_sel.D tF + tLOGI1 + tSUI + skew      :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<22>.Q to sr_di<22>.D has multiple clock origins.
+From: sr_sr<22> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_di<22>.D tF + tLOGI1 + tSUI + skew             :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<23>.Q to sr_di<23>.D has multiple clock origins.
+From: sr_sr<23> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_di<23>.D tF + tLOGI1 + tSUI + skew             :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB6__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<2>.Q to sr_di<2>.D has multiple clock origins.
+From: sr_sr<2>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_di<2>.D tF + tLOGI1 + tSUI + skew              :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB2__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<3>.Q to sr_di<3>.D has multiple clock origins.
+From: sr_sr<3>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_di<3>.D tF + tLOGI1 + tSUI + skew              :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB6__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<4>.Q to sr_di<4>.D has multiple clock origins.
+From: sr_sr<4>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_di<4>.D tF + tLOGI1 + tSUI + skew              :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB6__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<5>.Q to sr_di<5>.D has multiple clock origins.
+From: sr_sr<5>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_di<5>.D tF + tLOGI1 + tSUI + skew              :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB6__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<6>.Q to sr_di<6>.D has multiple clock origins.
+From: sr_sr<6>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_di<6>.D tF + tLOGI1 + tSUI + skew              :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB6__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<7>.Q to sr_di<7>.D has multiple clock origins.
+From: sr_sr<7>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_di<7>.D tF + tLOGI1 + tSUI + skew              :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB11__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<8>.Q to dds_profile<0>.D has multiple clock origins.
+From: sr_sr<8>  tCOI                                    :  0.4ns        (0.4ns)
+  To: dds_profile<0>.D tF + tLOGI1 + tSUI + skew        :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB2__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<8>.Q to dds_profile_1<0>.D has multiple clock origins.
+From: sr_sr<8>  tCOI                                    :  0.4ns        (0.4ns)
+  To: dds_profile_1<0>.D tF + tLOGI1 + tSUI + skew      :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<8>.Q to dds_profile_2<0>.D has multiple clock origins.
+From: sr_sr<8>  tCOI                                    :  0.4ns        (0.4ns)
+  To: dds_profile_2<0>.D tF + tLOGI1 + tSUI + skew      :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB6__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<8>.Q to dds_profile_3<0>.D has multiple clock origins.
+From: sr_sr<8>  tCOI                                    :  0.4ns        (0.4ns)
+  To: dds_profile_3<0>.D tF + tLOGI1 + tSUI + skew      :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB3__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<9>.Q to dds_profile<1>.D has multiple clock origins.
+From: sr_sr<9>  tCOI                                    :  0.4ns        (0.4ns)
+  To: dds_profile<1>.D tF + tLOGI1 + tSUI + skew        :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB2__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<9>.Q to dds_profile_1<1>.D has multiple clock origins.
+From: sr_sr<9>  tCOI                                    :  0.4ns        (0.4ns)
+  To: dds_profile_1<1>.D tF + tLOGI1 + tSUI + skew      :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB8__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<9>.Q to dds_profile_2<1>.D has multiple clock origins.
+From: sr_sr<9>  tCOI                                    :  0.4ns        (0.4ns)
+  To: dds_profile_2<1>.D tF + tLOGI1 + tSUI + skew      :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+C2S path from sr_sr<9>.Q to dds_profile_3<1>.D has multiple clock origins.
+From: sr_sr<9>  tCOI                                    :  0.4ns        (0.4ns)
+  To: dds_profile_3<1>.D tF + tLOGI1 + tSUI + skew      :  4.3ns        (4.7ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: att_le<0> tCOI                                    :  0.4ns        (0.4ns)
+  To: att_le<0>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: att_le<1> tCOI                                    :  0.4ns        (0.4ns)
+  To: att_le<1>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: att_le<2> tCOI                                    :  0.4ns        (0.4ns)
+  To: att_le<2>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: att_le<3> tCOI                                    :  0.4ns        (0.4ns)
+  To: att_le<3>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: le_clk    tCOI                                    :  0.4ns        (0.4ns)
+  To: le_clk.D  tF + tLOGI1 + tLOGI2 + tSUI             :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: le_clk    tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<10>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: le_clk    tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<11>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: le_clk    tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<12>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: le_clk    tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<13>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: le_clk    tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<14>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: le_clk    tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<15>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: le_clk    tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<16>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: le_clk    tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<17>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: le_clk    tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<18>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: le_clk    tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<19>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: le_clk    tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<1>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: le_clk    tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<20>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: le_clk    tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<21>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: le_clk    tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<22>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: le_clk    tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<23>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: le_clk    tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<2>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: le_clk    tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<3>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: le_clk    tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<4>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: le_clk    tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<5>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: le_clk    tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<6>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: le_clk    tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<7>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: le_clk    tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<8>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: le_clk    tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<9>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+C2S path from sr_di<0>.Q to sr_sr<1>.D has multiple clock origins.
+From: sr_di<0>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<1>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+C2S path from sr_di<1>.Q to sr_sr<2>.D has multiple clock origins.
+From: sr_di<1>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<2>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: FB6__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+C2S path from sr_di<2>.Q to sr_sr<3>.D has multiple clock origins.
+From: sr_di<2>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<3>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: FB2__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+C2S path from sr_di<3>.Q to sr_sr<4>.D has multiple clock origins.
+From: sr_di<3>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<4>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<0>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<1>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<10> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<10>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<10> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<11>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<11> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<11>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<11> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<12>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<12> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<12>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<12> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<13>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<13> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<13>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<13> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<14>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<14> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<14>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<14> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<15>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<15> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<15>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<15> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<16>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<16> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<16>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<16> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<17>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<17> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<17>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<17> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<18>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<18> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<18>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<18> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<19>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<19> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<19>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<19> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<20>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<1>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<1>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<1>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<2>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<20> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<20>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<20> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<21>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<21> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<21>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<21> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<22>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<22> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<22>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<22> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<23>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<23> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sdo.D  tF + tLOGI1 + tLOGI2 + tSUI             :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<23> tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<23>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<2>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<2>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<2>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<3>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<3>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<3>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<3>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<4>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<4>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<4>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<4>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<5>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<5>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<5>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<5>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<6>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<6>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<6>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<6>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<7>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<7>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<7>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<7>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<8>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<8>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<8>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<8>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<9>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<9>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<10>.D tF + tLOGI1 + tLOGI2 + tSUI           :  3.8ns        (4.2ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+Source and destination clock skew: 0.0ns
+From: sr_sr<9>  tCOI                                    :  0.4ns        (0.4ns)
+  To: sr_sr<9>.D tF + tLOGI1 + tLOGI2 + tSUI            :  3.8ns        (4.2ns)
+
+                                ****************
+                                * Pad to Setup *
+                                ****************
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: N_PZ_445  tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: sr_sdo.CE tF + tCT + tECSU                        :  3.9ns        (8.1ns)
+
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: N_PZ_445  tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: sr_sr<0>.CE tF + tCT + tECSU                      :  3.9ns        (8.1ns)
+
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: N_PZ_445  tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: sr_sdo.CE tF + tCT + tECSU                        :  3.9ns        (8.1ns)
+
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: N_PZ_445  tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: sr_sr<0>.CE tF + tCT + tECSU                      :  3.9ns        (8.1ns)
+
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: N_PZ_445  tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: sr_sdo.CE tF + tCT + tECSU                        :  3.9ns        (8.1ns)
+
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+Thru: N_PZ_445  tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: sr_sr<0>.CE tF + tCT + tECSU                      :  3.9ns        (8.1ns)
+
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: N_PZ_445  tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: sr_sdo.CE tF + tCT + tECSU                        :  3.9ns        (8.1ns)
+
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+Thru: N_PZ_445  tLOGI1 + tLOGI2 + tPDI                  :  1.3ns        (4.2ns)
+  To: sr_sr<0>.CE tF + tCT + tECSU                      :  3.9ns        (8.1ns)
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: dds_pll_lock -                                    :  0.0ns        (0.0ns)
+Thru: dds_pll_lock.ZIA tIN + tIN33                      :  2.9ns        (2.9ns)
+  To: sr_sr<9>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: dds_pll_lock_1 -                                  :  0.0ns        (0.0ns)
+Thru: dds_pll_lock_1.ZIA tIN + tIN33                    :  2.9ns        (2.9ns)
+  To: sr_sr<10>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: dds_pll_lock_2 -                                  :  0.0ns        (0.0ns)
+Thru: dds_pll_lock_2.ZIA tIN + tIN33                    :  2.9ns        (2.9ns)
+  To: sr_sr<11>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: dds_pll_lock_3 -                                  :  0.0ns        (0.0ns)
+Thru: dds_pll_lock_3.ZIA tIN + tIN33                    :  2.9ns        (2.9ns)
+  To: sr_sr<12>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: dds_smp_err -                                     :  0.0ns        (0.0ns)
+Thru: dds_smp_err.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<5>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: dds_smp_err_1 -                                   :  0.0ns        (0.0ns)
+Thru: dds_smp_err_1.ZIA tIN + tIN33                     :  2.9ns        (2.9ns)
+  To: sr_sr<6>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: dds_smp_err_2 -                                   :  0.0ns        (0.0ns)
+Thru: dds_smp_err_2.ZIA tIN + tIN33                     :  2.9ns        (2.9ns)
+  To: sr_sr<7>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: dds_smp_err_3 -                                   :  0.0ns        (0.0ns)
+Thru: dds_smp_err_3.ZIA tIN + tIN33                     :  2.9ns        (2.9ns)
+  To: sr_sr<8>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_12 -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_12.ZIA tIN + tIN33                         :  2.9ns        (2.9ns)
+  To: sr_sr<1>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_13 -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_13.ZIA tIN + tIN33                         :  2.9ns        (2.9ns)
+  To: sr_sr<2>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_14 -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_14.ZIA tIN + tIN33                         :  2.9ns        (2.9ns)
+  To: sr_sr<3>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_15 -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_15.ZIA tIN + tIN33                         :  2.9ns        (2.9ns)
+  To: sr_sr<4>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: att_le<0>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: att_le<1>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: att_le<2>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: att_le<3>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: le_clk.D  tLOGI1 + tLOGI2 + tSUI                  :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<10>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<11>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<12>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<13>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<14>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<15>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<16>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<17>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<18>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<19>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<1>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<20>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<21>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<22>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<23>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<2>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<3>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<4>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<5>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<6>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<7>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<8>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_3  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_3.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<9>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: att_le<0>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: att_le<1>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: att_le<2>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: att_le<3>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: le_clk.D  tLOGI1 + tLOGI2 + tSUI                  :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<10>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<11>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<12>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<13>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<14>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<15>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<16>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<17>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<18>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<19>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<1>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<20>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<21>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<22>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<23>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<2>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<3>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<4>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<5>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<6>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<7>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<8>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_4  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_4.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<9>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: att_le<0>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: att_le<1>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: att_le<2>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: att_le<3>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: le_clk.D  tLOGI1 + tLOGI2 + tSUI                  :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<10>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<11>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<12>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<13>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<14>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<15>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<16>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<17>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<18>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<19>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<1>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<20>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<21>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<22>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<23>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<2>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<3>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<4>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<5>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<6>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<7>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<8>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_5  -                                       :  0.0ns        (0.0ns)
+Thru: eem_io_5.ZIA tIN + tIN33                          :  2.9ns        (2.9ns)
+  To: sr_sr<9>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<0> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<0>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<13>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: att_le<0>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: att_le<1>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: att_le<2>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: att_le<3>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: le_clk.D  tLOGI1 + tLOGI2 + tSUI                  :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<10>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<11>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<12>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<13>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<14>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<15>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<16>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<17>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<18>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<19>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<1>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<20>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<21>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<22>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<23>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<2>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<3>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<4>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<5>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<6>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<7>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<8>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<1> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<1>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<9>.D tLOGI1 + tLOGI2 + tSUI                 :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<2> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<2>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<15>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: ifc_mode<3> -                                     :  0.0ns        (0.0ns)
+Thru: ifc_mode<3>.ZIA tIN + tIN33                       :  2.9ns        (2.9ns)
+  To: sr_sr<16>.D tLOGI1 + tLOGI2 + tSUI                :  2.1ns        (5.0ns)
+Subtracting clock delay from path delay yields setup requirement: 2.7ns
+
+Destination clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: eem_io_1  -                                       :  0.0ns        (0.0ns)
+  To: sr_sr<0>.D tDIN + tIN33 + tSUI                    :  4.9ns        (4.9ns)
+Subtracting clock delay from path delay yields setup requirement: 2.6ns
+
+                                ****************
+                                * Clock to Pad *
+                                ****************
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<22> tCOI                                    :  0.4ns        (0.4ns)
+Thru: N_PZ_442  tF + tLOGI1 + tLOGI2 + tPDI             :  3.0ns        (3.4ns)
+Thru: clk_div.OE tF + tCT                               :  3.1ns        (6.5ns)
+  To: clk_div   tEN + tOUT33                            :  4.7ns       (11.2ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<23> tCOI                                    :  0.4ns        (0.4ns)
+Thru: N_PZ_442  tF + tLOGI1 + tLOGI2 + tPDI             :  3.0ns        (3.4ns)
+Thru: clk_div.OE tF + tCT                               :  3.1ns        (6.5ns)
+  To: clk_div   tEN + tOUT33                            :  4.7ns       (11.2ns)
+
+Source clock net: FB12__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: dds_common_master_reset tCOI                      :  0.4ns        (0.4ns)
+Thru: dds_reset.Q tF + tLOGI1 + tLOGI2 + tPDI           :  3.0ns        (3.4ns)
+  To: dds_reset tOUT + tOUT33                           :  3.5ns        (6.9ns)
+
+Source clock net: FB12__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: dds_common_master_reset tCOI                      :  0.4ns        (0.4ns)
+Thru: dds_reset_1.Q tF + tLOGI1 + tLOGI2 + tPDI         :  3.0ns        (3.4ns)
+  To: dds_reset_1 tOUT + tOUT33                         :  3.5ns        (6.9ns)
+
+Source clock net: FB12__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: dds_common_master_reset tCOI                      :  0.4ns        (0.4ns)
+Thru: dds_reset_2.Q tF + tLOGI1 + tLOGI2 + tPDI         :  3.0ns        (3.4ns)
+  To: dds_reset_2 tOUT + tOUT33                         :  3.5ns        (6.9ns)
+
+Source clock net: FB12__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: dds_common_master_reset tCOI                      :  0.4ns        (0.4ns)
+Thru: dds_reset_3.Q tF + tLOGI1 + tLOGI2 + tPDI         :  3.0ns        (3.4ns)
+  To: dds_reset_3 tOUT + tOUT33                         :  3.5ns        (6.9ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<12> tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_io_update.Q tF + tLOGI1 + tLOGI2 + tPDI       :  3.0ns        (3.4ns)
+  To: dds_io_update tOUT + tOUT33                       :  3.5ns        (6.9ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<12> tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_io_update_1.Q tF + tLOGI1 + tLOGI2 + tPDI     :  3.0ns        (3.4ns)
+  To: dds_io_update_1 tOUT + tOUT33                     :  3.5ns        (6.9ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<12> tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_io_update_2.Q tF + tLOGI1 + tLOGI2 + tPDI     :  3.0ns        (3.4ns)
+  To: dds_io_update_2 tOUT + tOUT33                     :  3.5ns        (6.9ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<12> tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_io_update_3.Q tF + tLOGI1 + tLOGI2 + tPDI     :  3.0ns        (3.4ns)
+  To: dds_io_update_3 tOUT + tOUT33                     :  3.5ns        (6.9ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<13> tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_cs_n.Q tF + tLOGI1 + tLOGI2 + tPDI            :  3.0ns        (3.4ns)
+  To: dds_cs_n  tOUT + tOUT33                           :  3.5ns        (6.9ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<13> tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_io_update.Q tF + tLOGI1 + tLOGI2 + tPDI       :  3.0ns        (3.4ns)
+  To: dds_io_update tOUT + tOUT33                       :  3.5ns        (6.9ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<13> tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_sck.Q tF + tLOGI1 + tLOGI2 + tPDI             :  3.0ns        (3.4ns)
+  To: dds_sck   tOUT + tOUT33                           :  3.5ns        (6.9ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<13> tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_sdi.Q tF + tLOGI1 + tLOGI2 + tPDI             :  3.0ns        (3.4ns)
+  To: dds_sdi   tOUT + tOUT33                           :  3.5ns        (6.9ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<13> tCOI                                    :  0.4ns        (0.4ns)
+Thru: tp.Q      tF + tLOGI1 + tLOGI2 + tPDI             :  3.0ns        (3.4ns)
+  To: tp        tOUT + tOUT33                           :  3.5ns        (6.9ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<13> tCOI                                    :  0.4ns        (0.4ns)
+Thru: tp_1.Q    tF + tLOGI1 + tLOGI2 + tPDI             :  3.0ns        (3.4ns)
+  To: tp_1      tOUT + tOUT33                           :  3.5ns        (6.9ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<13> tCOI                                    :  0.4ns        (0.4ns)
+Thru: tp_2.Q    tF + tLOGI1 + tLOGI2 + tPDI             :  3.0ns        (3.4ns)
+  To: tp_2      tOUT + tOUT33                           :  3.5ns        (6.9ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<14> tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_cs_n_1.Q tF + tLOGI1 + tLOGI2 + tPDI          :  3.0ns        (3.4ns)
+  To: dds_cs_n_1 tOUT + tOUT33                          :  3.5ns        (6.9ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<14> tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_io_update_1.Q tF + tLOGI1 + tLOGI2 + tPDI     :  3.0ns        (3.4ns)
+  To: dds_io_update_1 tOUT + tOUT33                     :  3.5ns        (6.9ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<14> tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_sck_1.Q tF + tLOGI1 + tLOGI2 + tPDI           :  3.0ns        (3.4ns)
+  To: dds_sck_1 tOUT + tOUT33                           :  3.5ns        (6.9ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<14> tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_sdi_1.Q tF + tLOGI1 + tLOGI2 + tPDI           :  3.0ns        (3.4ns)
+  To: dds_sdi_1 tOUT + tOUT33                           :  3.5ns        (6.9ns)
+
+Source clock net: FB4__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<15> tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_cs_n_2.Q tF + tLOGI1 + tLOGI2 + tPDI          :  3.0ns        (3.4ns)
+  To: dds_cs_n_2 tOUT + tOUT33                          :  3.5ns        (6.9ns)
+
+Source clock net: FB4__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<15> tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_io_update_2.Q tF + tLOGI1 + tLOGI2 + tPDI     :  3.0ns        (3.4ns)
+  To: dds_io_update_2 tOUT + tOUT33                     :  3.5ns        (6.9ns)
+
+Source clock net: FB4__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<15> tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_sck_2.Q tF + tLOGI1 + tLOGI2 + tPDI           :  3.0ns        (3.4ns)
+  To: dds_sck_2 tOUT + tOUT33                           :  3.5ns        (6.9ns)
+
+Source clock net: FB4__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<15> tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_sdi_2.Q tF + tLOGI1 + tLOGI2 + tPDI           :  3.0ns        (3.4ns)
+  To: dds_sdi_2 tOUT + tOUT33                           :  3.5ns        (6.9ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<16> tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_cs_n_3.Q tF + tLOGI1 + tLOGI2 + tPDI          :  3.0ns        (3.4ns)
+  To: dds_cs_n_3 tOUT + tOUT33                          :  3.5ns        (6.9ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<16> tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_io_update_3.Q tF + tLOGI1 + tLOGI2 + tPDI     :  3.0ns        (3.4ns)
+  To: dds_io_update_3 tOUT + tOUT33                     :  3.5ns        (6.9ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<16> tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_sck_3.Q tF + tLOGI1 + tLOGI2 + tPDI           :  3.0ns        (3.4ns)
+  To: dds_sck_3 tOUT + tOUT33                           :  3.5ns        (6.9ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<16> tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_sdi_3.Q tF + tLOGI1 + tLOGI2 + tPDI           :  3.0ns        (3.4ns)
+  To: dds_sdi_3 tOUT + tOUT33                           :  3.5ns        (6.9ns)
+
+Source clock net: FB6__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<4>  tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_led<1>.Q tF + tLOGI1 + tLOGI2 + tPDI          :  3.0ns        (3.4ns)
+  To: dds_led<1> tOUT + tOUT33                          :  3.5ns        (6.9ns)
+
+Source clock net: FB6__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<5>  tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_led_1<1>.Q tF + tLOGI1 + tLOGI2 + tPDI        :  3.0ns        (3.4ns)
+  To: dds_led_1<1> tOUT + tOUT33                        :  3.5ns        (6.9ns)
+
+Source clock net: FB6__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<6>  tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_led_2<1>.Q tF + tLOGI1 + tLOGI2 + tPDI        :  3.0ns        (3.4ns)
+  To: dds_led_2<1> tOUT + tOUT33                        :  3.5ns        (6.9ns)
+
+Source clock net: FB6__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<7>  tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_led_3<1>.Q tF + tLOGI1 + tLOGI2 + tPDI        :  3.0ns        (3.4ns)
+  To: dds_led_3<1> tOUT + tOUT33                        :  3.5ns        (6.9ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: sr_sdo    tCOI                                    :  0.4ns        (0.4ns)
+Thru: eem_io_2.Q tF + tLOGI1 + tLOGI2 + tPDI            :  3.0ns        (3.4ns)
+  To: eem_io_2  tOUT + tOUT33                           :  3.5ns        (6.9ns)
+
+Source clock net: FB4__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: clk_in_sel tCOI                                   :  0.4ns        (0.4ns)
+Thru: clk_osc_en_n.Q tF + tLOGI1 + tPDI                 :  2.7ns        (3.1ns)
+  To: clk_osc_en_n tOUT + tOUT33                        :  3.5ns        (6.6ns)
+
+Source clock net: FB9__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: clk_mmcx_osc_sel tCOI                             :  0.4ns        (0.4ns)
+Thru: clk_osc_en_n.Q tF + tLOGI1 + tPDI                 :  2.7ns        (3.1ns)
+  To: clk_osc_en_n tOUT + tOUT33                        :  3.5ns        (6.6ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<0>  tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_led<0>.Q tF + tLOGI1 + tPDI                   :  2.7ns        (3.1ns)
+  To: dds_led<0> tOUT + tOUT33                          :  3.5ns        (6.6ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<0>  tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_rf_sw.Q tF + tLOGI1 + tPDI                    :  2.7ns        (3.1ns)
+  To: dds_rf_sw tOUT + tOUT33                           :  3.5ns        (6.6ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<1>  tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_led_1<0>.Q tF + tLOGI1 + tPDI                 :  2.7ns        (3.1ns)
+  To: dds_led_1<0> tOUT + tOUT33                        :  3.5ns        (6.6ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<1>  tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_rf_sw_1.Q tF + tLOGI1 + tPDI                  :  2.7ns        (3.1ns)
+  To: dds_rf_sw_1 tOUT + tOUT33                         :  3.5ns        (6.6ns)
+
+Source clock net: FB6__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<2>  tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_led_2<0>.Q tF + tLOGI1 + tPDI                 :  2.7ns        (3.1ns)
+  To: dds_led_2<0> tOUT + tOUT33                        :  3.5ns        (6.6ns)
+
+Source clock net: FB6__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<2>  tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_rf_sw_2.Q tF + tLOGI1 + tPDI                  :  2.7ns        (3.1ns)
+  To: dds_rf_sw_2 tOUT + tOUT33                         :  3.5ns        (6.6ns)
+
+Source clock net: FB2__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<3>  tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_led_3<0>.Q tF + tLOGI1 + tPDI                 :  2.7ns        (3.1ns)
+  To: dds_led_3<0> tOUT + tOUT33                        :  3.5ns        (6.6ns)
+
+Source clock net: FB2__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: sr_di<3>  tCOI                                    :  0.4ns        (0.4ns)
+Thru: dds_rf_sw_3.Q tF + tLOGI1 + tPDI                  :  2.7ns        (3.1ns)
+  To: dds_rf_sw_3 tOUT + tOUT33                         :  3.5ns        (6.6ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: att_le<0>.Q tCOI                                  :  0.4ns        (0.4ns)
+  To: att_le<0> tOUT + tOUT33                           :  3.5ns        (3.9ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: att_le<1>.Q tCOI                                  :  0.4ns        (0.4ns)
+  To: att_le<1> tOUT + tOUT33                           :  3.5ns        (3.9ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: att_le<2>.Q tCOI                                  :  0.4ns        (0.4ns)
+  To: att_le<2> tOUT + tOUT33                           :  3.5ns        (3.9ns)
+
+Source clock net: eem_io.GCK
+Worst case clock delay from origin eem_io is 2.3ns
+From: att_le<3>.Q tCOI                                  :  0.4ns        (0.4ns)
+  To: att_le<3> tOUT + tOUT33                           :  3.5ns        (3.9ns)
+
+Source clock net: FB16__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: att_rst_n.Q tCOI                                  :  0.4ns        (0.4ns)
+  To: att_rst_n tOUT + tOUT33                           :  3.5ns        (3.9ns)
+
+Source clock net: FB4__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: clk_in_sel.Q tCOI                                 :  0.4ns        (0.4ns)
+  To: clk_in_sel tOUT + tOUT33                          :  3.5ns        (3.9ns)
+
+Source clock net: FB9__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: clk_mmcx_osc_sel.Q tCOI                           :  0.4ns        (0.4ns)
+  To: clk_mmcx_osc_sel tOUT + tOUT33                    :  3.5ns        (3.9ns)
+
+Source clock net: FB11__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: dds_common_io_reset.Q tCOI                        :  0.4ns        (0.4ns)
+  To: dds_common_io_reset tOUT + tOUT33                 :  3.5ns        (3.9ns)
+
+Source clock net: FB12__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: dds_common_master_reset.Q tCOI                    :  0.4ns        (0.4ns)
+  To: dds_common_master_reset tOUT + tOUT33             :  3.5ns        (3.9ns)
+
+Source clock net: FB11__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: dds_profile<0>.Q tCOI                             :  0.4ns        (0.4ns)
+  To: dds_profile<0> tOUT + tOUT33                      :  3.5ns        (3.9ns)
+
+Source clock net: FB3__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: dds_profile<1>.Q tCOI                             :  0.4ns        (0.4ns)
+  To: dds_profile<1> tOUT + tOUT33                      :  3.5ns        (3.9ns)
+
+Source clock net: FB3__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: dds_profile<2>.Q tCOI                             :  0.4ns        (0.4ns)
+  To: dds_profile<2> tOUT + tOUT33                      :  3.5ns        (3.9ns)
+
+Source clock net: FB2__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: dds_profile_1<0>.Q tCOI                           :  0.4ns        (0.4ns)
+  To: dds_profile_1<0> tOUT + tOUT33                    :  3.5ns        (3.9ns)
+
+Source clock net: FB2__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: dds_profile_1<1>.Q tCOI                           :  0.4ns        (0.4ns)
+  To: dds_profile_1<1> tOUT + tOUT33                    :  3.5ns        (3.9ns)
+
+Source clock net: FB2__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: dds_profile_1<2>.Q tCOI                           :  0.4ns        (0.4ns)
+  To: dds_profile_1<2> tOUT + tOUT33                    :  3.5ns        (3.9ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: dds_profile_2<0>.Q tCOI                           :  0.4ns        (0.4ns)
+  To: dds_profile_2<0> tOUT + tOUT33                    :  3.5ns        (3.9ns)
+
+Source clock net: FB8__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: dds_profile_2<1>.Q tCOI                           :  0.4ns        (0.4ns)
+  To: dds_profile_2<1> tOUT + tOUT33                    :  3.5ns        (3.9ns)
+
+Source clock net: FB6__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: dds_profile_2<2>.Q tCOI                           :  0.4ns        (0.4ns)
+  To: dds_profile_2<2> tOUT + tOUT33                    :  3.5ns        (3.9ns)
+
+Source clock net: FB6__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: dds_profile_3<0>.Q tCOI                           :  0.4ns        (0.4ns)
+  To: dds_profile_3<0> tOUT + tOUT33                    :  3.5ns        (3.9ns)
+
+Source clock net: FB5__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: dds_profile_3<1>.Q tCOI                           :  0.4ns        (0.4ns)
+  To: dds_profile_3<1> tOUT + tOUT33                    :  3.5ns        (3.9ns)
+
+Source clock net: FB6__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: dds_profile_3<2>.Q tCOI                           :  0.4ns        (0.4ns)
+  To: dds_profile_3<2> tOUT + tOUT33                    :  3.5ns        (3.9ns)
+
+Source clock net: FB16__ctinst/4
+Worst case clock delay from origin le_clk.Q is 3.5ns
+From: dds_sync_sync_sel.Q tCOI                          :  0.4ns        (0.4ns)
+  To: dds_sync_sync_sel tOUT + tOUT33                   :  3.5ns        (3.9ns)
+
+                   *****************************************
+                   * Path Ending at Clock Pin of Flip-Flop *
+                   *****************************************
+From: eem_io    -                                       :  0.0ns        (0.0ns)
+  To: eem_io.GCK tGCK + tIN33                           :  2.3ns        (2.3ns)
+
+Path Type Definition: 
+
+Pad to Pad (tPD) -                        Reports pad to pad paths that start 
+                                          at input pads and end at output pads. 
+                                          Paths are not traced through 
+                                          registers. 
+
+Clock Pad to Output Pad (tCO) -           Reports paths that start at input 
+                                          pads trace through clock inputs of 
+                                          registers and end at output pads. 
+                                          Paths are not traced through PRE/CLR 
+                                          inputs of registers. 
+
+Setup to Clock at Pad (tSU or tSUF) -     Reports external setup time of data 
+                                          to clock at pad. Data path starts at 
+                                          an input pad and ends at register 
+                                          (Fast Input Register for tSUF) D/T 
+                                          input. Clock path starts at input pad 
+                                          and ends at the register clock input. 
+                                          Paths are not traced through 
+                                          registers. Pin-to-pin setup 
+                                          requirement is not reported or 
+                                          guaranteed for product-term clocks 
+                                          derived from macrocell feedback 
+                                          signals. 
+
+Clock to Setup (tCYC) -                   Register to register cycle time. 
+                                          Include source register tCO and 
+                                          destination register tSU. Note that 
+                                          when the computed Maximum Clock Speed 
+                                          is limited by tCYC it is computed 
+                                          assuming that all registers are 
+                                          rising-edge sensitive. 
+
+Clock to Pad -                            Reports path starting at clock pin of 
+                                          register and ends at ouput pad. 
+
+Path Ending at Clock Pin of Flip-Flop -   Reports paths that start at input pad 
+                                          and end at clock input of flip-flop. 
+                                          Paths are not traced through 
+                                          registers. 
+
+Pad to Setup -                            Reports paths that start at pads and 
+                                          end at register D/T input. Paths are 
+                                          not traced through registers. 
+

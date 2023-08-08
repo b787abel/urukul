@@ -1,0 +1,2688 @@
+assert111.........
+name = ddddddd..
+assert333.........
+NDEBUG is defined
+__STDC__ is defined
+__MSVC__ is NOT defined
+XPLA_BORLANDC is NOT defined
+
+---------------------
+|  D E F A U L T S  |
+---------------------
+max_pt=36, min_pt=3
+max_fi=32, min_fi=4
+
+-----------------
+|  H E A D E R  |
+-----------------
+#$ MODULE urukul
+#$ PINS 3 "dds_sync_sync_out_en":R6 "ifc_mode<2>":A16 "ifc_mode<1>":B16 
+#$ PINS 4 "eem_io_2":T16 "clk_div":E5 "eem_io_3":R16 "eem_io_4":R15 
+#$ PINS 3 "eem_io_1":R13 "eem_io":M2 "dds_profile_3<2>":P2 
+#$ PINS 3 "dds_profile_3<0>":N3 "dds_profile_3<1>":P1 "dds_reset":B13 
+#$ PINS 3 "dds_common_master_reset":F16 "dds_rf_sw":D13 "eem_io_12":R1 
+#$ PINS 4 "dds_rf_sw_1":C12 "eem_io_13":T1 "dds_rf_sw_2":D10 "eem_io_14":T2 
+#$ PINS 3 "dds_rf_sw_3":D9 "eem_io_15":T3 "clk_in_sel":G5 
+#$ PINS 4 "clk_mmcx_osc_sel":C11 "tp_1":A5 "tp_2":B5 "eem_oe_10":R4 
+#$ PINS 4 "eem_io_10":R3 "eem_io_6":R12 "eem_io_5":R14 "variant":A15 
+#$ PINS 3 "ifc_mode<0>":E14 "dds_smp_err_1":J1 "dds_pll_lock_1":K2 
+#$ PINS 3 "dds_smp_err":D4 "dds_pll_lock":E4 "dds_smp_err_2":P6 
+#$ PINS 3 "dds_pll_lock_2":N7 "dds_smp_err_3":N6 "dds_pll_lock_3":P7 
+#$ PINS 4 "dds_sdo_3":G3 "dds_sdo_1":J3 "dds_sdo":A3 "dds_sdo_2":J2 
+#$ PINS 4 "att_s_out<3>":R9 "eem_io_7":T15 "eem_io_8":M3 "eem_io_9":J5 
+#$ PINS 4 "eem_io_11":R2 "ifc_mode<3>":B15 "att_le<0>":E10 "att_le<1>":P8 
+#$ PINS 3 "att_le<2>":C8 "att_le<3>":K4 "dds_sync_sync_sel":T10 
+#$ PINS 3 "dds_common_io_reset":B9 "clk_osc_en_n":B6 "dds_io_update_1":P4 
+#$ PINS 3 "dds_io_update_2":H5 "dds_io_update_3":E3 "dds_io_update":B1 
+#$ PINS 3 "dds_led_1<1>":A11 "dds_led<1>":B10 "dds_led_2<1>":B14 
+#$ PINS 4 "dds_led_3<1>":B11 "dds_sck_1":K3 "dds_sck_2":H4 "dds_sck_3":H2 
+#$ PINS 4 "dds_sdi_1":K5 "dds_sdi_2":H3 "dds_sdi_3":F5 "att_clk":E9 
+#$ PINS 3 "att_rst_n":N9 "att_s_in<0>":B7 "att_s_in<1>":D8 
+#$ PINS 3 "att_s_out<0>":C10 "att_s_in<2>":D7 "att_s_out<1>":C9 
+#$ PINS 4 "att_s_in<3>":L5 "att_s_out<2>":E8 "dds_cs_n_1":J4 "dds_cs_n_2":H1 
+#$ PINS 4 "dds_cs_n_3":G4 "tp":A4 "dds_cs_n":B3 "dds_led<0>":E11 
+#$ PINS 3 "dds_led_1<0>":A13 "dds_led_2<0>":A14 "dds_led_3<0>":A12 
+#$ PINS 3 "dds_reset_3":T8 "dds_reset_2":R10 "dds_reset_1":F2 
+#$ PINS 3 "dds_sync_clk_out_en":T5 "eem_oe_2":K15 "dds_profile<2>":A8 
+#$ PINS 3 "dds_profile_2<2>":M5 "dds_profile_1<2>":E2 "dds_profile_2<0>":M1 
+#$ PINS 3 "dds_profile_1<0>":D3 "dds_profile<0>":A9 "dds_profile_2<1>":M6 
+#$ PINS 3 "dds_profile<1>":B8 "dds_profile_1<1>":D2 "dds_sck":A2 
+#$ PINS 5 "dds_sdi":B2 "tp_3":A6 "tp_4":A7 "dds_drover":D11 "fsen":N15 
+#$ PINS 4 "dds_osk":C13 "dds_osk_3":N2 "dds_osk_2":L1 "dds_osk_1":C3 
+#$ PINS 4 "dds_drctl":C14 "dds_drctl_3":N1 "dds_drctl_2":K1 "dds_drctl_1":C4 
+#$ PINS 4 "eem_oe":P15 "eem_oe_9":T4 "eem_oe_8":R7 "eem_oe_13":R8 
+#$ PINS 4 "eem_oe_12":M7 "eem_oe_11":R5 "dds_drhold":E13 "dds_drhold_3":N4 
+#$ PINS 4 "dds_drhold_2":L4 "dds_drhold_1":C7 "eem_oe_7":P16 "eem_oe_6":L16 
+#$ PINS 4 "eem_oe_5":M16 "eem_oe_4":L15 "eem_oe_3":N16 "eem_oe_1":M15 
+#$ PINS 2 "eem_oe_15":M8 "eem_oe_14":T7 
+#$ NODES 5 "sr_di<22>" "sr_di<23>" "sr_sr<0>" "sr_sr<10>" "sr_sr<12>" 
+#$ NODES 5 "sr_sr<13>" "sr_sr<14>" "sr_sr<15>" "sr_sr<16>" "sr_sr<17>" 
+#$ NODES 5 "le_clk" "sr_sr<18>" "sr_sr<19>" "sr_sr<1>" "sr_sr<20>" 
+#$ NODES 5 "sr_sr<21>" "sr_sr<22>" "sr_sr<23>" "sr_sr<2>" "sr_sr<3>" 
+#$ NODES 6 "sr_sr<4>" "sr_sr<5>" "sr_sr<6>" "sr_sr<7>" "sr_sr<8>" "sr_sr<9>" 
+#$ NODES 6 "sr_sdo" "sr_sr<11>" "sr_di<0>" "sr_di<1>" "sr_di<2>" "sr_di<3>" 
+#$ NODES 5 "sr_di<13>" "sr_di<14>" "sr_di<15>" "sr_di<16>" "sr_di<12>" 
+#$ NODES 4 "sr_di<4>" "sr_di<5>" "sr_di<6>" "sr_di<7>" 
+
+---------------------------------------
+|  P I N    T a b l e    [count=176]  |
+---------------------------------------
+ dds_profile<0> sr_di<7> sr_di<12> sr_sr<23> dds_led_3<1> att_s_out<0> att_rst_n tp 
+ sr_di<2> sr_sr<18> eem_io_1 dds_led_1<0> att_le<3> eem_io_2 att_s_in<3> sr_sr<2> 
+ dds_common_io_reset clk_in_sel eem_io_3 sr_sr<13> sr_di<22> eem_oe_9 ifc_mode<2> 
+ dds_profile_1<1> dds_sync_sync_out_en eem_io_4 eem_oe_8 eem_oe_10 dds_rf_sw dds_osk_1 
+ eem_io_5 sr_sr<7> eem_oe_7 eem_oe_11 dds_pll_lock dds_osk_2 eem_io_6 eem_oe_6 
+ eem_oe_12 dds_profile_2<0> dds_osk_3 eem_io_7 sr_di<6> sr_di<13> sr_sr<22> eem_oe_5 
+ eem_oe_13 clk_osc_en_n eem_io_8 eem_oe_14 eem_oe_4 att_s_out<1> eem_io_9 dds_led_3<0> 
+ le_clk eem_oe_15 eem_oe_3 dds_io_update sr_di<1> sr_sr<17> dds_osk eem_oe_2 
+ dds_sync_clk_out_en dds_led_1<1> dds_cs_n att_le<2> eem_oe_1 dds_smp_err_1 sr_sr<3> 
+ dds_smp_err_2 sr_sr<12> sr_di<23> dds_drhold_3 dds_smp_err_3 dds_profile_1<2> 
+ ifc_mode<1> dds_led_2<0> dds_drhold_2 sr_sr<8> dds_drhold_1 eem_oe dds_sync_sync_sel 
+ dds_sck tp_4 dds_profile_2<1> sr_di<5> sr_di<14> sr_sr<21> tp_3 tp_2 att_s_in<0> 
+ eem_io att_s_out<2> dds_smp_err dds_profile_3<0> dds_cs_n_3 tp_1 sr_di<0> sr_sr<16> 
+ att_le<1> dds_cs_n_2 dds_drhold dds_reset_3 dds_cs_n_1 sr_sr<4> dds_reset_2 dds_led<0> 
+ sr_sr<11> dds_reset_1 dds_profile<2> dds_sdi ifc_mode<0> dds_led_2<1> dds_sdi_3 
+ dds_sck_3 dds_pll_lock_3 dds_reset variant dds_sdi_2 sr_sr<9> dds_io_update_3 
+ dds_pll_lock_2 dds_sdi_1 dds_sck_2 dds_io_update_2 clk_mmcx_osc_sel dds_pll_lock_1 
+ dds_profile_2<2> dds_sck_1 sr_di<4> sr_di<15> sr_sr<20> dds_io_update_1 dds_drover 
+ att_s_out<3> att_s_in<1> sr_sr<0> dds_sdo dds_profile_3<1> sr_sdo sr_sr<15> att_clk 
+ att_le<0> fsen eem_io_10 sr_sr<5> dds_led<1> eem_io_11 dds_rf_sw_1 sr_sr<10> 
+ dds_profile<1> eem_io_12 dds_rf_sw_2 eem_io_13 dds_rf_sw_3 dds_sdo_3 eem_io_14 
+ dds_sdo_2 dds_common_master_reset dds_drctl_3 eem_io_15 dds_sdo_1 sr_di<16> sr_di<3> 
+ sr_sr<19> dds_drctl_2 dds_drctl_1 att_s_in<2> sr_sr<1> dds_profile_3<2> dds_drctl 
+ sr_sr<14> ifc_mode<3> dds_profile_1<0> clk_div sr_sr<6>
+
+-------------------------------------------
+|  P I N    E q n l i s t    [count=135]  |
+-------------------------------------------
+dds_sync_sync_out_en (fi=4): (dds_sync_sync_out_en/N_PZ_5, net=urukul) 
+ifc_mode<2> (fi=0): 
+ifc_mode<1> (fi=0): 
+eem_io_2 (fi=10): (eem_io_2/N_PZ_6, net=urukul) (eem_io_2.OE/N_PZ_7, net=urukul) 
+clk_div (fi=4): (clk_div/N_PZ_8, net=urukul) (clk_div.OE/N_PZ_9, net=urukul) 
+eem_io_3 (fi=0): 
+eem_io_4 (fi=0): 
+eem_io_1 (fi=0): 
+eem_io (fi=0): 
+dds_profile_3<2> (fi=2): (dds_profile_3<2>.D/N_PZ_85, net=urukul) (dds_profile_3<2>.CLK/N_PZ_86, net=urukul) 
+dds_profile_3<0> (fi=2): (dds_profile_3<0>.D/N_PZ_87, net=urukul) (dds_profile_3<0>.CLK/N_PZ_88, net=urukul) 
+dds_profile_3<1> (fi=2): (dds_profile_3<1>.D/N_PZ_89, net=urukul) (dds_profile_3<1>.CLK/N_PZ_90, net=urukul) 
+dds_reset (fi=4): (dds_reset/N_PZ_91, net=urukul) 
+dds_common_master_reset (fi=2): (dds_common_master_reset.D/N_PZ_92, net=urukul) (dds_common_master_reset.CLK/N_PZ_93, net=urukul) 
+dds_rf_sw (fi=2): (dds_rf_sw/N_PZ_1, net=urukul) 
+eem_io_12 (fi=0): 
+dds_rf_sw_1 (fi=2): (dds_rf_sw_1/N_PZ_2, net=urukul) 
+eem_io_13 (fi=0): 
+dds_rf_sw_2 (fi=2): (dds_rf_sw_2/N_PZ_3, net=urukul) 
+eem_io_14 (fi=0): 
+dds_rf_sw_3 (fi=2): (dds_rf_sw_3/N_PZ_4, net=urukul) 
+eem_io_15 (fi=0): 
+clk_in_sel (fi=2): (clk_in_sel.D/N_PZ_94, net=urukul) (clk_in_sel.CLK/N_PZ_95, net=urukul) 
+clk_mmcx_osc_sel (fi=2): (clk_mmcx_osc_sel.D/N_PZ_96, net=urukul) (clk_mmcx_osc_sel.CLK/N_PZ_97, net=urukul) 
+tp_1 (fi=4): (tp_1/N_PZ_98, net=urukul) 
+tp_2 (fi=4): (tp_2/N_PZ_99, net=urukul) 
+eem_oe_10 (fi=2): (eem_oe_10/N_PZ_0, net=urukul) 
+eem_io_10 (fi=3): (eem_io_10/N_PZ_100, net=urukul) (eem_io_10.OE/N_PZ_101, net=urukul) 
+eem_io_6 (fi=0): 
+eem_io_5 (fi=0): 
+variant (fi=0): 
+ifc_mode<0> (fi=0): 
+dds_smp_err_1 (fi=0): 
+dds_pll_lock_1 (fi=0): 
+dds_smp_err (fi=0): 
+dds_pll_lock (fi=0): 
+dds_smp_err_2 (fi=0): 
+dds_pll_lock_2 (fi=0): 
+dds_smp_err_3 (fi=0): 
+dds_pll_lock_3 (fi=0): 
+dds_sdo_3 (fi=0): 
+dds_sdo_1 (fi=0): 
+dds_sdo (fi=0): 
+dds_sdo_2 (fi=0): 
+att_s_out<3> (fi=0): 
+eem_io_7 (fi=0): 
+eem_io_8 (fi=0): 
+eem_io_9 (fi=0): 
+eem_io_11 (fi=0): 
+ifc_mode<3> (fi=0): 
+att_le<0> (fi=6): (att_le<0>.CLK/N_PZ_137, net=urukul) (att_le<0>.AP/N_PZ_138, net=urukul) (att_le<0>.T/N_PZ_298, net=urukul) 
+att_le<1> (fi=6): (att_le<1>.CLK/N_PZ_141, net=urukul) (att_le<1>.AP/N_PZ_142, net=urukul) (att_le<1>.T/N_PZ_299, net=urukul) 
+att_le<2> (fi=6): (att_le<2>.CLK/N_PZ_145, net=urukul) (att_le<2>.AP/N_PZ_146, net=urukul) (att_le<2>.T/N_PZ_300, net=urukul) 
+att_le<3> (fi=6): (att_le<3>.CLK/N_PZ_149, net=urukul) (att_le<3>.AP/N_PZ_150, net=urukul) (att_le<3>.T/N_PZ_301, net=urukul) 
+dds_sync_sync_sel (fi=2): (dds_sync_sync_sel.D/N_PZ_152, net=urukul) (dds_sync_sync_sel.CLK/N_PZ_153, net=urukul) 
+dds_common_io_reset (fi=2): (dds_common_io_reset.D/N_PZ_154, net=urukul) (dds_common_io_reset.CLK/N_PZ_155, net=urukul) 
+clk_osc_en_n (fi=2): (clk_osc_en_n/N_PZ_156, net=urukul) 
+dds_io_update_1 (fi=3): (dds_io_update_1/N_PZ_157, net=urukul) 
+dds_io_update_2 (fi=3): (dds_io_update_2/N_PZ_158, net=urukul) 
+dds_io_update_3 (fi=3): (dds_io_update_3/N_PZ_159, net=urukul) 
+dds_io_update (fi=3): (dds_io_update/N_PZ_160, net=urukul) 
+dds_led_1<1> (fi=5): (dds_led_1<1>/N_PZ_161, net=urukul) 
+dds_led<1> (fi=5): (dds_led<1>/N_PZ_162, net=urukul) 
+dds_led_2<1> (fi=5): (dds_led_2<1>/N_PZ_163, net=urukul) 
+dds_led_3<1> (fi=5): (dds_led_3<1>/N_PZ_164, net=urukul) 
+dds_sck_1 (fi=4): (dds_sck_1/N_PZ_165, net=urukul) 
+dds_sck_2 (fi=4): (dds_sck_2/N_PZ_166, net=urukul) 
+dds_sck_3 (fi=4): (dds_sck_3/N_PZ_167, net=urukul) 
+dds_sdi_1 (fi=4): (dds_sdi_1/N_PZ_168, net=urukul) 
+dds_sdi_2 (fi=4): (dds_sdi_2/N_PZ_169, net=urukul) 
+dds_sdi_3 (fi=4): (dds_sdi_3/N_PZ_170, net=urukul) 
+att_clk (fi=5): (att_clk/N_PZ_171, net=urukul) 
+att_rst_n (fi=2): (att_rst_n.D/N_PZ_172, net=urukul) (att_rst_n.CLK/N_PZ_173, net=urukul) 
+att_s_in<0> (fi=1): (att_s_in<0>/N_PZ_174, net=urukul) 
+att_s_in<1> (fi=1): (att_s_in<1>/N_PZ_175, net=urukul) 
+att_s_out<0> (fi=0): 
+att_s_in<2> (fi=1): (att_s_in<2>/N_PZ_176, net=urukul) 
+att_s_out<1> (fi=0): 
+att_s_in<3> (fi=1): (att_s_in<3>/N_PZ_177, net=urukul) 
+att_s_out<2> (fi=0): 
+dds_cs_n_1 (fi=5): (dds_cs_n_1/N_PZ_178, net=urukul) 
+dds_cs_n_2 (fi=5): (dds_cs_n_2/N_PZ_179, net=urukul) 
+dds_cs_n_3 (fi=5): (dds_cs_n_3/N_PZ_180, net=urukul) 
+tp (fi=5): (tp/N_PZ_181, net=urukul) 
+dds_cs_n (fi=5): (dds_cs_n/N_PZ_182, net=urukul) 
+dds_led<0> (fi=2): (dds_led<0>/N_PZ_183, net=urukul) 
+dds_led_1<0> (fi=2): (dds_led_1<0>/N_PZ_184, net=urukul) 
+dds_led_2<0> (fi=2): (dds_led_2<0>/N_PZ_185, net=urukul) 
+dds_led_3<0> (fi=2): (dds_led_3<0>/N_PZ_186, net=urukul) 
+dds_reset_3 (fi=4): (dds_reset_3/N_PZ_187, net=urukul) 
+dds_reset_2 (fi=4): (dds_reset_2/N_PZ_188, net=urukul) 
+dds_reset_1 (fi=4): (dds_reset_1/N_PZ_189, net=urukul) 
+dds_sync_clk_out_en (fi=4): (dds_sync_clk_out_en/N_PZ_190, net=urukul) 
+eem_oe_2 (fi=1): (eem_oe_2/N_PZ_191, net=urukul) 
+dds_profile<2> (fi=2): (dds_profile<2>.D/N_PZ_192, net=urukul) (dds_profile<2>.CLK/N_PZ_193, net=urukul) 
+dds_profile_2<2> (fi=2): (dds_profile_2<2>.D/N_PZ_194, net=urukul) (dds_profile_2<2>.CLK/N_PZ_195, net=urukul) 
+dds_profile_1<2> (fi=2): (dds_profile_1<2>.D/N_PZ_196, net=urukul) (dds_profile_1<2>.CLK/N_PZ_197, net=urukul) 
+dds_profile_2<0> (fi=2): (dds_profile_2<0>.D/N_PZ_198, net=urukul) (dds_profile_2<0>.CLK/N_PZ_199, net=urukul) 
+dds_profile_1<0> (fi=2): (dds_profile_1<0>.D/N_PZ_200, net=urukul) (dds_profile_1<0>.CLK/N_PZ_201, net=urukul) 
+dds_profile<0> (fi=2): (dds_profile<0>.D/N_PZ_202, net=urukul) (dds_profile<0>.CLK/N_PZ_203, net=urukul) 
+dds_profile_2<1> (fi=2): (dds_profile_2<1>.D/N_PZ_204, net=urukul) (dds_profile_2<1>.CLK/N_PZ_205, net=urukul) 
+dds_profile<1> (fi=2): (dds_profile<1>.D/N_PZ_206, net=urukul) (dds_profile<1>.CLK/N_PZ_207, net=urukul) 
+dds_profile_1<1> (fi=2): (dds_profile_1<1>.D/N_PZ_208, net=urukul) (dds_profile_1<1>.CLK/N_PZ_209, net=urukul) 
+dds_sck (fi=4): (dds_sck/N_PZ_210, net=urukul) 
+dds_sdi (fi=4): (dds_sdi/N_PZ_211, net=urukul) 
+tp_3 (fi=1): (tp_3/N_PZ_212, net=urukul) 
+tp_4 (fi=1): (tp_4/N_PZ_213, net=urukul) 
+dds_drover (fi=0): 
+fsen (fi=0): (fsen/N_PZ_214, net=urukul) 
+dds_osk (fi=0): (dds_osk/N_PZ_215, net=urukul) 
+dds_osk_3 (fi=0): (dds_osk_3/N_PZ_216, net=urukul) 
+dds_osk_2 (fi=0): (dds_osk_2/N_PZ_217, net=urukul) 
+dds_osk_1 (fi=0): (dds_osk_1/N_PZ_218, net=urukul) 
+dds_drctl (fi=0): (dds_drctl/N_PZ_219, net=urukul) 
+dds_drctl_3 (fi=0): (dds_drctl_3/N_PZ_220, net=urukul) 
+dds_drctl_2 (fi=0): (dds_drctl_2/N_PZ_221, net=urukul) 
+dds_drctl_1 (fi=0): (dds_drctl_1/N_PZ_222, net=urukul) 
+eem_oe (fi=0): (eem_oe/N_PZ_223, net=urukul) 
+eem_oe_9 (fi=0): (eem_oe_9/N_PZ_224, net=urukul) 
+eem_oe_8 (fi=0): (eem_oe_8/N_PZ_225, net=urukul) 
+eem_oe_13 (fi=0): (eem_oe_13/N_PZ_226, net=urukul) 
+eem_oe_12 (fi=0): (eem_oe_12/N_PZ_227, net=urukul) 
+eem_oe_11 (fi=0): (eem_oe_11/N_PZ_228, net=urukul) 
+dds_drhold (fi=0): (dds_drhold/N_PZ_229, net=urukul) 
+dds_drhold_3 (fi=0): (dds_drhold_3/N_PZ_230, net=urukul) 
+dds_drhold_2 (fi=0): (dds_drhold_2/N_PZ_231, net=urukul) 
+dds_drhold_1 (fi=0): (dds_drhold_1/N_PZ_232, net=urukul) 
+eem_oe_7 (fi=0): (eem_oe_7/N_PZ_233, net=urukul) 
+eem_oe_6 (fi=0): (eem_oe_6/N_PZ_234, net=urukul) 
+eem_oe_5 (fi=0): (eem_oe_5/N_PZ_235, net=urukul) 
+eem_oe_4 (fi=0): (eem_oe_4/N_PZ_236, net=urukul) 
+eem_oe_3 (fi=0): (eem_oe_3/N_PZ_237, net=urukul) 
+eem_oe_1 (fi=0): (eem_oe_1/N_PZ_238, net=urukul) 
+eem_oe_15 (fi=0): (eem_oe_15/N_PZ_239, net=urukul) 
+eem_oe_14 (fi=0): (eem_oe_14/N_PZ_240, net=urukul) 
+
+--------------------------------------------
+|  N O D E    E q n l i s t    [count=41]  |
+--------------------------------------------
+sr_di<22> (fi=2): sr_di<22>.D/N_PZ_116 sr_di<22>.CLK/N_PZ_117 
+sr_di<23> (fi=2): sr_di<23>.D/N_PZ_118 sr_di<23>.CLK/N_PZ_119 
+sr_sr<0> (fi=6): sr_sr<0>.D/N_PZ_10 sr_sr<0>.CLK/N_PZ_11 sr_sr<0>.CE/N_PZ_12 
+sr_sr<10> (fi=9): sr_sr<10>.D/N_PZ_13 sr_sr<10>.CLK/N_PZ_14 
+sr_sr<12> (fi=9): sr_sr<12>.D/N_PZ_16 sr_sr<12>.CLK/N_PZ_17 
+sr_sr<13> (fi=9): sr_sr<13>.D/N_PZ_19 sr_sr<13>.CLK/N_PZ_20 
+sr_sr<14> (fi=8): sr_sr<14>.D/N_PZ_22 sr_sr<14>.CLK/N_PZ_23 
+sr_sr<15> (fi=9): sr_sr<15>.D/N_PZ_25 sr_sr<15>.CLK/N_PZ_26 
+sr_sr<16> (fi=9): sr_sr<16>.D/N_PZ_28 sr_sr<16>.CLK/N_PZ_29 
+sr_sr<17> (fi=8): sr_sr<17>.D/N_PZ_31 sr_sr<17>.CLK/N_PZ_32 
+le_clk (fi=6): le_clk.CLK/N_PZ_103 le_clk.AP/N_PZ_104 le_clk.T/N_PZ_297 
+sr_sr<18> (fi=8): sr_sr<18>.D/N_PZ_34 sr_sr<18>.CLK/N_PZ_35 
+sr_sr<19> (fi=8): sr_sr<19>.D/N_PZ_37 sr_sr<19>.CLK/N_PZ_38 
+sr_sr<1> (fi=10): sr_sr<1>.D/N_PZ_40 sr_sr<1>.CLK/N_PZ_41 
+sr_sr<20> (fi=8): sr_sr<20>.CLK/N_PZ_44 sr_sr<20>.T/N_PZ_284 
+sr_sr<21> (fi=8): sr_sr<21>.D/N_PZ_46 sr_sr<21>.CLK/N_PZ_47 
+sr_sr<22> (fi=8): sr_sr<22>.D/N_PZ_49 sr_sr<22>.CLK/N_PZ_50 
+sr_sr<23> (fi=8): sr_sr<23>.D/N_PZ_52 sr_sr<23>.CLK/N_PZ_53 
+sr_sr<2> (fi=10): sr_sr<2>.D/N_PZ_55 sr_sr<2>.CLK/N_PZ_56 
+sr_sr<3> (fi=10): sr_sr<3>.D/N_PZ_58 sr_sr<3>.CLK/N_PZ_59 
+sr_sr<4> (fi=10): sr_sr<4>.D/N_PZ_61 sr_sr<4>.CLK/N_PZ_62 
+sr_sr<5> (fi=9): sr_sr<5>.D/N_PZ_64 sr_sr<5>.CLK/N_PZ_65 
+sr_sr<6> (fi=9): sr_sr<6>.D/N_PZ_67 sr_sr<6>.CLK/N_PZ_68 
+sr_sr<7> (fi=9): sr_sr<7>.D/N_PZ_70 sr_sr<7>.CLK/N_PZ_71 
+sr_sr<8> (fi=9): sr_sr<8>.D/N_PZ_73 sr_sr<8>.CLK/N_PZ_74 
+sr_sr<9> (fi=9): sr_sr<9>.D/N_PZ_76 sr_sr<9>.CLK/N_PZ_77 
+sr_sdo (fi=6): sr_sdo.D/N_PZ_79 sr_sdo.CLK/N_PZ_80 sr_sdo.CE/N_PZ_81 
+sr_sr<11> (fi=9): sr_sr<11>.D/N_PZ_82 sr_sr<11>.CLK/N_PZ_83 
+sr_di<0> (fi=2): sr_di<0>.D/N_PZ_120 sr_di<0>.CLK/N_PZ_121 
+sr_di<1> (fi=2): sr_di<1>.D/N_PZ_122 sr_di<1>.CLK/N_PZ_123 
+sr_di<2> (fi=2): sr_di<2>.D/N_PZ_124 sr_di<2>.CLK/N_PZ_125 
+sr_di<3> (fi=2): sr_di<3>.D/N_PZ_126 sr_di<3>.CLK/N_PZ_127 
+sr_di<13> (fi=2): sr_di<13>.D/N_PZ_106 sr_di<13>.CLK/N_PZ_107 
+sr_di<14> (fi=2): sr_di<14>.D/N_PZ_108 sr_di<14>.CLK/N_PZ_109 
+sr_di<15> (fi=2): sr_di<15>.D/N_PZ_110 sr_di<15>.CLK/N_PZ_111 
+sr_di<16> (fi=2): sr_di<16>.D/N_PZ_112 sr_di<16>.CLK/N_PZ_113 
+sr_di<12> (fi=2): sr_di<12>.D/N_PZ_114 sr_di<12>.CLK/N_PZ_115 
+sr_di<4> (fi=2): sr_di<4>.D/N_PZ_128 sr_di<4>.CLK/N_PZ_129 
+sr_di<5> (fi=2): sr_di<5>.D/N_PZ_130 sr_di<5>.CLK/N_PZ_131 
+sr_di<6> (fi=2): sr_di<6>.D/N_PZ_132 sr_di<6>.CLK/N_PZ_133 
+sr_di<7> (fi=2): sr_di<7>.D/N_PZ_134 sr_di<7>.CLK/N_PZ_135 
+
+---------------------------------
+|  D a t a   S t r u c t u r e  |
+---------------------------------
+PI ( 86) =  ifc_mode<2> ifc_mode<1> eem_io_3 eem_io_4 eem_io_1 eem_io 
+            dds_common_master_reset.Q eem_io_12 eem_io_13 eem_io_14 eem_io_15 eem_io_6 
+            eem_io_5 variant ifc_mode<0> dds_smp_err_1 dds_pll_lock_1 dds_smp_err 
+            dds_pll_lock dds_smp_err_2 dds_pll_lock_2 dds_smp_err_3 dds_pll_lock_3 
+            dds_sdo_3 dds_sdo_1 dds_sdo dds_sdo_2 att_s_out<3> eem_io_7 eem_io_2.PIN 
+            eem_io_8 eem_io_9 eem_io_10.PIN eem_io_11 ifc_mode<3> clk_in_sel.Q 
+            clk_mmcx_osc_sel.Q att_s_out<0> att_s_out<1> att_s_out<2> dds_drover 
+            sr_sr<0>.Q sr_sr<10>.Q sr_sr<12>.Q sr_sr<13>.Q sr_sr<14>.Q sr_sr<15>.Q 
+            sr_sr<16>.Q sr_sr<17>.Q sr_sr<18>.Q sr_sr<19>.Q sr_sr<1>.Q sr_sr<20>.Q 
+            sr_sr<21>.Q sr_sr<22>.Q sr_sr<23>.Q sr_sr<2>.Q sr_sr<3>.Q sr_sr<4>.Q 
+            sr_sr<5>.Q sr_sr<6>.Q sr_sr<7>.Q sr_sr<8>.Q sr_sr<9>.Q sr_sdo.Q sr_sr<11>.Q 
+            le_clk.Q sr_di<13>.Q sr_di<14>.Q sr_di<15>.Q sr_di<16>.Q sr_di<12>.Q 
+            sr_di<22>.Q sr_di<23>.Q sr_di<0>.Q sr_di<1>.Q sr_di<2>.Q sr_di<3>.Q 
+            sr_di<4>.Q sr_di<5>.Q sr_di<6>.Q sr_di<7>.Q att_le<0>.Q att_le<1>.Q 
+            att_le<2>.Q att_le<3>.Q
+
+PO (213) =  eem_oe_10 dds_rf_sw dds_rf_sw_1 dds_rf_sw_2 dds_rf_sw_3 
+            dds_sync_sync_out_en eem_io_2 eem_io_2.OE clk_div clk_div.OE sr_sr<0>.D 
+            sr_sr<0>.CLK sr_sr<0>.CE sr_sr<10>.D sr_sr<10>.CLK sr_sr<12>.D 
+            sr_sr<12>.CLK sr_sr<13>.D sr_sr<13>.CLK sr_sr<14>.D sr_sr<14>.CLK 
+            sr_sr<15>.D sr_sr<15>.CLK sr_sr<16>.D sr_sr<16>.CLK sr_sr<17>.D 
+            sr_sr<17>.CLK sr_sr<18>.D sr_sr<18>.CLK sr_sr<19>.D sr_sr<19>.CLK 
+            sr_sr<1>.D sr_sr<1>.CLK sr_sr<20>.CLK sr_sr<21>.D sr_sr<21>.CLK sr_sr<22>.D 
+            sr_sr<22>.CLK sr_sr<23>.D sr_sr<23>.CLK sr_sr<2>.D sr_sr<2>.CLK sr_sr<3>.D 
+            sr_sr<3>.CLK sr_sr<4>.D sr_sr<4>.CLK sr_sr<5>.D sr_sr<5>.CLK sr_sr<6>.D 
+            sr_sr<6>.CLK sr_sr<7>.D sr_sr<7>.CLK sr_sr<8>.D sr_sr<8>.CLK sr_sr<9>.D 
+            sr_sr<9>.CLK sr_sdo.D sr_sdo.CLK sr_sdo.CE sr_sr<11>.D sr_sr<11>.CLK 
+            dds_profile_3<2>.D dds_profile_3<2>.CLK dds_profile_3<0>.D 
+            dds_profile_3<0>.CLK dds_profile_3<1>.D dds_profile_3<1>.CLK dds_reset 
+            dds_common_master_reset.D dds_common_master_reset.CLK clk_in_sel.D 
+            clk_in_sel.CLK clk_mmcx_osc_sel.D clk_mmcx_osc_sel.CLK tp_1 tp_2 eem_io_10 
+            eem_io_10.OE le_clk.CLK le_clk.AP sr_di<13>.D sr_di<13>.CLK sr_di<14>.D 
+            sr_di<14>.CLK sr_di<15>.D sr_di<15>.CLK sr_di<16>.D sr_di<16>.CLK 
+            sr_di<12>.D sr_di<12>.CLK sr_di<22>.D sr_di<22>.CLK sr_di<23>.D 
+            sr_di<23>.CLK sr_di<0>.D sr_di<0>.CLK sr_di<1>.D sr_di<1>.CLK sr_di<2>.D 
+            sr_di<2>.CLK sr_di<3>.D sr_di<3>.CLK sr_di<4>.D sr_di<4>.CLK sr_di<5>.D 
+            sr_di<5>.CLK sr_di<6>.D sr_di<6>.CLK sr_di<7>.D sr_di<7>.CLK att_le<0>.CLK 
+            att_le<0>.AP att_le<1>.CLK att_le<1>.AP att_le<2>.CLK att_le<2>.AP 
+            att_le<3>.CLK att_le<3>.AP dds_sync_sync_sel.D dds_sync_sync_sel.CLK 
+            dds_common_io_reset.D dds_common_io_reset.CLK clk_osc_en_n dds_io_update_1 
+            dds_io_update_2 dds_io_update_3 dds_io_update dds_led_1<1> dds_led<1> 
+            dds_led_2<1> dds_led_3<1> dds_sck_1 dds_sck_2 dds_sck_3 dds_sdi_1 dds_sdi_2 
+            dds_sdi_3 att_clk att_rst_n.D att_rst_n.CLK att_s_in<0> att_s_in<1> 
+            att_s_in<2> att_s_in<3> dds_cs_n_1 dds_cs_n_2 dds_cs_n_3 tp dds_cs_n 
+            dds_led<0> dds_led_1<0> dds_led_2<0> dds_led_3<0> dds_reset_3 dds_reset_2 
+            dds_reset_1 dds_sync_clk_out_en eem_oe_2 dds_profile<2>.D 
+            dds_profile<2>.CLK dds_profile_2<2>.D dds_profile_2<2>.CLK 
+            dds_profile_1<2>.D dds_profile_1<2>.CLK dds_profile_2<0>.D 
+            dds_profile_2<0>.CLK dds_profile_1<0>.D dds_profile_1<0>.CLK 
+            dds_profile<0>.D dds_profile<0>.CLK dds_profile_2<1>.D dds_profile_2<1>.CLK 
+            dds_profile<1>.D dds_profile<1>.CLK dds_profile_1<1>.D dds_profile_1<1>.CLK 
+            dds_sck dds_sdi tp_3 tp_4 fsen dds_osk dds_osk_3 dds_osk_2 dds_osk_1 
+            dds_drctl dds_drctl_3 dds_drctl_2 dds_drctl_1 eem_oe eem_oe_9 eem_oe_8 
+            eem_oe_13 eem_oe_12 eem_oe_11 dds_drhold dds_drhold_3 dds_drhold_2 
+            dds_drhold_1 eem_oe_7 eem_oe_6 eem_oe_5 eem_oe_4 eem_oe_3 eem_oe_1 
+            eem_oe_15 eem_oe_14 sr_sr<20>.T le_clk.T att_le<0>.T att_le<1>.T 
+            att_le<2>.T att_le<3>.T
+
+INT = (213) N_PZ_0 N_PZ_1 N_PZ_2 N_PZ_3 N_PZ_4 N_PZ_5 N_PZ_6 N_PZ_7 N_PZ_8 N_PZ_9 
+            N_PZ_10 N_PZ_11 N_PZ_12 N_PZ_13 N_PZ_14 N_PZ_16 N_PZ_17 N_PZ_19 N_PZ_20 
+            N_PZ_22 N_PZ_23 N_PZ_25 N_PZ_26 N_PZ_28 N_PZ_29 N_PZ_31 N_PZ_32 N_PZ_34 
+            N_PZ_35 N_PZ_37 N_PZ_38 N_PZ_40 N_PZ_41 N_PZ_44 N_PZ_46 N_PZ_47 N_PZ_49 
+            N_PZ_50 N_PZ_52 N_PZ_53 N_PZ_55 N_PZ_56 N_PZ_58 N_PZ_59 N_PZ_61 N_PZ_62 
+            N_PZ_64 N_PZ_65 N_PZ_67 N_PZ_68 N_PZ_70 N_PZ_71 N_PZ_73 N_PZ_74 N_PZ_76 
+            N_PZ_77 N_PZ_79 N_PZ_80 N_PZ_81 N_PZ_82 N_PZ_83 N_PZ_85 N_PZ_86 N_PZ_87 
+            N_PZ_88 N_PZ_89 N_PZ_90 N_PZ_91 N_PZ_92 N_PZ_93 N_PZ_94 N_PZ_95 N_PZ_96 
+            N_PZ_97 N_PZ_98 N_PZ_99 N_PZ_100 N_PZ_101 N_PZ_103 N_PZ_104 N_PZ_106 
+            N_PZ_107 N_PZ_108 N_PZ_109 N_PZ_110 N_PZ_111 N_PZ_112 N_PZ_113 N_PZ_114 
+            N_PZ_115 N_PZ_116 N_PZ_117 N_PZ_118 N_PZ_119 N_PZ_120 N_PZ_121 N_PZ_122 
+            N_PZ_123 N_PZ_124 N_PZ_125 N_PZ_126 N_PZ_127 N_PZ_128 N_PZ_129 N_PZ_130 
+            N_PZ_131 N_PZ_132 N_PZ_133 N_PZ_134 N_PZ_135 N_PZ_137 N_PZ_138 N_PZ_141 
+            N_PZ_142 N_PZ_145 N_PZ_146 N_PZ_149 N_PZ_150 N_PZ_152 N_PZ_153 N_PZ_154 
+            N_PZ_155 N_PZ_156 N_PZ_157 N_PZ_158 N_PZ_159 N_PZ_160 N_PZ_161 N_PZ_162 
+            N_PZ_163 N_PZ_164 N_PZ_165 N_PZ_166 N_PZ_167 N_PZ_168 N_PZ_169 N_PZ_170 
+            N_PZ_171 N_PZ_172 N_PZ_173 N_PZ_174 N_PZ_175 N_PZ_176 N_PZ_177 N_PZ_178 
+            N_PZ_179 N_PZ_180 N_PZ_181 N_PZ_182 N_PZ_183 N_PZ_184 N_PZ_185 N_PZ_186 
+            N_PZ_187 N_PZ_188 N_PZ_189 N_PZ_190 N_PZ_191 N_PZ_192 N_PZ_193 N_PZ_194 
+            N_PZ_195 N_PZ_196 N_PZ_197 N_PZ_198 N_PZ_199 N_PZ_200 N_PZ_201 N_PZ_202 
+            N_PZ_203 N_PZ_204 N_PZ_205 N_PZ_206 N_PZ_207 N_PZ_208 N_PZ_209 N_PZ_210 
+            N_PZ_211 N_PZ_212 N_PZ_213 N_PZ_214 N_PZ_215 N_PZ_216 N_PZ_217 N_PZ_218 
+            N_PZ_219 N_PZ_220 N_PZ_221 N_PZ_222 N_PZ_223 N_PZ_224 N_PZ_225 N_PZ_226 
+            N_PZ_227 N_PZ_228 N_PZ_229 N_PZ_230 N_PZ_231 N_PZ_232 N_PZ_233 N_PZ_234 
+            N_PZ_235 N_PZ_236 N_PZ_237 N_PZ_238 N_PZ_239 N_PZ_240 N_PZ_284 N_PZ_297 
+            N_PZ_298 N_PZ_299 N_PZ_300 N_PZ_301
+
+PINT= (  0)
+
+AINT= (213) N_PZ_0 N_PZ_1 N_PZ_2 N_PZ_3 N_PZ_4 N_PZ_5 N_PZ_6 N_PZ_7 N_PZ_8 N_PZ_9 
+            N_PZ_10 N_PZ_11 N_PZ_12 N_PZ_13 N_PZ_14 N_PZ_16 N_PZ_17 N_PZ_19 N_PZ_20 
+            N_PZ_22 N_PZ_23 N_PZ_25 N_PZ_26 N_PZ_28 N_PZ_29 N_PZ_31 N_PZ_32 N_PZ_34 
+            N_PZ_35 N_PZ_37 N_PZ_38 N_PZ_40 N_PZ_41 N_PZ_44 N_PZ_46 N_PZ_47 N_PZ_49 
+            N_PZ_50 N_PZ_52 N_PZ_53 N_PZ_55 N_PZ_56 N_PZ_58 N_PZ_59 N_PZ_61 N_PZ_62 
+            N_PZ_64 N_PZ_65 N_PZ_67 N_PZ_68 N_PZ_70 N_PZ_71 N_PZ_73 N_PZ_74 N_PZ_76 
+            N_PZ_77 N_PZ_79 N_PZ_80 N_PZ_81 N_PZ_82 N_PZ_83 N_PZ_85 N_PZ_86 N_PZ_87 
+            N_PZ_88 N_PZ_89 N_PZ_90 N_PZ_91 N_PZ_92 N_PZ_93 N_PZ_94 N_PZ_95 N_PZ_96 
+            N_PZ_97 N_PZ_98 N_PZ_99 N_PZ_100 N_PZ_101 N_PZ_103 N_PZ_104 N_PZ_106 
+            N_PZ_107 N_PZ_108 N_PZ_109 N_PZ_110 N_PZ_111 N_PZ_112 N_PZ_113 N_PZ_114 
+            N_PZ_115 N_PZ_116 N_PZ_117 N_PZ_118 N_PZ_119 N_PZ_120 N_PZ_121 N_PZ_122 
+            N_PZ_123 N_PZ_124 N_PZ_125 N_PZ_126 N_PZ_127 N_PZ_128 N_PZ_129 N_PZ_130 
+            N_PZ_131 N_PZ_132 N_PZ_133 N_PZ_134 N_PZ_135 N_PZ_137 N_PZ_138 N_PZ_141 
+            N_PZ_142 N_PZ_145 N_PZ_146 N_PZ_149 N_PZ_150 N_PZ_152 N_PZ_153 N_PZ_154 
+            N_PZ_155 N_PZ_156 N_PZ_157 N_PZ_158 N_PZ_159 N_PZ_160 N_PZ_161 N_PZ_162 
+            N_PZ_163 N_PZ_164 N_PZ_165 N_PZ_166 N_PZ_167 N_PZ_168 N_PZ_169 N_PZ_170 
+            N_PZ_171 N_PZ_172 N_PZ_173 N_PZ_174 N_PZ_175 N_PZ_176 N_PZ_177 N_PZ_178 
+            N_PZ_179 N_PZ_180 N_PZ_181 N_PZ_182 N_PZ_183 N_PZ_184 N_PZ_185 N_PZ_186 
+            N_PZ_187 N_PZ_188 N_PZ_189 N_PZ_190 N_PZ_191 N_PZ_192 N_PZ_193 N_PZ_194 
+            N_PZ_195 N_PZ_196 N_PZ_197 N_PZ_198 N_PZ_199 N_PZ_200 N_PZ_201 N_PZ_202 
+            N_PZ_203 N_PZ_204 N_PZ_205 N_PZ_206 N_PZ_207 N_PZ_208 N_PZ_209 N_PZ_210 
+            N_PZ_211 N_PZ_212 N_PZ_213 N_PZ_214 N_PZ_215 N_PZ_216 N_PZ_217 N_PZ_218 
+            N_PZ_219 N_PZ_220 N_PZ_221 N_PZ_222 N_PZ_223 N_PZ_224 N_PZ_225 N_PZ_226 
+            N_PZ_227 N_PZ_228 N_PZ_229 N_PZ_230 N_PZ_231 N_PZ_232 N_PZ_233 N_PZ_234 
+            N_PZ_235 N_PZ_236 N_PZ_237 N_PZ_238 N_PZ_239 N_PZ_240 N_PZ_284 N_PZ_297 
+            N_PZ_298 N_PZ_299 N_PZ_300 N_PZ_301
+
+
+----------------------------
+|  D F S    N e t w o r k  |
+----------------------------
+ifc_mode<2> ifc_mode<1> N_PZ_0 eem_oe_10 eem_io_12 sr_di<0>.Q N_PZ_1 dds_rf_sw  
+eem_io_13 sr_di<1>.Q N_PZ_2 dds_rf_sw_1 eem_io_14 sr_di<2>.Q N_PZ_3 dds_rf_sw_2  
+eem_io_15 sr_di<3>.Q N_PZ_4 dds_rf_sw_3 variant ifc_mode<0> N_PZ_5  
+dds_sync_sync_out_en eem_io_3 eem_io_4 eem_io_5 dds_sdo_3 dds_sdo_1 dds_sdo dds_sdo_2  
+att_s_out<3> sr_sdo.Q N_PZ_6 eem_io_2 N_PZ_7 eem_io_2.OE sr_di<22>.Q sr_di<23>.Q  
+N_PZ_8 clk_div N_PZ_9 clk_div.OE eem_io_1 N_PZ_10 sr_sr<0>.D eem_io N_PZ_11  
+sr_sr<0>.CLK N_PZ_12 sr_sr<0>.CE dds_pll_lock_1 sr_sr<10>.Q sr_sr<9>.Q le_clk.Q  
+N_PZ_13 sr_sr<10>.D N_PZ_14 sr_sr<10>.CLK dds_pll_lock_3 sr_sr<12>.Q sr_sr<11>.Q  
+N_PZ_16 sr_sr<12>.D N_PZ_17 sr_sr<12>.CLK sr_sr<13>.Q N_PZ_19 sr_sr<13>.D N_PZ_20  
+sr_sr<13>.CLK sr_sr<14>.Q N_PZ_22 sr_sr<14>.D N_PZ_23 sr_sr<14>.CLK sr_sr<15>.Q  
+N_PZ_25 sr_sr<15>.D N_PZ_26 sr_sr<15>.CLK ifc_mode<3> sr_sr<16>.Q N_PZ_28 sr_sr<16>.D  
+N_PZ_29 sr_sr<16>.CLK sr_sr<17>.Q N_PZ_31 sr_sr<17>.D N_PZ_32 sr_sr<17>.CLK  
+sr_sr<18>.Q N_PZ_34 sr_sr<18>.D N_PZ_35 sr_sr<18>.CLK sr_sr<19>.Q N_PZ_37 sr_sr<19>.D  
+N_PZ_38 sr_sr<19>.CLK sr_sr<0>.Q sr_sr<1>.Q N_PZ_40 sr_sr<1>.D N_PZ_41 sr_sr<1>.CLK  
+N_PZ_44 sr_sr<20>.CLK sr_sr<20>.Q sr_sr<21>.Q N_PZ_46 sr_sr<21>.D N_PZ_47  
+sr_sr<21>.CLK sr_sr<22>.Q N_PZ_49 sr_sr<22>.D N_PZ_50 sr_sr<22>.CLK sr_sr<23>.Q  
+N_PZ_52 sr_sr<23>.D N_PZ_53 sr_sr<23>.CLK sr_sr<2>.Q N_PZ_55 sr_sr<2>.D N_PZ_56  
+sr_sr<2>.CLK sr_sr<3>.Q N_PZ_58 sr_sr<3>.D N_PZ_59 sr_sr<3>.CLK sr_sr<4>.Q N_PZ_61  
+sr_sr<4>.D N_PZ_62 sr_sr<4>.CLK dds_smp_err sr_sr<5>.Q N_PZ_64 sr_sr<5>.D N_PZ_65  
+sr_sr<5>.CLK dds_smp_err_1 sr_sr<6>.Q N_PZ_67 sr_sr<6>.D N_PZ_68 sr_sr<6>.CLK  
+dds_smp_err_2 sr_sr<7>.Q N_PZ_70 sr_sr<7>.D N_PZ_71 sr_sr<7>.CLK dds_smp_err_3  
+sr_sr<8>.Q N_PZ_73 sr_sr<8>.D N_PZ_74 sr_sr<8>.CLK dds_pll_lock N_PZ_76 sr_sr<9>.D  
+N_PZ_77 sr_sr<9>.CLK N_PZ_79 sr_sdo.D N_PZ_80 sr_sdo.CLK N_PZ_81 sr_sdo.CE  
+dds_pll_lock_2 N_PZ_82 sr_sr<11>.D N_PZ_83 sr_sr<11>.CLK N_PZ_85 dds_profile_3<2>.D  
+N_PZ_86 dds_profile_3<2>.CLK N_PZ_87 dds_profile_3<0>.D N_PZ_88 dds_profile_3<0>.CLK  
+N_PZ_89 dds_profile_3<1>.D N_PZ_90 dds_profile_3<1>.CLK dds_common_master_reset.Q  
+eem_io_7 N_PZ_91 dds_reset N_PZ_92 dds_common_master_reset.D N_PZ_93  
+dds_common_master_reset.CLK N_PZ_94 clk_in_sel.D N_PZ_95 clk_in_sel.CLK N_PZ_96  
+clk_mmcx_osc_sel.D N_PZ_97 clk_mmcx_osc_sel.CLK eem_io_2.PIN sr_di<13>.Q N_PZ_98 tp_1  
+eem_io_8 N_PZ_99 tp_2 eem_io_6 N_PZ_100 eem_io_10 N_PZ_101 eem_io_10.OE N_PZ_103  
+le_clk.CLK N_PZ_104 le_clk.AP N_PZ_106 sr_di<13>.D N_PZ_107 sr_di<13>.CLK N_PZ_108  
+sr_di<14>.D N_PZ_109 sr_di<14>.CLK N_PZ_110 sr_di<15>.D N_PZ_111 sr_di<15>.CLK  
+N_PZ_112 sr_di<16>.D N_PZ_113 sr_di<16>.CLK N_PZ_114 sr_di<12>.D N_PZ_115  
+sr_di<12>.CLK N_PZ_116 sr_di<22>.D N_PZ_117 sr_di<22>.CLK N_PZ_118 sr_di<23>.D  
+N_PZ_119 sr_di<23>.CLK N_PZ_120 sr_di<0>.D N_PZ_121 sr_di<0>.CLK N_PZ_122 sr_di<1>.D  
+N_PZ_123 sr_di<1>.CLK N_PZ_124 sr_di<2>.D N_PZ_125 sr_di<2>.CLK N_PZ_126 sr_di<3>.D  
+N_PZ_127 sr_di<3>.CLK N_PZ_128 sr_di<4>.D N_PZ_129 sr_di<4>.CLK N_PZ_130 sr_di<5>.D  
+N_PZ_131 sr_di<5>.CLK N_PZ_132 sr_di<6>.D N_PZ_133 sr_di<6>.CLK N_PZ_134 sr_di<7>.D  
+N_PZ_135 sr_di<7>.CLK N_PZ_137 att_le<0>.CLK N_PZ_138 att_le<0>.AP N_PZ_141  
+att_le<1>.CLK N_PZ_142 att_le<1>.AP N_PZ_145 att_le<2>.CLK N_PZ_146 att_le<2>.AP  
+N_PZ_149 att_le<3>.CLK N_PZ_150 att_le<3>.AP N_PZ_152 dds_sync_sync_sel.D N_PZ_153  
+dds_sync_sync_sel.CLK N_PZ_154 dds_common_io_reset.D N_PZ_155 dds_common_io_reset.CLK  
+clk_in_sel.Q clk_mmcx_osc_sel.Q N_PZ_156 clk_osc_en_n sr_di<14>.Q sr_di<12>.Q N_PZ_157  
+dds_io_update_1 sr_di<15>.Q N_PZ_158 dds_io_update_2 sr_di<16>.Q N_PZ_159  
+dds_io_update_3 N_PZ_160 dds_io_update sr_di<5>.Q N_PZ_161 dds_led_1<1> sr_di<4>.Q  
+N_PZ_162 dds_led<1> sr_di<6>.Q N_PZ_163 dds_led_2<1> sr_di<7>.Q N_PZ_164 dds_led_3<1>  
+N_PZ_165 dds_sck_1 N_PZ_166 dds_sck_2 N_PZ_167 dds_sck_3 eem_io_9 N_PZ_168 dds_sdi_1  
+eem_io_10.PIN N_PZ_169 dds_sdi_2 eem_io_11 N_PZ_170 dds_sdi_3 N_PZ_171 att_clk  
+N_PZ_172 att_rst_n.D N_PZ_173 att_rst_n.CLK N_PZ_174 att_s_in<0> att_s_out<0> N_PZ_175  
+att_s_in<1> att_s_out<1> N_PZ_176 att_s_in<2> att_s_out<2> N_PZ_177 att_s_in<3>  
+N_PZ_178 dds_cs_n_1 N_PZ_179 dds_cs_n_2 N_PZ_180 dds_cs_n_3 N_PZ_181 tp N_PZ_182  
+dds_cs_n N_PZ_183 dds_led<0> N_PZ_184 dds_led_1<0> N_PZ_185 dds_led_2<0> N_PZ_186  
+dds_led_3<0> N_PZ_187 dds_reset_3 N_PZ_188 dds_reset_2 N_PZ_189 dds_reset_1 N_PZ_190  
+dds_sync_clk_out_en N_PZ_191 eem_oe_2 N_PZ_192 dds_profile<2>.D N_PZ_193  
+dds_profile<2>.CLK N_PZ_194 dds_profile_2<2>.D N_PZ_195 dds_profile_2<2>.CLK N_PZ_196  
+dds_profile_1<2>.D N_PZ_197 dds_profile_1<2>.CLK N_PZ_198 dds_profile_2<0>.D N_PZ_199  
+dds_profile_2<0>.CLK N_PZ_200 dds_profile_1<0>.D N_PZ_201 dds_profile_1<0>.CLK  
+N_PZ_202 dds_profile<0>.D N_PZ_203 dds_profile<0>.CLK N_PZ_204 dds_profile_2<1>.D  
+N_PZ_205 dds_profile_2<1>.CLK N_PZ_206 dds_profile<1>.D N_PZ_207 dds_profile<1>.CLK  
+N_PZ_208 dds_profile_1<1>.D N_PZ_209 dds_profile_1<1>.CLK N_PZ_210 dds_sck N_PZ_211  
+dds_sdi N_PZ_212 tp_3 dds_drover N_PZ_213 tp_4 N_PZ_214 fsen N_PZ_215 dds_osk N_PZ_216  
+dds_osk_3 N_PZ_217 dds_osk_2 N_PZ_218 dds_osk_1 N_PZ_219 dds_drctl N_PZ_220  
+dds_drctl_3 N_PZ_221 dds_drctl_2 N_PZ_222 dds_drctl_1 N_PZ_223 eem_oe N_PZ_224  
+eem_oe_9 N_PZ_225 eem_oe_8 N_PZ_226 eem_oe_13 N_PZ_227 eem_oe_12 N_PZ_228 eem_oe_11  
+N_PZ_229 dds_drhold N_PZ_230 dds_drhold_3 N_PZ_231 dds_drhold_2 N_PZ_232 dds_drhold_1  
+N_PZ_233 eem_oe_7 N_PZ_234 eem_oe_6 N_PZ_235 eem_oe_5 N_PZ_236 eem_oe_4 N_PZ_237  
+eem_oe_3 N_PZ_238 eem_oe_1 N_PZ_239 eem_oe_15 N_PZ_240 eem_oe_14 N_PZ_284 sr_sr<20>.T  
+N_PZ_297 le_clk.T att_le<0>.Q N_PZ_298 att_le<0>.T att_le<1>.Q N_PZ_299 att_le<1>.T  
+att_le<2>.Q N_PZ_300 att_le<2>.T att_le<3>.Q N_PZ_301 att_le<3>.T 
+
+                                  Short Name                 Collapsible
+          Name       Base   Ext   | TypePolOld pt/th fi/FI fo | min          Pair        pxapin
+   ifc_mode<2>ifc_mode<2>         a   PI  -  -  -| -  -| -  5 -   -             -             -
+   ifc_mode<1>ifc_mode<1>         b   PI  -  -  -| -  -| - 58 -   -             -             -
+      eem_io_3   eem_io_3         i   PI  -  -  -| -  -| - 42 -   -             -             -
+      eem_io_4   eem_io_4         j   PI  -  -  -| -  -| - 42 -   -             -             -
+      eem_io_1   eem_io_1         l   PI  -  -  -| -  -| -  7 -   -             -             -
+        eem_io     eem_io         m   PI  -  -  -| -  -| - 36 -   -             -             -
+dds_common_master_reset.Qdds_common_master_reset    .Q  l1   PI  -  -  -| -  -| -  4 -   -             -             -
+     eem_io_12  eem_io_12        m1   PI  -  -  -| -  -| -  3 -   -             -             -
+     eem_io_13  eem_io_13        o1   PI  -  -  -| -  -| -  3 -   -             -             -
+     eem_io_14  eem_io_14        q1   PI  -  -  -| -  -| -  3 -   -             -             -
+     eem_io_15  eem_io_15        s1   PI  -  -  -| -  -| -  3 -   -             -             -
+      eem_io_6   eem_io_6        y1   PI  -  -  -| -  -| -  5 -   -             -             -
+        N_PZ_0     N_PZ_0     - e16 AINT  -  -  1|36  2|32  1 -   -     eem_oe_10             -
+      eem_io_5   eem_io_5        a2   PI  -  -  -| -  -| - 42 -   -             -             -
+       variant    variant        b2   PI  -  -  -| -  -| - 11 -   -             -             -
+   ifc_mode<0>ifc_mode<0>        c2   PI  -  -  -| -  -| - 12 -   -             -             -
+ dds_smp_err_1dds_smp_err_1        i3   PI  -  -  -| -  -| -  2 -   -             -             -
+dds_pll_lock_1dds_pll_lock_1        j3   PI  -  -  -| -  -| -  2 -   -             -             -
+   dds_smp_errdds_smp_err        k3   PI  -  -  -| -  -| -  2 -   -             -             -
+  dds_pll_lockdds_pll_lock        l3   PI  -  -  -| -  -| -  2 -   -             -             -
+ dds_smp_err_2dds_smp_err_2        m3   PI  -  -  -| -  -| -  2 -   -             -             -
+dds_pll_lock_2dds_pll_lock_2        n3   PI  -  -  -| -  -| -  2 -   -             -             -
+ dds_smp_err_3dds_smp_err_3        o3   PI  -  -  -| -  -| -  2 -   -             -             -
+dds_pll_lock_3dds_pll_lock_3        p3   PI  -  -  -| -  -| -  2 -   -             -             -
+     dds_sdo_3  dds_sdo_3        r3   PI  -  -  -| -  -| -  1 -   -             -             -
+     dds_sdo_1  dds_sdo_1        s3   PI  -  -  -| -  -| -  1 -   -             -             -
+       dds_sdo    dds_sdo        t3   PI  -  -  -| -  -| -  2 -   -             -             -
+     dds_sdo_2  dds_sdo_2        z3   PI  -  -  -| -  -| -  1 -   -             -             -
+  att_s_out<3>att_s_out<3>        c4   PI  -  -  -| -  -| -  1 -   -             -             -
+      eem_io_7   eem_io_7        u4   PI  -  -  -| -  -| -  4 -   -             -             -
+  eem_io_2.PIN   eem_io_2  .PIN  w4   PI  -  -  -| -  -| -  5 -   -             -             -
+      eem_io_8   eem_io_8        a5   PI  -  -  -| -  -| -  2 -   -             -             -
+      eem_io_9   eem_io_9        b5   PI  -  -  -| -  -| -  1 -   -             -             -
+ eem_io_10.PIN  eem_io_10  .PIN  c5   PI  -  -  -| -  -| -  1 -   -             -             -
+     eem_io_11  eem_io_11        d5   PI  -  -  -| -  -| -  1 -   -             -             -
+   ifc_mode<3>ifc_mode<3>        f5   PI  -  -  -| -  -| -  1 -   -             -             -
+        N_PZ_1     N_PZ_1     - f16 AINT  L  -  1|36  2|32  1 -   -     dds_rf_sw             -
+        N_PZ_2     N_PZ_2     - g16 AINT  L  -  1|36  2|32  1 -   -   dds_rf_sw_1             -
+        N_PZ_3     N_PZ_3     - h16 AINT  L  -  1|36  2|32  1 -   -   dds_rf_sw_2             -
+        N_PZ_4     N_PZ_4     - i16 AINT  L  -  1|36  2|32  1 -   -   dds_rf_sw_3             -
+  clk_in_sel.Q clk_in_sel    .Q  l5   PI  -  -  -| -  -| -  1 -   -             -             -
+clk_mmcx_osc_sel.Qclk_mmcx_osc_sel    .Q  m5   PI  -  -  -| -  -| -  1 -   -             -             -
+  att_s_out<0>att_s_out<0>        p6   PI  -  -  -| -  -| -  1 -   -             -             -
+  att_s_out<1>att_s_out<1>        q6   PI  -  -  -| -  -| -  1 -   -             -             -
+  att_s_out<2>att_s_out<2>        r6   PI  -  -  -| -  -| -  1 -   -             -             -
+    dds_drover dds_drover        b7   PI  -  -  -| -  -| -  1 -   -             -             -
+        N_PZ_5     N_PZ_5     - j16 AINT  -  -  2|36  4|32  1 -   -dds_sync_sync_out_en             -
+        N_PZ_6     N_PZ_6     - k16 AINT  -  - 10|36 10|32  1 -   -      eem_io_2             -
+        N_PZ_7     N_PZ_7     - l16 AINT  -  -  1|36  1|32  1 -   -   eem_io_2.OE             -
+        N_PZ_8     N_PZ_8     - m16 AINT  L  -  1|36  2|32  1 -   -       clk_div             -
+        N_PZ_9     N_PZ_9     - n16 AINT  -  -  3|36  4|32  1 -   -    clk_div.OE             -
+       N_PZ_10    N_PZ_10     - o16 AINT  -  -  1|36  1|32  1 -   -    sr_sr<0>.D             -
+       N_PZ_11    N_PZ_11     - p16 AINT  -  -  1|36  1|32  1 -   -  sr_sr<0>.CLK             -
+       N_PZ_12    N_PZ_12     - q16 AINT  -  -  2|36  4|32  1 -   -   sr_sr<0>.CE             -
+       N_PZ_13    N_PZ_13     - r16 AINT  -  -  7|36  8|32  1 -   -   sr_sr<10>.D             -
+       N_PZ_14    N_PZ_14     - s16 AINT  -  -  1|36  1|32  1 -   - sr_sr<10>.CLK             -
+       N_PZ_16    N_PZ_16     - u16 AINT  -  -  7|36  8|32  1 -   -   sr_sr<12>.D             -
+       N_PZ_17    N_PZ_17     - v16 AINT  -  -  1|36  1|32  1 -   - sr_sr<12>.CLK             -
+       N_PZ_19    N_PZ_19     - x16 AINT  -  -  7|36  8|32  1 -   -   sr_sr<13>.D             -
+       N_PZ_20    N_PZ_20     - y16 AINT  -  -  1|36  1|32  1 -   - sr_sr<13>.CLK             -
+       N_PZ_22    N_PZ_22     - a17 AINT  -  -  6|36  7|32  1 -   -   sr_sr<14>.D             -
+       N_PZ_23    N_PZ_23     - b17 AINT  -  -  1|36  1|32  1 -   - sr_sr<14>.CLK             -
+       N_PZ_25    N_PZ_25     - d17 AINT  -  -  7|36  8|32  1 -   -   sr_sr<15>.D             -
+       N_PZ_26    N_PZ_26     - e17 AINT  -  -  1|36  1|32  1 -   - sr_sr<15>.CLK             -
+       N_PZ_28    N_PZ_28     - g17 AINT  -  -  7|36  8|32  1 -   -   sr_sr<16>.D             -
+       N_PZ_29    N_PZ_29     - h17 AINT  -  -  1|36  1|32  1 -   - sr_sr<16>.CLK             -
+       N_PZ_31    N_PZ_31     - j17 AINT  -  -  5|36  7|32  1 -   -   sr_sr<17>.D             -
+       N_PZ_32    N_PZ_32     - k17 AINT  -  -  1|36  1|32  1 -   - sr_sr<17>.CLK             -
+       N_PZ_34    N_PZ_34     - m17 AINT  -  -  5|36  7|32  1 -   -   sr_sr<18>.D             -
+       N_PZ_35    N_PZ_35     - n17 AINT  -  -  1|36  1|32  1 -   - sr_sr<18>.CLK             -
+       N_PZ_37    N_PZ_37     - p17 AINT  -  -  5|36  7|32  1 -   -   sr_sr<19>.D             -
+       N_PZ_38    N_PZ_38     - q17 AINT  -  -  1|36  1|32  1 -   - sr_sr<19>.CLK             -
+       N_PZ_40    N_PZ_40     - s17 AINT  -  -  9|36  9|32  1 -   -    sr_sr<1>.D             -
+       N_PZ_41    N_PZ_41     - t17 AINT  -  -  1|36  1|32  1 -   -  sr_sr<1>.CLK             -
+       N_PZ_44    N_PZ_44     - w17 AINT  -  -  1|36  1|32  1 -   - sr_sr<20>.CLK             -
+       N_PZ_46    N_PZ_46     - y17 AINT  -  -  5|36  7|32  1 -   -   sr_sr<21>.D             -
+       N_PZ_47    N_PZ_47     - z17 AINT  -  -  1|36  1|32  1 -   - sr_sr<21>.CLK             -
+       N_PZ_49    N_PZ_49     - b18 AINT  -  -  5|36  7|32  1 -   -   sr_sr<22>.D             -
+       N_PZ_50    N_PZ_50     - c18 AINT  -  -  1|36  1|32  1 -   - sr_sr<22>.CLK             -
+       N_PZ_52    N_PZ_52     - e18 AINT  -  -  5|36  7|32  1 -   -   sr_sr<23>.D             -
+       N_PZ_53    N_PZ_53     - f18 AINT  -  -  1|36  1|32  1 -   - sr_sr<23>.CLK             -
+       N_PZ_55    N_PZ_55     - h18 AINT  -  -  9|36  9|32  1 -   -    sr_sr<2>.D             -
+       N_PZ_56    N_PZ_56     - i18 AINT  -  -  1|36  1|32  1 -   -  sr_sr<2>.CLK             -
+       N_PZ_58    N_PZ_58     - k18 AINT  -  -  9|36  9|32  1 -   -    sr_sr<3>.D             -
+       N_PZ_59    N_PZ_59     - l18 AINT  -  -  1|36  1|32  1 -   -  sr_sr<3>.CLK             -
+       N_PZ_61    N_PZ_61     - n18 AINT  -  -  9|36  9|32  1 -   -    sr_sr<4>.D             -
+       N_PZ_62    N_PZ_62     - o18 AINT  -  -  1|36  1|32  1 -   -  sr_sr<4>.CLK             -
+       N_PZ_64    N_PZ_64     - q18 AINT  -  -  7|36  8|32  1 -   -    sr_sr<5>.D             -
+       N_PZ_65    N_PZ_65     - r18 AINT  -  -  1|36  1|32  1 -   -  sr_sr<5>.CLK             -
+       N_PZ_67    N_PZ_67     - t18 AINT  -  -  7|36  8|32  1 -   -    sr_sr<6>.D             -
+       N_PZ_68    N_PZ_68     - u18 AINT  -  -  1|36  1|32  1 -   -  sr_sr<6>.CLK             -
+       N_PZ_70    N_PZ_70     - w18 AINT  -  -  7|36  8|32  1 -   -    sr_sr<7>.D             -
+       N_PZ_71    N_PZ_71     - x18 AINT  -  -  1|36  1|32  1 -   -  sr_sr<7>.CLK             -
+       N_PZ_73    N_PZ_73     - z18 AINT  -  -  7|36  8|32  1 -   -    sr_sr<8>.D             -
+       N_PZ_74    N_PZ_74     - a19 AINT  -  -  1|36  1|32  1 -   -  sr_sr<8>.CLK             -
+       N_PZ_76    N_PZ_76     - c19 AINT  -  -  7|36  8|32  1 -   -    sr_sr<9>.D             -
+       N_PZ_77    N_PZ_77     - d19 AINT  -  -  1|36  1|32  1 -   -  sr_sr<9>.CLK             -
+       N_PZ_79    N_PZ_79     - f19 AINT  -  -  1|36  1|32  1 -   -      sr_sdo.D             -
+       N_PZ_80    N_PZ_80     - g19 AINT  L  -  1|36  1|32  1 -   -    sr_sdo.CLK             -
+       N_PZ_81    N_PZ_81     - h19 AINT  -  -  2|36  4|32  1 -   -     sr_sdo.CE             -
+       N_PZ_82    N_PZ_82     - i19 AINT  -  -  7|36  8|32  1 -   -   sr_sr<11>.D             -
+       N_PZ_83    N_PZ_83     - j19 AINT  -  -  1|36  1|32  1 -   - sr_sr<11>.CLK             -
+       N_PZ_85    N_PZ_85     - l19 AINT  -  -  1|36  1|32  1 -   -dds_profile_3<2>.D             -
+       N_PZ_86    N_PZ_86     - m19 AINT  -  -  1|36  1|32  1 -   -dds_profile_3<2>.CLK             -
+       N_PZ_87    N_PZ_87     - n19 AINT  -  -  1|36  1|32  1 -   -dds_profile_3<0>.D             -
+       N_PZ_88    N_PZ_88     - o19 AINT  -  -  1|36  1|32  1 -   -dds_profile_3<0>.CLK             -
+       N_PZ_89    N_PZ_89     - p19 AINT  -  -  1|36  1|32  1 -   -dds_profile_3<1>.D             -
+       N_PZ_90    N_PZ_90     - q19 AINT  -  -  1|36  1|32  1 -   -dds_profile_3<1>.CLK             -
+       N_PZ_91    N_PZ_91     - r19 AINT  -  -  2|36  4|32  1 -   -     dds_reset             -
+       N_PZ_92    N_PZ_92     - s19 AINT  -  -  1|36  1|32  1 -   -dds_common_master_reset.D             -
+       N_PZ_93    N_PZ_93     - t19 AINT  -  -  1|36  1|32  1 -   -dds_common_master_reset.CLK             -
+       N_PZ_94    N_PZ_94     - u19 AINT  -  -  1|36  1|32  1 -   -  clk_in_sel.D             -
+       N_PZ_95    N_PZ_95     - v19 AINT  -  -  1|36  1|32  1 -   -clk_in_sel.CLK             -
+       N_PZ_96    N_PZ_96     - w19 AINT  -  -  1|36  1|32  1 -   -clk_mmcx_osc_sel.D             -
+       N_PZ_97    N_PZ_97     - x19 AINT  -  -  1|36  1|32  1 -   -clk_mmcx_osc_sel.CLK             -
+       N_PZ_98    N_PZ_98     - y19 AINT  -  -  3|36  4|32  1 -   -          tp_1             -
+       N_PZ_99    N_PZ_99     - z19 AINT  -  -  3|36  4|32  1 -   -          tp_2             -
+      N_PZ_100   N_PZ_100     - a20 AINT  -  -  1|36  1|32  1 -   -     eem_io_10             -
+      N_PZ_101   N_PZ_101     - b20 AINT  -  -  1|36  2|32  1 -   -  eem_io_10.OE             -
+      N_PZ_103   N_PZ_103     - d20 AINT  -  -  1|36  1|32  1 -   -    le_clk.CLK             -
+      N_PZ_104   N_PZ_104     - e20 AINT  -  -  3|36  4|32  1 -   -     le_clk.AP             -
+      N_PZ_106   N_PZ_106     - g20 AINT  -  -  1|36  1|32  1 -   -   sr_di<13>.D             -
+      N_PZ_107   N_PZ_107     - h20 AINT  -  -  1|36  1|32  1 -   - sr_di<13>.CLK             -
+      N_PZ_108   N_PZ_108     - i20 AINT  -  -  1|36  1|32  1 -   -   sr_di<14>.D             -
+      N_PZ_109   N_PZ_109     - j20 AINT  -  -  1|36  1|32  1 -   - sr_di<14>.CLK             -
+      N_PZ_110   N_PZ_110     - k20 AINT  -  -  1|36  1|32  1 -   -   sr_di<15>.D             -
+      N_PZ_111   N_PZ_111     - l20 AINT  -  -  1|36  1|32  1 -   - sr_di<15>.CLK             -
+      N_PZ_112   N_PZ_112     - m20 AINT  -  -  1|36  1|32  1 -   -   sr_di<16>.D             -
+      N_PZ_113   N_PZ_113     - n20 AINT  -  -  1|36  1|32  1 -   - sr_di<16>.CLK             -
+      N_PZ_114   N_PZ_114     - o20 AINT  -  -  1|36  1|32  1 -   -   sr_di<12>.D             -
+      N_PZ_115   N_PZ_115     - p20 AINT  -  -  1|36  1|32  1 -   - sr_di<12>.CLK             -
+      N_PZ_116   N_PZ_116     - q20 AINT  -  -  1|36  1|32  1 -   -   sr_di<22>.D             -
+      N_PZ_117   N_PZ_117     - r20 AINT  -  -  1|36  1|32  1 -   - sr_di<22>.CLK             -
+      N_PZ_118   N_PZ_118     - s20 AINT  -  -  1|36  1|32  1 -   -   sr_di<23>.D             -
+      N_PZ_119   N_PZ_119     - t20 AINT  -  -  1|36  1|32  1 -   - sr_di<23>.CLK             -
+      N_PZ_120   N_PZ_120     - u20 AINT  -  -  1|36  1|32  1 -   -    sr_di<0>.D             -
+      N_PZ_121   N_PZ_121     - v20 AINT  -  -  1|36  1|32  1 -   -  sr_di<0>.CLK             -
+      N_PZ_122   N_PZ_122     - w20 AINT  -  -  1|36  1|32  1 -   -    sr_di<1>.D             -
+      N_PZ_123   N_PZ_123     - x20 AINT  -  -  1|36  1|32  1 -   -  sr_di<1>.CLK             -
+      N_PZ_124   N_PZ_124     - y20 AINT  -  -  1|36  1|32  1 -   -    sr_di<2>.D             -
+      N_PZ_125   N_PZ_125     - z20 AINT  -  -  1|36  1|32  1 -   -  sr_di<2>.CLK             -
+      N_PZ_126   N_PZ_126     - a21 AINT  -  -  1|36  1|32  1 -   -    sr_di<3>.D             -
+      N_PZ_127   N_PZ_127     - b21 AINT  -  -  1|36  1|32  1 -   -  sr_di<3>.CLK             -
+      N_PZ_128   N_PZ_128     - c21 AINT  -  -  1|36  1|32  1 -   -    sr_di<4>.D             -
+      N_PZ_129   N_PZ_129     - d21 AINT  -  -  1|36  1|32  1 -   -  sr_di<4>.CLK             -
+      N_PZ_130   N_PZ_130     - e21 AINT  -  -  1|36  1|32  1 -   -    sr_di<5>.D             -
+      N_PZ_131   N_PZ_131     - f21 AINT  -  -  1|36  1|32  1 -   -  sr_di<5>.CLK             -
+      N_PZ_132   N_PZ_132     - g21 AINT  -  -  1|36  1|32  1 -   -    sr_di<6>.D             -
+      N_PZ_133   N_PZ_133     - h21 AINT  -  -  1|36  1|32  1 -   -  sr_di<6>.CLK             -
+      N_PZ_134   N_PZ_134     - i21 AINT  -  -  1|36  1|32  1 -   -    sr_di<7>.D             -
+      N_PZ_135   N_PZ_135     - j21 AINT  -  -  1|36  1|32  1 -   -  sr_di<7>.CLK             -
+      N_PZ_137   N_PZ_137     - l21 AINT  -  -  1|36  1|32  1 -   - att_le<0>.CLK             -
+      N_PZ_138   N_PZ_138     - m21 AINT  -  -  3|36  4|32  1 -   -  att_le<0>.AP             -
+      N_PZ_141   N_PZ_141     - p21 AINT  -  -  1|36  1|32  1 -   - att_le<1>.CLK             -
+      N_PZ_142   N_PZ_142     - q21 AINT  -  -  3|36  4|32  1 -   -  att_le<1>.AP             -
+      N_PZ_145   N_PZ_145     - t21 AINT  -  -  1|36  1|32  1 -   - att_le<2>.CLK             -
+      N_PZ_146   N_PZ_146     - u21 AINT  -  -  3|36  4|32  1 -   -  att_le<2>.AP             -
+      N_PZ_149   N_PZ_149     - x21 AINT  -  -  1|36  1|32  1 -   - att_le<3>.CLK             -
+      N_PZ_150   N_PZ_150     - y21 AINT  -  -  3|36  4|32  1 -   -  att_le<3>.AP             -
+      N_PZ_152   N_PZ_152     - a22 AINT  -  -  1|36  1|32  1 -   -dds_sync_sync_sel.D             -
+      N_PZ_153   N_PZ_153     - b22 AINT  -  -  1|36  1|32  1 -   -dds_sync_sync_sel.CLK             -
+      N_PZ_154   N_PZ_154     - c22 AINT  -  -  1|36  1|32  1 -   -dds_common_io_reset.D             -
+      N_PZ_155   N_PZ_155     - d22 AINT  -  -  1|36  1|32  1 -   -dds_common_io_reset.CLK             -
+      N_PZ_156   N_PZ_156     - e22 AINT  L  -  1|36  2|32  1 -   -  clk_osc_en_n             -
+      N_PZ_157   N_PZ_157     - f22 AINT  -  -  2|36  3|32  1 -   -dds_io_update_1             -
+      N_PZ_158   N_PZ_158     - g22 AINT  -  -  2|36  3|32  1 -   -dds_io_update_2             -
+      N_PZ_159   N_PZ_159     - h22 AINT  -  -  2|36  3|32  1 -   -dds_io_update_3             -
+      N_PZ_160   N_PZ_160     - i22 AINT  -  -  2|36  3|32  1 -   - dds_io_update             -
+      N_PZ_161   N_PZ_161     - j22 AINT  L  -  2|36  5|32  1 -   -  dds_led_1<1>             -
+      N_PZ_162   N_PZ_162     - k22 AINT  L  -  2|36  5|32  1 -   -    dds_led<1>             -
+      N_PZ_163   N_PZ_163     - l22 AINT  L  -  2|36  5|32  1 -   -  dds_led_2<1>             -
+      N_PZ_164   N_PZ_164     - m22 AINT  L  -  2|36  5|32  1 -   -  dds_led_3<1>             -
+      N_PZ_165   N_PZ_165     - n22 AINT  -  -  3|36  4|32  1 -   -     dds_sck_1             -
+      N_PZ_166   N_PZ_166     - o22 AINT  -  -  3|36  4|32  1 -   -     dds_sck_2             -
+      N_PZ_167   N_PZ_167     - p22 AINT  -  -  3|36  4|32  1 -   -     dds_sck_3             -
+      N_PZ_168   N_PZ_168     - q22 AINT  -  -  3|36  4|32  1 -   -     dds_sdi_1             -
+      N_PZ_169   N_PZ_169     - r22 AINT  -  -  3|36  4|32  1 -   -     dds_sdi_2             -
+      N_PZ_170   N_PZ_170     - s22 AINT  -  -  3|36  4|32  1 -   -     dds_sdi_3             -
+      N_PZ_171   N_PZ_171     - t22 AINT  -  -  2|36  5|32  1 -   -       att_clk             -
+      N_PZ_172   N_PZ_172     - u22 AINT  -  -  1|36  1|32  1 -   -   att_rst_n.D             -
+      N_PZ_173   N_PZ_173     - v22 AINT  -  -  1|36  1|32  1 -   - att_rst_n.CLK             -
+      N_PZ_174   N_PZ_174     - w22 AINT  -  -  1|36  1|32  1 -   -   att_s_in<0>             -
+      N_PZ_175   N_PZ_175     - x22 AINT  -  -  1|36  1|32  1 -   -   att_s_in<1>             -
+      N_PZ_176   N_PZ_176     - y22 AINT  -  -  1|36  1|32  1 -   -   att_s_in<2>             -
+      N_PZ_177   N_PZ_177     - z22 AINT  -  -  1|36  1|32  1 -   -   att_s_in<3>             -
+      N_PZ_178   N_PZ_178     - a23 AINT  L  -  4|36  5|32  1 -   -    dds_cs_n_1             -
+      N_PZ_179   N_PZ_179     - b23 AINT  L  -  4|36  5|32  1 -   -    dds_cs_n_2             -
+      N_PZ_180   N_PZ_180     - c23 AINT  L  -  3|36  5|32  1 -   -    dds_cs_n_3             -
+      N_PZ_181   N_PZ_181     - d23 AINT  L  -  4|36  5|32  1 -   -            tp             -
+      N_PZ_182   N_PZ_182     - e23 AINT  L  -  4|36  5|32  1 -   -      dds_cs_n             -
+      N_PZ_183   N_PZ_183     - f23 AINT  L  -  1|36  2|32  1 -   -    dds_led<0>             -
+      N_PZ_184   N_PZ_184     - g23 AINT  L  -  1|36  2|32  1 -   -  dds_led_1<0>             -
+      N_PZ_185   N_PZ_185     - h23 AINT  L  -  1|36  2|32  1 -   -  dds_led_2<0>             -
+      N_PZ_186   N_PZ_186     - i23 AINT  L  -  1|36  2|32  1 -   -  dds_led_3<0>             -
+      N_PZ_187   N_PZ_187     - j23 AINT  -  -  2|36  4|32  1 -   -   dds_reset_3             -
+      N_PZ_188   N_PZ_188     - k23 AINT  -  -  2|36  4|32  1 -   -   dds_reset_2             -
+      N_PZ_189   N_PZ_189     - l23 AINT  -  -  2|36  4|32  1 -   -   dds_reset_1             -
+      N_PZ_190   N_PZ_190     - m23 AINT  -  -  2|36  4|32  1 -   -dds_sync_clk_out_en             -
+      N_PZ_191   N_PZ_191     - n23 AINT  -  -  1|36  1|32  1 -   -      eem_oe_2             -
+      N_PZ_192   N_PZ_192     - o23 AINT  -  -  1|36  1|32  1 -   -dds_profile<2>.D             -
+      N_PZ_193   N_PZ_193     - p23 AINT  -  -  1|36  1|32  1 -   -dds_profile<2>.CLK             -
+      N_PZ_194   N_PZ_194     - q23 AINT  -  -  1|36  1|32  1 -   -dds_profile_2<2>.D             -
+      N_PZ_195   N_PZ_195     - r23 AINT  -  -  1|36  1|32  1 -   -dds_profile_2<2>.CLK             -
+      N_PZ_196   N_PZ_196     - s23 AINT  -  -  1|36  1|32  1 -   -dds_profile_1<2>.D             -
+      N_PZ_197   N_PZ_197     - t23 AINT  -  -  1|36  1|32  1 -   -dds_profile_1<2>.CLK             -
+      N_PZ_198   N_PZ_198     - u23 AINT  -  -  1|36  1|32  1 -   -dds_profile_2<0>.D             -
+      N_PZ_199   N_PZ_199     - v23 AINT  -  -  1|36  1|32  1 -   -dds_profile_2<0>.CLK             -
+      N_PZ_200   N_PZ_200     - w23 AINT  -  -  1|36  1|32  1 -   -dds_profile_1<0>.D             -
+      N_PZ_201   N_PZ_201     - x23 AINT  -  -  1|36  1|32  1 -   -dds_profile_1<0>.CLK             -
+      N_PZ_202   N_PZ_202     - y23 AINT  -  -  1|36  1|32  1 -   -dds_profile<0>.D             -
+      N_PZ_203   N_PZ_203     - z23 AINT  -  -  1|36  1|32  1 -   -dds_profile<0>.CLK             -
+      N_PZ_204   N_PZ_204     - a24 AINT  -  -  1|36  1|32  1 -   -dds_profile_2<1>.D             -
+      N_PZ_205   N_PZ_205     - b24 AINT  -  -  1|36  1|32  1 -   -dds_profile_2<1>.CLK             -
+      N_PZ_206   N_PZ_206     - c24 AINT  -  -  1|36  1|32  1 -   -dds_profile<1>.D             -
+      N_PZ_207   N_PZ_207     - d24 AINT  -  -  1|36  1|32  1 -   -dds_profile<1>.CLK             -
+      N_PZ_208   N_PZ_208     - e24 AINT  -  -  1|36  1|32  1 -   -dds_profile_1<1>.D             -
+      N_PZ_209   N_PZ_209     - f24 AINT  -  -  1|36  1|32  1 -   -dds_profile_1<1>.CLK             -
+      N_PZ_210   N_PZ_210     - g24 AINT  -  -  3|36  4|32  1 -   -       dds_sck             -
+      N_PZ_211   N_PZ_211     - h24 AINT  -  -  3|36  4|32  1 -   -       dds_sdi             -
+      N_PZ_212   N_PZ_212     - i24 AINT  -  -  1|36  1|32  1 -   -          tp_3             -
+      N_PZ_213   N_PZ_213     - j24 AINT  -  -  1|36  1|32  1 -   -          tp_4             -
+      N_PZ_214   N_PZ_214     - k24 AINT  -  -  1|36  0|32  1 -   -          fsen             -
+      N_PZ_215   N_PZ_215     - l24 AINT  -  -  1|36  0|32  1 -   -       dds_osk             -
+      N_PZ_216   N_PZ_216     - m24 AINT  -  -  1|36  0|32  1 -   -     dds_osk_3             -
+      N_PZ_217   N_PZ_217     - n24 AINT  -  -  1|36  0|32  1 -   -     dds_osk_2             -
+      N_PZ_218   N_PZ_218     - o24 AINT  -  -  1|36  0|32  1 -   -     dds_osk_1             -
+      N_PZ_219   N_PZ_219     - p24 AINT  -  -  1|36  0|32  1 -   -     dds_drctl             -
+      N_PZ_220   N_PZ_220     - q24 AINT  -  -  1|36  0|32  1 -   -   dds_drctl_3             -
+      N_PZ_221   N_PZ_221     - r24 AINT  -  -  1|36  0|32  1 -   -   dds_drctl_2             -
+      N_PZ_222   N_PZ_222     - s24 AINT  -  -  1|36  0|32  1 -   -   dds_drctl_1             -
+      N_PZ_223   N_PZ_223     - t24 AINT  -  -  0|36  0|32  1 -   -        eem_oe             -
+      N_PZ_224   N_PZ_224     - u24 AINT  -  -  0|36  0|32  1 -   -      eem_oe_9             -
+      N_PZ_225   N_PZ_225     - v24 AINT  -  -  0|36  0|32  1 -   -      eem_oe_8             -
+      N_PZ_226   N_PZ_226     - w24 AINT  -  -  0|36  0|32  1 -   -     eem_oe_13             -
+      N_PZ_227   N_PZ_227     - x24 AINT  -  -  0|36  0|32  1 -   -     eem_oe_12             -
+      N_PZ_228   N_PZ_228     - y24 AINT  -  -  0|36  0|32  1 -   -     eem_oe_11             -
+      N_PZ_229   N_PZ_229     - z24 AINT  -  -  0|36  0|32  1 -   -    dds_drhold             -
+      N_PZ_230   N_PZ_230     - a25 AINT  -  -  0|36  0|32  1 -   -  dds_drhold_3             -
+      N_PZ_231   N_PZ_231     - b25 AINT  -  -  0|36  0|32  1 -   -  dds_drhold_2             -
+      N_PZ_232   N_PZ_232     - c25 AINT  -  -  0|36  0|32  1 -   -  dds_drhold_1             -
+      N_PZ_233   N_PZ_233     - d25 AINT  -  -  0|36  0|32  1 -   -      eem_oe_7             -
+      N_PZ_234   N_PZ_234     - e25 AINT  -  -  0|36  0|32  1 -   -      eem_oe_6             -
+      N_PZ_235   N_PZ_235     - f25 AINT  -  -  0|36  0|32  1 -   -      eem_oe_5             -
+      N_PZ_236   N_PZ_236     - g25 AINT  -  -  0|36  0|32  1 -   -      eem_oe_4             -
+      N_PZ_237   N_PZ_237     - h25 AINT  -  -  0|36  0|32  1 -   -      eem_oe_3             -
+      N_PZ_238   N_PZ_238     - i25 AINT  -  -  0|36  0|32  1 -   -      eem_oe_1             -
+      N_PZ_239   N_PZ_239     - j25 AINT  -  -  0|36  0|32  1 -   -     eem_oe_15             -
+      N_PZ_240   N_PZ_240     - k25 AINT  -  -  0|36  0|32  1 -   -     eem_oe_14             -
+     eem_oe_10  eem_oe_10        z1   PO  -  -  -| -  -| -  0 -   -        N_PZ_0     eem_oe_10
+     dds_rf_sw  dds_rf_sw        g5   PO  -  -  -| -  -| -  0 -   -        N_PZ_1     dds_rf_sw
+   dds_rf_sw_1dds_rf_sw_1        h5   PO  -  -  -| -  -| -  0 -   -        N_PZ_2   dds_rf_sw_1
+   dds_rf_sw_2dds_rf_sw_2        i5   PO  -  -  -| -  -| -  0 -   -        N_PZ_3   dds_rf_sw_2
+   dds_rf_sw_3dds_rf_sw_3        j5   PO  -  -  -| -  -| -  0 -   -        N_PZ_4   dds_rf_sw_3
+dds_sync_sync_out_endds_sync_sync_out_en        c7   PO  -  -  -| -  -| -  0 -   -        N_PZ_5dds_sync_sync_out_en
+      eem_io_2   eem_io_2        d7   PO  -  -  -| -  -| -  0 -   -        N_PZ_6      eem_io_2
+   eem_io_2.OE   eem_io_2   .OE  e7   PO  -  -  -| -  -| -  0 -   -        N_PZ_7      eem_io_2
+       clk_div    clk_div        f7   PO  -  -  -| -  -| -  0 -   -        N_PZ_8       clk_div
+    clk_div.OE    clk_div   .OE  g7   PO  -  -  -| -  -| -  0 -   -        N_PZ_9       clk_div
+    sr_sr<0>.D   sr_sr<0>    .D  h7   PO  -  -  -| -  -| -  0 -   -       N_PZ_10      sr_sr<0>
+  sr_sr<0>.CLK   sr_sr<0>  .CLK  i7   PO  -  -  -| -  -| -  0 -   -       N_PZ_11      sr_sr<0>
+   sr_sr<0>.CE   sr_sr<0>   .CE  j7   PO  -  -  -| -  -| -  0 -   -       N_PZ_12      sr_sr<0>
+   sr_sr<10>.D  sr_sr<10>    .D  k7   PO  -  -  -| -  -| -  0 -   -       N_PZ_13     sr_sr<10>
+ sr_sr<10>.CLK  sr_sr<10>  .CLK  l7   PO  -  -  -| -  -| -  0 -   -       N_PZ_14     sr_sr<10>
+   sr_sr<12>.D  sr_sr<12>    .D  n7   PO  -  -  -| -  -| -  0 -   -       N_PZ_16     sr_sr<12>
+ sr_sr<12>.CLK  sr_sr<12>  .CLK  o7   PO  -  -  -| -  -| -  0 -   -       N_PZ_17     sr_sr<12>
+   sr_sr<13>.D  sr_sr<13>    .D  q7   PO  -  -  -| -  -| -  0 -   -       N_PZ_19     sr_sr<13>
+ sr_sr<13>.CLK  sr_sr<13>  .CLK  r7   PO  -  -  -| -  -| -  0 -   -       N_PZ_20     sr_sr<13>
+   sr_sr<14>.D  sr_sr<14>    .D  t7   PO  -  -  -| -  -| -  0 -   -       N_PZ_22     sr_sr<14>
+ sr_sr<14>.CLK  sr_sr<14>  .CLK  u7   PO  -  -  -| -  -| -  0 -   -       N_PZ_23     sr_sr<14>
+   sr_sr<15>.D  sr_sr<15>    .D  w7   PO  -  -  -| -  -| -  0 -   -       N_PZ_25     sr_sr<15>
+ sr_sr<15>.CLK  sr_sr<15>  .CLK  x7   PO  -  -  -| -  -| -  0 -   -       N_PZ_26     sr_sr<15>
+   sr_sr<16>.D  sr_sr<16>    .D  z7   PO  -  -  -| -  -| -  0 -   -       N_PZ_28     sr_sr<16>
+ sr_sr<16>.CLK  sr_sr<16>  .CLK  a8   PO  -  -  -| -  -| -  0 -   -       N_PZ_29     sr_sr<16>
+   sr_sr<17>.D  sr_sr<17>    .D  c8   PO  -  -  -| -  -| -  0 -   -       N_PZ_31     sr_sr<17>
+ sr_sr<17>.CLK  sr_sr<17>  .CLK  d8   PO  -  -  -| -  -| -  0 -   -       N_PZ_32     sr_sr<17>
+   sr_sr<18>.D  sr_sr<18>    .D  f8   PO  -  -  -| -  -| -  0 -   -       N_PZ_34     sr_sr<18>
+ sr_sr<18>.CLK  sr_sr<18>  .CLK  g8   PO  -  -  -| -  -| -  0 -   -       N_PZ_35     sr_sr<18>
+   sr_sr<19>.D  sr_sr<19>    .D  i8   PO  -  -  -| -  -| -  0 -   -       N_PZ_37     sr_sr<19>
+ sr_sr<19>.CLK  sr_sr<19>  .CLK  j8   PO  -  -  -| -  -| -  0 -   -       N_PZ_38     sr_sr<19>
+    sr_sr<1>.D   sr_sr<1>    .D  l8   PO  -  -  -| -  -| -  0 -   -       N_PZ_40      sr_sr<1>
+  sr_sr<1>.CLK   sr_sr<1>  .CLK  m8   PO  -  -  -| -  -| -  0 -   -       N_PZ_41      sr_sr<1>
+ sr_sr<20>.CLK  sr_sr<20>  .CLK  p8   PO  -  -  -| -  -| -  0 -   -       N_PZ_44     sr_sr<20>
+   sr_sr<21>.D  sr_sr<21>    .D  r8   PO  -  -  -| -  -| -  0 -   -       N_PZ_46     sr_sr<21>
+ sr_sr<21>.CLK  sr_sr<21>  .CLK  s8   PO  -  -  -| -  -| -  0 -   -       N_PZ_47     sr_sr<21>
+   sr_sr<22>.D  sr_sr<22>    .D  u8   PO  -  -  -| -  -| -  0 -   -       N_PZ_49     sr_sr<22>
+ sr_sr<22>.CLK  sr_sr<22>  .CLK  v8   PO  -  -  -| -  -| -  0 -   -       N_PZ_50     sr_sr<22>
+   sr_sr<23>.D  sr_sr<23>    .D  x8   PO  -  -  -| -  -| -  0 -   -       N_PZ_52     sr_sr<23>
+ sr_sr<23>.CLK  sr_sr<23>  .CLK  y8   PO  -  -  -| -  -| -  0 -   -       N_PZ_53     sr_sr<23>
+    sr_sr<2>.D   sr_sr<2>    .D  a9   PO  -  -  -| -  -| -  0 -   -       N_PZ_55      sr_sr<2>
+  sr_sr<2>.CLK   sr_sr<2>  .CLK  b9   PO  -  -  -| -  -| -  0 -   -       N_PZ_56      sr_sr<2>
+    sr_sr<3>.D   sr_sr<3>    .D  d9   PO  -  -  -| -  -| -  0 -   -       N_PZ_58      sr_sr<3>
+  sr_sr<3>.CLK   sr_sr<3>  .CLK  e9   PO  -  -  -| -  -| -  0 -   -       N_PZ_59      sr_sr<3>
+    sr_sr<4>.D   sr_sr<4>    .D  g9   PO  -  -  -| -  -| -  0 -   -       N_PZ_61      sr_sr<4>
+  sr_sr<4>.CLK   sr_sr<4>  .CLK  h9   PO  -  -  -| -  -| -  0 -   -       N_PZ_62      sr_sr<4>
+    sr_sr<5>.D   sr_sr<5>    .D  j9   PO  -  -  -| -  -| -  0 -   -       N_PZ_64      sr_sr<5>
+  sr_sr<5>.CLK   sr_sr<5>  .CLK  k9   PO  -  -  -| -  -| -  0 -   -       N_PZ_65      sr_sr<5>
+    sr_sr<6>.D   sr_sr<6>    .D  m9   PO  -  -  -| -  -| -  0 -   -       N_PZ_67      sr_sr<6>
+  sr_sr<6>.CLK   sr_sr<6>  .CLK  n9   PO  -  -  -| -  -| -  0 -   -       N_PZ_68      sr_sr<6>
+    sr_sr<7>.D   sr_sr<7>    .D  p9   PO  -  -  -| -  -| -  0 -   -       N_PZ_70      sr_sr<7>
+  sr_sr<7>.CLK   sr_sr<7>  .CLK  q9   PO  -  -  -| -  -| -  0 -   -       N_PZ_71      sr_sr<7>
+    sr_sr<8>.D   sr_sr<8>    .D  s9   PO  -  -  -| -  -| -  0 -   -       N_PZ_73      sr_sr<8>
+  sr_sr<8>.CLK   sr_sr<8>  .CLK  t9   PO  -  -  -| -  -| -  0 -   -       N_PZ_74      sr_sr<8>
+    sr_sr<9>.D   sr_sr<9>    .D  v9   PO  -  -  -| -  -| -  0 -   -       N_PZ_76      sr_sr<9>
+  sr_sr<9>.CLK   sr_sr<9>  .CLK  w9   PO  -  -  -| -  -| -  0 -   -       N_PZ_77      sr_sr<9>
+      sr_sdo.D     sr_sdo    .D  y9   PO  -  -  -| -  -| -  0 -   -       N_PZ_79        sr_sdo
+    sr_sdo.CLK     sr_sdo  .CLK  z9   PO  -  -  -| -  -| -  0 -   -       N_PZ_80        sr_sdo
+     sr_sdo.CE     sr_sdo   .CE a10   PO  -  -  -| -  -| -  0 -   -       N_PZ_81        sr_sdo
+   sr_sr<11>.D  sr_sr<11>    .D b10   PO  -  -  -| -  -| -  0 -   -       N_PZ_82     sr_sr<11>
+ sr_sr<11>.CLK  sr_sr<11>  .CLK c10   PO  -  -  -| -  -| -  0 -   -       N_PZ_83     sr_sr<11>
+dds_profile_3<2>.Ddds_profile_3<2>    .D e10   PO  -  -  -| -  -| -  0 -   -       N_PZ_85dds_profile_3<2>
+dds_profile_3<2>.CLKdds_profile_3<2>  .CLK f10   PO  -  -  -| -  -| -  0 -   -       N_PZ_86dds_profile_3<2>
+dds_profile_3<0>.Ddds_profile_3<0>    .D g10   PO  -  -  -| -  -| -  0 -   -       N_PZ_87dds_profile_3<0>
+dds_profile_3<0>.CLKdds_profile_3<0>  .CLK h10   PO  -  -  -| -  -| -  0 -   -       N_PZ_88dds_profile_3<0>
+dds_profile_3<1>.Ddds_profile_3<1>    .D i10   PO  -  -  -| -  -| -  0 -   -       N_PZ_89dds_profile_3<1>
+dds_profile_3<1>.CLKdds_profile_3<1>  .CLK j10   PO  -  -  -| -  -| -  0 -   -       N_PZ_90dds_profile_3<1>
+     dds_reset  dds_reset       k10   PO  -  -  -| -  -| -  0 -   -       N_PZ_91     dds_reset
+dds_common_master_reset.Ddds_common_master_reset    .D l10   PO  -  -  -| -  -| -  0 -   -       N_PZ_92dds_common_master_reset
+dds_common_master_reset.CLKdds_common_master_reset  .CLK m10   PO  -  -  -| -  -| -  0 -   -       N_PZ_93dds_common_master_reset
+  clk_in_sel.D clk_in_sel    .D n10   PO  -  -  -| -  -| -  0 -   -       N_PZ_94    clk_in_sel
+clk_in_sel.CLK clk_in_sel  .CLK o10   PO  -  -  -| -  -| -  0 -   -       N_PZ_95    clk_in_sel
+clk_mmcx_osc_sel.Dclk_mmcx_osc_sel    .D p10   PO  -  -  -| -  -| -  0 -   -       N_PZ_96clk_mmcx_osc_sel
+clk_mmcx_osc_sel.CLKclk_mmcx_osc_sel  .CLK q10   PO  -  -  -| -  -| -  0 -   -       N_PZ_97clk_mmcx_osc_sel
+          tp_1       tp_1       r10   PO  -  -  -| -  -| -  0 -   -       N_PZ_98          tp_1
+          tp_2       tp_2       s10   PO  -  -  -| -  -| -  0 -   -       N_PZ_99          tp_2
+     eem_io_10  eem_io_10       t10   PO  -  -  -| -  -| -  0 -   -      N_PZ_100     eem_io_10
+  eem_io_10.OE  eem_io_10   .OE u10   PO  -  -  -| -  -| -  0 -   -      N_PZ_101     eem_io_10
+    le_clk.CLK     le_clk  .CLK w10   PO  -  -  -| -  -| -  0 -   -      N_PZ_103        le_clk
+     le_clk.AP     le_clk   .AP x10   PO  -  -  -| -  -| -  0 -   -      N_PZ_104        le_clk
+   sr_di<13>.D  sr_di<13>    .D z10   PO  -  -  -| -  -| -  0 -   -      N_PZ_106     sr_di<13>
+ sr_di<13>.CLK  sr_di<13>  .CLK a11   PO  -  -  -| -  -| -  0 -   -      N_PZ_107     sr_di<13>
+   sr_di<14>.D  sr_di<14>    .D b11   PO  -  -  -| -  -| -  0 -   -      N_PZ_108     sr_di<14>
+ sr_di<14>.CLK  sr_di<14>  .CLK c11   PO  -  -  -| -  -| -  0 -   -      N_PZ_109     sr_di<14>
+   sr_di<15>.D  sr_di<15>    .D d11   PO  -  -  -| -  -| -  0 -   -      N_PZ_110     sr_di<15>
+ sr_di<15>.CLK  sr_di<15>  .CLK e11   PO  -  -  -| -  -| -  0 -   -      N_PZ_111     sr_di<15>
+   sr_di<16>.D  sr_di<16>    .D f11   PO  -  -  -| -  -| -  0 -   -      N_PZ_112     sr_di<16>
+ sr_di<16>.CLK  sr_di<16>  .CLK g11   PO  -  -  -| -  -| -  0 -   -      N_PZ_113     sr_di<16>
+   sr_di<12>.D  sr_di<12>    .D h11   PO  -  -  -| -  -| -  0 -   -      N_PZ_114     sr_di<12>
+ sr_di<12>.CLK  sr_di<12>  .CLK i11   PO  -  -  -| -  -| -  0 -   -      N_PZ_115     sr_di<12>
+   sr_di<22>.D  sr_di<22>    .D j11   PO  -  -  -| -  -| -  0 -   -      N_PZ_116     sr_di<22>
+ sr_di<22>.CLK  sr_di<22>  .CLK k11   PO  -  -  -| -  -| -  0 -   -      N_PZ_117     sr_di<22>
+   sr_di<23>.D  sr_di<23>    .D l11   PO  -  -  -| -  -| -  0 -   -      N_PZ_118     sr_di<23>
+ sr_di<23>.CLK  sr_di<23>  .CLK m11   PO  -  -  -| -  -| -  0 -   -      N_PZ_119     sr_di<23>
+    sr_di<0>.D   sr_di<0>    .D n11   PO  -  -  -| -  -| -  0 -   -      N_PZ_120      sr_di<0>
+  sr_di<0>.CLK   sr_di<0>  .CLK o11   PO  -  -  -| -  -| -  0 -   -      N_PZ_121      sr_di<0>
+    sr_di<1>.D   sr_di<1>    .D p11   PO  -  -  -| -  -| -  0 -   -      N_PZ_122      sr_di<1>
+  sr_di<1>.CLK   sr_di<1>  .CLK q11   PO  -  -  -| -  -| -  0 -   -      N_PZ_123      sr_di<1>
+    sr_di<2>.D   sr_di<2>    .D r11   PO  -  -  -| -  -| -  0 -   -      N_PZ_124      sr_di<2>
+  sr_di<2>.CLK   sr_di<2>  .CLK s11   PO  -  -  -| -  -| -  0 -   -      N_PZ_125      sr_di<2>
+    sr_di<3>.D   sr_di<3>    .D t11   PO  -  -  -| -  -| -  0 -   -      N_PZ_126      sr_di<3>
+  sr_di<3>.CLK   sr_di<3>  .CLK u11   PO  -  -  -| -  -| -  0 -   -      N_PZ_127      sr_di<3>
+    sr_di<4>.D   sr_di<4>    .D v11   PO  -  -  -| -  -| -  0 -   -      N_PZ_128      sr_di<4>
+  sr_di<4>.CLK   sr_di<4>  .CLK w11   PO  -  -  -| -  -| -  0 -   -      N_PZ_129      sr_di<4>
+    sr_di<5>.D   sr_di<5>    .D x11   PO  -  -  -| -  -| -  0 -   -      N_PZ_130      sr_di<5>
+  sr_di<5>.CLK   sr_di<5>  .CLK y11   PO  -  -  -| -  -| -  0 -   -      N_PZ_131      sr_di<5>
+    sr_di<6>.D   sr_di<6>    .D z11   PO  -  -  -| -  -| -  0 -   -      N_PZ_132      sr_di<6>
+  sr_di<6>.CLK   sr_di<6>  .CLK a12   PO  -  -  -| -  -| -  0 -   -      N_PZ_133      sr_di<6>
+    sr_di<7>.D   sr_di<7>    .D b12   PO  -  -  -| -  -| -  0 -   -      N_PZ_134      sr_di<7>
+  sr_di<7>.CLK   sr_di<7>  .CLK c12   PO  -  -  -| -  -| -  0 -   -      N_PZ_135      sr_di<7>
+ att_le<0>.CLK  att_le<0>  .CLK e12   PO  -  -  -| -  -| -  0 -   -      N_PZ_137     att_le<0>
+  att_le<0>.AP  att_le<0>   .AP f12   PO  -  -  -| -  -| -  0 -   -      N_PZ_138     att_le<0>
+ att_le<1>.CLK  att_le<1>  .CLK i12   PO  -  -  -| -  -| -  0 -   -      N_PZ_141     att_le<1>
+  att_le<1>.AP  att_le<1>   .AP j12   PO  -  -  -| -  -| -  0 -   -      N_PZ_142     att_le<1>
+ att_le<2>.CLK  att_le<2>  .CLK m12   PO  -  -  -| -  -| -  0 -   -      N_PZ_145     att_le<2>
+  att_le<2>.AP  att_le<2>   .AP n12   PO  -  -  -| -  -| -  0 -   -      N_PZ_146     att_le<2>
+ att_le<3>.CLK  att_le<3>  .CLK q12   PO  -  -  -| -  -| -  0 -   -      N_PZ_149     att_le<3>
+  att_le<3>.AP  att_le<3>   .AP r12   PO  -  -  -| -  -| -  0 -   -      N_PZ_150     att_le<3>
+dds_sync_sync_sel.Ddds_sync_sync_sel    .D t12   PO  -  -  -| -  -| -  0 -   -      N_PZ_152dds_sync_sync_sel
+dds_sync_sync_sel.CLKdds_sync_sync_sel  .CLK u12   PO  -  -  -| -  -| -  0 -   -      N_PZ_153dds_sync_sync_sel
+dds_common_io_reset.Ddds_common_io_reset    .D v12   PO  -  -  -| -  -| -  0 -   -      N_PZ_154dds_common_io_reset
+dds_common_io_reset.CLKdds_common_io_reset  .CLK w12   PO  -  -  -| -  -| -  0 -   -      N_PZ_155dds_common_io_reset
+  clk_osc_en_nclk_osc_en_n       x12   PO  -  -  -| -  -| -  0 -   -      N_PZ_156  clk_osc_en_n
+dds_io_update_1dds_io_update_1       y12   PO  -  -  -| -  -| -  0 -   -      N_PZ_157dds_io_update_1
+dds_io_update_2dds_io_update_2       z12   PO  -  -  -| -  -| -  0 -   -      N_PZ_158dds_io_update_2
+dds_io_update_3dds_io_update_3       a13   PO  -  -  -| -  -| -  0 -   -      N_PZ_159dds_io_update_3
+ dds_io_updatedds_io_update       b13   PO  -  -  -| -  -| -  0 -   -      N_PZ_160 dds_io_update
+  dds_led_1<1>dds_led_1<1>       c13   PO  -  -  -| -  -| -  0 -   -      N_PZ_161  dds_led_1<1>
+    dds_led<1> dds_led<1>       d13   PO  -  -  -| -  -| -  0 -   -      N_PZ_162    dds_led<1>
+  dds_led_2<1>dds_led_2<1>       e13   PO  -  -  -| -  -| -  0 -   -      N_PZ_163  dds_led_2<1>
+  dds_led_3<1>dds_led_3<1>       f13   PO  -  -  -| -  -| -  0 -   -      N_PZ_164  dds_led_3<1>
+     dds_sck_1  dds_sck_1       g13   PO  -  -  -| -  -| -  0 -   -      N_PZ_165     dds_sck_1
+     dds_sck_2  dds_sck_2       h13   PO  -  -  -| -  -| -  0 -   -      N_PZ_166     dds_sck_2
+     dds_sck_3  dds_sck_3       i13   PO  -  -  -| -  -| -  0 -   -      N_PZ_167     dds_sck_3
+     dds_sdi_1  dds_sdi_1       j13   PO  -  -  -| -  -| -  0 -   -      N_PZ_168     dds_sdi_1
+     dds_sdi_2  dds_sdi_2       k13   PO  -  -  -| -  -| -  0 -   -      N_PZ_169     dds_sdi_2
+     dds_sdi_3  dds_sdi_3       l13   PO  -  -  -| -  -| -  0 -   -      N_PZ_170     dds_sdi_3
+       att_clk    att_clk       m13   PO  -  -  -| -  -| -  0 -   -      N_PZ_171       att_clk
+   att_rst_n.D  att_rst_n    .D n13   PO  -  -  -| -  -| -  0 -   -      N_PZ_172     att_rst_n
+ att_rst_n.CLK  att_rst_n  .CLK o13   PO  -  -  -| -  -| -  0 -   -      N_PZ_173     att_rst_n
+   att_s_in<0>att_s_in<0>       p13   PO  -  -  -| -  -| -  0 -   -      N_PZ_174   att_s_in<0>
+   att_s_in<1>att_s_in<1>       q13   PO  -  -  -| -  -| -  0 -   -      N_PZ_175   att_s_in<1>
+   att_s_in<2>att_s_in<2>       r13   PO  -  -  -| -  -| -  0 -   -      N_PZ_176   att_s_in<2>
+   att_s_in<3>att_s_in<3>       s13   PO  -  -  -| -  -| -  0 -   -      N_PZ_177   att_s_in<3>
+    dds_cs_n_1 dds_cs_n_1       t13   PO  -  -  -| -  -| -  0 -   -      N_PZ_178    dds_cs_n_1
+    dds_cs_n_2 dds_cs_n_2       u13   PO  -  -  -| -  -| -  0 -   -      N_PZ_179    dds_cs_n_2
+    dds_cs_n_3 dds_cs_n_3       v13   PO  -  -  -| -  -| -  0 -   -      N_PZ_180    dds_cs_n_3
+            tp         tp       w13   PO  -  -  -| -  -| -  0 -   -      N_PZ_181            tp
+      dds_cs_n   dds_cs_n       x13   PO  -  -  -| -  -| -  0 -   -      N_PZ_182      dds_cs_n
+    dds_led<0> dds_led<0>       y13   PO  -  -  -| -  -| -  0 -   -      N_PZ_183    dds_led<0>
+  dds_led_1<0>dds_led_1<0>       z13   PO  -  -  -| -  -| -  0 -   -      N_PZ_184  dds_led_1<0>
+  dds_led_2<0>dds_led_2<0>       a14   PO  -  -  -| -  -| -  0 -   -      N_PZ_185  dds_led_2<0>
+  dds_led_3<0>dds_led_3<0>       b14   PO  -  -  -| -  -| -  0 -   -      N_PZ_186  dds_led_3<0>
+   dds_reset_3dds_reset_3       c14   PO  -  -  -| -  -| -  0 -   -      N_PZ_187   dds_reset_3
+   dds_reset_2dds_reset_2       d14   PO  -  -  -| -  -| -  0 -   -      N_PZ_188   dds_reset_2
+   dds_reset_1dds_reset_1       e14   PO  -  -  -| -  -| -  0 -   -      N_PZ_189   dds_reset_1
+dds_sync_clk_out_endds_sync_clk_out_en       f14   PO  -  -  -| -  -| -  0 -   -      N_PZ_190dds_sync_clk_out_en
+      eem_oe_2   eem_oe_2       g14   PO  -  -  -| -  -| -  0 -   -      N_PZ_191      eem_oe_2
+dds_profile<2>.Ddds_profile<2>    .D h14   PO  -  -  -| -  -| -  0 -   -      N_PZ_192dds_profile<2>
+dds_profile<2>.CLKdds_profile<2>  .CLK i14   PO  -  -  -| -  -| -  0 -   -      N_PZ_193dds_profile<2>
+dds_profile_2<2>.Ddds_profile_2<2>    .D j14   PO  -  -  -| -  -| -  0 -   -      N_PZ_194dds_profile_2<2>
+dds_profile_2<2>.CLKdds_profile_2<2>  .CLK k14   PO  -  -  -| -  -| -  0 -   -      N_PZ_195dds_profile_2<2>
+dds_profile_1<2>.Ddds_profile_1<2>    .D l14   PO  -  -  -| -  -| -  0 -   -      N_PZ_196dds_profile_1<2>
+dds_profile_1<2>.CLKdds_profile_1<2>  .CLK m14   PO  -  -  -| -  -| -  0 -   -      N_PZ_197dds_profile_1<2>
+dds_profile_2<0>.Ddds_profile_2<0>    .D n14   PO  -  -  -| -  -| -  0 -   -      N_PZ_198dds_profile_2<0>
+dds_profile_2<0>.CLKdds_profile_2<0>  .CLK o14   PO  -  -  -| -  -| -  0 -   -      N_PZ_199dds_profile_2<0>
+dds_profile_1<0>.Ddds_profile_1<0>    .D p14   PO  -  -  -| -  -| -  0 -   -      N_PZ_200dds_profile_1<0>
+dds_profile_1<0>.CLKdds_profile_1<0>  .CLK q14   PO  -  -  -| -  -| -  0 -   -      N_PZ_201dds_profile_1<0>
+dds_profile<0>.Ddds_profile<0>    .D r14   PO  -  -  -| -  -| -  0 -   -      N_PZ_202dds_profile<0>
+dds_profile<0>.CLKdds_profile<0>  .CLK s14   PO  -  -  -| -  -| -  0 -   -      N_PZ_203dds_profile<0>
+dds_profile_2<1>.Ddds_profile_2<1>    .D t14   PO  -  -  -| -  -| -  0 -   -      N_PZ_204dds_profile_2<1>
+dds_profile_2<1>.CLKdds_profile_2<1>  .CLK u14   PO  -  -  -| -  -| -  0 -   -      N_PZ_205dds_profile_2<1>
+dds_profile<1>.Ddds_profile<1>    .D v14   PO  -  -  -| -  -| -  0 -   -      N_PZ_206dds_profile<1>
+dds_profile<1>.CLKdds_profile<1>  .CLK w14   PO  -  -  -| -  -| -  0 -   -      N_PZ_207dds_profile<1>
+dds_profile_1<1>.Ddds_profile_1<1>    .D x14   PO  -  -  -| -  -| -  0 -   -      N_PZ_208dds_profile_1<1>
+dds_profile_1<1>.CLKdds_profile_1<1>  .CLK y14   PO  -  -  -| -  -| -  0 -   -      N_PZ_209dds_profile_1<1>
+       dds_sck    dds_sck       z14   PO  -  -  -| -  -| -  0 -   -      N_PZ_210       dds_sck
+       dds_sdi    dds_sdi       a15   PO  -  -  -| -  -| -  0 -   -      N_PZ_211       dds_sdi
+          tp_3       tp_3       b15   PO  -  -  -| -  -| -  0 -   -      N_PZ_212          tp_3
+          tp_4       tp_4       c15   PO  -  -  -| -  -| -  0 -   -      N_PZ_213          tp_4
+          fsen       fsen       d15   PO  -  -  -| -  -| -  0 -   -      N_PZ_214          fsen
+       dds_osk    dds_osk       e15   PO  -  -  -| -  -| -  0 -   -      N_PZ_215       dds_osk
+     dds_osk_3  dds_osk_3       f15   PO  -  -  -| -  -| -  0 -   -      N_PZ_216     dds_osk_3
+     dds_osk_2  dds_osk_2       g15   PO  -  -  -| -  -| -  0 -   -      N_PZ_217     dds_osk_2
+     dds_osk_1  dds_osk_1       h15   PO  -  -  -| -  -| -  0 -   -      N_PZ_218     dds_osk_1
+     dds_drctl  dds_drctl       i15   PO  -  -  -| -  -| -  0 -   -      N_PZ_219     dds_drctl
+   dds_drctl_3dds_drctl_3       j15   PO  -  -  -| -  -| -  0 -   -      N_PZ_220   dds_drctl_3
+   dds_drctl_2dds_drctl_2       k15   PO  -  -  -| -  -| -  0 -   -      N_PZ_221   dds_drctl_2
+   dds_drctl_1dds_drctl_1       l15   PO  -  -  -| -  -| -  0 -   -      N_PZ_222   dds_drctl_1
+        eem_oe     eem_oe       m15   PO  -  -  -| -  -| -  0 -   -      N_PZ_223        eem_oe
+      eem_oe_9   eem_oe_9       n15   PO  -  -  -| -  -| -  0 -   -      N_PZ_224      eem_oe_9
+      eem_oe_8   eem_oe_8       o15   PO  -  -  -| -  -| -  0 -   -      N_PZ_225      eem_oe_8
+     eem_oe_13  eem_oe_13       p15   PO  -  -  -| -  -| -  0 -   -      N_PZ_226     eem_oe_13
+     eem_oe_12  eem_oe_12       q15   PO  -  -  -| -  -| -  0 -   -      N_PZ_227     eem_oe_12
+     eem_oe_11  eem_oe_11       r15   PO  -  -  -| -  -| -  0 -   -      N_PZ_228     eem_oe_11
+    dds_drhold dds_drhold       s15   PO  -  -  -| -  -| -  0 -   -      N_PZ_229    dds_drhold
+  dds_drhold_3dds_drhold_3       t15   PO  -  -  -| -  -| -  0 -   -      N_PZ_230  dds_drhold_3
+  dds_drhold_2dds_drhold_2       u15   PO  -  -  -| -  -| -  0 -   -      N_PZ_231  dds_drhold_2
+  dds_drhold_1dds_drhold_1       v15   PO  -  -  -| -  -| -  0 -   -      N_PZ_232  dds_drhold_1
+      eem_oe_7   eem_oe_7       w15   PO  -  -  -| -  -| -  0 -   -      N_PZ_233      eem_oe_7
+      eem_oe_6   eem_oe_6       x15   PO  -  -  -| -  -| -  0 -   -      N_PZ_234      eem_oe_6
+      eem_oe_5   eem_oe_5       y15   PO  -  -  -| -  -| -  0 -   -      N_PZ_235      eem_oe_5
+      eem_oe_4   eem_oe_4       z15   PO  -  -  -| -  -| -  0 -   -      N_PZ_236      eem_oe_4
+      eem_oe_3   eem_oe_3       a16   PO  -  -  -| -  -| -  0 -   -      N_PZ_237      eem_oe_3
+      eem_oe_1   eem_oe_1       b16   PO  -  -  -| -  -| -  0 -   -      N_PZ_238      eem_oe_1
+     eem_oe_15  eem_oe_15       c16   PO  -  -  -| -  -| -  0 -   -      N_PZ_239     eem_oe_15
+     eem_oe_14  eem_oe_14       d16   PO  -  -  -| -  -| -  0 -   -      N_PZ_240     eem_oe_14
+    sr_sr<0>.Q   sr_sr<0>    .Q l25   PI  -  -  -| -  -| -  2 -   -             -             -
+   sr_sr<10>.Q  sr_sr<10>    .Q m25   PI  -  -  -| -  -| -  6 -   -             -             -
+   sr_sr<12>.Q  sr_sr<12>    .Q n25   PI  -  -  -| -  -| -  3 -   -             -             -
+   sr_sr<13>.Q  sr_sr<13>    .Q o25   PI  -  -  -| -  -| -  3 -   -             -             -
+   sr_sr<14>.Q  sr_sr<14>    .Q p25   PI  -  -  -| -  -| -  3 -   -             -             -
+   sr_sr<15>.Q  sr_sr<15>    .Q q25   PI  -  -  -| -  -| -  3 -   -             -             -
+   sr_sr<16>.Q  sr_sr<16>    .Q r25   PI  -  -  -| -  -| -  3 -   -             -             -
+   sr_sr<17>.Q  sr_sr<17>    .Q s25   PI  -  -  -| -  -| -  3 -   -             -             -
+   sr_sr<18>.Q  sr_sr<18>    .Q t25   PI  -  -  -| -  -| -  3 -   -             -             -
+   sr_sr<19>.Q  sr_sr<19>    .Q u25   PI  -  -  -| -  -| -  4 -   -             -             -
+    sr_sr<1>.Q   sr_sr<1>    .Q v25   PI  -  -  -| -  -| -  3 -   -             -             -
+   sr_sr<20>.Q  sr_sr<20>    .Q w25   PI  -  -  -| -  -| -  3 -   -             -             -
+   sr_sr<21>.Q  sr_sr<21>    .Q x25   PI  -  -  -| -  -| -  3 -   -             -             -
+   sr_sr<22>.Q  sr_sr<22>    .Q y25   PI  -  -  -| -  -| -  3 -   -             -             -
+   sr_sr<23>.Q  sr_sr<23>    .Q z25   PI  -  -  -| -  -| -  3 -   -             -             -
+    sr_sr<2>.Q   sr_sr<2>    .Q a26   PI  -  -  -| -  -| -  3 -   -             -             -
+    sr_sr<3>.Q   sr_sr<3>    .Q b26   PI  -  -  -| -  -| -  3 -   -             -             -
+    sr_sr<4>.Q   sr_sr<4>    .Q c26   PI  -  -  -| -  -| -  3 -   -             -             -
+    sr_sr<5>.Q   sr_sr<5>    .Q d26   PI  -  -  -| -  -| -  3 -   -             -             -
+    sr_sr<6>.Q   sr_sr<6>    .Q e26   PI  -  -  -| -  -| -  3 -   -             -             -
+    sr_sr<7>.Q   sr_sr<7>    .Q f26   PI  -  -  -| -  -| -  3 -   -             -             -
+    sr_sr<8>.Q   sr_sr<8>    .Q g26   PI  -  -  -| -  -| -  6 -   -             -             -
+    sr_sr<9>.Q   sr_sr<9>    .Q h26   PI  -  -  -| -  -| -  6 -   -             -             -
+      sr_sdo.Q     sr_sdo    .Q i26   PI  -  -  -| -  -| -  1 -   -             -             -
+   sr_sr<11>.Q  sr_sr<11>    .Q j26   PI  -  -  -| -  -| -  2 -   -             -             -
+      le_clk.Q     le_clk    .Q k26   PI  -  -  -| -  -| - 57 -   -             -             -
+   sr_di<13>.Q  sr_di<13>    .Q l26   PI  -  -  -| -  -| -  7 -   -             -             -
+   sr_di<14>.Q  sr_di<14>    .Q m26   PI  -  -  -| -  -| -  4 -   -             -             -
+   sr_di<15>.Q  sr_di<15>    .Q n26   PI  -  -  -| -  -| -  4 -   -             -             -
+   sr_di<16>.Q  sr_di<16>    .Q o26   PI  -  -  -| -  -| -  4 -   -             -             -
+   sr_di<12>.Q  sr_di<12>    .Q p26   PI  -  -  -| -  -| -  4 -   -             -             -
+   sr_di<22>.Q  sr_di<22>    .Q q26   PI  -  -  -| -  -| -  2 -   -             -             -
+   sr_di<23>.Q  sr_di<23>    .Q r26   PI  -  -  -| -  -| -  2 -   -             -             -
+    sr_di<0>.Q   sr_di<0>    .Q s26   PI  -  -  -| -  -| -  3 -   -             -             -
+    sr_di<1>.Q   sr_di<1>    .Q t26   PI  -  -  -| -  -| -  3 -   -             -             -
+    sr_di<2>.Q   sr_di<2>    .Q u26   PI  -  -  -| -  -| -  3 -   -             -             -
+    sr_di<3>.Q   sr_di<3>    .Q v26   PI  -  -  -| -  -| -  3 -   -             -             -
+    sr_di<4>.Q   sr_di<4>    .Q w26   PI  -  -  -| -  -| -  1 -   -             -             -
+    sr_di<5>.Q   sr_di<5>    .Q x26   PI  -  -  -| -  -| -  1 -   -             -             -
+    sr_di<6>.Q   sr_di<6>    .Q y26   PI  -  -  -| -  -| -  1 -   -             -             -
+    sr_di<7>.Q   sr_di<7>    .Q z26   PI  -  -  -| -  -| -  1 -   -             -             -
+      N_PZ_284   N_PZ_284     - y30 AINT  -  -  6|36  7|32  1 -   -   sr_sr<20>.T             -
+   sr_sr<20>.T  sr_sr<20>    .T x30   PO  -  -  -| -  -| -  0 -   -      N_PZ_284     sr_sr<20>
+      N_PZ_297   N_PZ_297     - y31 AINT  -  -  2|36  5|32  1 -   -      le_clk.T             -
+      le_clk.T     le_clk    .T x31   PO  -  -  -| -  -| -  0 -   -      N_PZ_297        le_clk
+   att_le<0>.Q  att_le<0>    .Q z31   PI  -  -  -| -  -| -  1 -   -             -             -
+      N_PZ_298   N_PZ_298     - b32 AINT  -  -  2|36  5|32  1 -   -   att_le<0>.T             -
+   att_le<0>.T  att_le<0>    .T a32   PO  -  -  -| -  -| -  0 -   -      N_PZ_298     att_le<0>
+   att_le<1>.Q  att_le<1>    .Q c32   PI  -  -  -| -  -| -  1 -   -             -             -
+      N_PZ_299   N_PZ_299     - e32 AINT  -  -  2|36  5|32  1 -   -   att_le<1>.T             -
+   att_le<1>.T  att_le<1>    .T d32   PO  -  -  -| -  -| -  0 -   -      N_PZ_299     att_le<1>
+   att_le<2>.Q  att_le<2>    .Q f32   PI  -  -  -| -  -| -  1 -   -             -             -
+      N_PZ_300   N_PZ_300     - h32 AINT  -  -  2|36  5|32  1 -   -   att_le<2>.T             -
+   att_le<2>.T  att_le<2>    .T g32   PO  -  -  -| -  -| -  0 -   -      N_PZ_300     att_le<2>
+   att_le<3>.Q  att_le<3>    .Q i32   PI  -  -  -| -  -| -  1 -   -             -             -
+      N_PZ_301   N_PZ_301     - k32 AINT  -  -  2|36  5|32  1 -   -   att_le<3>.T             -
+   att_le<3>.T  att_le<3>    .T j32   PO  -  -  -| -  -| -  0 -   -      N_PZ_301     att_le<3>
+
+-----------------------------------------------------------
+|  PinCnt = 135, NodeCnt = 41, Total = 176, TotalPt = 404 |
+-----------------------------------------------------------
+ifc_mode<2>,net=urukul: PI
+  <--0-- 
+  --5--> (N_PZ_0, urukul) (N_PZ_5, urukul) (N_PZ_190, urukul) (N_PZ_101, urukul)  
+         (N_PZ_25, urukul) 
+ifc_mode<1>,net=urukul: PI
+  <--0-- 
+  --58--> (N_PZ_0, urukul) (N_PZ_5, urukul) (N_PZ_6, urukul) (N_PZ_7, urukul)  
+          (N_PZ_98, urukul) (N_PZ_99, urukul) (N_PZ_165, urukul) (N_PZ_166, urukul)  
+          (N_PZ_167, urukul) (N_PZ_168, urukul) (N_PZ_169, urukul) (N_PZ_170, urukul)  
+          (N_PZ_178, urukul) (N_PZ_179, urukul) (N_PZ_180, urukul) (N_PZ_181, urukul)  
+          (N_PZ_182, urukul) (N_PZ_190, urukul) (N_PZ_191, urukul) (N_PZ_210, urukul)  
+          (N_PZ_211, urukul) (N_PZ_171, urukul) (N_PZ_138, urukul) (N_PZ_298, urukul)  
+          (N_PZ_142, urukul) (N_PZ_299, urukul) (N_PZ_146, urukul) (N_PZ_300, urukul)  
+          (N_PZ_150, urukul) (N_PZ_301, urukul) (N_PZ_101, urukul) (N_PZ_104, urukul)  
+          (N_PZ_297, urukul) (N_PZ_81, urukul) (N_PZ_12, urukul) (N_PZ_13, urukul)  
+          (N_PZ_82, urukul) (N_PZ_16, urukul) (N_PZ_19, urukul) (N_PZ_22, urukul)  
+          (N_PZ_25, urukul) (N_PZ_28, urukul) (N_PZ_31, urukul) (N_PZ_34, urukul)  
+          (N_PZ_37, urukul) (N_PZ_40, urukul) (N_PZ_284, urukul) (N_PZ_46, urukul)  
+          (N_PZ_49, urukul) (N_PZ_52, urukul) (N_PZ_55, urukul) (N_PZ_58, urukul)  
+          (N_PZ_61, urukul) (N_PZ_64, urukul) (N_PZ_67, urukul) (N_PZ_70, urukul)  
+          (N_PZ_73, urukul) (N_PZ_76, urukul) 
+eem_io_3,net=urukul: PI
+  <--0-- 
+  --42--> (N_PZ_6, urukul) (N_PZ_178, urukul) (N_PZ_179, urukul) (N_PZ_180, urukul)  
+          (N_PZ_181, urukul) (N_PZ_182, urukul) (N_PZ_171, urukul) (N_PZ_138, urukul)  
+          (N_PZ_298, urukul) (N_PZ_142, urukul) (N_PZ_299, urukul) (N_PZ_146, urukul)  
+          (N_PZ_300, urukul) (N_PZ_150, urukul) (N_PZ_301, urukul) (N_PZ_104, urukul)  
+          (N_PZ_297, urukul) (N_PZ_81, urukul) (N_PZ_12, urukul) (N_PZ_13, urukul)  
+          (N_PZ_82, urukul) (N_PZ_16, urukul) (N_PZ_19, urukul) (N_PZ_22, urukul)  
+          (N_PZ_25, urukul) (N_PZ_28, urukul) (N_PZ_31, urukul) (N_PZ_34, urukul)  
+          (N_PZ_37, urukul) (N_PZ_40, urukul) (N_PZ_284, urukul) (N_PZ_46, urukul)  
+          (N_PZ_49, urukul) (N_PZ_52, urukul) (N_PZ_55, urukul) (N_PZ_58, urukul)  
+          (N_PZ_61, urukul) (N_PZ_64, urukul) (N_PZ_67, urukul) (N_PZ_70, urukul)  
+          (N_PZ_73, urukul) (N_PZ_76, urukul) 
+eem_io_4,net=urukul: PI
+  <--0-- 
+  --42--> (N_PZ_6, urukul) (N_PZ_178, urukul) (N_PZ_179, urukul) (N_PZ_180, urukul)  
+          (N_PZ_181, urukul) (N_PZ_182, urukul) (N_PZ_171, urukul) (N_PZ_138, urukul)  
+          (N_PZ_298, urukul) (N_PZ_142, urukul) (N_PZ_299, urukul) (N_PZ_146, urukul)  
+          (N_PZ_300, urukul) (N_PZ_150, urukul) (N_PZ_301, urukul) (N_PZ_104, urukul)  
+          (N_PZ_297, urukul) (N_PZ_81, urukul) (N_PZ_12, urukul) (N_PZ_13, urukul)  
+          (N_PZ_82, urukul) (N_PZ_16, urukul) (N_PZ_19, urukul) (N_PZ_22, urukul)  
+          (N_PZ_25, urukul) (N_PZ_28, urukul) (N_PZ_31, urukul) (N_PZ_34, urukul)  
+          (N_PZ_37, urukul) (N_PZ_40, urukul) (N_PZ_284, urukul) (N_PZ_46, urukul)  
+          (N_PZ_49, urukul) (N_PZ_52, urukul) (N_PZ_55, urukul) (N_PZ_58, urukul)  
+          (N_PZ_61, urukul) (N_PZ_64, urukul) (N_PZ_67, urukul) (N_PZ_70, urukul)  
+          (N_PZ_73, urukul) (N_PZ_76, urukul) 
+eem_io_1,net=urukul: PI
+  <--0-- 
+  --7--> (N_PZ_10, urukul) (N_PZ_99, urukul) (N_PZ_168, urukul) (N_PZ_169, urukul)  
+         (N_PZ_170, urukul) (N_PZ_174, urukul) (N_PZ_211, urukul) 
+eem_io,net=urukul: PI
+  <--0-- 
+  --36--> (N_PZ_11, urukul) (N_PZ_14, urukul) (N_PZ_17, urukul) (N_PZ_20, urukul)  
+          (N_PZ_23, urukul) (N_PZ_26, urukul) (N_PZ_29, urukul) (N_PZ_32, urukul)  
+          (N_PZ_35, urukul) (N_PZ_38, urukul) (N_PZ_41, urukul) (N_PZ_44, urukul)  
+          (N_PZ_47, urukul) (N_PZ_50, urukul) (N_PZ_53, urukul) (N_PZ_56, urukul)  
+          (N_PZ_59, urukul) (N_PZ_62, urukul) (N_PZ_65, urukul) (N_PZ_68, urukul)  
+          (N_PZ_71, urukul) (N_PZ_74, urukul) (N_PZ_77, urukul) (N_PZ_80, urukul)  
+          (N_PZ_83, urukul) (N_PZ_98, urukul) (N_PZ_103, urukul) (N_PZ_137, urukul)  
+          (N_PZ_141, urukul) (N_PZ_145, urukul) (N_PZ_149, urukul) (N_PZ_165, urukul)  
+          (N_PZ_166, urukul) (N_PZ_167, urukul) (N_PZ_210, urukul) (N_PZ_171, urukul) 
+dds_common_master_reset.Q,net=urukul: PI
+  <--0-- 
+  --4--> (N_PZ_91, urukul) (N_PZ_187, urukul) (N_PZ_188, urukul) (N_PZ_189, urukul) 
+eem_io_12,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_1, urukul) (N_PZ_183, urukul) (N_PZ_40, urukul) 
+eem_io_13,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_2, urukul) (N_PZ_184, urukul) (N_PZ_55, urukul) 
+eem_io_14,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_3, urukul) (N_PZ_185, urukul) (N_PZ_58, urukul) 
+eem_io_15,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_4, urukul) (N_PZ_186, urukul) (N_PZ_61, urukul) 
+eem_io_6,net=urukul: PI
+  <--0-- 
+  --5--> (N_PZ_100, urukul) (N_PZ_157, urukul) (N_PZ_158, urukul) (N_PZ_159, urukul)  
+         (N_PZ_160, urukul) 
+N_PZ_0,net=urukul: PINT ( eem_oe_10 )
+  <--2--  (ifc_mode<2>, urukul) (ifc_mode<1>, urukul)
+  --1--> (eem_oe_10, urukul) 
+eem_io_5,net=urukul: PI
+  <--0-- 
+  --42--> (N_PZ_6, urukul) (N_PZ_178, urukul) (N_PZ_179, urukul) (N_PZ_180, urukul)  
+          (N_PZ_181, urukul) (N_PZ_182, urukul) (N_PZ_171, urukul) (N_PZ_138, urukul)  
+          (N_PZ_298, urukul) (N_PZ_142, urukul) (N_PZ_299, urukul) (N_PZ_146, urukul)  
+          (N_PZ_300, urukul) (N_PZ_150, urukul) (N_PZ_301, urukul) (N_PZ_104, urukul)  
+          (N_PZ_297, urukul) (N_PZ_81, urukul) (N_PZ_12, urukul) (N_PZ_13, urukul)  
+          (N_PZ_82, urukul) (N_PZ_16, urukul) (N_PZ_19, urukul) (N_PZ_22, urukul)  
+          (N_PZ_25, urukul) (N_PZ_28, urukul) (N_PZ_31, urukul) (N_PZ_34, urukul)  
+          (N_PZ_37, urukul) (N_PZ_40, urukul) (N_PZ_284, urukul) (N_PZ_46, urukul)  
+          (N_PZ_49, urukul) (N_PZ_52, urukul) (N_PZ_55, urukul) (N_PZ_58, urukul)  
+          (N_PZ_61, urukul) (N_PZ_64, urukul) (N_PZ_67, urukul) (N_PZ_70, urukul)  
+          (N_PZ_73, urukul) (N_PZ_76, urukul) 
+variant,net=urukul: PI
+  <--0-- 
+  --11--> (N_PZ_5, urukul) (N_PZ_91, urukul) (N_PZ_161, urukul) (N_PZ_162, urukul)  
+          (N_PZ_163, urukul) (N_PZ_164, urukul) (N_PZ_187, urukul) (N_PZ_188, urukul)  
+          (N_PZ_189, urukul) (N_PZ_190, urukul) (N_PZ_9, urukul) 
+ifc_mode<0>,net=urukul: PI
+  <--0-- 
+  --12--> (N_PZ_5, urukul) (N_PZ_91, urukul) (N_PZ_161, urukul) (N_PZ_162, urukul)  
+          (N_PZ_163, urukul) (N_PZ_164, urukul) (N_PZ_187, urukul) (N_PZ_188, urukul)  
+          (N_PZ_189, urukul) (N_PZ_190, urukul) (N_PZ_9, urukul) (N_PZ_19, urukul) 
+dds_smp_err_1,net=urukul: PI
+  <--0-- 
+  --2--> (N_PZ_161, urukul) (N_PZ_67, urukul) 
+dds_pll_lock_1,net=urukul: PI
+  <--0-- 
+  --2--> (N_PZ_161, urukul) (N_PZ_13, urukul) 
+dds_smp_err,net=urukul: PI
+  <--0-- 
+  --2--> (N_PZ_162, urukul) (N_PZ_64, urukul) 
+dds_pll_lock,net=urukul: PI
+  <--0-- 
+  --2--> (N_PZ_162, urukul) (N_PZ_76, urukul) 
+dds_smp_err_2,net=urukul: PI
+  <--0-- 
+  --2--> (N_PZ_163, urukul) (N_PZ_70, urukul) 
+dds_pll_lock_2,net=urukul: PI
+  <--0-- 
+  --2--> (N_PZ_163, urukul) (N_PZ_82, urukul) 
+dds_smp_err_3,net=urukul: PI
+  <--0-- 
+  --2--> (N_PZ_164, urukul) (N_PZ_73, urukul) 
+dds_pll_lock_3,net=urukul: PI
+  <--0-- 
+  --2--> (N_PZ_164, urukul) (N_PZ_16, urukul) 
+dds_sdo_3,net=urukul: PI
+  <--0-- 
+  --1--> (N_PZ_6, urukul) 
+dds_sdo_1,net=urukul: PI
+  <--0-- 
+  --1--> (N_PZ_6, urukul) 
+dds_sdo,net=urukul: PI
+  <--0-- 
+  --2--> (N_PZ_6, urukul) (N_PZ_212, urukul) 
+dds_sdo_2,net=urukul: PI
+  <--0-- 
+  --1--> (N_PZ_6, urukul) 
+att_s_out<3>,net=urukul: PI
+  <--0-- 
+  --1--> (N_PZ_6, urukul) 
+eem_io_7,net=urukul: PI
+  <--0-- 
+  --4--> (N_PZ_91, urukul) (N_PZ_187, urukul) (N_PZ_188, urukul) (N_PZ_189, urukul) 
+eem_io_2.PIN,net=urukul: PI
+  <--0-- 
+  --5--> (N_PZ_98, urukul) (N_PZ_165, urukul) (N_PZ_166, urukul) (N_PZ_167, urukul)  
+         (N_PZ_210, urukul) 
+eem_io_8,net=urukul: PI
+  <--0-- 
+  --2--> (N_PZ_99, urukul) (N_PZ_211, urukul) 
+eem_io_9,net=urukul: PI
+  <--0-- 
+  --1--> (N_PZ_168, urukul) 
+eem_io_10.PIN,net=urukul: PI
+  <--0-- 
+  --1--> (N_PZ_169, urukul) 
+eem_io_11,net=urukul: PI
+  <--0-- 
+  --1--> (N_PZ_170, urukul) 
+ifc_mode<3>,net=urukul: PI
+  <--0-- 
+  --1--> (N_PZ_28, urukul) 
+N_PZ_1,net=urukul: PINT ( dds_rf_sw )
+  <--2--  (eem_io_12, urukul) (sr_di<0>.Q, urukul)
+  --1--> (dds_rf_sw, urukul) 
+N_PZ_2,net=urukul: PINT ( dds_rf_sw_1 )
+  <--2--  (eem_io_13, urukul) (sr_di<1>.Q, urukul)
+  --1--> (dds_rf_sw_1, urukul) 
+N_PZ_3,net=urukul: PINT ( dds_rf_sw_2 )
+  <--2--  (eem_io_14, urukul) (sr_di<2>.Q, urukul)
+  --1--> (dds_rf_sw_2, urukul) 
+N_PZ_4,net=urukul: PINT ( dds_rf_sw_3 )
+  <--2--  (eem_io_15, urukul) (sr_di<3>.Q, urukul)
+  --1--> (dds_rf_sw_3, urukul) 
+clk_in_sel.Q,net=urukul: PI
+  <--0-- 
+  --1--> (N_PZ_156, urukul) 
+clk_mmcx_osc_sel.Q,net=urukul: PI
+  <--0-- 
+  --1--> (N_PZ_156, urukul) 
+att_s_out<0>,net=urukul: PI
+  <--0-- 
+  --1--> (N_PZ_175, urukul) 
+att_s_out<1>,net=urukul: PI
+  <--0-- 
+  --1--> (N_PZ_176, urukul) 
+att_s_out<2>,net=urukul: PI
+  <--0-- 
+  --1--> (N_PZ_177, urukul) 
+dds_drover,net=urukul: PI
+  <--0-- 
+  --1--> (N_PZ_213, urukul) 
+N_PZ_5,net=urukul: PINT ( dds_sync_sync_out_en )
+  <--4--  (ifc_mode<2>, urukul) (ifc_mode<1>, urukul) (variant, urukul) 
+          (ifc_mode<0>, urukul)
+  --1--> (dds_sync_sync_out_en, urukul) 
+N_PZ_6,net=urukul: PINT ( eem_io_2 )
+  <--10--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+           (eem_io_5, urukul) (dds_sdo_3, urukul) (dds_sdo_1, urukul) (dds_sdo, urukul) 
+           (dds_sdo_2, urukul) (att_s_out<3>, urukul) (sr_sdo.Q, urukul)
+  --1--> (eem_io_2, urukul) 
+N_PZ_7,net=urukul: PINT ( eem_io_2.OE )
+  <--1--  (ifc_mode<1>, urukul)
+  --1--> (eem_io_2.OE, urukul) 
+N_PZ_8,net=urukul: PINT ( clk_div )
+  <--2--  (sr_di<22>.Q, urukul) (sr_di<23>.Q, urukul)
+  --1--> (clk_div, urukul) 
+N_PZ_9,net=urukul: PINT ( clk_div.OE )
+  <--4--  (variant, urukul) (ifc_mode<0>, urukul) (sr_di<22>.Q, urukul) 
+          (sr_di<23>.Q, urukul)
+  --1--> (clk_div.OE, urukul) 
+N_PZ_10,net=urukul: PINT ( sr_sr<0>.D )
+  <--1--  (eem_io_1, urukul)
+  --1--> (sr_sr<0>.D, urukul) 
+N_PZ_11,net=urukul: PINT ( sr_sr<0>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sr<0>.CLK, urukul) 
+N_PZ_12,net=urukul: PINT ( sr_sr<0>.CE )
+  <--4--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul)
+  --1--> (sr_sr<0>.CE, urukul) 
+N_PZ_13,net=urukul: PINT ( sr_sr<10>.D )
+  <--8--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (dds_pll_lock_1, urukul) (sr_sr<10>.Q, urukul) 
+          (sr_sr<9>.Q, urukul) (le_clk.Q, urukul)
+  --1--> (sr_sr<10>.D, urukul) 
+N_PZ_14,net=urukul: PINT ( sr_sr<10>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sr<10>.CLK, urukul) 
+N_PZ_16,net=urukul: PINT ( sr_sr<12>.D )
+  <--8--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (dds_pll_lock_3, urukul) (sr_sr<12>.Q, urukul) 
+          (sr_sr<11>.Q, urukul) (le_clk.Q, urukul)
+  --1--> (sr_sr<12>.D, urukul) 
+N_PZ_17,net=urukul: PINT ( sr_sr<12>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sr<12>.CLK, urukul) 
+N_PZ_19,net=urukul: PINT ( sr_sr<13>.D )
+  <--8--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (ifc_mode<0>, urukul) (sr_sr<12>.Q, urukul) 
+          (sr_sr<13>.Q, urukul) (le_clk.Q, urukul)
+  --1--> (sr_sr<13>.D, urukul) 
+N_PZ_20,net=urukul: PINT ( sr_sr<13>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sr<13>.CLK, urukul) 
+N_PZ_22,net=urukul: PINT ( sr_sr<14>.D )
+  <--7--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (sr_sr<13>.Q, urukul) (sr_sr<14>.Q, urukul) 
+          (le_clk.Q, urukul)
+  --1--> (sr_sr<14>.D, urukul) 
+N_PZ_23,net=urukul: PINT ( sr_sr<14>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sr<14>.CLK, urukul) 
+N_PZ_25,net=urukul: PINT ( sr_sr<15>.D )
+  <--8--  (ifc_mode<2>, urukul) (ifc_mode<1>, urukul) (eem_io_3, urukul) 
+          (eem_io_4, urukul) (eem_io_5, urukul) (sr_sr<14>.Q, urukul) 
+          (sr_sr<15>.Q, urukul) (le_clk.Q, urukul)
+  --1--> (sr_sr<15>.D, urukul) 
+N_PZ_26,net=urukul: PINT ( sr_sr<15>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sr<15>.CLK, urukul) 
+N_PZ_28,net=urukul: PINT ( sr_sr<16>.D )
+  <--8--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (ifc_mode<3>, urukul) (sr_sr<15>.Q, urukul) 
+          (sr_sr<16>.Q, urukul) (le_clk.Q, urukul)
+  --1--> (sr_sr<16>.D, urukul) 
+N_PZ_29,net=urukul: PINT ( sr_sr<16>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sr<16>.CLK, urukul) 
+N_PZ_31,net=urukul: PINT ( sr_sr<17>.D )
+  <--7--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (sr_sr<16>.Q, urukul) (sr_sr<17>.Q, urukul) 
+          (le_clk.Q, urukul)
+  --1--> (sr_sr<17>.D, urukul) 
+N_PZ_32,net=urukul: PINT ( sr_sr<17>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sr<17>.CLK, urukul) 
+N_PZ_34,net=urukul: PINT ( sr_sr<18>.D )
+  <--7--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (sr_sr<17>.Q, urukul) (sr_sr<18>.Q, urukul) 
+          (le_clk.Q, urukul)
+  --1--> (sr_sr<18>.D, urukul) 
+N_PZ_35,net=urukul: PINT ( sr_sr<18>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sr<18>.CLK, urukul) 
+N_PZ_37,net=urukul: PINT ( sr_sr<19>.D )
+  <--7--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (sr_sr<18>.Q, urukul) (sr_sr<19>.Q, urukul) 
+          (le_clk.Q, urukul)
+  --1--> (sr_sr<19>.D, urukul) 
+N_PZ_38,net=urukul: PINT ( sr_sr<19>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sr<19>.CLK, urukul) 
+N_PZ_40,net=urukul: PINT ( sr_sr<1>.D )
+  <--9--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_12, urukul) (eem_io_5, urukul) (sr_sr<0>.Q, urukul) 
+          (sr_sr<1>.Q, urukul) (le_clk.Q, urukul) (sr_di<0>.Q, urukul)
+  --1--> (sr_sr<1>.D, urukul) 
+N_PZ_41,net=urukul: PINT ( sr_sr<1>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sr<1>.CLK, urukul) 
+N_PZ_44,net=urukul: PINT ( sr_sr<20>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sr<20>.CLK, urukul) 
+N_PZ_46,net=urukul: PINT ( sr_sr<21>.D )
+  <--7--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (sr_sr<20>.Q, urukul) (sr_sr<21>.Q, urukul) 
+          (le_clk.Q, urukul)
+  --1--> (sr_sr<21>.D, urukul) 
+N_PZ_47,net=urukul: PINT ( sr_sr<21>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sr<21>.CLK, urukul) 
+N_PZ_49,net=urukul: PINT ( sr_sr<22>.D )
+  <--7--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (sr_sr<21>.Q, urukul) (sr_sr<22>.Q, urukul) 
+          (le_clk.Q, urukul)
+  --1--> (sr_sr<22>.D, urukul) 
+N_PZ_50,net=urukul: PINT ( sr_sr<22>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sr<22>.CLK, urukul) 
+N_PZ_52,net=urukul: PINT ( sr_sr<23>.D )
+  <--7--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (sr_sr<22>.Q, urukul) (sr_sr<23>.Q, urukul) 
+          (le_clk.Q, urukul)
+  --1--> (sr_sr<23>.D, urukul) 
+N_PZ_53,net=urukul: PINT ( sr_sr<23>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sr<23>.CLK, urukul) 
+N_PZ_55,net=urukul: PINT ( sr_sr<2>.D )
+  <--9--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_13, urukul) (eem_io_5, urukul) (sr_sr<1>.Q, urukul) 
+          (sr_sr<2>.Q, urukul) (le_clk.Q, urukul) (sr_di<1>.Q, urukul)
+  --1--> (sr_sr<2>.D, urukul) 
+N_PZ_56,net=urukul: PINT ( sr_sr<2>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sr<2>.CLK, urukul) 
+N_PZ_58,net=urukul: PINT ( sr_sr<3>.D )
+  <--9--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_14, urukul) (eem_io_5, urukul) (sr_sr<2>.Q, urukul) 
+          (sr_sr<3>.Q, urukul) (le_clk.Q, urukul) (sr_di<2>.Q, urukul)
+  --1--> (sr_sr<3>.D, urukul) 
+N_PZ_59,net=urukul: PINT ( sr_sr<3>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sr<3>.CLK, urukul) 
+N_PZ_61,net=urukul: PINT ( sr_sr<4>.D )
+  <--9--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_15, urukul) (eem_io_5, urukul) (sr_sr<3>.Q, urukul) 
+          (sr_sr<4>.Q, urukul) (le_clk.Q, urukul) (sr_di<3>.Q, urukul)
+  --1--> (sr_sr<4>.D, urukul) 
+N_PZ_62,net=urukul: PINT ( sr_sr<4>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sr<4>.CLK, urukul) 
+N_PZ_64,net=urukul: PINT ( sr_sr<5>.D )
+  <--8--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (dds_smp_err, urukul) (sr_sr<4>.Q, urukul) 
+          (sr_sr<5>.Q, urukul) (le_clk.Q, urukul)
+  --1--> (sr_sr<5>.D, urukul) 
+N_PZ_65,net=urukul: PINT ( sr_sr<5>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sr<5>.CLK, urukul) 
+N_PZ_67,net=urukul: PINT ( sr_sr<6>.D )
+  <--8--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (dds_smp_err_1, urukul) (sr_sr<5>.Q, urukul) 
+          (sr_sr<6>.Q, urukul) (le_clk.Q, urukul)
+  --1--> (sr_sr<6>.D, urukul) 
+N_PZ_68,net=urukul: PINT ( sr_sr<6>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sr<6>.CLK, urukul) 
+N_PZ_70,net=urukul: PINT ( sr_sr<7>.D )
+  <--8--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (dds_smp_err_2, urukul) (sr_sr<6>.Q, urukul) 
+          (sr_sr<7>.Q, urukul) (le_clk.Q, urukul)
+  --1--> (sr_sr<7>.D, urukul) 
+N_PZ_71,net=urukul: PINT ( sr_sr<7>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sr<7>.CLK, urukul) 
+N_PZ_73,net=urukul: PINT ( sr_sr<8>.D )
+  <--8--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (dds_smp_err_3, urukul) (sr_sr<7>.Q, urukul) 
+          (sr_sr<8>.Q, urukul) (le_clk.Q, urukul)
+  --1--> (sr_sr<8>.D, urukul) 
+N_PZ_74,net=urukul: PINT ( sr_sr<8>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sr<8>.CLK, urukul) 
+N_PZ_76,net=urukul: PINT ( sr_sr<9>.D )
+  <--8--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (dds_pll_lock, urukul) (sr_sr<8>.Q, urukul) 
+          (sr_sr<9>.Q, urukul) (le_clk.Q, urukul)
+  --1--> (sr_sr<9>.D, urukul) 
+N_PZ_77,net=urukul: PINT ( sr_sr<9>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sr<9>.CLK, urukul) 
+N_PZ_79,net=urukul: PINT ( sr_sdo.D )
+  <--1--  (sr_sr<23>.Q, urukul)
+  --1--> (sr_sdo.D, urukul) 
+N_PZ_80,net=urukul: PINT ( sr_sdo.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sdo.CLK, urukul) 
+N_PZ_81,net=urukul: PINT ( sr_sdo.CE )
+  <--4--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul)
+  --1--> (sr_sdo.CE, urukul) 
+N_PZ_82,net=urukul: PINT ( sr_sr<11>.D )
+  <--8--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (dds_pll_lock_2, urukul) (sr_sr<10>.Q, urukul) 
+          (sr_sr<11>.Q, urukul) (le_clk.Q, urukul)
+  --1--> (sr_sr<11>.D, urukul) 
+N_PZ_83,net=urukul: PINT ( sr_sr<11>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (sr_sr<11>.CLK, urukul) 
+N_PZ_85,net=urukul: PINT ( dds_profile_3<2>.D )
+  <--1--  (sr_sr<10>.Q, urukul)
+  --1--> (dds_profile_3<2>.D, urukul) 
+N_PZ_86,net=urukul: PINT ( dds_profile_3<2>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (dds_profile_3<2>.CLK, urukul) 
+N_PZ_87,net=urukul: PINT ( dds_profile_3<0>.D )
+  <--1--  (sr_sr<8>.Q, urukul)
+  --1--> (dds_profile_3<0>.D, urukul) 
+N_PZ_88,net=urukul: PINT ( dds_profile_3<0>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (dds_profile_3<0>.CLK, urukul) 
+N_PZ_89,net=urukul: PINT ( dds_profile_3<1>.D )
+  <--1--  (sr_sr<9>.Q, urukul)
+  --1--> (dds_profile_3<1>.D, urukul) 
+N_PZ_90,net=urukul: PINT ( dds_profile_3<1>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (dds_profile_3<1>.CLK, urukul) 
+N_PZ_91,net=urukul: PINT ( dds_reset )
+  <--4--  (dds_common_master_reset.Q, urukul) (variant, urukul) (ifc_mode<0>, urukul) 
+          (eem_io_7, urukul)
+  --1--> (dds_reset, urukul) 
+N_PZ_92,net=urukul: PINT ( dds_common_master_reset.D )
+  <--1--  (sr_sr<19>.Q, urukul)
+  --1--> (dds_common_master_reset.D, urukul) 
+N_PZ_93,net=urukul: PINT ( dds_common_master_reset.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (dds_common_master_reset.CLK, urukul) 
+N_PZ_94,net=urukul: PINT ( clk_in_sel.D )
+  <--1--  (sr_sr<17>.Q, urukul)
+  --1--> (clk_in_sel.D, urukul) 
+N_PZ_95,net=urukul: PINT ( clk_in_sel.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (clk_in_sel.CLK, urukul) 
+N_PZ_96,net=urukul: PINT ( clk_mmcx_osc_sel.D )
+  <--1--  (sr_sr<21>.Q, urukul)
+  --1--> (clk_mmcx_osc_sel.D, urukul) 
+N_PZ_97,net=urukul: PINT ( clk_mmcx_osc_sel.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (clk_mmcx_osc_sel.CLK, urukul) 
+N_PZ_98,net=urukul: PINT ( tp_1 )
+  <--4--  (ifc_mode<1>, urukul) (eem_io, urukul) (eem_io_2.PIN, urukul) 
+          (sr_di<13>.Q, urukul)
+  --1--> (tp_1, urukul) 
+N_PZ_99,net=urukul: PINT ( tp_2 )
+  <--4--  (ifc_mode<1>, urukul) (eem_io_1, urukul) (eem_io_8, urukul) 
+          (sr_di<13>.Q, urukul)
+  --1--> (tp_2, urukul) 
+N_PZ_100,net=urukul: PINT ( eem_io_10 )
+  <--1--  (eem_io_6, urukul)
+  --1--> (eem_io_10, urukul) 
+N_PZ_101,net=urukul: PINT ( eem_io_10.OE )
+  <--2--  (ifc_mode<2>, urukul) (ifc_mode<1>, urukul)
+  --1--> (eem_io_10.OE, urukul) 
+N_PZ_103,net=urukul: PINT ( le_clk.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (le_clk.CLK, urukul) 
+N_PZ_104,net=urukul: PINT ( le_clk.AP )
+  <--4--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul)
+  --1--> (le_clk.AP, urukul) 
+N_PZ_106,net=urukul: PINT ( sr_di<13>.D )
+  <--1--  (sr_sr<13>.Q, urukul)
+  --1--> (sr_di<13>.D, urukul) 
+N_PZ_107,net=urukul: PINT ( sr_di<13>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (sr_di<13>.CLK, urukul) 
+N_PZ_108,net=urukul: PINT ( sr_di<14>.D )
+  <--1--  (sr_sr<14>.Q, urukul)
+  --1--> (sr_di<14>.D, urukul) 
+N_PZ_109,net=urukul: PINT ( sr_di<14>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (sr_di<14>.CLK, urukul) 
+N_PZ_110,net=urukul: PINT ( sr_di<15>.D )
+  <--1--  (sr_sr<15>.Q, urukul)
+  --1--> (sr_di<15>.D, urukul) 
+N_PZ_111,net=urukul: PINT ( sr_di<15>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (sr_di<15>.CLK, urukul) 
+N_PZ_112,net=urukul: PINT ( sr_di<16>.D )
+  <--1--  (sr_sr<16>.Q, urukul)
+  --1--> (sr_di<16>.D, urukul) 
+N_PZ_113,net=urukul: PINT ( sr_di<16>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (sr_di<16>.CLK, urukul) 
+N_PZ_114,net=urukul: PINT ( sr_di<12>.D )
+  <--1--  (sr_sr<12>.Q, urukul)
+  --1--> (sr_di<12>.D, urukul) 
+N_PZ_115,net=urukul: PINT ( sr_di<12>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (sr_di<12>.CLK, urukul) 
+N_PZ_116,net=urukul: PINT ( sr_di<22>.D )
+  <--1--  (sr_sr<22>.Q, urukul)
+  --1--> (sr_di<22>.D, urukul) 
+N_PZ_117,net=urukul: PINT ( sr_di<22>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (sr_di<22>.CLK, urukul) 
+N_PZ_118,net=urukul: PINT ( sr_di<23>.D )
+  <--1--  (sr_sr<23>.Q, urukul)
+  --1--> (sr_di<23>.D, urukul) 
+N_PZ_119,net=urukul: PINT ( sr_di<23>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (sr_di<23>.CLK, urukul) 
+N_PZ_120,net=urukul: PINT ( sr_di<0>.D )
+  <--1--  (sr_sr<0>.Q, urukul)
+  --1--> (sr_di<0>.D, urukul) 
+N_PZ_121,net=urukul: PINT ( sr_di<0>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (sr_di<0>.CLK, urukul) 
+N_PZ_122,net=urukul: PINT ( sr_di<1>.D )
+  <--1--  (sr_sr<1>.Q, urukul)
+  --1--> (sr_di<1>.D, urukul) 
+N_PZ_123,net=urukul: PINT ( sr_di<1>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (sr_di<1>.CLK, urukul) 
+N_PZ_124,net=urukul: PINT ( sr_di<2>.D )
+  <--1--  (sr_sr<2>.Q, urukul)
+  --1--> (sr_di<2>.D, urukul) 
+N_PZ_125,net=urukul: PINT ( sr_di<2>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (sr_di<2>.CLK, urukul) 
+N_PZ_126,net=urukul: PINT ( sr_di<3>.D )
+  <--1--  (sr_sr<3>.Q, urukul)
+  --1--> (sr_di<3>.D, urukul) 
+N_PZ_127,net=urukul: PINT ( sr_di<3>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (sr_di<3>.CLK, urukul) 
+N_PZ_128,net=urukul: PINT ( sr_di<4>.D )
+  <--1--  (sr_sr<4>.Q, urukul)
+  --1--> (sr_di<4>.D, urukul) 
+N_PZ_129,net=urukul: PINT ( sr_di<4>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (sr_di<4>.CLK, urukul) 
+N_PZ_130,net=urukul: PINT ( sr_di<5>.D )
+  <--1--  (sr_sr<5>.Q, urukul)
+  --1--> (sr_di<5>.D, urukul) 
+N_PZ_131,net=urukul: PINT ( sr_di<5>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (sr_di<5>.CLK, urukul) 
+N_PZ_132,net=urukul: PINT ( sr_di<6>.D )
+  <--1--  (sr_sr<6>.Q, urukul)
+  --1--> (sr_di<6>.D, urukul) 
+N_PZ_133,net=urukul: PINT ( sr_di<6>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (sr_di<6>.CLK, urukul) 
+N_PZ_134,net=urukul: PINT ( sr_di<7>.D )
+  <--1--  (sr_sr<7>.Q, urukul)
+  --1--> (sr_di<7>.D, urukul) 
+N_PZ_135,net=urukul: PINT ( sr_di<7>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (sr_di<7>.CLK, urukul) 
+N_PZ_137,net=urukul: PINT ( att_le<0>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (att_le<0>.CLK, urukul) 
+N_PZ_138,net=urukul: PINT ( att_le<0>.AP )
+  <--4--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul)
+  --1--> (att_le<0>.AP, urukul) 
+N_PZ_141,net=urukul: PINT ( att_le<1>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (att_le<1>.CLK, urukul) 
+N_PZ_142,net=urukul: PINT ( att_le<1>.AP )
+  <--4--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul)
+  --1--> (att_le<1>.AP, urukul) 
+N_PZ_145,net=urukul: PINT ( att_le<2>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (att_le<2>.CLK, urukul) 
+N_PZ_146,net=urukul: PINT ( att_le<2>.AP )
+  <--4--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul)
+  --1--> (att_le<2>.AP, urukul) 
+N_PZ_149,net=urukul: PINT ( att_le<3>.CLK )
+  <--1--  (eem_io, urukul)
+  --1--> (att_le<3>.CLK, urukul) 
+N_PZ_150,net=urukul: PINT ( att_le<3>.AP )
+  <--4--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul)
+  --1--> (att_le<3>.AP, urukul) 
+N_PZ_152,net=urukul: PINT ( dds_sync_sync_sel.D )
+  <--1--  (sr_sr<18>.Q, urukul)
+  --1--> (dds_sync_sync_sel.D, urukul) 
+N_PZ_153,net=urukul: PINT ( dds_sync_sync_sel.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (dds_sync_sync_sel.CLK, urukul) 
+N_PZ_154,net=urukul: PINT ( dds_common_io_reset.D )
+  <--1--  (sr_sr<20>.Q, urukul)
+  --1--> (dds_common_io_reset.D, urukul) 
+N_PZ_155,net=urukul: PINT ( dds_common_io_reset.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (dds_common_io_reset.CLK, urukul) 
+N_PZ_156,net=urukul: PINT ( clk_osc_en_n )
+  <--2--  (clk_in_sel.Q, urukul) (clk_mmcx_osc_sel.Q, urukul)
+  --1--> (clk_osc_en_n, urukul) 
+N_PZ_157,net=urukul: PINT ( dds_io_update_1 )
+  <--3--  (eem_io_6, urukul) (sr_di<14>.Q, urukul) (sr_di<12>.Q, urukul)
+  --1--> (dds_io_update_1, urukul) 
+N_PZ_158,net=urukul: PINT ( dds_io_update_2 )
+  <--3--  (eem_io_6, urukul) (sr_di<15>.Q, urukul) (sr_di<12>.Q, urukul)
+  --1--> (dds_io_update_2, urukul) 
+N_PZ_159,net=urukul: PINT ( dds_io_update_3 )
+  <--3--  (eem_io_6, urukul) (sr_di<16>.Q, urukul) (sr_di<12>.Q, urukul)
+  --1--> (dds_io_update_3, urukul) 
+N_PZ_160,net=urukul: PINT ( dds_io_update )
+  <--3--  (eem_io_6, urukul) (sr_di<13>.Q, urukul) (sr_di<12>.Q, urukul)
+  --1--> (dds_io_update, urukul) 
+N_PZ_161,net=urukul: PINT ( dds_led_1<1> )
+  <--5--  (variant, urukul) (ifc_mode<0>, urukul) (dds_smp_err_1, urukul) 
+          (dds_pll_lock_1, urukul) (sr_di<5>.Q, urukul)
+  --1--> (dds_led_1<1>, urukul) 
+N_PZ_162,net=urukul: PINT ( dds_led<1> )
+  <--5--  (variant, urukul) (ifc_mode<0>, urukul) (dds_smp_err, urukul) 
+          (dds_pll_lock, urukul) (sr_di<4>.Q, urukul)
+  --1--> (dds_led<1>, urukul) 
+N_PZ_163,net=urukul: PINT ( dds_led_2<1> )
+  <--5--  (variant, urukul) (ifc_mode<0>, urukul) (dds_smp_err_2, urukul) 
+          (dds_pll_lock_2, urukul) (sr_di<6>.Q, urukul)
+  --1--> (dds_led_2<1>, urukul) 
+N_PZ_164,net=urukul: PINT ( dds_led_3<1> )
+  <--5--  (variant, urukul) (ifc_mode<0>, urukul) (dds_smp_err_3, urukul) 
+          (dds_pll_lock_3, urukul) (sr_di<7>.Q, urukul)
+  --1--> (dds_led_3<1>, urukul) 
+N_PZ_165,net=urukul: PINT ( dds_sck_1 )
+  <--4--  (ifc_mode<1>, urukul) (eem_io, urukul) (eem_io_2.PIN, urukul) 
+          (sr_di<14>.Q, urukul)
+  --1--> (dds_sck_1, urukul) 
+N_PZ_166,net=urukul: PINT ( dds_sck_2 )
+  <--4--  (ifc_mode<1>, urukul) (eem_io, urukul) (eem_io_2.PIN, urukul) 
+          (sr_di<15>.Q, urukul)
+  --1--> (dds_sck_2, urukul) 
+N_PZ_167,net=urukul: PINT ( dds_sck_3 )
+  <--4--  (ifc_mode<1>, urukul) (eem_io, urukul) (eem_io_2.PIN, urukul) 
+          (sr_di<16>.Q, urukul)
+  --1--> (dds_sck_3, urukul) 
+N_PZ_168,net=urukul: PINT ( dds_sdi_1 )
+  <--4--  (ifc_mode<1>, urukul) (eem_io_1, urukul) (eem_io_9, urukul) 
+          (sr_di<14>.Q, urukul)
+  --1--> (dds_sdi_1, urukul) 
+N_PZ_169,net=urukul: PINT ( dds_sdi_2 )
+  <--4--  (ifc_mode<1>, urukul) (eem_io_1, urukul) (eem_io_10.PIN, urukul) 
+          (sr_di<15>.Q, urukul)
+  --1--> (dds_sdi_2, urukul) 
+N_PZ_170,net=urukul: PINT ( dds_sdi_3 )
+  <--4--  (ifc_mode<1>, urukul) (eem_io_1, urukul) (eem_io_11, urukul) 
+          (sr_di<16>.Q, urukul)
+  --1--> (dds_sdi_3, urukul) 
+N_PZ_171,net=urukul: PINT ( att_clk )
+  <--5--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) (eem_io, urukul) 
+          (eem_io_5, urukul)
+  --1--> (att_clk, urukul) 
+N_PZ_172,net=urukul: PINT ( att_rst_n.D )
+  <--1--  (sr_sr<19>.Q, urukul)
+  --1--> (att_rst_n.D, urukul) 
+N_PZ_173,net=urukul: PINT ( att_rst_n.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (att_rst_n.CLK, urukul) 
+N_PZ_174,net=urukul: PINT ( att_s_in<0> )
+  <--1--  (eem_io_1, urukul)
+  --1--> (att_s_in<0>, urukul) 
+N_PZ_175,net=urukul: PINT ( att_s_in<1> )
+  <--1--  (att_s_out<0>, urukul)
+  --1--> (att_s_in<1>, urukul) 
+N_PZ_176,net=urukul: PINT ( att_s_in<2> )
+  <--1--  (att_s_out<1>, urukul)
+  --1--> (att_s_in<2>, urukul) 
+N_PZ_177,net=urukul: PINT ( att_s_in<3> )
+  <--1--  (att_s_out<2>, urukul)
+  --1--> (att_s_in<3>, urukul) 
+N_PZ_178,net=urukul: PINT ( dds_cs_n_1 )
+  <--5--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (sr_di<14>.Q, urukul)
+  --1--> (dds_cs_n_1, urukul) 
+N_PZ_179,net=urukul: PINT ( dds_cs_n_2 )
+  <--5--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (sr_di<15>.Q, urukul)
+  --1--> (dds_cs_n_2, urukul) 
+N_PZ_180,net=urukul: PINT ( dds_cs_n_3 )
+  <--5--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (sr_di<16>.Q, urukul)
+  --1--> (dds_cs_n_3, urukul) 
+N_PZ_181,net=urukul: PINT ( tp )
+  <--5--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (sr_di<13>.Q, urukul)
+  --1--> (tp, urukul) 
+N_PZ_182,net=urukul: PINT ( dds_cs_n )
+  <--5--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (sr_di<13>.Q, urukul)
+  --1--> (dds_cs_n, urukul) 
+N_PZ_183,net=urukul: PINT ( dds_led<0> )
+  <--2--  (eem_io_12, urukul) (sr_di<0>.Q, urukul)
+  --1--> (dds_led<0>, urukul) 
+N_PZ_184,net=urukul: PINT ( dds_led_1<0> )
+  <--2--  (eem_io_13, urukul) (sr_di<1>.Q, urukul)
+  --1--> (dds_led_1<0>, urukul) 
+N_PZ_185,net=urukul: PINT ( dds_led_2<0> )
+  <--2--  (eem_io_14, urukul) (sr_di<2>.Q, urukul)
+  --1--> (dds_led_2<0>, urukul) 
+N_PZ_186,net=urukul: PINT ( dds_led_3<0> )
+  <--2--  (eem_io_15, urukul) (sr_di<3>.Q, urukul)
+  --1--> (dds_led_3<0>, urukul) 
+N_PZ_187,net=urukul: PINT ( dds_reset_3 )
+  <--4--  (dds_common_master_reset.Q, urukul) (variant, urukul) (ifc_mode<0>, urukul) 
+          (eem_io_7, urukul)
+  --1--> (dds_reset_3, urukul) 
+N_PZ_188,net=urukul: PINT ( dds_reset_2 )
+  <--4--  (dds_common_master_reset.Q, urukul) (variant, urukul) (ifc_mode<0>, urukul) 
+          (eem_io_7, urukul)
+  --1--> (dds_reset_2, urukul) 
+N_PZ_189,net=urukul: PINT ( dds_reset_1 )
+  <--4--  (dds_common_master_reset.Q, urukul) (variant, urukul) (ifc_mode<0>, urukul) 
+          (eem_io_7, urukul)
+  --1--> (dds_reset_1, urukul) 
+N_PZ_190,net=urukul: PINT ( dds_sync_clk_out_en )
+  <--4--  (ifc_mode<2>, urukul) (ifc_mode<1>, urukul) (variant, urukul) 
+          (ifc_mode<0>, urukul)
+  --1--> (dds_sync_clk_out_en, urukul) 
+N_PZ_191,net=urukul: PINT ( eem_oe_2 )
+  <--1--  (ifc_mode<1>, urukul)
+  --1--> (eem_oe_2, urukul) 
+N_PZ_192,net=urukul: PINT ( dds_profile<2>.D )
+  <--1--  (sr_sr<10>.Q, urukul)
+  --1--> (dds_profile<2>.D, urukul) 
+N_PZ_193,net=urukul: PINT ( dds_profile<2>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (dds_profile<2>.CLK, urukul) 
+N_PZ_194,net=urukul: PINT ( dds_profile_2<2>.D )
+  <--1--  (sr_sr<10>.Q, urukul)
+  --1--> (dds_profile_2<2>.D, urukul) 
+N_PZ_195,net=urukul: PINT ( dds_profile_2<2>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (dds_profile_2<2>.CLK, urukul) 
+N_PZ_196,net=urukul: PINT ( dds_profile_1<2>.D )
+  <--1--  (sr_sr<10>.Q, urukul)
+  --1--> (dds_profile_1<2>.D, urukul) 
+N_PZ_197,net=urukul: PINT ( dds_profile_1<2>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (dds_profile_1<2>.CLK, urukul) 
+N_PZ_198,net=urukul: PINT ( dds_profile_2<0>.D )
+  <--1--  (sr_sr<8>.Q, urukul)
+  --1--> (dds_profile_2<0>.D, urukul) 
+N_PZ_199,net=urukul: PINT ( dds_profile_2<0>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (dds_profile_2<0>.CLK, urukul) 
+N_PZ_200,net=urukul: PINT ( dds_profile_1<0>.D )
+  <--1--  (sr_sr<8>.Q, urukul)
+  --1--> (dds_profile_1<0>.D, urukul) 
+N_PZ_201,net=urukul: PINT ( dds_profile_1<0>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (dds_profile_1<0>.CLK, urukul) 
+N_PZ_202,net=urukul: PINT ( dds_profile<0>.D )
+  <--1--  (sr_sr<8>.Q, urukul)
+  --1--> (dds_profile<0>.D, urukul) 
+N_PZ_203,net=urukul: PINT ( dds_profile<0>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (dds_profile<0>.CLK, urukul) 
+N_PZ_204,net=urukul: PINT ( dds_profile_2<1>.D )
+  <--1--  (sr_sr<9>.Q, urukul)
+  --1--> (dds_profile_2<1>.D, urukul) 
+N_PZ_205,net=urukul: PINT ( dds_profile_2<1>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (dds_profile_2<1>.CLK, urukul) 
+N_PZ_206,net=urukul: PINT ( dds_profile<1>.D )
+  <--1--  (sr_sr<9>.Q, urukul)
+  --1--> (dds_profile<1>.D, urukul) 
+N_PZ_207,net=urukul: PINT ( dds_profile<1>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (dds_profile<1>.CLK, urukul) 
+N_PZ_208,net=urukul: PINT ( dds_profile_1<1>.D )
+  <--1--  (sr_sr<9>.Q, urukul)
+  --1--> (dds_profile_1<1>.D, urukul) 
+N_PZ_209,net=urukul: PINT ( dds_profile_1<1>.CLK )
+  <--1--  (le_clk.Q, urukul)
+  --1--> (dds_profile_1<1>.CLK, urukul) 
+N_PZ_210,net=urukul: PINT ( dds_sck )
+  <--4--  (ifc_mode<1>, urukul) (eem_io, urukul) (eem_io_2.PIN, urukul) 
+          (sr_di<13>.Q, urukul)
+  --1--> (dds_sck, urukul) 
+N_PZ_211,net=urukul: PINT ( dds_sdi )
+  <--4--  (ifc_mode<1>, urukul) (eem_io_1, urukul) (eem_io_8, urukul) 
+          (sr_di<13>.Q, urukul)
+  --1--> (dds_sdi, urukul) 
+N_PZ_212,net=urukul: PINT ( tp_3 )
+  <--1--  (dds_sdo, urukul)
+  --1--> (tp_3, urukul) 
+N_PZ_213,net=urukul: PINT ( tp_4 )
+  <--1--  (dds_drover, urukul)
+  --1--> (tp_4, urukul) 
+N_PZ_214,net=urukul: PINT ( fsen )
+  <--0-- 
+  --1--> (fsen, urukul) 
+N_PZ_215,net=urukul: PINT ( dds_osk )
+  <--0-- 
+  --1--> (dds_osk, urukul) 
+N_PZ_216,net=urukul: PINT ( dds_osk_3 )
+  <--0-- 
+  --1--> (dds_osk_3, urukul) 
+N_PZ_217,net=urukul: PINT ( dds_osk_2 )
+  <--0-- 
+  --1--> (dds_osk_2, urukul) 
+N_PZ_218,net=urukul: PINT ( dds_osk_1 )
+  <--0-- 
+  --1--> (dds_osk_1, urukul) 
+N_PZ_219,net=urukul: PINT ( dds_drctl )
+  <--0-- 
+  --1--> (dds_drctl, urukul) 
+N_PZ_220,net=urukul: PINT ( dds_drctl_3 )
+  <--0-- 
+  --1--> (dds_drctl_3, urukul) 
+N_PZ_221,net=urukul: PINT ( dds_drctl_2 )
+  <--0-- 
+  --1--> (dds_drctl_2, urukul) 
+N_PZ_222,net=urukul: PINT ( dds_drctl_1 )
+  <--0-- 
+  --1--> (dds_drctl_1, urukul) 
+N_PZ_223,net=urukul: PINT ( eem_oe )
+  <--0-- 
+  --1--> (eem_oe, urukul) 
+N_PZ_224,net=urukul: PINT ( eem_oe_9 )
+  <--0-- 
+  --1--> (eem_oe_9, urukul) 
+N_PZ_225,net=urukul: PINT ( eem_oe_8 )
+  <--0-- 
+  --1--> (eem_oe_8, urukul) 
+N_PZ_226,net=urukul: PINT ( eem_oe_13 )
+  <--0-- 
+  --1--> (eem_oe_13, urukul) 
+N_PZ_227,net=urukul: PINT ( eem_oe_12 )
+  <--0-- 
+  --1--> (eem_oe_12, urukul) 
+N_PZ_228,net=urukul: PINT ( eem_oe_11 )
+  <--0-- 
+  --1--> (eem_oe_11, urukul) 
+N_PZ_229,net=urukul: PINT ( dds_drhold )
+  <--0-- 
+  --1--> (dds_drhold, urukul) 
+N_PZ_230,net=urukul: PINT ( dds_drhold_3 )
+  <--0-- 
+  --1--> (dds_drhold_3, urukul) 
+N_PZ_231,net=urukul: PINT ( dds_drhold_2 )
+  <--0-- 
+  --1--> (dds_drhold_2, urukul) 
+N_PZ_232,net=urukul: PINT ( dds_drhold_1 )
+  <--0-- 
+  --1--> (dds_drhold_1, urukul) 
+N_PZ_233,net=urukul: PINT ( eem_oe_7 )
+  <--0-- 
+  --1--> (eem_oe_7, urukul) 
+N_PZ_234,net=urukul: PINT ( eem_oe_6 )
+  <--0-- 
+  --1--> (eem_oe_6, urukul) 
+N_PZ_235,net=urukul: PINT ( eem_oe_5 )
+  <--0-- 
+  --1--> (eem_oe_5, urukul) 
+N_PZ_236,net=urukul: PINT ( eem_oe_4 )
+  <--0-- 
+  --1--> (eem_oe_4, urukul) 
+N_PZ_237,net=urukul: PINT ( eem_oe_3 )
+  <--0-- 
+  --1--> (eem_oe_3, urukul) 
+N_PZ_238,net=urukul: PINT ( eem_oe_1 )
+  <--0-- 
+  --1--> (eem_oe_1, urukul) 
+N_PZ_239,net=urukul: PINT ( eem_oe_15 )
+  <--0-- 
+  --1--> (eem_oe_15, urukul) 
+N_PZ_240,net=urukul: PINT ( eem_oe_14 )
+  <--0-- 
+  --1--> (eem_oe_14, urukul) 
+eem_oe_10,net=urukul: PO
+  <--1--  (N_PZ_0, urukul)
+  --0--> 
+dds_rf_sw,net=urukul: PO
+  <--1--  (N_PZ_1, urukul)
+  --0--> 
+dds_rf_sw_1,net=urukul: PO
+  <--1--  (N_PZ_2, urukul)
+  --0--> 
+dds_rf_sw_2,net=urukul: PO
+  <--1--  (N_PZ_3, urukul)
+  --0--> 
+dds_rf_sw_3,net=urukul: PO
+  <--1--  (N_PZ_4, urukul)
+  --0--> 
+dds_sync_sync_out_en,net=urukul: PO
+  <--1--  (N_PZ_5, urukul)
+  --0--> 
+eem_io_2,net=urukul: PO
+  <--1--  (N_PZ_6, urukul)
+  --0--> 
+eem_io_2.OE,net=urukul: PO
+  <--1--  (N_PZ_7, urukul)
+  --0--> 
+clk_div,net=urukul: PO
+  <--1--  (N_PZ_8, urukul)
+  --0--> 
+clk_div.OE,net=urukul: PO
+  <--1--  (N_PZ_9, urukul)
+  --0--> 
+sr_sr<0>.D,net=urukul: PO
+  <--1--  (N_PZ_10, urukul)
+  --0--> 
+sr_sr<0>.CLK,net=urukul: PO
+  <--1--  (N_PZ_11, urukul)
+  --0--> 
+sr_sr<0>.CE,net=urukul: PO
+  <--1--  (N_PZ_12, urukul)
+  --0--> 
+sr_sr<10>.D,net=urukul: PO
+  <--1--  (N_PZ_13, urukul)
+  --0--> 
+sr_sr<10>.CLK,net=urukul: PO
+  <--1--  (N_PZ_14, urukul)
+  --0--> 
+sr_sr<12>.D,net=urukul: PO
+  <--1--  (N_PZ_16, urukul)
+  --0--> 
+sr_sr<12>.CLK,net=urukul: PO
+  <--1--  (N_PZ_17, urukul)
+  --0--> 
+sr_sr<13>.D,net=urukul: PO
+  <--1--  (N_PZ_19, urukul)
+  --0--> 
+sr_sr<13>.CLK,net=urukul: PO
+  <--1--  (N_PZ_20, urukul)
+  --0--> 
+sr_sr<14>.D,net=urukul: PO
+  <--1--  (N_PZ_22, urukul)
+  --0--> 
+sr_sr<14>.CLK,net=urukul: PO
+  <--1--  (N_PZ_23, urukul)
+  --0--> 
+sr_sr<15>.D,net=urukul: PO
+  <--1--  (N_PZ_25, urukul)
+  --0--> 
+sr_sr<15>.CLK,net=urukul: PO
+  <--1--  (N_PZ_26, urukul)
+  --0--> 
+sr_sr<16>.D,net=urukul: PO
+  <--1--  (N_PZ_28, urukul)
+  --0--> 
+sr_sr<16>.CLK,net=urukul: PO
+  <--1--  (N_PZ_29, urukul)
+  --0--> 
+sr_sr<17>.D,net=urukul: PO
+  <--1--  (N_PZ_31, urukul)
+  --0--> 
+sr_sr<17>.CLK,net=urukul: PO
+  <--1--  (N_PZ_32, urukul)
+  --0--> 
+sr_sr<18>.D,net=urukul: PO
+  <--1--  (N_PZ_34, urukul)
+  --0--> 
+sr_sr<18>.CLK,net=urukul: PO
+  <--1--  (N_PZ_35, urukul)
+  --0--> 
+sr_sr<19>.D,net=urukul: PO
+  <--1--  (N_PZ_37, urukul)
+  --0--> 
+sr_sr<19>.CLK,net=urukul: PO
+  <--1--  (N_PZ_38, urukul)
+  --0--> 
+sr_sr<1>.D,net=urukul: PO
+  <--1--  (N_PZ_40, urukul)
+  --0--> 
+sr_sr<1>.CLK,net=urukul: PO
+  <--1--  (N_PZ_41, urukul)
+  --0--> 
+sr_sr<20>.CLK,net=urukul: PO
+  <--1--  (N_PZ_44, urukul)
+  --0--> 
+sr_sr<21>.D,net=urukul: PO
+  <--1--  (N_PZ_46, urukul)
+  --0--> 
+sr_sr<21>.CLK,net=urukul: PO
+  <--1--  (N_PZ_47, urukul)
+  --0--> 
+sr_sr<22>.D,net=urukul: PO
+  <--1--  (N_PZ_49, urukul)
+  --0--> 
+sr_sr<22>.CLK,net=urukul: PO
+  <--1--  (N_PZ_50, urukul)
+  --0--> 
+sr_sr<23>.D,net=urukul: PO
+  <--1--  (N_PZ_52, urukul)
+  --0--> 
+sr_sr<23>.CLK,net=urukul: PO
+  <--1--  (N_PZ_53, urukul)
+  --0--> 
+sr_sr<2>.D,net=urukul: PO
+  <--1--  (N_PZ_55, urukul)
+  --0--> 
+sr_sr<2>.CLK,net=urukul: PO
+  <--1--  (N_PZ_56, urukul)
+  --0--> 
+sr_sr<3>.D,net=urukul: PO
+  <--1--  (N_PZ_58, urukul)
+  --0--> 
+sr_sr<3>.CLK,net=urukul: PO
+  <--1--  (N_PZ_59, urukul)
+  --0--> 
+sr_sr<4>.D,net=urukul: PO
+  <--1--  (N_PZ_61, urukul)
+  --0--> 
+sr_sr<4>.CLK,net=urukul: PO
+  <--1--  (N_PZ_62, urukul)
+  --0--> 
+sr_sr<5>.D,net=urukul: PO
+  <--1--  (N_PZ_64, urukul)
+  --0--> 
+sr_sr<5>.CLK,net=urukul: PO
+  <--1--  (N_PZ_65, urukul)
+  --0--> 
+sr_sr<6>.D,net=urukul: PO
+  <--1--  (N_PZ_67, urukul)
+  --0--> 
+sr_sr<6>.CLK,net=urukul: PO
+  <--1--  (N_PZ_68, urukul)
+  --0--> 
+sr_sr<7>.D,net=urukul: PO
+  <--1--  (N_PZ_70, urukul)
+  --0--> 
+sr_sr<7>.CLK,net=urukul: PO
+  <--1--  (N_PZ_71, urukul)
+  --0--> 
+sr_sr<8>.D,net=urukul: PO
+  <--1--  (N_PZ_73, urukul)
+  --0--> 
+sr_sr<8>.CLK,net=urukul: PO
+  <--1--  (N_PZ_74, urukul)
+  --0--> 
+sr_sr<9>.D,net=urukul: PO
+  <--1--  (N_PZ_76, urukul)
+  --0--> 
+sr_sr<9>.CLK,net=urukul: PO
+  <--1--  (N_PZ_77, urukul)
+  --0--> 
+sr_sdo.D,net=urukul: PO
+  <--1--  (N_PZ_79, urukul)
+  --0--> 
+sr_sdo.CLK,net=urukul: PO
+  <--1--  (N_PZ_80, urukul)
+  --0--> 
+sr_sdo.CE,net=urukul: PO
+  <--1--  (N_PZ_81, urukul)
+  --0--> 
+sr_sr<11>.D,net=urukul: PO
+  <--1--  (N_PZ_82, urukul)
+  --0--> 
+sr_sr<11>.CLK,net=urukul: PO
+  <--1--  (N_PZ_83, urukul)
+  --0--> 
+dds_profile_3<2>.D,net=urukul: PO
+  <--1--  (N_PZ_85, urukul)
+  --0--> 
+dds_profile_3<2>.CLK,net=urukul: PO
+  <--1--  (N_PZ_86, urukul)
+  --0--> 
+dds_profile_3<0>.D,net=urukul: PO
+  <--1--  (N_PZ_87, urukul)
+  --0--> 
+dds_profile_3<0>.CLK,net=urukul: PO
+  <--1--  (N_PZ_88, urukul)
+  --0--> 
+dds_profile_3<1>.D,net=urukul: PO
+  <--1--  (N_PZ_89, urukul)
+  --0--> 
+dds_profile_3<1>.CLK,net=urukul: PO
+  <--1--  (N_PZ_90, urukul)
+  --0--> 
+dds_reset,net=urukul: PO
+  <--1--  (N_PZ_91, urukul)
+  --0--> 
+dds_common_master_reset.D,net=urukul: PO
+  <--1--  (N_PZ_92, urukul)
+  --0--> 
+dds_common_master_reset.CLK,net=urukul: PO
+  <--1--  (N_PZ_93, urukul)
+  --0--> 
+clk_in_sel.D,net=urukul: PO
+  <--1--  (N_PZ_94, urukul)
+  --0--> 
+clk_in_sel.CLK,net=urukul: PO
+  <--1--  (N_PZ_95, urukul)
+  --0--> 
+clk_mmcx_osc_sel.D,net=urukul: PO
+  <--1--  (N_PZ_96, urukul)
+  --0--> 
+clk_mmcx_osc_sel.CLK,net=urukul: PO
+  <--1--  (N_PZ_97, urukul)
+  --0--> 
+tp_1,net=urukul: PO
+  <--1--  (N_PZ_98, urukul)
+  --0--> 
+tp_2,net=urukul: PO
+  <--1--  (N_PZ_99, urukul)
+  --0--> 
+eem_io_10,net=urukul: PO
+  <--1--  (N_PZ_100, urukul)
+  --0--> 
+eem_io_10.OE,net=urukul: PO
+  <--1--  (N_PZ_101, urukul)
+  --0--> 
+le_clk.CLK,net=urukul: PO
+  <--1--  (N_PZ_103, urukul)
+  --0--> 
+le_clk.AP,net=urukul: PO
+  <--1--  (N_PZ_104, urukul)
+  --0--> 
+sr_di<13>.D,net=urukul: PO
+  <--1--  (N_PZ_106, urukul)
+  --0--> 
+sr_di<13>.CLK,net=urukul: PO
+  <--1--  (N_PZ_107, urukul)
+  --0--> 
+sr_di<14>.D,net=urukul: PO
+  <--1--  (N_PZ_108, urukul)
+  --0--> 
+sr_di<14>.CLK,net=urukul: PO
+  <--1--  (N_PZ_109, urukul)
+  --0--> 
+sr_di<15>.D,net=urukul: PO
+  <--1--  (N_PZ_110, urukul)
+  --0--> 
+sr_di<15>.CLK,net=urukul: PO
+  <--1--  (N_PZ_111, urukul)
+  --0--> 
+sr_di<16>.D,net=urukul: PO
+  <--1--  (N_PZ_112, urukul)
+  --0--> 
+sr_di<16>.CLK,net=urukul: PO
+  <--1--  (N_PZ_113, urukul)
+  --0--> 
+sr_di<12>.D,net=urukul: PO
+  <--1--  (N_PZ_114, urukul)
+  --0--> 
+sr_di<12>.CLK,net=urukul: PO
+  <--1--  (N_PZ_115, urukul)
+  --0--> 
+sr_di<22>.D,net=urukul: PO
+  <--1--  (N_PZ_116, urukul)
+  --0--> 
+sr_di<22>.CLK,net=urukul: PO
+  <--1--  (N_PZ_117, urukul)
+  --0--> 
+sr_di<23>.D,net=urukul: PO
+  <--1--  (N_PZ_118, urukul)
+  --0--> 
+sr_di<23>.CLK,net=urukul: PO
+  <--1--  (N_PZ_119, urukul)
+  --0--> 
+sr_di<0>.D,net=urukul: PO
+  <--1--  (N_PZ_120, urukul)
+  --0--> 
+sr_di<0>.CLK,net=urukul: PO
+  <--1--  (N_PZ_121, urukul)
+  --0--> 
+sr_di<1>.D,net=urukul: PO
+  <--1--  (N_PZ_122, urukul)
+  --0--> 
+sr_di<1>.CLK,net=urukul: PO
+  <--1--  (N_PZ_123, urukul)
+  --0--> 
+sr_di<2>.D,net=urukul: PO
+  <--1--  (N_PZ_124, urukul)
+  --0--> 
+sr_di<2>.CLK,net=urukul: PO
+  <--1--  (N_PZ_125, urukul)
+  --0--> 
+sr_di<3>.D,net=urukul: PO
+  <--1--  (N_PZ_126, urukul)
+  --0--> 
+sr_di<3>.CLK,net=urukul: PO
+  <--1--  (N_PZ_127, urukul)
+  --0--> 
+sr_di<4>.D,net=urukul: PO
+  <--1--  (N_PZ_128, urukul)
+  --0--> 
+sr_di<4>.CLK,net=urukul: PO
+  <--1--  (N_PZ_129, urukul)
+  --0--> 
+sr_di<5>.D,net=urukul: PO
+  <--1--  (N_PZ_130, urukul)
+  --0--> 
+sr_di<5>.CLK,net=urukul: PO
+  <--1--  (N_PZ_131, urukul)
+  --0--> 
+sr_di<6>.D,net=urukul: PO
+  <--1--  (N_PZ_132, urukul)
+  --0--> 
+sr_di<6>.CLK,net=urukul: PO
+  <--1--  (N_PZ_133, urukul)
+  --0--> 
+sr_di<7>.D,net=urukul: PO
+  <--1--  (N_PZ_134, urukul)
+  --0--> 
+sr_di<7>.CLK,net=urukul: PO
+  <--1--  (N_PZ_135, urukul)
+  --0--> 
+att_le<0>.CLK,net=urukul: PO
+  <--1--  (N_PZ_137, urukul)
+  --0--> 
+att_le<0>.AP,net=urukul: PO
+  <--1--  (N_PZ_138, urukul)
+  --0--> 
+att_le<1>.CLK,net=urukul: PO
+  <--1--  (N_PZ_141, urukul)
+  --0--> 
+att_le<1>.AP,net=urukul: PO
+  <--1--  (N_PZ_142, urukul)
+  --0--> 
+att_le<2>.CLK,net=urukul: PO
+  <--1--  (N_PZ_145, urukul)
+  --0--> 
+att_le<2>.AP,net=urukul: PO
+  <--1--  (N_PZ_146, urukul)
+  --0--> 
+att_le<3>.CLK,net=urukul: PO
+  <--1--  (N_PZ_149, urukul)
+  --0--> 
+att_le<3>.AP,net=urukul: PO
+  <--1--  (N_PZ_150, urukul)
+  --0--> 
+dds_sync_sync_sel.D,net=urukul: PO
+  <--1--  (N_PZ_152, urukul)
+  --0--> 
+dds_sync_sync_sel.CLK,net=urukul: PO
+  <--1--  (N_PZ_153, urukul)
+  --0--> 
+dds_common_io_reset.D,net=urukul: PO
+  <--1--  (N_PZ_154, urukul)
+  --0--> 
+dds_common_io_reset.CLK,net=urukul: PO
+  <--1--  (N_PZ_155, urukul)
+  --0--> 
+clk_osc_en_n,net=urukul: PO
+  <--1--  (N_PZ_156, urukul)
+  --0--> 
+dds_io_update_1,net=urukul: PO
+  <--1--  (N_PZ_157, urukul)
+  --0--> 
+dds_io_update_2,net=urukul: PO
+  <--1--  (N_PZ_158, urukul)
+  --0--> 
+dds_io_update_3,net=urukul: PO
+  <--1--  (N_PZ_159, urukul)
+  --0--> 
+dds_io_update,net=urukul: PO
+  <--1--  (N_PZ_160, urukul)
+  --0--> 
+dds_led_1<1>,net=urukul: PO
+  <--1--  (N_PZ_161, urukul)
+  --0--> 
+dds_led<1>,net=urukul: PO
+  <--1--  (N_PZ_162, urukul)
+  --0--> 
+dds_led_2<1>,net=urukul: PO
+  <--1--  (N_PZ_163, urukul)
+  --0--> 
+dds_led_3<1>,net=urukul: PO
+  <--1--  (N_PZ_164, urukul)
+  --0--> 
+dds_sck_1,net=urukul: PO
+  <--1--  (N_PZ_165, urukul)
+  --0--> 
+dds_sck_2,net=urukul: PO
+  <--1--  (N_PZ_166, urukul)
+  --0--> 
+dds_sck_3,net=urukul: PO
+  <--1--  (N_PZ_167, urukul)
+  --0--> 
+dds_sdi_1,net=urukul: PO
+  <--1--  (N_PZ_168, urukul)
+  --0--> 
+dds_sdi_2,net=urukul: PO
+  <--1--  (N_PZ_169, urukul)
+  --0--> 
+dds_sdi_3,net=urukul: PO
+  <--1--  (N_PZ_170, urukul)
+  --0--> 
+att_clk,net=urukul: PO
+  <--1--  (N_PZ_171, urukul)
+  --0--> 
+att_rst_n.D,net=urukul: PO
+  <--1--  (N_PZ_172, urukul)
+  --0--> 
+att_rst_n.CLK,net=urukul: PO
+  <--1--  (N_PZ_173, urukul)
+  --0--> 
+att_s_in<0>,net=urukul: PO
+  <--1--  (N_PZ_174, urukul)
+  --0--> 
+att_s_in<1>,net=urukul: PO
+  <--1--  (N_PZ_175, urukul)
+  --0--> 
+att_s_in<2>,net=urukul: PO
+  <--1--  (N_PZ_176, urukul)
+  --0--> 
+att_s_in<3>,net=urukul: PO
+  <--1--  (N_PZ_177, urukul)
+  --0--> 
+dds_cs_n_1,net=urukul: PO
+  <--1--  (N_PZ_178, urukul)
+  --0--> 
+dds_cs_n_2,net=urukul: PO
+  <--1--  (N_PZ_179, urukul)
+  --0--> 
+dds_cs_n_3,net=urukul: PO
+  <--1--  (N_PZ_180, urukul)
+  --0--> 
+tp,net=urukul: PO
+  <--1--  (N_PZ_181, urukul)
+  --0--> 
+dds_cs_n,net=urukul: PO
+  <--1--  (N_PZ_182, urukul)
+  --0--> 
+dds_led<0>,net=urukul: PO
+  <--1--  (N_PZ_183, urukul)
+  --0--> 
+dds_led_1<0>,net=urukul: PO
+  <--1--  (N_PZ_184, urukul)
+  --0--> 
+dds_led_2<0>,net=urukul: PO
+  <--1--  (N_PZ_185, urukul)
+  --0--> 
+dds_led_3<0>,net=urukul: PO
+  <--1--  (N_PZ_186, urukul)
+  --0--> 
+dds_reset_3,net=urukul: PO
+  <--1--  (N_PZ_187, urukul)
+  --0--> 
+dds_reset_2,net=urukul: PO
+  <--1--  (N_PZ_188, urukul)
+  --0--> 
+dds_reset_1,net=urukul: PO
+  <--1--  (N_PZ_189, urukul)
+  --0--> 
+dds_sync_clk_out_en,net=urukul: PO
+  <--1--  (N_PZ_190, urukul)
+  --0--> 
+eem_oe_2,net=urukul: PO
+  <--1--  (N_PZ_191, urukul)
+  --0--> 
+dds_profile<2>.D,net=urukul: PO
+  <--1--  (N_PZ_192, urukul)
+  --0--> 
+dds_profile<2>.CLK,net=urukul: PO
+  <--1--  (N_PZ_193, urukul)
+  --0--> 
+dds_profile_2<2>.D,net=urukul: PO
+  <--1--  (N_PZ_194, urukul)
+  --0--> 
+dds_profile_2<2>.CLK,net=urukul: PO
+  <--1--  (N_PZ_195, urukul)
+  --0--> 
+dds_profile_1<2>.D,net=urukul: PO
+  <--1--  (N_PZ_196, urukul)
+  --0--> 
+dds_profile_1<2>.CLK,net=urukul: PO
+  <--1--  (N_PZ_197, urukul)
+  --0--> 
+dds_profile_2<0>.D,net=urukul: PO
+  <--1--  (N_PZ_198, urukul)
+  --0--> 
+dds_profile_2<0>.CLK,net=urukul: PO
+  <--1--  (N_PZ_199, urukul)
+  --0--> 
+dds_profile_1<0>.D,net=urukul: PO
+  <--1--  (N_PZ_200, urukul)
+  --0--> 
+dds_profile_1<0>.CLK,net=urukul: PO
+  <--1--  (N_PZ_201, urukul)
+  --0--> 
+dds_profile<0>.D,net=urukul: PO
+  <--1--  (N_PZ_202, urukul)
+  --0--> 
+dds_profile<0>.CLK,net=urukul: PO
+  <--1--  (N_PZ_203, urukul)
+  --0--> 
+dds_profile_2<1>.D,net=urukul: PO
+  <--1--  (N_PZ_204, urukul)
+  --0--> 
+dds_profile_2<1>.CLK,net=urukul: PO
+  <--1--  (N_PZ_205, urukul)
+  --0--> 
+dds_profile<1>.D,net=urukul: PO
+  <--1--  (N_PZ_206, urukul)
+  --0--> 
+dds_profile<1>.CLK,net=urukul: PO
+  <--1--  (N_PZ_207, urukul)
+  --0--> 
+dds_profile_1<1>.D,net=urukul: PO
+  <--1--  (N_PZ_208, urukul)
+  --0--> 
+dds_profile_1<1>.CLK,net=urukul: PO
+  <--1--  (N_PZ_209, urukul)
+  --0--> 
+dds_sck,net=urukul: PO
+  <--1--  (N_PZ_210, urukul)
+  --0--> 
+dds_sdi,net=urukul: PO
+  <--1--  (N_PZ_211, urukul)
+  --0--> 
+tp_3,net=urukul: PO
+  <--1--  (N_PZ_212, urukul)
+  --0--> 
+tp_4,net=urukul: PO
+  <--1--  (N_PZ_213, urukul)
+  --0--> 
+fsen,net=urukul: PO
+  <--1--  (N_PZ_214, urukul)
+  --0--> 
+dds_osk,net=urukul: PO
+  <--1--  (N_PZ_215, urukul)
+  --0--> 
+dds_osk_3,net=urukul: PO
+  <--1--  (N_PZ_216, urukul)
+  --0--> 
+dds_osk_2,net=urukul: PO
+  <--1--  (N_PZ_217, urukul)
+  --0--> 
+dds_osk_1,net=urukul: PO
+  <--1--  (N_PZ_218, urukul)
+  --0--> 
+dds_drctl,net=urukul: PO
+  <--1--  (N_PZ_219, urukul)
+  --0--> 
+dds_drctl_3,net=urukul: PO
+  <--1--  (N_PZ_220, urukul)
+  --0--> 
+dds_drctl_2,net=urukul: PO
+  <--1--  (N_PZ_221, urukul)
+  --0--> 
+dds_drctl_1,net=urukul: PO
+  <--1--  (N_PZ_222, urukul)
+  --0--> 
+eem_oe,net=urukul: PO
+  <--1--  (N_PZ_223, urukul)
+  --0--> 
+eem_oe_9,net=urukul: PO
+  <--1--  (N_PZ_224, urukul)
+  --0--> 
+eem_oe_8,net=urukul: PO
+  <--1--  (N_PZ_225, urukul)
+  --0--> 
+eem_oe_13,net=urukul: PO
+  <--1--  (N_PZ_226, urukul)
+  --0--> 
+eem_oe_12,net=urukul: PO
+  <--1--  (N_PZ_227, urukul)
+  --0--> 
+eem_oe_11,net=urukul: PO
+  <--1--  (N_PZ_228, urukul)
+  --0--> 
+dds_drhold,net=urukul: PO
+  <--1--  (N_PZ_229, urukul)
+  --0--> 
+dds_drhold_3,net=urukul: PO
+  <--1--  (N_PZ_230, urukul)
+  --0--> 
+dds_drhold_2,net=urukul: PO
+  <--1--  (N_PZ_231, urukul)
+  --0--> 
+dds_drhold_1,net=urukul: PO
+  <--1--  (N_PZ_232, urukul)
+  --0--> 
+eem_oe_7,net=urukul: PO
+  <--1--  (N_PZ_233, urukul)
+  --0--> 
+eem_oe_6,net=urukul: PO
+  <--1--  (N_PZ_234, urukul)
+  --0--> 
+eem_oe_5,net=urukul: PO
+  <--1--  (N_PZ_235, urukul)
+  --0--> 
+eem_oe_4,net=urukul: PO
+  <--1--  (N_PZ_236, urukul)
+  --0--> 
+eem_oe_3,net=urukul: PO
+  <--1--  (N_PZ_237, urukul)
+  --0--> 
+eem_oe_1,net=urukul: PO
+  <--1--  (N_PZ_238, urukul)
+  --0--> 
+eem_oe_15,net=urukul: PO
+  <--1--  (N_PZ_239, urukul)
+  --0--> 
+eem_oe_14,net=urukul: PO
+  <--1--  (N_PZ_240, urukul)
+  --0--> 
+sr_sr<0>.Q,net=urukul: PI
+  <--0-- 
+  --2--> (N_PZ_120, urukul) (N_PZ_40, urukul) 
+sr_sr<10>.Q,net=urukul: PI
+  <--0-- 
+  --6--> (N_PZ_85, urukul) (N_PZ_192, urukul) (N_PZ_194, urukul) (N_PZ_196, urukul)  
+         (N_PZ_13, urukul) (N_PZ_82, urukul) 
+sr_sr<12>.Q,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_114, urukul) (N_PZ_16, urukul) (N_PZ_19, urukul) 
+sr_sr<13>.Q,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_106, urukul) (N_PZ_19, urukul) (N_PZ_22, urukul) 
+sr_sr<14>.Q,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_108, urukul) (N_PZ_22, urukul) (N_PZ_25, urukul) 
+sr_sr<15>.Q,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_110, urukul) (N_PZ_25, urukul) (N_PZ_28, urukul) 
+sr_sr<16>.Q,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_112, urukul) (N_PZ_28, urukul) (N_PZ_31, urukul) 
+sr_sr<17>.Q,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_94, urukul) (N_PZ_31, urukul) (N_PZ_34, urukul) 
+sr_sr<18>.Q,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_152, urukul) (N_PZ_34, urukul) (N_PZ_37, urukul) 
+sr_sr<19>.Q,net=urukul: PI
+  <--0-- 
+  --4--> (N_PZ_92, urukul) (N_PZ_172, urukul) (N_PZ_37, urukul) (N_PZ_284, urukul) 
+sr_sr<1>.Q,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_122, urukul) (N_PZ_40, urukul) (N_PZ_55, urukul) 
+sr_sr<20>.Q,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_154, urukul) (N_PZ_284, urukul) (N_PZ_46, urukul) 
+sr_sr<21>.Q,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_96, urukul) (N_PZ_46, urukul) (N_PZ_49, urukul) 
+sr_sr<22>.Q,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_116, urukul) (N_PZ_49, urukul) (N_PZ_52, urukul) 
+sr_sr<23>.Q,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_79, urukul) (N_PZ_118, urukul) (N_PZ_52, urukul) 
+sr_sr<2>.Q,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_124, urukul) (N_PZ_55, urukul) (N_PZ_58, urukul) 
+sr_sr<3>.Q,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_126, urukul) (N_PZ_58, urukul) (N_PZ_61, urukul) 
+sr_sr<4>.Q,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_128, urukul) (N_PZ_61, urukul) (N_PZ_64, urukul) 
+sr_sr<5>.Q,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_130, urukul) (N_PZ_64, urukul) (N_PZ_67, urukul) 
+sr_sr<6>.Q,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_132, urukul) (N_PZ_67, urukul) (N_PZ_70, urukul) 
+sr_sr<7>.Q,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_134, urukul) (N_PZ_70, urukul) (N_PZ_73, urukul) 
+sr_sr<8>.Q,net=urukul: PI
+  <--0-- 
+  --6--> (N_PZ_87, urukul) (N_PZ_198, urukul) (N_PZ_200, urukul) (N_PZ_202, urukul)  
+         (N_PZ_73, urukul) (N_PZ_76, urukul) 
+sr_sr<9>.Q,net=urukul: PI
+  <--0-- 
+  --6--> (N_PZ_89, urukul) (N_PZ_204, urukul) (N_PZ_206, urukul) (N_PZ_208, urukul)  
+         (N_PZ_13, urukul) (N_PZ_76, urukul) 
+sr_sdo.Q,net=urukul: PI
+  <--0-- 
+  --1--> (N_PZ_6, urukul) 
+sr_sr<11>.Q,net=urukul: PI
+  <--0-- 
+  --2--> (N_PZ_82, urukul) (N_PZ_16, urukul) 
+le_clk.Q,net=urukul: PI
+  <--0-- 
+  --57--> (N_PZ_86, urukul) (N_PZ_88, urukul) (N_PZ_90, urukul) (N_PZ_93, urukul)  
+          (N_PZ_95, urukul) (N_PZ_97, urukul) (N_PZ_107, urukul) (N_PZ_109, urukul)  
+          (N_PZ_111, urukul) (N_PZ_113, urukul) (N_PZ_115, urukul) (N_PZ_117, urukul)  
+          (N_PZ_119, urukul) (N_PZ_121, urukul) (N_PZ_123, urukul) (N_PZ_125, urukul)  
+          (N_PZ_127, urukul) (N_PZ_129, urukul) (N_PZ_131, urukul) (N_PZ_133, urukul)  
+          (N_PZ_135, urukul) (N_PZ_153, urukul) (N_PZ_155, urukul) (N_PZ_173, urukul)  
+          (N_PZ_193, urukul) (N_PZ_195, urukul) (N_PZ_197, urukul) (N_PZ_199, urukul)  
+          (N_PZ_201, urukul) (N_PZ_203, urukul) (N_PZ_205, urukul) (N_PZ_207, urukul)  
+          (N_PZ_209, urukul) (N_PZ_297, urukul) (N_PZ_13, urukul) (N_PZ_82, urukul)  
+          (N_PZ_16, urukul) (N_PZ_19, urukul) (N_PZ_22, urukul) (N_PZ_25, urukul)  
+          (N_PZ_28, urukul) (N_PZ_31, urukul) (N_PZ_34, urukul) (N_PZ_37, urukul)  
+          (N_PZ_40, urukul) (N_PZ_284, urukul) (N_PZ_46, urukul) (N_PZ_49, urukul)  
+          (N_PZ_52, urukul) (N_PZ_55, urukul) (N_PZ_58, urukul) (N_PZ_61, urukul)  
+          (N_PZ_64, urukul) (N_PZ_67, urukul) (N_PZ_70, urukul) (N_PZ_73, urukul)  
+          (N_PZ_76, urukul) 
+sr_di<13>.Q,net=urukul: PI
+  <--0-- 
+  --7--> (N_PZ_98, urukul) (N_PZ_99, urukul) (N_PZ_160, urukul) (N_PZ_181, urukul)  
+         (N_PZ_182, urukul) (N_PZ_210, urukul) (N_PZ_211, urukul) 
+sr_di<14>.Q,net=urukul: PI
+  <--0-- 
+  --4--> (N_PZ_157, urukul) (N_PZ_165, urukul) (N_PZ_168, urukul) (N_PZ_178, urukul) 
+sr_di<15>.Q,net=urukul: PI
+  <--0-- 
+  --4--> (N_PZ_158, urukul) (N_PZ_166, urukul) (N_PZ_169, urukul) (N_PZ_179, urukul) 
+sr_di<16>.Q,net=urukul: PI
+  <--0-- 
+  --4--> (N_PZ_159, urukul) (N_PZ_167, urukul) (N_PZ_170, urukul) (N_PZ_180, urukul) 
+sr_di<12>.Q,net=urukul: PI
+  <--0-- 
+  --4--> (N_PZ_157, urukul) (N_PZ_158, urukul) (N_PZ_159, urukul) (N_PZ_160, urukul) 
+sr_di<22>.Q,net=urukul: PI
+  <--0-- 
+  --2--> (N_PZ_8, urukul) (N_PZ_9, urukul) 
+sr_di<23>.Q,net=urukul: PI
+  <--0-- 
+  --2--> (N_PZ_8, urukul) (N_PZ_9, urukul) 
+sr_di<0>.Q,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_1, urukul) (N_PZ_183, urukul) (N_PZ_40, urukul) 
+sr_di<1>.Q,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_2, urukul) (N_PZ_184, urukul) (N_PZ_55, urukul) 
+sr_di<2>.Q,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_3, urukul) (N_PZ_185, urukul) (N_PZ_58, urukul) 
+sr_di<3>.Q,net=urukul: PI
+  <--0-- 
+  --3--> (N_PZ_4, urukul) (N_PZ_186, urukul) (N_PZ_61, urukul) 
+sr_di<4>.Q,net=urukul: PI
+  <--0-- 
+  --1--> (N_PZ_162, urukul) 
+sr_di<5>.Q,net=urukul: PI
+  <--0-- 
+  --1--> (N_PZ_161, urukul) 
+sr_di<6>.Q,net=urukul: PI
+  <--0-- 
+  --1--> (N_PZ_163, urukul) 
+sr_di<7>.Q,net=urukul: PI
+  <--0-- 
+  --1--> (N_PZ_164, urukul) 
+N_PZ_284,net=urukul: PINT ( sr_sr<20>.T )
+  <--7--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (sr_sr<19>.Q, urukul) (sr_sr<20>.Q, urukul) 
+          (le_clk.Q, urukul)
+  --1--> (sr_sr<20>.T, urukul) 
+sr_sr<20>.T,net=urukul: PO
+  <--1--  (N_PZ_284, urukul)
+  --0--> 
+N_PZ_297,net=urukul: PINT ( le_clk.T )
+  <--5--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (le_clk.Q, urukul)
+  --1--> (le_clk.T, urukul) 
+le_clk.T,net=urukul: PO
+  <--1--  (N_PZ_297, urukul)
+  --0--> 
+att_le<0>.Q,net=urukul: PI
+  <--0-- 
+  --1--> (N_PZ_298, urukul) 
+N_PZ_298,net=urukul: PINT ( att_le<0>.T )
+  <--5--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (att_le<0>.Q, urukul)
+  --1--> (att_le<0>.T, urukul) 
+att_le<0>.T,net=urukul: PO
+  <--1--  (N_PZ_298, urukul)
+  --0--> 
+att_le<1>.Q,net=urukul: PI
+  <--0-- 
+  --1--> (N_PZ_299, urukul) 
+N_PZ_299,net=urukul: PINT ( att_le<1>.T )
+  <--5--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (att_le<1>.Q, urukul)
+  --1--> (att_le<1>.T, urukul) 
+att_le<1>.T,net=urukul: PO
+  <--1--  (N_PZ_299, urukul)
+  --0--> 
+att_le<2>.Q,net=urukul: PI
+  <--0-- 
+  --1--> (N_PZ_300, urukul) 
+N_PZ_300,net=urukul: PINT ( att_le<2>.T )
+  <--5--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (att_le<2>.Q, urukul)
+  --1--> (att_le<2>.T, urukul) 
+att_le<2>.T,net=urukul: PO
+  <--1--  (N_PZ_300, urukul)
+  --0--> 
+att_le<3>.Q,net=urukul: PI
+  <--0-- 
+  --1--> (N_PZ_301, urukul) 
+N_PZ_301,net=urukul: PINT ( att_le<3>.T )
+  <--5--  (ifc_mode<1>, urukul) (eem_io_3, urukul) (eem_io_4, urukul) 
+          (eem_io_5, urukul) (att_le<3>.Q, urukul)
+  --1--> (att_le<3>.T, urukul) 
+att_le<3>.T,net=urukul: PO
+  <--1--  (N_PZ_301, urukul)
+  --0--> 

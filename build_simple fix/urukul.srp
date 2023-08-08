@@ -1,0 +1,284 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "urukul.prj"
+Input Format                       : MIXED
+
+---- Target Parameters
+Output File Name                   : "urukul.ngc"
+Target Device                      : xc2c256-6-ft256
+
+---- Source Options
+Top Module Name                    : urukul
+
+=========================================================================
+
+WARNING:Xst:29 - Optimization Effort not specified
+The following parameters have been added:
+Optimization Goal                  : SPEED
+Optimization Effort                : 1
+
+=========================================================================
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "urukul.v" in library work
+Module <urukul> compiled
+No errors in compilation
+Analysis of file <"urukul.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <urukul> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <urukul>.
+WARNING:Xst:2725 - "urukul.v" line 253: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "urukul.v" line 256: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "urukul.v" line 259: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "urukul.v" line 262: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "urukul.v" line 471: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "urukul.v" line 474: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "urukul.v" line 477: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "urukul.v" line 480: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "urukul.v" line 507: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "urukul.v" line 510: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "urukul.v" line 531: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "urukul.v" line 534: Size mismatch between case item and case selector.
+Module <urukul> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  1" for instance <FDPE> in unit <urukul>.
+    Set user-defined property "INIT =  1" for instance <FDPE_1> in unit <urukul>.
+    Set user-defined property "INIT =  1" for instance <FDPE_2> in unit <urukul>.
+    Set user-defined property "INIT =  1" for instance <FDPE_3> in unit <urukul>.
+    Set user-defined property "INIT =  1" for instance <FDPE_4> in unit <urukul>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2561 - Always blocking tristate driving signal <eem_io> in unit <urukul> is removed.
+INFO:Xst:2561 - Always blocking tristate driving signal <eem_io_1> in unit <urukul> is removed.
+INFO:Xst:2561 - Always blocking tristate driving signal <eem_io_3> in unit <urukul> is removed.
+INFO:Xst:2561 - Always blocking tristate driving signal <eem_io_4> in unit <urukul> is removed.
+INFO:Xst:2561 - Always blocking tristate driving signal <eem_io_5> in unit <urukul> is removed.
+INFO:Xst:2561 - Always blocking tristate driving signal <eem_io_6> in unit <urukul> is removed.
+INFO:Xst:2561 - Always blocking tristate driving signal <eem_io_7> in unit <urukul> is removed.
+INFO:Xst:2561 - Always blocking tristate driving signal <eem_io_8> in unit <urukul> is removed.
+INFO:Xst:2561 - Always blocking tristate driving signal <eem_io_9> in unit <urukul> is removed.
+INFO:Xst:2561 - Always blocking tristate driving signal <eem_io_11> in unit <urukul> is removed.
+
+Synthesizing Unit <urukul>.
+    Related source file is "urukul.v".
+WARNING:Xst:647 - Input <dds_drover_1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <dds_drover_2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <dds_drover_3> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <dds_sync_clk0> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <tstriple9_o> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tstriple8_o> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tstriple7_o> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tstriple6_o> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tstriple5_o> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tstriple4_o> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tstriple3_o> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tstriple1_o> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tstriple11_o> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tstriple0_o> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <stat_data_dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <sr_do<23>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sel<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <i> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cfg_data_dummy> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 4x1-bit ROM for signal <rhs_array_muxed2>.
+    Found 1-bit tristate buffer for signal <clk_div>.
+    Found 1-bit tristate buffer for signal <eem_io_10>.
+    Found 1-bit tristate buffer for signal <eem_io_2>.
+    Found 1-bit 8-to-1 multiplexer for signal <rhs_array_muxed0>.
+    Found 24-bit register for signal <sr_di>.
+    Found 1-bit register for signal <sr_sdo>.
+    Found 24-bit register for signal <sr_sr>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   3 Tristate(s).
+Unit <urukul> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 4x1-bit ROM                                           : 1
+# Registers                                            : 26
+ 1-bit register                                        : 25
+ 24-bit register                                       : 1
+# Multiplexers                                         : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+# Tristates                                            : 3
+ 1-bit tristate buffer                                 : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 4x1-bit ROM                                           : 1
+# Registers                                            : 30
+ Flip-Flops                                            : 30
+# Multiplexers                                         : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <sr_di_11> of sequential type is unconnected in block <urukul>.
+
+Optimizing unit <urukul> ...
+  implementation constraint: INIT=1	 : FDPE
+  implementation constraint: INIT=1	 : FDPE_1
+  implementation constraint: INIT=1	 : FDPE_2
+  implementation constraint: INIT=1	 : FDPE_3
+  implementation constraint: INIT=1	 : FDPE_4
+  implementation constraint: INIT=r	 : sr_di_23
+  implementation constraint: INIT=r	 : sr_sdo
+  implementation constraint: INIT=r	 : sr_sr_0
+  implementation constraint: INIT=r	 : sr_sr_23
+  implementation constraint: INIT=r	 : sr_sr_22
+  implementation constraint: INIT=r	 : sr_sr_21
+  implementation constraint: INIT=r	 : sr_sr_20
+  implementation constraint: INIT=r	 : sr_sr_19
+  implementation constraint: INIT=r	 : sr_sr_18
+  implementation constraint: INIT=r	 : sr_sr_17
+  implementation constraint: INIT=r	 : sr_sr_16
+  implementation constraint: INIT=r	 : sr_sr_15
+  implementation constraint: INIT=r	 : sr_sr_14
+  implementation constraint: INIT=r	 : sr_sr_13
+  implementation constraint: INIT=r	 : sr_sr_12
+  implementation constraint: INIT=r	 : sr_sr_11
+  implementation constraint: INIT=r	 : sr_sr_10
+  implementation constraint: INIT=r	 : sr_sr_9
+  implementation constraint: INIT=r	 : sr_sr_8
+  implementation constraint: INIT=r	 : sr_sr_7
+  implementation constraint: INIT=r	 : sr_sr_6
+  implementation constraint: INIT=r	 : sr_sr_5
+  implementation constraint: INIT=r	 : sr_sr_4
+  implementation constraint: INIT=r	 : sr_sr_3
+  implementation constraint: INIT=r	 : sr_sr_2
+  implementation constraint: INIT=r	 : sr_sr_1
+  implementation constraint: INIT=r	 : sr_di_0
+  implementation constraint: INIT=r	 : sr_di_1
+  implementation constraint: INIT=r	 : sr_di_2
+  implementation constraint: INIT=r	 : sr_di_3
+  implementation constraint: INIT=r	 : sr_di_4
+  implementation constraint: INIT=r	 : sr_di_5
+  implementation constraint: INIT=r	 : sr_di_6
+  implementation constraint: INIT=r	 : sr_di_7
+  implementation constraint: INIT=r	 : sr_di_8
+  implementation constraint: INIT=r	 : sr_di_9
+  implementation constraint: INIT=r	 : sr_di_10
+  implementation constraint: INIT=r	 : sr_di_22
+  implementation constraint: INIT=r	 : sr_di_12
+  implementation constraint: INIT=r	 : sr_di_13
+  implementation constraint: INIT=r	 : sr_di_14
+  implementation constraint: INIT=r	 : sr_di_15
+  implementation constraint: INIT=r	 : sr_di_16
+  implementation constraint: INIT=r	 : sr_di_17
+  implementation constraint: INIT=r	 : sr_di_18
+  implementation constraint: INIT=r	 : sr_di_19
+  implementation constraint: INIT=r	 : sr_di_20
+  implementation constraint: INIT=r	 : sr_di_21
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : urukul.ngc
+Output Format                      : ngc
+Optimization Goal                  : SPEED
+Keep Hierarchy                     : no
+Target Technology                  : xc2c256-6-ft256
+
+Design Statistics
+# IOs                              : 139
+
+Cell Usage :
+# BELS                             : 268
+#      AND2                        : 110
+#      AND3                        : 6
+#      GND                         : 1
+#      INV                         : 89
+#      OR2                         : 60
+#      OR3                         : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 53
+#      FD                          : 23
+#      FDCE                        : 25
+#      FDPE                        : 5
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# IO Buffers                       : 134
+#      IBUF                        : 35
+#      IOBUFE                      : 2
+#      OBUF                        : 96
+#      OBUFE                       : 1
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 2.50 secs
+ 
+--> 
+
+
+Total memory usage is 513236 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   33 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
+

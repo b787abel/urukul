@@ -1,0 +1,342 @@
+
+----------------------------------------
+|  P a r t i t i o n    S u c c e e d  |
+----------------------------------------
+0 Group(s)
+
+GCLK0: 7=eem_io.p
+----------------- B l o c k 0 ------------------
+PLApt(56/56), Fanin(25/38), Clk(1/3), Bct(1/4), Pin(10/11), Mcell(16/16)
+PLApts[56/56] 15 202 205 207 8 204 270 208 6 203 209 132 134 50 51 52 162 163 46 47 48 136 137 160 161 42 43 
+              44 152 153 200 201 128 129 130 148 149 158 159 38 39 40 140 141 198 199 54 55 56 133 135 164 31 
+              165 4 17
+Fanins[25] clk_in_sel.n clk_mmcx_osc_sel.n N_PZ_445.n le_clk.n sr_di<13>.n sr_sr<10>.n sr_sr<11>.n 
+           sr_sr<12>.n sr_sr<13>.n sr_sr<14>.n sr_sr<15>.n sr_sr<9>.n dds_pll_lock_1.p dds_pll_lock_2.p 
+           dds_pll_lock_3.p eem_io.p eem_io_1.p eem_io_2.p eem_io_3.p eem_io_4.p eem_io_5.p eem_io_8.p 
+           ifc_mode<0>.p ifc_mode<1>.p ifc_mode<2>.p
+clk[1] eem_io 
+CTC: 
+CTR: 
+CTS: (pt=270) N_PZ_445' ;
+CTE: 
+vref: [0]
+Signal[18] [dds_cs_n(257),dds_cs_n(B3)] [tp(262),tp(A4)] [dds_sck(260),dds_sck(A2)] [tp_1(269),tp_1(A5)]  
+           [tp_2(268),tp_2(B5)] [clk_osc_en_n(271),clk_osc_en_n(B6)] [dds_drctl_1(259),dds_drctl_1(C4)]  
+           [dds_drhold_1(272),dds_drhold_1(C7)] [att_s_out<2>(E8)] [dds_sdo(A3)] [le_clk(267)]  
+           [sr_sr<14>(266)] [sr_sr<13>(265)] [sr_sr<12>(264)] [sr_sr<11>(263)] [sr_sr<10>(270)]  
+           [sr_sr<15>(261)] [N_PZ_445(258)] 
+Signal[18] [ 0: dds_cs_n(257) dds_cs_n(B3)  ][ 1: N_PZ_445(258) (B4)  ][ 2: dds_drctl_1(259) dds_drctl_1(C4)  
+            ][ 3: dds_sck(260) dds_sck(A2)  ][ 4: sr_sr<15>(261) dds_sdo(A3)  ][ 5: tp(262) tp(A4)  ][ 6:  
+           sr_sr<11>(263)  ][ 7: sr_sr<12>(264)  ][ 8: sr_sr<13>(265)  ][ 9: sr_sr<14>(266)  ][ 10:  
+           le_clk(267)  ][ 11: tp_2(268) tp_2(B5)  ][ 12: tp_1(269) tp_1(A5)  ][ 13: sr_sr<10>(270)  
+           att_s_out<2>(E8)  ][ 14: clk_osc_en_n(271) clk_osc_en_n(B6)  ][ 15: dds_drhold_1(272)  
+           dds_drhold_1(C7)  ]
+----------------- B l o c k 1 ------------------
+PLApt(56/56), Fanin(29/38), Clk(1/3), Bct(2/4), Pin(10/11), Mcell(15/16)
+PLApts[56/56] 6 203 209 206 131 233 229 268 236 123 118 124 125 144 145 196 197 119 120 121 150 151 194 195 
+              115 122 116 117 146 147 192 193 111 112 113 138 139 190 191 107 108 109 142 237 143 188 189 103 
+              104 98 105 186 187 250 251 37
+Fanins[29] N_PZ_442.n le_clk.n sr_di<12>.n sr_di<13>.n sr_di<16>.n sr_di<22>.n sr_di<23>.n sr_di<3>.n 
+           sr_sr<10>.n sr_sr<3>.n sr_sr<4>.n sr_sr<5>.n sr_sr<6>.n sr_sr<7>.n sr_sr<8>.n sr_sr<9>.n 
+           dds_pll_lock.p dds_smp_err.p dds_smp_err_1.p dds_smp_err_2.p dds_smp_err_3.p eem_io_1.p 
+           eem_io_15.p eem_io_3.p eem_io_4.p eem_io_5.p eem_io_6.p eem_io_8.p ifc_mode<1>.p
+clk[1] eem_io 
+CTC: (pt=131) le_clk ;
+CTR: 
+CTS: 
+CTE: (pt=268) N_PZ_442' ;
+vref: [0]
+Signal[17] [dds_profile_1<0>(273),dds_profile_1<0>(D3)] [dds_profile_1<1>(278),dds_profile_1<1>(D2)]  
+           [dds_profile_1<2>(288),dds_profile_1<2>(E2)] [dds_sdi(276),dds_sdi(B2)]  
+           [dds_io_update(285),dds_io_update(B1)] [dds_io_update_3(275),dds_io_update_3(E3)]  
+           [clk_div(284),clk_div(E5)] [dds_osk_1(274),dds_osk_1(C3)] [dds_pll_lock(E4)] [dds_smp_err(D4)]  
+           [sr_sr<9>(283)] [sr_sr<8>(282)] [sr_sr<7>(281)] [sr_sr<6>(280)] [sr_sr<5>(279)] [sr_sr<4>(287)]  
+           [sr_di<3>(286)] 
+Signal[17] [ 0: dds_profile_1<0>(273) dds_profile_1<0>(D3)  ][ 1: dds_osk_1(274) dds_osk_1(C3)  ][ 2:  
+           dds_io_update_3(275) dds_io_update_3(E3)  ][ 3: dds_sdi(276) dds_sdi(B2)  ][ 4: dds_smp_err(D4)  ] 
+           [ 5: dds_profile_1<1>(278) dds_profile_1<1>(D2)  ][ 6: sr_sr<5>(279)  ][ 7: sr_sr<6>(280)  ][ 8:  
+           sr_sr<7>(281)  ][ 9: sr_sr<8>(282)  ][ 10: sr_sr<9>(283)  ][ 11: clk_div(284) clk_div(E5)  ][ 12:  
+           dds_io_update(285) dds_io_update(B1)  ][ 13: sr_di<3>(286) dds_pll_lock(E4)  ][ 14: sr_sr<4>(287)  
+           (C1)  ][ 15: dds_profile_1<2>(288) dds_profile_1<2>(E2)  ]
+----------------- B l o c k 2 ------------------
+PLApt(47/56), Fanin(29/38), Clk(1/3), Bct(2/4), Pin(11/11), Mcell(16/16)
+PLApts[47/53] 260 261 264 265 131 9 271 18 75 76 23 77 156 33 157 241 5 242 95 96 97 176 35 177 244 32 245 99 
+              100 101 184 185 247 248 62 63 64 168 169 66 67 68 170 122 171 () () () () 37 () () 240
+Fanins[29] att_le<0>.n att_le<2>.n N_PZ_449.n le_clk.n sr_di<0>.n sr_di<1>.n sr_di<2>.n sr_sr<0>.n 
+           sr_sr<10>.n sr_sr<16>.n sr_sr<17>.n sr_sr<18>.n sr_sr<1>.n sr_sr<2>.n sr_sr<3>.n sr_sr<9>.n 
+           att_s_out<0>.p att_s_out<1>.p dds_drover.p dds_sdo.p eem_io.p eem_io_1.p eem_io_12.p eem_io_13.p 
+           eem_io_14.p eem_io_3.p eem_io_4.p eem_io_5.p ifc_mode<1>.p
+clk[1] eem_io 
+CTC: (pt=131) le_clk ;
+CTR: 
+CTS: (pt=271) N_PZ_449' ;
+CTE: 
+vref: [0]
+Signal[16] [att_le<0>(304),att_le<0>(E10)] [att_le<2>(301),att_le<2>(C8)]  
+           [dds_profile<1>(300),dds_profile<1>(B8)] [dds_profile<2>(302),dds_profile<2>(A8)]  
+           [att_clk(292),att_clk(E9)] [dds_led<0>(303),dds_led<0>(E11)] [att_s_in<0>(291),att_s_in<0>(B7)]  
+           [att_s_in<1>(294),att_s_in<1>(D8)] [att_s_in<2>(290),att_s_in<2>(D7)] [tp_3(289),tp_3(A6)]  
+           [tp_4(293),tp_4(A7)] [sr_sr<1>(299)] [sr_sr<2>(298)] [sr_sr<3>(297)] [sr_sr<17>(296)]  
+           [sr_sr<18>(295)] 
+Signal[16] [ 0: tp_3(289) tp_3(A6)  ][ 1: att_s_in<2>(290) att_s_in<2>(D7)  ][ 2: att_s_in<0>(291)  
+           att_s_in<0>(B7)  ][ 3: att_clk(292) att_clk(E9)  ][ 4: tp_4(293) tp_4(A7)  ][ 5: att_s_in<1>(294)  
+           att_s_in<1>(D8)  ][ 6: sr_sr<18>(295)  ][ 7: sr_sr<17>(296)  ][ 8: sr_sr<3>(297)  ][ 9:  
+           sr_sr<2>(298)  ][ 10: sr_sr<1>(299)  ][ 11: dds_profile<1>(300) dds_profile<1>(B8)  ][ 12:  
+           att_le<2>(301) att_le<2>(C8)  ][ 13: dds_profile<2>(302) dds_profile<2>(A8)  ][ 14:  
+           dds_led<0>(303) dds_led<0>(E11)  ][ 15: att_le<0>(304) att_le<0>(E10)  ]
+----------------- B l o c k 3 ------------------
+PLApt(56/56), Fanin(28/38), Clk(1/3), Bct(1/4), Pin(10/11), Mcell(16/16)
+PLApts[56/56] 13 218 221 223 131 12 226 230 8 220 224 228 231 53 6 219 225 227 232 10 30 222 235 70 71 61 72 
+              172 173 79 80 81 174 175 83 84 85 178 179 87 88 89 180 181 91 92 93 182 183 58 59 60 154 155 
+              166 167
+Fanins[28] dds_common_master_reset.n le_clk.n sr_di<12>.n sr_di<15>.n sr_di<16>.n sr_sr<15>.n sr_sr<16>.n 
+           sr_sr<17>.n sr_sr<18>.n sr_sr<19>.n sr_sr<20>.n sr_sr<21>.n sr_sr<22>.n sr_sr<23>.n eem_io.p 
+           eem_io_1.p eem_io_10.p eem_io_11.p eem_io_2.p eem_io_3.p eem_io_4.p eem_io_5.p eem_io_6.p 
+           eem_io_7.p ifc_mode<0>.p ifc_mode<1>.p ifc_mode<3>.p variant.p
+clk[1] eem_io 
+CTC: (pt=131) le_clk ;
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[17] [clk_in_sel(310),clk_in_sel(G5)] [dds_cs_n_2(319),dds_cs_n_2(H1)]  
+           [dds_cs_n_3(307),dds_cs_n_3(G4)] [dds_sck_2(317),dds_sck_2(H4)] [dds_sck_3(316),dds_sck_3(H2)]  
+           [dds_sdi_2(318),dds_sdi_2(H3)] [dds_sdi_3(309),dds_sdi_3(F5)] [dds_reset_1(305),dds_reset_1(F2)]  
+           [dds_io_update_2(320),dds_io_update_2(H5)] [dds_sdo_3(G3)] [sr_sr<19>(315)] [sr_sr<20>(314)]  
+           [sr_sr<21>(313)] [sr_sr<22>(312)] [sr_sr<23>(311)] [sr_sr<16>(308)] [sr_di<15>(306)] 
+Signal[17] [ 0: dds_reset_1(305) dds_reset_1(F2)  ][ 1: sr_di<15>(306) (F3)  ][ 2: dds_cs_n_3(307)  
+           dds_cs_n_3(G4)  ][ 3: sr_sr<16>(308) dds_sdo_3(G3)  ][ 4: dds_sdi_3(309) dds_sdi_3(F5)  ][ 5:  
+           clk_in_sel(310) clk_in_sel(G5)  ][ 6: sr_sr<23>(311)  ][ 7: sr_sr<22>(312)  ][ 8: sr_sr<21>(313)  
+            ][ 9: sr_sr<20>(314)  ][ 10: sr_sr<19>(315)  ][ 11: dds_sck_3(316) dds_sck_3(H2)  ][ 12:  
+           dds_sck_2(317) dds_sck_2(H4)  ][ 13: dds_sdi_2(318) dds_sdi_2(H3)  ][ 14: dds_cs_n_2(319)  
+           dds_cs_n_2(H1)  ][ 15: dds_io_update_2(320) dds_io_update_2(H5)  ]
+----------------- B l o c k 4 ------------------
+PLApt(13/56), Fanin(13/38), Clk(1/3), Bct(1/4), Pin(10/11), Mcell(16/16)
+PLApts[13/56] () () () () 131 () () () () () 269 () () () () () () () () 90 () () 122 () () 86 () () 57 () () 
+              49 () () 45 () () 41 () () 36 () () 74 () () () () () () () () 118 () () 34
+Fanins[13] N_PZ_445.n le_clk.n sr_sr<0>.n sr_sr<12>.n sr_sr<13>.n sr_sr<14>.n sr_sr<16>.n sr_sr<1>.n 
+           sr_sr<22>.n sr_sr<23>.n sr_sr<8>.n sr_sr<9>.n att_s_out<2>.p
+clk[1] eem_io 
+CTC: (pt=131) le_clk ;
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[19] [dds_profile_2<0>(335),dds_profile_2<0>(M1)] [dds_profile_3<1>(325),dds_profile_3<1>(P1)]  
+           [att_s_in<3>(336),att_s_in<3>(L5)] [dds_drctl_3(333),dds_drctl_3(N1)]  
+           [dds_osk_3(323),dds_osk_3(N2)] [dds_drhold_2(334),dds_drhold_2(L4)]  
+           [dds_drhold_3(322),dds_drhold_3(N4)] [eem_io(M2)] [eem_io_12(R1)] [eem_io_8(M3)] [sr_di<0>(331)]  
+           [sr_di<12>(330)] [sr_di<13>(329)] [sr_di<14>(328)] [sr_di<16>(327)] [sr_di<1>(332)]  
+           [sr_di<22>(326)] [sr_di<23>(324)] [sr_sdo(321)] 
+Signal[19] [ 0: sr_sdo(321) eem_io_12(R1)  ][ 1: dds_drhold_3(322) dds_drhold_3(N4)  ][ 2: dds_osk_3(323)  
+           dds_osk_3(N2)  ][ 3: sr_di<23>(324) eem_io_8(M3)  ][ 4: dds_profile_3<1>(325)  
+           dds_profile_3<1>(P1)  ][ 5: sr_di<22>(326) eem_io(M2)  ][ 6: sr_di<16>(327)  ][ 7: sr_di<14>(328)  
+            ][ 8: sr_di<13>(329)  ][ 9: sr_di<12>(330)  ][ 10: sr_di<0>(331)  ][ 11: sr_di<1>(332) (L3)  ] 
+           [ 12: dds_drctl_3(333) dds_drctl_3(N1)  ][ 13: dds_drhold_2(334) dds_drhold_2(L4)  ][ 14:  
+           dds_profile_2<0>(335) dds_profile_2<0>(M1)  ][ 15: att_s_in<3>(336) att_s_in<3>(L5)  ]
+----------------- B l o c k 5 ------------------
+PLApt(16/56), Fanin(20/38), Clk(0/3), Bct(1/4), Pin(9/11), Mcell(13/16)
+PLApts[16/53] 214 234 3 16 131 238 239 () () () 118 () () 37 () () () () () () () () () () () () () () 114 () 
+              () 110 () () 106 () () 102 () () 94 () () () () () () () () 2 () () 37
+Fanins[20] le_clk.n sr_di<12>.n sr_di<14>.n sr_di<22>.n sr_di<23>.n sr_sr<10>.n sr_sr<2>.n sr_sr<4>.n 
+           sr_sr<5>.n sr_sr<6>.n sr_sr<7>.n sr_sr<8>.n eem_io_3.p eem_io_4.p eem_io_5.p eem_io_6.p 
+           ifc_mode<0>.p ifc_mode<1>.p ifc_mode<2>.p variant.p
+clk[0] 
+CTC: (pt=131) le_clk ;
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[16] [dds_profile_2<2>(351),dds_profile_2<2>(M5)] [dds_profile_3<0>(337),dds_profile_3<0>(N3)]  
+           [dds_profile_3<2>(338),dds_profile_3<2>(P2)] [dds_io_update_1(339),dds_io_update_1(P4)]  
+           [eem_oe_10(350),eem_oe_10(R4)] [eem_oe_11(352),eem_oe_11(R5)] [eem_io_11(R2)] [eem_io_13(T1)]  
+           [eem_io_14(T2)] [sr_di<2>(347)] [sr_di<4>(346)] [sr_di<5>(345)] [sr_di<6>(344)] [sr_di<7>(343)]  
+           [N_PZ_449(349)] [N_PZ_442(348)] 
+Signal[16] [ 0: dds_profile_3<0>(337) dds_profile_3<0>(N3)  ][ 1: dds_profile_3<2>(338) dds_profile_3<2>(P2)  
+            ][ 2: dds_io_update_1(339) dds_io_update_1(P4)  ][ 3: (P5)  ][ 4: eem_io_11(R2)  ][ 5:  
+           eem_io_13(T1)  ][ 6: sr_di<7>(343)  ][ 7: sr_di<6>(344)  ][ 8: sr_di<5>(345)  ][ 9: sr_di<4>(346)  
+            ][ 10: sr_di<2>(347)  ][ 11: N_PZ_442(348) eem_io_14(T2)  ][ 12: N_PZ_449(349) (N5)  ][ 13:  
+           eem_oe_10(350) eem_oe_10(R4)  ][ 14: dds_profile_2<2>(351) dds_profile_2<2>(M5)  ][ 15:  
+           eem_oe_11(352) eem_oe_11(R5)  ]
+----------------- B l o c k 6 ------------------
+PLApt(13/56), Fanin(11/38), Clk(1/3), Bct(1/4), Pin(11/12), Mcell(6/16)
+PLApts[13/13] 266 267 14 210 213 215 271 8 212 216 6 211 217
+Fanins[11] att_le<3>.n N_PZ_449.n sr_di<14>.n eem_io.p eem_io_1.p eem_io_2.p eem_io_3.p eem_io_4.p eem_io_5.p 
+           eem_io_9.p ifc_mode<1>.p
+clk[1] eem_io 
+CTC: 
+CTR: 
+CTS: (pt=271) N_PZ_449' ;
+CTE: 
+vref: [0]
+Signal[11] [att_le<3>(353),att_le<3>(K4)] [dds_cs_n_1(363),dds_cs_n_1(J4)] [dds_sck_1(355),dds_sck_1(K3)]  
+           [dds_sdi_1(357),dds_sdi_1(K5)] [dds_drctl_2(364),dds_drctl_2(K1)] [dds_osk_2(356),dds_osk_2(L1)]  
+           [dds_pll_lock_1(K2)] [dds_sdo_1(J3)] [dds_sdo_2(J2)] [dds_smp_err_1(J1)] [eem_io_9(J5)] 
+Signal[11] [ 0: att_le<3>(353) att_le<3>(K4)  ][ 1: (L2)  ][ 2: dds_sck_1(355) dds_sck_1(K3)  ][ 3:  
+           dds_osk_2(356) dds_osk_2(L1)  ][ 4: dds_sdi_1(357) dds_sdi_1(K5)  ][ 5: dds_pll_lock_1(K2)  ][ 6:  
+            ][ 7:  ][ 8:  ][ 9:  ][ 10: dds_cs_n_1(363) dds_cs_n_1(J4)  ][ 11: dds_drctl_2(364)  
+           dds_drctl_2(K1)  ][ 12: dds_sdo_1(J3)  ][ 13: dds_sdo_2(J2)  ][ 14: eem_io_9(J5)  ][ 15:  
+           dds_smp_err_1(J1)  ]
+----------------- B l o c k 7 ------------------
+PLApt(6/56), Fanin(7/38), Clk(0/3), Bct(2/4), Pin(12/12), Mcell(7/16)
+PLApts[6/20] 19 20 () () 131 () () 2 () () () () () () () () 11 () () 122
+Fanins[ 7] le_clk.n sr_sr<9>.n eem_io_6.p ifc_mode<0>.p ifc_mode<1>.p ifc_mode<2>.p variant.p
+clk[0] 
+CTC: (pt=131) le_clk ;
+CTR: 
+CTS: 
+CTE: (pt=2) ifc_mode<2> ifc_mode<1>' ;
+vref: [0]
+Signal[12] [dds_profile_2<1>(372),dds_profile_2<1>(M6)] [dds_sync_clk_out_en(381),dds_sync_clk_out_en(T5)]  
+           [dds_sync_sync_out_en(369),dds_sync_sync_out_en(R6)] [eem_io_10(371),eem_io_10(R3)]  
+           [eem_oe_12(384),eem_oe_12(M7)] [eem_oe_8(383),eem_oe_8(R7)] [eem_oe_9(379),eem_oe_9(T4)]  
+           [dds_pll_lock_2(N7)] [dds_pll_lock_3(P7)] [dds_smp_err_2(P6)] [dds_smp_err_3(N6)] [eem_io_15(T3)] 
+Signal[12] [ 0: dds_sync_sync_out_en(369) dds_sync_sync_out_en(R6)  ][ 1: dds_smp_err_3(N6)  ][ 2:  
+           eem_io_10(371) eem_io_10(R3)  ][ 3: dds_profile_2<1>(372) dds_profile_2<1>(M6)  ][ 4:  
+           eem_io_15(T3)  ][ 5: dds_smp_err_2(P6)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10: eem_oe_9(379)  
+           eem_oe_9(T4)  ][ 11: dds_pll_lock_3(P7)  ][ 12: dds_sync_clk_out_en(381) dds_sync_clk_out_en(T5)  
+            ][ 13: dds_pll_lock_2(N7)  ][ 14: eem_oe_8(383) eem_oe_8(R7)  ][ 15: eem_oe_12(384)  
+           eem_oe_12(M7)  ]
+----------------- B l o c k 8 ------------------
+PLApt(11/56), Fanin(17/38), Clk(0/3), Bct(1/4), Pin(11/12), Mcell(10/16)
+PLApts[11/56] 256 257 10 30 131 () () () () () () () () () () () () () () () () () 243 () () () () () () () 
+              () () () () () () () () () () 240 () () 246 () () () () () 243 () () 82 () () 249
+Fanins[17] dds_common_master_reset.n le_clk.n sr_di<0>.n sr_di<1>.n sr_di<2>.n sr_di<3>.n sr_di<6>.n 
+           sr_sr<21>.n dds_pll_lock_2.p dds_smp_err_2.p eem_io_12.p eem_io_13.p eem_io_14.p eem_io_15.p 
+           eem_io_7.p ifc_mode<0>.p variant.p
+clk[0] 
+CTC: (pt=131) le_clk ;
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[11] [clk_mmcx_osc_sel(399),clk_mmcx_osc_sel(C11)] [dds_led_2<1>(386),dds_led_2<1>(B14)]  
+           [dds_reset(385),dds_reset(B13)] [dds_led_1<0>(398),dds_led_1<0>(A13)]  
+           [dds_led_2<0>(396),dds_led_2<0>(A14)] [dds_led_3<0>(400),dds_led_3<0>(A12)]  
+           [dds_rf_sw(395),dds_rf_sw(D13)] [dds_rf_sw_1(389),dds_rf_sw_1(C12)] [dds_osk(387),dds_osk(C13)]  
+           [dds_drhold(397),dds_drhold(E13)] [variant(A15)] 
+Signal[11] [ 0: dds_reset(385) dds_reset(B13)  ][ 1: dds_led_2<1>(386) dds_led_2<1>(B14)  ][ 2: dds_osk(387)  
+           dds_osk(C13)  ][ 3: variant(A15)  ][ 4: dds_rf_sw_1(389) dds_rf_sw_1(C12)  ][ 5: (B12)  ][ 6:  ] 
+           [ 7:  ][ 8:  ][ 9:  ][ 10: dds_rf_sw(395) dds_rf_sw(D13)  ][ 11: dds_led_2<0>(396)  
+           dds_led_2<0>(A14)  ][ 12: dds_drhold(397) dds_drhold(E13)  ][ 13: dds_led_1<0>(398)  
+           dds_led_1<0>(A13)  ][ 14: clk_mmcx_osc_sel(399) clk_mmcx_osc_sel(C11)  ][ 15: dds_led_3<0>(400)  
+           dds_led_3<0>(A12)  ]
+----------------- B l o c k 9 ------------------
+PLApt(0/56), Fanin(0/38), Clk(0/3), Bct(0/4), Pin(5/12), Mcell(1/16)
+PLApts[0/0]
+Fanins[ 0]
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 5] [dds_drctl(403),dds_drctl(C14)] [ifc_mode<0>(E14)] [ifc_mode<1>(B16)] [ifc_mode<2>(A16)]  
+           [ifc_mode<3>(B15)] 
+Signal[ 5] [ 0: ifc_mode<2>(A16)  ][ 1: ifc_mode<3>(B15)  ][ 2: dds_drctl(403) dds_drctl(C14)  ][ 3: (G11)  ] 
+           [ 4: ifc_mode<1>(B16)  ][ 5: (D15)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10: ifc_mode<0>(E14)  ][ 11:  
+           (C16)  ][ 12: (F14)  ][ 13: (F13)  ][ 14: (E15)  ][ 15: (G13)  ]
+----------------- B l o c k 10 ------------------
+PLApt(11/56), Fanin(18/38), Clk(0/3), Bct(1/4), Pin(10/12), Mcell(7/16)
+PLApts[11/56] 252 253 254 255 131 258 259 () () () () () () () () () () () () 246 () () () () () () () () () 
+              () () () () () () () () () () () () () () 78 () () () () () () () () 118 () () 249
+Fanins[18] le_clk.n sr_di<2>.n sr_di<3>.n sr_di<4>.n sr_di<5>.n sr_di<7>.n sr_sr<20>.n sr_sr<8>.n 
+           dds_pll_lock.p dds_pll_lock_1.p dds_pll_lock_3.p dds_smp_err.p dds_smp_err_1.p dds_smp_err_3.p 
+           eem_io_14.p eem_io_15.p ifc_mode<0>.p variant.p
+clk[0] 
+CTC: (pt=131) le_clk ;
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[10] [dds_common_io_reset(428),dds_common_io_reset(B9)] [dds_profile<0>(431),dds_profile<0>(A9)]  
+           [dds_led<1>(421),dds_led<1>(B10)] [dds_led_1<1>(419),dds_led_1<1>(A11)]  
+           [dds_led_3<1>(417),dds_led_3<1>(B11)] [dds_rf_sw_2(420),dds_rf_sw_2(D10)]  
+           [dds_rf_sw_3(432),dds_rf_sw_3(D9)] [att_s_out<0>(C10)] [att_s_out<1>(C9)] [dds_drover(D11)] 
+Signal[10] [ 0: dds_led_3<1>(417) dds_led_3<1>(B11)  ][ 1: dds_drover(D11)  ][ 2: dds_led_1<1>(419)  
+           dds_led_1<1>(A11)  ][ 3: dds_rf_sw_2(420) dds_rf_sw_2(D10)  ][ 4: dds_led<1>(421) dds_led<1>(B10)  
+            ][ 5: (E12)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10: (F12)  ][ 11: dds_common_io_reset(428)  
+           dds_common_io_reset(B9)  ][ 12: att_s_out<1>(C9)  ][ 13: att_s_out<0>(C10)  ][ 14:  
+           dds_profile<0>(431) dds_profile<0>(A9)  ][ 15: dds_rf_sw_3(432) dds_rf_sw_3(D9)  ]
+----------------- B l o c k 11 ------------------
+PLApt(2/56), Fanin(2/38), Clk(0/3), Bct(1/4), Pin(1/12), Mcell(1/16)
+PLApts[2/23] () () () () 131 () () () () () () () () () () () () () () () () () 69
+Fanins[ 2] le_clk.n sr_sr<19>.n
+clk[0] 
+CTC: (pt=131) le_clk ;
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 1] [dds_common_master_reset(437),dds_common_master_reset(F16)] 
+Signal[ 1] [ 0: (F15)  ][ 1: (G14)  ][ 2: (E16)  ][ 3: (H12)  ][ 4: dds_common_master_reset(437)  
+           dds_common_master_reset(F16)  ][ 5: (H16)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10: (G15)  ][ 11: (H13)  
+            ][ 12: (G16)  ][ 13: (H14)  ][ 14: (H15)  ][ 15: (J12)  ]
+----------------- B l o c k 12 ------------------
+PLApt(11/56), Fanin(10/38), Clk(0/3), Bct(1/4), Pin(7/11), Mcell(5/16)
+PLApts[11/11] 21 22 24 25 26 27 28 1 29 126 127
+Fanins[10] sr_sdo.n att_s_out<3>.p dds_sdo.p dds_sdo_1.p dds_sdo_2.p dds_sdo_3.p eem_io_3.p eem_io_4.p 
+           eem_io_5.p ifc_mode<1>.p
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: (pt=1) ifc_mode<1>' ;
+vref: [0]
+Signal[ 7] [eem_io_2(450),eem_io_2(T16)] [fsen(453),fsen(N15)] [eem_oe_1(454),eem_oe_1(M15)]  
+           [eem_oe_3(462),eem_oe_3(N16)] [eem_oe_7(461),eem_oe_7(P16)] [eem_io_3(R16)] [eem_io_4(R15)] 
+Signal[ 7] [ 0: eem_io_4(R15)  ][ 1: eem_io_2(450) eem_io_2(T16)  ][ 2: (N14)  ][ 3: eem_io_3(R16)  ][ 4:  
+           fsen(453) fsen(N15)  ][ 5: eem_oe_1(454) eem_oe_1(M15)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10:  ] 
+           [ 11: (M13)  ][ 12: eem_oe_7(461) eem_oe_7(P16)  ][ 13: eem_oe_3(462) eem_oe_3(N16)  ][ 14: (L14)  
+            ][ 15: (M14)  ]
+----------------- B l o c k 13 ------------------
+PLApt(1/56), Fanin(1/38), Clk(1/3), Bct(0/4), Pin(5/11), Mcell(2/16)
+PLApts[1/20] () () () () () () () () () () () () () () () () () () () 269
+Fanins[ 1] N_PZ_445.n
+clk[1] eem_io 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 6] [eem_oe(465),eem_oe(P15)] [eem_io_5(R14)] [eem_io_6(R12)] [eem_io_7(T15)]  
+           [sr_sr<0>,eem_io_1(R13)] 
+Signal[ 6] [ 0: eem_oe(465) eem_oe(P15)  ][ 1: (P14)  ][ 2: (P13)  ][ 3: sr_sr<0>(468) eem_io_1(R13)  ][ 4:  
+           (N13)  ][ 5: eem_io_5(R14)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10:  ][ 11: eem_io_7(T15)  ][ 12:  
+           eem_io_6(R12)  ][ 13: (N11)  ][ 14: (M11)  ][ 15: (N10)  ]
+----------------- B l o c k 14 ------------------
+PLApt(1/56), Fanin(1/38), Clk(0/3), Bct(0/4), Pin(4/12), Mcell(4/16)
+PLApts[1/41] () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () 
+             () () () () () () () () 1
+Fanins[ 1] ifc_mode<1>.p
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 4] [eem_oe_2(491),eem_oe_2(K15)] [eem_oe_4(481),eem_oe_4(L15)] [eem_oe_5(484),eem_oe_5(M16)]  
+           [eem_oe_6(486),eem_oe_6(L16)] 
+Signal[ 4] [ 0: eem_oe_4(481) eem_oe_4(L15)  ][ 1: (L13)  ][ 2: (M12)  ][ 3: eem_oe_5(484) eem_oe_5(M16)  ] 
+           [ 4: (K14)  ][ 5: eem_oe_6(486) eem_oe_6(L16)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10: eem_oe_2(491)  
+           eem_oe_2(K15)  ][ 11: (L12)  ][ 12: (K16)  ][ 13: (J14)  ][ 14: (J15)  ][ 15: (J13)  ]
+----------------- B l o c k 15 ------------------
+PLApt(8/56), Fanin(13/38), Clk(1/3), Bct(2/4), Pin(9/12), Mcell(8/16)
+PLApts[8/23] 262 263 10 30 131 () 271 () () () () () () () () () 65 () () () () () 73
+Fanins[13] att_le<1>.n dds_common_master_reset.n N_PZ_449.n le_clk.n sr_sr<18>.n sr_sr<19>.n eem_io_3.p 
+           eem_io_4.p eem_io_5.p eem_io_7.p ifc_mode<0>.p ifc_mode<1>.p variant.p
+clk[1] eem_io 
+CTC: (pt=131) le_clk ;
+CTR: 
+CTS: (pt=271) N_PZ_449' ;
+CTE: 
+vref: [0]
+Signal[ 9] [att_le<1>(508),att_le<1>(P8)] [att_rst_n(501),att_rst_n(N9)]  
+           [dds_sync_sync_sel(499),dds_sync_sync_sel(T10)] [dds_reset_2(498),dds_reset_2(R10)]  
+           [dds_reset_3(507),dds_reset_3(T8)] [eem_oe_13(509),eem_oe_13(R8)] [eem_oe_14(510),eem_oe_14(T7)]  
+           [eem_oe_15(502),eem_oe_15(M8)] [att_s_out<3>(R9)] 
+Signal[ 9] [ 0: (P10)  ][ 1: dds_reset_2(498) dds_reset_2(R10)  ][ 2: dds_sync_sync_sel(499)  
+           dds_sync_sync_sel(T10)  ][ 3: att_s_out<3>(R9)  ][ 4: att_rst_n(501) att_rst_n(N9)  ][ 5:  
+           eem_oe_15(502) eem_oe_15(M8)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10: dds_reset_3(507) dds_reset_3(T8)  
+            ][ 11: att_le<1>(508) att_le<1>(P8)  ][ 12: eem_oe_13(509) eem_oe_13(R8)  ][ 13: eem_oe_14(510)  
+           eem_oe_14(T7)  ][ 14: (N8)  ][ 15: (T6)  ]

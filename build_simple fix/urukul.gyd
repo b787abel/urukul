@@ -1,0 +1,211 @@
+Pin Freeze File:  version P.20131013
+
+2C256256 XC2C256-6-FT256
+att_s_out<0> S:PINC10
+att_s_out<1> S:PINC9
+att_s_out<2> S:PINE8
+att_s_out<3> S:PINR9
+dds_drover S:PIND11
+dds_pll_lock_1 S:PINK2
+dds_pll_lock_2 S:PINN7
+dds_pll_lock_3 S:PINP7
+dds_pll_lock S:PINE4
+dds_sdo_1 S:PINJ3
+dds_sdo_2 S:PINJ2
+dds_sdo_3 S:PING3
+dds_sdo S:PINA3
+dds_smp_err_1 S:PINJ1
+dds_smp_err_2 S:PINP6
+dds_smp_err_3 S:PINN6
+dds_smp_err S:PIND4
+eem_io_11 S:PINR2
+eem_io_12 S:PINR1
+eem_io_13 S:PINT1
+eem_io_14 S:PINT2
+eem_io_15 S:PINT3
+eem_io_1 S:PINR13
+eem_io_3 S:PINR16
+eem_io_4 S:PINR15
+eem_io_5 S:PINR14
+eem_io_6 S:PINR12
+eem_io_7 S:PINT15
+eem_io_8 S:PINM3
+eem_io_9 S:PINJ5
+eem_io S:PINM2
+ifc_mode<0> S:PINE14
+ifc_mode<1> S:PINB16
+ifc_mode<2> S:PINA16
+ifc_mode<3> S:PINB15
+variant S:PINA15
+att_clk S:PINE9
+att_le<0> S:PINE10
+att_le<1> S:PINP8
+att_le<2> S:PINC8
+att_le<3> S:PINK4
+att_rst_n S:PINN9
+att_s_in<0> S:PINB7
+att_s_in<1> S:PIND8
+att_s_in<2> S:PIND7
+att_s_in<3> S:PINL5
+clk_div S:PINE5
+clk_in_sel S:PING5
+clk_mmcx_osc_sel S:PINC11
+clk_osc_en_n S:PINB6
+dds_common_io_reset S:PINB9
+dds_common_master_reset S:PINF16
+dds_cs_n_1 S:PINJ4
+dds_cs_n_2 S:PINH1
+dds_cs_n_3 S:PING4
+dds_cs_n S:PINB3
+dds_drctl_1 S:PINC4
+dds_drctl_2 S:PINK1
+dds_drctl_3 S:PINN1
+dds_drctl S:PINC14
+dds_drhold_1 S:PINC7
+dds_drhold_2 S:PINL4
+dds_drhold_3 S:PINN4
+dds_drhold S:PINE13
+dds_io_update_1 S:PINP4
+dds_io_update_2 S:PINH5
+dds_io_update_3 S:PINE3
+dds_io_update S:PINB1
+dds_led<0> S:PINE11
+dds_led<1> S:PINB10
+dds_led_1<0> S:PINA13
+dds_led_1<1> S:PINA11
+dds_led_2<0> S:PINA14
+dds_led_2<1> S:PINB14
+dds_led_3<0> S:PINA12
+dds_led_3<1> S:PINB11
+dds_osk_1 S:PINC3
+dds_osk_2 S:PINL1
+dds_osk_3 S:PINN2
+dds_osk S:PINC13
+dds_profile<0> S:PINA9
+dds_profile<1> S:PINB8
+dds_profile<2> S:PINA8
+dds_profile_1<0> S:PIND3
+dds_profile_1<1> S:PIND2
+dds_profile_1<2> S:PINE2
+dds_profile_2<0> S:PINM1
+dds_profile_2<1> S:PINM6
+dds_profile_2<2> S:PINM5
+dds_profile_3<0> S:PINN3
+dds_profile_3<1> S:PINP1
+dds_profile_3<2> S:PINP2
+dds_reset_1 S:PINF2
+dds_reset_2 S:PINR10
+dds_reset_3 S:PINT8
+dds_reset S:PINB13
+dds_rf_sw_1 S:PINC12
+dds_rf_sw_2 S:PIND10
+dds_rf_sw_3 S:PIND9
+dds_rf_sw S:PIND13
+dds_sck_1 S:PINK3
+dds_sck_2 S:PINH4
+dds_sck_3 S:PINH2
+dds_sck S:PINA2
+dds_sdi_1 S:PINK5
+dds_sdi_2 S:PINH3
+dds_sdi_3 S:PINF5
+dds_sdi S:PINB2
+dds_sync_clk_out_en S:PINT5
+dds_sync_sync_out_en S:PINR6
+dds_sync_sync_sel S:PINT10
+eem_io_10 S:PINR3
+eem_io_2 S:PINT16
+eem_oe_10 S:PINR4
+eem_oe_11 S:PINR5
+eem_oe_12 S:PINM7
+eem_oe_13 S:PINR8
+eem_oe_14 S:PINT7
+eem_oe_15 S:PINM8
+eem_oe_1 S:PINM15
+eem_oe_2 S:PINK15
+eem_oe_3 S:PINN16
+eem_oe_4 S:PINL15
+eem_oe_5 S:PINM16
+eem_oe_6 S:PINL16
+eem_oe_7 S:PINP16
+eem_oe_8 S:PINR7
+eem_oe_9 S:PINT4
+eem_oe S:PINP15
+fsen S:PINN15
+tp_1 S:PINA5
+tp_2 S:PINB5
+tp_3 S:PINA6
+tp_4 S:PINA7
+tp S:PINA4
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_1 dds_cs_n N_PZ_445 dds_drctl_1 dds_sck
+		 sr_sr<15> tp sr_sr<11> sr_sr<12>
+		 sr_sr<13> sr_sr<14> le_clk tp_2
+		 tp_1 sr_sr<10> clk_osc_en_n dds_drhold_1
+		
+PARTITION FB2_1 dds_profile_1<0> dds_osk_1 dds_io_update_3 dds_sdi
+		
+PARTITION FB2_6 dds_profile_1<1> sr_sr<5> sr_sr<6> sr_sr<7>
+		 sr_sr<8> sr_sr<9> clk_div dds_io_update
+		 sr_di<3> sr_sr<4> dds_profile_1<2>
+PARTITION FB3_1 tp_3 att_s_in<2> att_s_in<0> att_clk
+		 tp_4 att_s_in<1> sr_sr<18> sr_sr<17>
+		 sr_sr<3> sr_sr<2> sr_sr<1> dds_profile<1>
+		 att_le<2> dds_profile<2> dds_led<0> att_le<0>
+		
+PARTITION FB4_1 dds_reset_1 sr_di<15> dds_cs_n_3 sr_sr<16>
+		 dds_sdi_3 clk_in_sel sr_sr<23> sr_sr<22>
+		 sr_sr<21> sr_sr<20> sr_sr<19> dds_sck_3
+		 dds_sck_2 dds_sdi_2 dds_cs_n_2 dds_io_update_2
+		
+PARTITION FB5_1 sr_sdo dds_drhold_3 dds_osk_3 sr_di<23>
+		 dds_profile_3<1> sr_di<22> sr_di<16> sr_di<14>
+		 sr_di<13> sr_di<12> sr_di<0> sr_di<1>
+		 dds_drctl_3 dds_drhold_2 dds_profile_2<0> att_s_in<3>
+		
+PARTITION FB6_1 dds_profile_3<0> dds_profile_3<2> dds_io_update_1
+PARTITION FB6_7 sr_di<7> sr_di<6> sr_di<5> sr_di<4>
+		 sr_di<2> N_PZ_442 N_PZ_449 eem_oe_10
+		 dds_profile_2<2> eem_oe_11
+PARTITION FB7_1 att_le<3>
+PARTITION FB7_3 dds_sck_1 dds_osk_2 dds_sdi_1
+PARTITION FB7_11 dds_cs_n_1 dds_drctl_2
+
+PARTITION FB8_1 dds_sync_sync_out_en
+PARTITION FB8_3 eem_io_10 dds_profile_2<1>
+PARTITION FB8_11 eem_oe_9
+PARTITION FB8_13 dds_sync_clk_out_en
+PARTITION FB8_15 eem_oe_8 eem_oe_12
+PARTITION FB9_1 dds_reset dds_led_2<1> dds_osk
+PARTITION FB9_5 dds_rf_sw_1
+PARTITION FB9_11 dds_rf_sw dds_led_2<0> dds_drhold dds_led_1<0>
+		 clk_mmcx_osc_sel dds_led_3<0>
+PARTITION FB10_3 dds_drctl
+
+PARTITION FB11_1 dds_led_3<1>
+PARTITION FB11_3 dds_led_1<1> dds_rf_sw_2 dds_led<1>
+PARTITION FB11_12 dds_common_io_reset
+PARTITION FB11_15 dds_profile<0> dds_rf_sw_3
+PARTITION FB12_5 dds_common_master_reset
+
+PARTITION FB13_2 eem_io_2
+PARTITION FB13_5 fsen eem_oe_1
+PARTITION FB13_13 eem_oe_7 eem_oe_3
+
+PARTITION FB14_1 eem_oe
+PARTITION FB14_4 sr_sr<0>
+
+PARTITION FB15_1 eem_oe_4
+PARTITION FB15_4 eem_oe_5
+PARTITION FB15_6 eem_oe_6
+PARTITION FB15_11 eem_oe_2
+
+PARTITION FB16_2 dds_reset_2 dds_sync_sync_sel
+PARTITION FB16_5 att_rst_n eem_oe_15
+PARTITION FB16_11 dds_reset_3 att_le<1> eem_oe_13 eem_oe_14
+		
+
+

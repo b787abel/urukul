@@ -1,0 +1,1925 @@
+ 
+cpldfit:  version P.20131013                        Xilinx Inc.
+                                  Fitter Report
+Design Name: urukul                              Date:  3-14-2023,  3:29PM
+Device Used: XC2C256-6-FT256
+Fitting Status: Successful
+
+*************************  Mapped Resource Summary  **************************
+
+Macrocells     Product Terms    Function Block   Registers      Pins           
+Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
+143/256 ( 56%) 308 /896  ( 34%) 224 /640  ( 35%) 63 /256 ( 25%) 135/184 ( 73%)
+
+** Function Block Resources **
+
+Function Mcells   FB Inps  Pterms   IO       CTC      CTR      CTS      CTE     
+Block    Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot
+FB1      16/16*    25/40    56/56*    8/11    0/1      0/1      1/1*     0/1
+FB2      15/16     29/40    56/56*    8/11    1/1*     0/1      0/1      1/1*
+FB3      16/16*    29/40    47/56    11/11*   1/1*     0/1      1/1*     0/1
+FB4      16/16*    28/40    56/56*    9/11    1/1*     0/1      0/1      0/1
+FB5      16/16*    13/40    13/56     7/11    1/1*     0/1      0/1      0/1
+FB6      13/16     20/40    16/56     6/11    1/1*     0/1      0/1      0/1
+FB7       6/16     11/40    13/56     6/12    0/1      0/1      1/1*     0/1
+FB8       7/16      7/40     6/56     7/12    1/1*     0/1      0/1      1/1*
+FB9      10/16     17/40    11/56    10/12    1/1*     0/1      0/1      0/1
+FB10      1/16      0/40     0/56     1/12    0/1      0/1      0/1      0/1
+FB11      7/16     18/40    11/56     7/12    1/1*     0/1      0/1      0/1
+FB12      1/16      2/40     2/56     1/12    1/1*     0/1      0/1      0/1
+FB13      5/16     10/40    11/56     5/11    0/1      0/1      0/1      1/1*
+FB14      2/16      1/40     1/56     1/11    0/1      0/1      0/1      0/1
+FB15      4/16      1/40     1/56     4/12    0/1      0/1      0/1      0/1
+FB16      8/16     13/40     8/56     8/12    1/1*     0/1      1/1*     0/1
+         -----    -------  -------   -----    ---      ---      ---      ---
+Total   143/256   224/640  308/896   99/184  10/16     0/16     4/16     3/16
+
+CTC - Control Term Clock
+CTR - Control Term Reset
+CTS - Control Term Set
+CTE - Control Term Output Enable
+
+* - Resource is exhausted
+
+** Global Control Resources **
+
+GCK         GSR         GTS         DGE         
+Used/Tot    Used/Tot    Used/Tot    Used/Tot    
+1/3         0/1         0/4         0/1
+
+Signal 'eem_io' mapped onto global clock net GCK0.
+
+** Pin Resources **
+
+Signal Type    Required     Mapped  |  Pin Type            Used    Total 
+------------------------------------|------------------------------------
+Input         :   35          35    |  I/O              :   126    174
+Output        :   97          97    |  GCK/IO           :     2      3
+Bidirectional :    2           2    |  GTS/IO           :     4      4
+GCK           :    1           1    |  GSR/IO           :     1      1
+GTS           :    0           0    |  CDR/IO           :     1      1
+GSR           :    0           0    |  DGE/IO           :     1      1
+                 ----        ----
+        Total    135         135
+
+End of Mapped Resource Summary
+**************************  Errors and Warnings  ***************************
+
+WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
+   use the default filename of 'urukul.ise'.
+INFO:Cpld - Inferring BUFG constraint for signal 'eem_io' based upon the LOC
+   constraint 'M2'. It is recommended that you declare this BUFG explicitedly in
+   your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
+INFO:Cpld - Inferring BUFG constraint for signal 'eem_io_8' based upon the LOC
+   constraint 'M3'. It is recommended that you declare this BUFG explicitedly in
+   your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
+INFO:Cpld - Inferring BUFG constraint for signal 'dds_sync_clk0' based upon the
+   LOC constraint 'P5'. It is recommended that you declare this BUFG
+   explicitedly in your design. Note that for certain device families the output
+   of a BUFG constraint can not drive a gated clock, and the BUFG constraint
+   will be ignored.
+WARNING:Cpld:1007 - Removing unused input(s) 'dds_drover_1'.  The input(s) are
+   unused after optimization. Please verify functionality via simulation.
+WARNING:Cpld:1007 - Removing unused input(s) 'dds_drover_2'.  The input(s) are
+   unused after optimization. Please verify functionality via simulation.
+WARNING:Cpld:1007 - Removing unused input(s) 'dds_drover_3'.  The input(s) are
+   unused after optimization. Please verify functionality via simulation.
+WARNING:Cpld:1007 - Removing unused input(s) 'dds_sync_clk0'.  The input(s) are
+   unused after optimization. Please verify functionality via simulation.
+WARNING:Cpld:1239 - The global clock designation (BUFG) on signal
+   'eem_io_8_IBUF' is ignored. Most likely the signal is gated and therefore
+   cannot be used as a global control signal.
+WARNING:Cpld:310 - Cannot apply TIMESPEC TSeem_io_2 =
+   PERIOD:PRDeem_io_2:8.000nS:HIGH:4.000nS because of one of the following: (a)
+   a signal name was not found; (b) a signal was removed or renamed due to
+   optimization; (c) there is no path between the FROM node and TO node in the
+   TIMESPEC.
+*************************  Summary of Mapped Logic  ************************
+
+** 99 Outputs **
+
+Signal                   Total Total Bank Loc     Pin   Pin       Pin     I/O      I/O       Slew Reg     Reg Init
+Name                     Pts   Inps               No.   Type      Use     STD      Style     Rate Use     State
+dds_cs_n                 4     5     2    FB1_1   B3    I/O       O       LVCMOS33           FAST         
+dds_drctl_1              0     0     2    FB1_3   C4    GSR/I/O   O       LVCMOS33           FAST         
+dds_sck                  3     4     2    FB1_4   A2    I/O       O       LVCMOS33           FAST         
+tp                       4     5     2    FB1_6   A4    I/O       O       LVCMOS33           FAST         
+tp_2                     3     4     2    FB1_12  B5    I/O       O       LVCMOS33           FAST         
+tp_1                     3     4     2    FB1_13  A5    I/O       O       LVCMOS33           FAST         
+clk_osc_en_n             1     2     2    FB1_15  B6    I/O       O       LVCMOS33           FAST         
+dds_drhold_1             0     0     2    FB1_16  C7    I/O       O       LVCMOS33           FAST         
+dds_profile_1<0>         2     2     2    FB2_1   D3    GTS/I/O   O       LVCMOS33           FAST DFF     RESET
+dds_osk_1                0     0     2    FB2_2   C3    I/O       O       LVCMOS33           FAST         
+dds_io_update_3          2     3     2    FB2_3   E3    GTS/I/O   O       LVCMOS33           FAST         
+dds_sdi                  3     4     2    FB2_4   B2    I/O       O       LVCMOS33           FAST         
+dds_profile_1<1>         2     2     2    FB2_6   D2    I/O       O       LVCMOS33           FAST DFF     RESET
+clk_div                  2     3     2    FB2_12  E5    GTS/I/O   O       LVCMOS33           FAST         
+dds_io_update            2     3     2    FB2_13  B1    I/O       O       LVCMOS33           FAST         
+dds_profile_1<2>         2     2     2    FB2_16  E2    I/O       O       LVCMOS33           FAST DFF     RESET
+tp_3                     1     1     2    FB3_1   A6    I/O       O       LVCMOS33           FAST         
+att_s_in<2>              1     1     2    FB3_2   D7    I/O       O       LVCMOS33           FAST         
+att_s_in<0>              1     1     2    FB3_3   B7    I/O       O       LVCMOS33           FAST         
+att_clk                  2     5     2    FB3_4   E9    I/O       O       LVCMOS33           FAST         
+tp_4                     1     1     2    FB3_5   A7    I/O       O       LVCMOS33           FAST         
+att_s_in<1>              1     1     2    FB3_6   D8    I/O       O       LVCMOS33           FAST         
+dds_profile<1>           2     2     2    FB3_12  B8    I/O       O       LVCMOS33           FAST DFF     RESET
+att_le<2>                3     6     2    FB3_13  C8    I/O       O       LVCMOS33           FAST TFF/S   SET
+dds_profile<2>           2     2     2    FB3_14  A8    I/O       O       LVCMOS33           FAST DFF     RESET
+dds_led<0>               1     2     2    FB3_15  E11   I/O       O       LVCMOS33           FAST         
+att_le<0>                3     6     2    FB3_16  E10   I/O       O       LVCMOS33           FAST TFF/S   SET
+dds_reset_1              2     4     2    FB4_1   F2    I/O       O       LVCMOS33           FAST         
+dds_cs_n_3               3     5     2    FB4_3   G4    I/O       O       LVCMOS33           FAST         
+dds_sdi_3                3     4     2    FB4_5   F5    I/O       O       LVCMOS33           FAST         
+clk_in_sel               2     2     2    FB4_6   G5    I/O       O       LVCMOS33           FAST DFF     RESET
+dds_sck_3                3     4     2    FB4_12  H2    I/O       O       LVCMOS33           FAST         
+dds_sck_2                3     4     2    FB4_13  H4    I/O       O       LVCMOS33           FAST         
+dds_sdi_2                3     4     2    FB4_14  H3    I/O       O       LVCMOS33           FAST         
+dds_cs_n_2               4     5     2    FB4_15  H1    I/O       O       LVCMOS33           FAST         
+dds_io_update_2          2     3     2    FB4_16  H5    I/O       O       LVCMOS33           FAST         
+dds_drhold_3             0     0     1    FB5_2   N4    I/O       O       LVCMOS33           FAST         
+dds_osk_3                0     0     1    FB5_3   N2    I/O       O       LVCMOS33           FAST         
+dds_profile_3<1>         2     2     1    FB5_5   P1    I/O       O       LVCMOS33           FAST DFF     RESET
+dds_drctl_3              0     0     1    FB5_13  N1    I/O       O       LVCMOS33           FAST         
+
+Signal                   Total Total Bank Loc     Pin   Pin       Pin     I/O      I/O       Slew Reg     Reg Init
+Name                     Pts   Inps               No.   Type      Use     STD      Style     Rate Use     State
+dds_drhold_2             0     0     1    FB5_14  L4    I/O       O       LVCMOS33           FAST         
+dds_profile_2<0>         2     2     1    FB5_15  M1    I/O       O       LVCMOS33           FAST DFF     RESET
+att_s_in<3>              1     1     1    FB5_16  L5    I/O       O       LVCMOS33           FAST         
+dds_profile_3<0>         2     2     1    FB6_1   N3    I/O       O       LVCMOS33           FAST DFF     RESET
+dds_profile_3<2>         2     2     1    FB6_2   P2    CDR/I/O   O       LVCMOS33           FAST DFF     RESET
+dds_io_update_1          2     3     1    FB6_3   P4    I/O       O       LVCMOS33           FAST         
+eem_oe_10                1     2     1    FB6_14  R4    I/O       O       LVCMOS33           FAST         
+dds_profile_2<2>         2     2     1    FB6_15  M5    I/O       O       LVCMOS33           FAST DFF     RESET
+eem_oe_11                0     0     1    FB6_16  R5    I/O       O       LVCMOS33           FAST         
+att_le<3>                3     6     1    FB7_1   K4    I/O       O       LVCMOS33           FAST TFF/S   SET
+dds_sck_1                3     4     1    FB7_3   K3    I/O       O       LVCMOS33           FAST         
+dds_osk_2                0     0     1    FB7_4   L1    I/O       O       LVCMOS33           FAST         
+dds_sdi_1                3     4     1    FB7_5   K5    I/O       O       LVCMOS33           FAST         
+dds_cs_n_1               4     5     1    FB7_11  J4    I/O       O       LVCMOS33           FAST         
+dds_drctl_2              0     0     1    FB7_12  K1    I/O       O       LVCMOS33           FAST         
+dds_sync_sync_out_en     2     4     1    FB8_1   R6    I/O       O       LVCMOS33           FAST         
+eem_io_10                2     3     1    FB8_3   R3    I/O       I/O     LVCMOS33           FAST         
+dds_profile_2<1>         2     2     1    FB8_4   M6    I/O       O       LVCMOS33           FAST DFF     RESET
+eem_oe_9                 0     0     1    FB8_11  T4    I/O       O       LVCMOS33           FAST         
+dds_sync_clk_out_en      2     4     1    FB8_13  T5    I/O       O       LVCMOS33           FAST         
+eem_oe_8                 0     0     1    FB8_15  R7    I/O       O       LVCMOS33           FAST         
+eem_oe_12                0     0     1    FB8_16  M7    I/O       O       LVCMOS33           FAST         
+dds_reset                2     4     2    FB9_1   B13   I/O       O       LVCMOS33           FAST         
+dds_led_2<1>             2     5     2    FB9_2   B14   I/O       O       LVCMOS33           FAST         
+dds_osk                  0     0     2    FB9_3   C13   I/O       O       LVCMOS33           FAST         
+dds_rf_sw_1              1     2     2    FB9_5   C12   I/O       O       LVCMOS33           FAST         
+dds_rf_sw                1     2     2    FB9_11  D13   I/O       O       LVCMOS33           FAST         
+dds_led_2<0>             1     2     2    FB9_12  A14   I/O       O       LVCMOS33           FAST         
+dds_drhold               0     0     2    FB9_13  E13   I/O       O       LVCMOS33           FAST         
+dds_led_1<0>             1     2     2    FB9_14  A13   I/O       O       LVCMOS33           FAST         
+clk_mmcx_osc_sel         2     2     2    FB9_15  C11   I/O       O       LVCMOS33           FAST DFF     RESET
+dds_led_3<0>             1     2     2    FB9_16  A12   I/O       O       LVCMOS33           FAST         
+dds_drctl                0     0     2    FB10_3  C14   I/O       O       LVCMOS33           FAST         
+dds_led_3<1>             2     5     2    FB11_1  B11   I/O       O       LVCMOS33           FAST         
+dds_led_1<1>             2     5     2    FB11_3  A11   I/O       O       LVCMOS33           FAST         
+dds_rf_sw_2              1     2     2    FB11_4  D10   I/O       O       LVCMOS33           FAST         
+dds_led<1>               2     5     2    FB11_5  B10   I/O       O       LVCMOS33           FAST         
+dds_common_io_reset      2     2     2    FB11_12 B9    I/O       O       LVCMOS33           FAST DFF     RESET
+dds_profile<0>           2     2     2    FB11_15 A9    I/O       O       LVCMOS33           FAST DFF     RESET
+dds_rf_sw_3              1     2     2    FB11_16 D9    I/O       O       LVCMOS33           FAST         
+
+Signal                   Total Total Bank Loc     Pin   Pin       Pin     I/O      I/O       Slew Reg     Reg Init
+Name                     Pts   Inps               No.   Type      Use     STD      Style     Rate Use     State
+dds_common_master_reset  2     2     2    FB12_5  F16   I/O       O       LVCMOS33           FAST DFF     RESET
+eem_io_2                 11    10    1    FB13_2  T16   I/O       I/O     LVCMOS33           FAST         
+fsen                     0     0     1    FB13_5  N15   I/O       O       LVCMOS33           FAST         
+eem_oe_1                 0     0     1    FB13_6  M15   I/O       O       LVCMOS33           FAST         
+eem_oe_7                 0     0     1    FB13_13 P16   I/O       O       LVCMOS33           FAST         
+eem_oe_3                 0     0     1    FB13_14 N16   I/O       O       LVCMOS33           FAST         
+eem_oe                   0     0     1    FB14_1  P15   I/O       O       LVCMOS33           FAST         
+eem_oe_4                 0     0     1    FB15_1  L15   I/O       O       LVCMOS33           FAST         
+eem_oe_5                 0     0     1    FB15_4  M16   I/O       O       LVCMOS33           FAST         
+eem_oe_6                 0     0     1    FB15_6  L16   I/O       O       LVCMOS33           FAST         
+eem_oe_2                 1     1     1    FB15_11 K15   I/O       O       LVCMOS33           FAST         
+dds_reset_2              2     4     1    FB16_2  R10   I/O       O       LVCMOS33           FAST         
+dds_sync_sync_sel        2     2     1    FB16_3  T10   I/O       O       LVCMOS33           FAST DFF     RESET
+att_rst_n                2     2     1    FB16_5  N9    I/O       O       LVCMOS33           FAST DFF/S   SET
+eem_oe_15                0     0     1    FB16_6  M8    I/O       O       LVCMOS33           FAST         
+dds_reset_3              2     4     1    FB16_11 T8    I/O       O       LVCMOS33           FAST         
+att_le<1>                3     6     1    FB16_12 P8    I/O       O       LVCMOS33           FAST TFF/S   SET
+eem_oe_13                0     0     1    FB16_13 R8    I/O       O       LVCMOS33           FAST         
+eem_oe_14                0     0     1    FB16_14 T7    I/O       O       LVCMOS33           FAST         
+
+** 44 Buried Nodes **
+
+Signal                   Total Total Loc     Reg     Reg Init
+Name                     Pts   Inps          Use     State
+N_PZ_445                 2     4     FB1_2           
+sr_sr<15>                7     8     FB1_5   DFF     RESET
+sr_sr<11>                7     8     FB1_7   DFF     RESET
+sr_sr<12>                7     8     FB1_8   DFF     RESET
+sr_sr<13>                7     8     FB1_9   DFF     RESET
+sr_sr<14>                6     7     FB1_10  DFF     RESET
+le_clk                   3     6     FB1_11  TFF/S   SET
+sr_sr<10>                7     8     FB1_14  DFF     RESET
+sr_sr<5>                 7     8     FB2_7   DFF     RESET
+sr_sr<6>                 7     8     FB2_8   DFF     RESET
+sr_sr<7>                 7     8     FB2_9   DFF     RESET
+sr_sr<8>                 7     8     FB2_10  DFF     RESET
+sr_sr<9>                 7     8     FB2_11  DFF     RESET
+sr_di<3>                 2     2     FB2_14  DFF     RESET
+sr_sr<4>                 7     9     FB2_15  DFF     RESET
+sr_sr<18>                5     7     FB3_7   DFF     RESET
+sr_sr<17>                5     7     FB3_8   DFF     RESET
+sr_sr<3>                 7     9     FB3_9   DFF     RESET
+sr_sr<2>                 7     9     FB3_10  DFF     RESET
+sr_sr<1>                 7     9     FB3_11  DFF     RESET
+sr_di<15>                2     2     FB4_2   DFF     RESET
+sr_sr<16>                7     8     FB4_4   DFF     RESET
+sr_sr<23>                5     7     FB4_7   DFF     RESET
+sr_sr<22>                5     7     FB4_8   DFF     RESET
+sr_sr<21>                5     7     FB4_9   DFF     RESET
+sr_sr<20>                5     7     FB4_10  DFF     RESET
+sr_sr<19>                5     7     FB4_11  DFF     RESET
+sr_sdo                   2     2     FB5_1   DEFF    RESET
+sr_di<23>                2     2     FB5_4   DFF     RESET
+sr_di<22>                2     2     FB5_6   DFF     RESET
+sr_di<16>                2     2     FB5_7   DFF     RESET
+sr_di<14>                2     2     FB5_8   DFF     RESET
+sr_di<13>                2     2     FB5_9   DFF     RESET
+sr_di<12>                2     2     FB5_10  DFF     RESET
+sr_di<0>                 2     2     FB5_11  DFF     RESET
+sr_di<1>                 2     2     FB5_12  DFF     RESET
+sr_di<7>                 2     2     FB6_7   DFF     RESET
+sr_di<6>                 2     2     FB6_8   DFF     RESET
+sr_di<5>                 2     2     FB6_9   DFF     RESET
+sr_di<4>                 2     2     FB6_10  DFF     RESET
+
+Signal                   Total Total Loc     Reg     Reg Init
+Name                     Pts   Inps          Use     State
+sr_di<2>                 2     2     FB6_11  DFF     RESET
+N_PZ_442                 2     4     FB6_12          
+N_PZ_449                 2     4     FB6_13          
+sr_sr<0>                 1     1     FB14_4  DEFF    RESET
+
+** 38 Inputs **
+
+Signal                   Bank Loc     Pin   Pin       Pin     I/O      I/O
+Name                                  No.   Type      Use     STD      Style
+dds_sdo                  2    FB1_5   A3    I/O       I       LVCMOS33 PU
+att_s_out<2>             2    FB1_14  E8    I/O       I       LVCMOS33 
+dds_smp_err              2    FB2_5   D4~   GTS/I/O   I       LVCMOS33 PU
+dds_pll_lock             2    FB2_14  E4~   I/O       I       LVCMOS33 PU
+dds_sdo_3                2    FB4_4   G3~   I/O       I       LVCMOS33 PU
+eem_io_12                1    FB5_1   R1~   I/O       I       LVCMOS33 
+eem_io_8                 1    FB5_4   M3~   GCK/I/O   I       LVCMOS33 
+eem_io                   1    FB5_6   M2    GCK/I/O   GCK/I   LVCMOS33 
+eem_io_11                1    FB6_5   R2~   I/O       I       LVCMOS33 
+eem_io_13                1    FB6_6   T1~   I/O       I       LVCMOS33 
+eem_io_14                1    FB6_12  T2~   DGE/I/O   I       LVCMOS33 
+dds_pll_lock_1           1    FB7_6   K2~   I/O       I       LVCMOS33 PU
+dds_sdo_1                1    FB7_13  J3~   I/O       I       LVCMOS33 PU
+dds_sdo_2                1    FB7_14  J2~   I/O       I       LVCMOS33 PU
+eem_io_9                 1    FB7_15  J5~   I/O       I       LVCMOS33 
+dds_smp_err_1            1    FB7_16  J1~   I/O       I       LVCMOS33 PU
+dds_smp_err_3            1    FB8_2   N6~   I/O       I       LVCMOS33 PU
+eem_io_10                1    FB8_3   R3    I/O       I/O     LVCMOS33 
+eem_io_15                1    FB8_5   T3~   I/O       I       LVCMOS33 
+dds_smp_err_2            1    FB8_6   P6~   I/O       I       LVCMOS33 PU
+dds_pll_lock_3           1    FB8_12  P7~   I/O       I       LVCMOS33 PU
+dds_pll_lock_2           1    FB8_14  N7~   I/O       I       LVCMOS33 PU
+variant                  2    FB9_4   A15~  I/O       I       LVCMOS33 
+ifc_mode<2>              2    FB10_1  A16   I/O       I       LVCMOS33 
+ifc_mode<3>              2    FB10_2  B15   I/O       I       LVCMOS33 
+ifc_mode<1>              2    FB10_5  B16   I/O       I       LVCMOS33 
+ifc_mode<0>              2    FB10_11 E14   I/O       I       LVCMOS33 
+dds_drover               2    FB11_2  D11   I/O       I       LVCMOS33 
+att_s_out<1>             2    FB11_13 C9    I/O       I       LVCMOS33 
+att_s_out<0>             2    FB11_14 C10   I/O       I       LVCMOS33 
+eem_io_4                 1    FB13_1  R15~  I/O       I       LVCMOS33 
+eem_io_2                 1    FB13_2  T16   I/O       I/O     LVCMOS33 
+eem_io_3                 1    FB13_4  R16~  I/O       I       LVCMOS33 
+eem_io_1                 1    FB14_4  R13   I/O       I       LVCMOS33 
+eem_io_5                 1    FB14_6  R14~  I/O       I       LVCMOS33 
+eem_io_7                 1    FB14_12 T15~  I/O       I       LVCMOS33 
+eem_io_6                 1    FB14_13 R12~  I/O       I       LVCMOS33 
+att_s_out<3>             1    FB16_4  R9    I/O       I       LVCMOS33 
+
+Legend:
+Pin No.   - ~     - User Assigned
+I/O Style - OD    - OpenDrain
+          - PU    - Pullup
+          - KPR   - Keeper
+          - S     - SchmittTrigger
+          - DG    - DataGate
+Reg Use   - LATCH - Transparent latch
+          - DFF   - D-flip-flop
+          - DEFF  - D-flip-flop with clock enable
+          - TFF   - T-flip-flop
+          - TDFF  - Dual-edge-triggered T-flip-flop
+          - DDFF  - Dual-edge-triggered flip-flop
+          - DDEFF - Dual-edge-triggered flip-flop with clock enable
+          /S (after any above flop/latch type) indicates initial state is Set
+**************************  Function Block Details  ************************
+Legend:
+Total Pt     - Total product terms used by the macrocell signal
+Loc          - Location where logic was mapped in device
+Pin Type/Use - I  - Input             GCK - Global clock
+               O  - Output            GTS - Global Output Enable
+              (b) - Buried macrocell  GSR - Global Set/Reset
+              VRF - Vref
+Pin No.      - ~  - User Assigned
+*********************************** FB1  ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               25/15
+Number of function block control terms used/remaining:        1/3
+Number of PLA product terms used/remaining:                   56/0
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+dds_cs_n                      4     FB1_1   B3   I/O     O                 
+N_PZ_445                      2     FB1_2   B4   I/O     (b)               
+dds_drctl_1                   0     FB1_3   C4   GSR/I/O O                 
+dds_sck                       3     FB1_4   A2   I/O     O                 
+sr_sr<15>                     7     FB1_5   A3   I/O     I                 
+tp                            4     FB1_6   A4   I/O     O                 
+sr_sr<11>                     7     FB1_7        (b)     (b)               
+sr_sr<12>                     7     FB1_8        (b)     (b)               
+sr_sr<13>                     7     FB1_9        (b)     (b)               
+sr_sr<14>                     6     FB1_10       (b)     (b)               
+le_clk                        3     FB1_11       (b)     (b)            +  
+tp_2                          3     FB1_12  B5   I/O     O                 
+tp_1                          3     FB1_13  A5   I/O     O                 
+sr_sr<10>                     7     FB1_14  E8   I/O     I                 
+clk_osc_en_n                  1     FB1_15  B6   I/O     O                 
+dds_drhold_1                  0     FB1_16  C7   I/O     O                 
+
+Signals Used by Logic in Function Block
+  1: N_PZ_445          10: eem_io_4          18: sr_di<13> 
+  2: clk_in_sel        11: eem_io_5          19: sr_sr<10> 
+  3: clk_mmcx_osc_sel  12: eem_io_8          20: sr_sr<11> 
+  4: dds_pll_lock_1    13: eem_io            21: sr_sr<12> 
+  5: dds_pll_lock_2    14: ifc_mode<0>       22: sr_sr<13> 
+  6: dds_pll_lock_3    15: ifc_mode<1>       23: sr_sr<14> 
+  7: eem_io_1          16: ifc_mode<2>       24: sr_sr<15> 
+  8: eem_io_2.PIN      17: le_clk            25: sr_sr<9> 
+  9: eem_io_3         
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+dds_cs_n          ........XXX...X..X...................... 5       
+N_PZ_445          ........XXX...X......................... 4       
+dds_drctl_1       ........................................ 0       
+dds_sck           .......X....X.X..X...................... 4       
+sr_sr<15>         ........XXX...XXX.....XX................ 8       
+tp                ........XXX...X..X...................... 5       
+sr_sr<11>         ....X...XXX...X.X.XX.................... 8       
+sr_sr<12>         .....X..XXX...X.X..XX................... 8       
+sr_sr<13>         ........XXX..XX.X...XX.................. 8       
+sr_sr<14>         ........XXX...X.X....XX................. 7       
+le_clk            X.......XXX...X.X....................... 6       
+tp_2              ......X....X..X..X...................... 4       
+tp_1              .......X....X.X..X...................... 4       
+sr_sr<10>         ...X....XXX...X.X.X.....X............... 8       
+clk_osc_en_n      .XX..................................... 2       
+dds_drhold_1      ........................................ 0       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB2  ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               29/11
+Number of function block control terms used/remaining:        2/2
+Number of PLA product terms used/remaining:                   56/0
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+dds_profile_1<0>              2     FB2_1   D3   GTS/I/O O      +          
+dds_osk_1                     0     FB2_2   C3   I/O     O                 
+dds_io_update_3               2     FB2_3   E3   GTS/I/O O                 
+dds_sdi                       3     FB2_4   B2   I/O     O                 
+(unused)                      0     FB2_5   D4   GTS/I/O I     
+dds_profile_1<1>              2     FB2_6   D2   I/O     O      +          
+sr_sr<5>                      7     FB2_7        (b)     (b)               
+sr_sr<6>                      7     FB2_8        (b)     (b)               
+sr_sr<7>                      7     FB2_9        (b)     (b)               
+sr_sr<8>                      7     FB2_10       (b)     (b)               
+sr_sr<9>                      7     FB2_11       (b)     (b)               
+clk_div                       2     FB2_12  E5   GTS/I/O O                  +  
+dds_io_update                 2     FB2_13  B1   I/O     O                 
+sr_di<3>                      2     FB2_14  E4   I/O     I      +          
+sr_sr<4>                      7     FB2_15  C1   I/O     (b)               
+dds_profile_1<2>              2     FB2_16  E2   I/O     O      +          
+
+Signals Used by Logic in Function Block
+  1: N_PZ_442          11: eem_io_5          21: sr_di<3> 
+  2: dds_pll_lock      12: eem_io_6          22: sr_sr<10> 
+  3: dds_smp_err_1     13: eem_io_8          23: sr_sr<3> 
+  4: dds_smp_err_2     14: ifc_mode<1>       24: sr_sr<4> 
+  5: dds_smp_err_3     15: le_clk            25: sr_sr<5> 
+  6: dds_smp_err       16: sr_di<12>         26: sr_sr<6> 
+  7: eem_io_15         17: sr_di<13>         27: sr_sr<7> 
+  8: eem_io_1          18: sr_di<16>         28: sr_sr<8> 
+  9: eem_io_3          19: sr_di<22>         29: sr_sr<9> 
+ 10: eem_io_4          20: sr_di<23>        
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+dds_profile_1<0>  ..............X............X............ 2       
+dds_osk_1         ........................................ 0       
+dds_io_update_3   ...........X...X.X...................... 3       
+dds_sdi           .......X....XX..X....................... 4       
+dds_profile_1<1>  ..............X.............X........... 2       
+sr_sr<5>          .....X..XXX..XX........XX............... 8       
+sr_sr<6>          ..X.....XXX..XX.........XX.............. 8       
+sr_sr<7>          ...X....XXX..XX..........XX............. 8       
+sr_sr<8>          ....X...XXX..XX...........XX............ 8       
+sr_sr<9>          .X......XXX..XX............XX........... 8       
+clk_div           X.................XX.................... 3       
+dds_io_update     ...........X...XX....................... 3       
+sr_di<3>          ..............X.......X................. 2       
+sr_sr<4>          ......X.XXX..XX.....X.XX................ 9       
+dds_profile_1<2>  ..............X......X.................. 2       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB3  ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               29/11
+Number of function block control terms used/remaining:        2/2
+Number of PLA product terms used/remaining:                   47/9
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+tp_3                          1     FB3_1   A6   I/O     O                 
+att_s_in<2>                   1     FB3_2   D7   I/O     O                 
+att_s_in<0>                   1     FB3_3   B7   I/O     O                 
+att_clk                       2     FB3_4   E9   I/O     O                 
+tp_4                          1     FB3_5   A7   I/O     O                 
+att_s_in<1>                   1     FB3_6   D8   I/O     O                 
+sr_sr<18>                     5     FB3_7        (b)     (b)               
+sr_sr<17>                     5     FB3_8        (b)     (b)               
+sr_sr<3>                      7     FB3_9        (b)     (b)               
+sr_sr<2>                      7     FB3_10       (b)     (b)               
+sr_sr<1>                      7     FB3_11       (b)     (b)               
+dds_profile<1>                2     FB3_12  B8   I/O     O      +          
+att_le<2>                     3     FB3_13  C8   I/O     O              +  
+dds_profile<2>                2     FB3_14  A8   I/O     O      +          
+dds_led<0>                    1     FB3_15  E11  I/O     O                 
+att_le<0>                     3     FB3_16  E10  I/O     O              +  
+
+Signals Used by Logic in Function Block
+  1: N_PZ_449          11: eem_io_1          21: sr_sr<0> 
+  2: att_le<0>         12: eem_io_3          22: sr_sr<10> 
+  3: att_le<2>         13: eem_io_4          23: sr_sr<16> 
+  4: att_s_out<0>      14: eem_io_5          24: sr_sr<17> 
+  5: att_s_out<1>      15: eem_io            25: sr_sr<18> 
+  6: dds_drover        16: ifc_mode<1>       26: sr_sr<1> 
+  7: dds_sdo           17: le_clk            27: sr_sr<2> 
+  8: eem_io_12         18: sr_di<0>          28: sr_sr<3> 
+  9: eem_io_13         19: sr_di<1>          29: sr_sr<9> 
+ 10: eem_io_14         20: sr_di<2>         
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+tp_3              ......X................................. 1       
+att_s_in<2>       ....X................................... 1       
+att_s_in<0>       ..........X............................. 1       
+att_clk           ...........XXXXX........................ 5       
+tp_4              .....X.................................. 1       
+att_s_in<1>       ...X.................................... 1       
+sr_sr<18>         ...........XXX.XX......XX............... 7       
+sr_sr<17>         ...........XXX.XX.....XX................ 7       
+sr_sr<3>          .........X.XXX.XX..X......XX............ 9       
+sr_sr<2>          ........X..XXX.XX.X......XX............. 9       
+sr_sr<1>          .......X...XXX.XXX..X....X.............. 9       
+dds_profile<1>    ................X...........X........... 2       
+att_le<2>         X.X........XXX.X........................ 6       
+dds_profile<2>    ................X....X.................. 2       
+dds_led<0>        .......X.........X...................... 2       
+att_le<0>         XX.........XXX.X........................ 6       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB4  ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               28/12
+Number of function block control terms used/remaining:        1/3
+Number of PLA product terms used/remaining:                   56/0
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+dds_reset_1                   2     FB4_1   F2   I/O     O                 
+sr_di<15>                     2     FB4_2   F3   I/O     (b)    +          
+dds_cs_n_3                    3     FB4_3   G4   I/O     O                 
+sr_sr<16>                     7     FB4_4   G3   I/O     I                 
+dds_sdi_3                     3     FB4_5   F5   I/O     O                 
+clk_in_sel                    2     FB4_6   G5   I/O     O      +          
+sr_sr<23>                     5     FB4_7        (b)     (b)               
+sr_sr<22>                     5     FB4_8        (b)     (b)               
+sr_sr<21>                     5     FB4_9        (b)     (b)               
+sr_sr<20>                     5     FB4_10       (b)     (b)               
+sr_sr<19>                     5     FB4_11       (b)     (b)               
+dds_sck_3                     3     FB4_12  H2   I/O     O                 
+dds_sck_2                     3     FB4_13  H4   I/O     O                 
+dds_sdi_2                     3     FB4_14  H3   I/O     O                 
+dds_cs_n_2                    4     FB4_15  H1   I/O     O                 
+dds_io_update_2               2     FB4_16  H5   I/O     O                 
+
+Signals Used by Logic in Function Block
+  1: dds_common_master_reset  11: eem_io            20: sr_sr<16> 
+  2: eem_io_10.PIN            12: ifc_mode<0>       21: sr_sr<17> 
+  3: eem_io_11                13: ifc_mode<1>       22: sr_sr<18> 
+  4: eem_io_1                 14: ifc_mode<3>       23: sr_sr<19> 
+  5: eem_io_2.PIN             15: le_clk            24: sr_sr<20> 
+  6: eem_io_3                 16: sr_di<12>         25: sr_sr<21> 
+  7: eem_io_4                 17: sr_di<15>         26: sr_sr<22> 
+  8: eem_io_5                 18: sr_di<16>         27: sr_sr<23> 
+  9: eem_io_6                 19: sr_sr<15>         28: variant 
+ 10: eem_io_7                
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+dds_reset_1       X........X.X...............X............ 4       
+sr_di<15>         ..............X...X..................... 2       
+dds_cs_n_3        .....XXX....X....X...................... 5       
+sr_sr<16>         .....XXX....XXX...XX.................... 8       
+dds_sdi_3         ..XX........X....X...................... 4       
+clk_in_sel        ..............X.....X................... 2       
+sr_sr<23>         .....XXX....X.X..........XX............. 7       
+sr_sr<22>         .....XXX....X.X.........XX.............. 7       
+sr_sr<21>         .....XXX....X.X........XX............... 7       
+sr_sr<20>         .....XXX....X.X.......XX................ 7       
+sr_sr<19>         .....XXX....X.X......XX................. 7       
+dds_sck_3         ....X.....X.X....X...................... 4       
+dds_sck_2         ....X.....X.X...X....................... 4       
+dds_sdi_2         .X.X........X...X....................... 4       
+dds_cs_n_2        .....XXX....X...X....................... 5       
+dds_io_update_2   ........X......XX....................... 3       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB5  ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               13/27
+Number of function block control terms used/remaining:        1/3
+Number of PLA product terms used/remaining:                   13/43
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+sr_sdo                        2     FB5_1   R1   I/O     I                 
+dds_drhold_3                  0     FB5_2   N4   I/O     O                 
+dds_osk_3                     0     FB5_3   N2   I/O     O                 
+sr_di<23>                     2     FB5_4   M3   GCK/I/O I      +          
+dds_profile_3<1>              2     FB5_5   P1   I/O     O      +          
+sr_di<22>                     2     FB5_6   M2   GCK/I/O GCK/I  +          
+sr_di<16>                     2     FB5_7        (b)     (b)    +          
+sr_di<14>                     2     FB5_8        (b)     (b)    +          
+sr_di<13>                     2     FB5_9        (b)     (b)    +          
+sr_di<12>                     2     FB5_10       (b)     (b)    +          
+sr_di<0>                      2     FB5_11       (b)     (b)    +          
+sr_di<1>                      2     FB5_12  L3   I/O     (b)    +          
+dds_drctl_3                   0     FB5_13  N1   I/O     O                 
+dds_drhold_2                  0     FB5_14  L4   I/O     O                 
+dds_profile_2<0>              2     FB5_15  M1   I/O     O      +          
+att_s_in<3>                   1     FB5_16  L5   I/O     O                 
+
+Signals Used by Logic in Function Block
+  1: N_PZ_445           6: sr_sr<13>         10: sr_sr<22> 
+  2: att_s_out<2>       7: sr_sr<14>         11: sr_sr<23> 
+  3: le_clk             8: sr_sr<16>         12: sr_sr<8> 
+  4: sr_sr<0>           9: sr_sr<1>          13: sr_sr<9> 
+  5: sr_sr<12>        
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+sr_sdo            X.........X............................. 2       
+dds_drhold_3      ........................................ 0       
+dds_osk_3         ........................................ 0       
+sr_di<23>         ..X.......X............................. 2       
+dds_profile_3<1>  ..X.........X........................... 2       
+sr_di<22>         ..X......X.............................. 2       
+sr_di<16>         ..X....X................................ 2       
+sr_di<14>         ..X...X................................. 2       
+sr_di<13>         ..X..X.................................. 2       
+sr_di<12>         ..X.X................................... 2       
+sr_di<0>          ..XX.................................... 2       
+sr_di<1>          ..X.....X............................... 2       
+dds_drctl_3       ........................................ 0       
+dds_drhold_2      ........................................ 0       
+dds_profile_2<0>  ..X........X............................ 2       
+att_s_in<3>       .X...................................... 1       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB6  ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               20/20
+Number of function block control terms used/remaining:        1/3
+Number of PLA product terms used/remaining:                   16/40
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+dds_profile_3<0>              2     FB6_1   N3   I/O     O      +          
+dds_profile_3<2>              2     FB6_2   P2   CDR/I/O O      +          
+dds_io_update_1               2     FB6_3   P4   I/O     O                 
+(unused)                      0     FB6_4   P5   GCK/I/O       
+(unused)                      0     FB6_5   R2   I/O     I     
+(unused)                      0     FB6_6   T1   I/O     I     
+sr_di<7>                      2     FB6_7        (b)     (b)    +          
+sr_di<6>                      2     FB6_8        (b)     (b)    +          
+sr_di<5>                      2     FB6_9        (b)     (b)    +          
+sr_di<4>                      2     FB6_10       (b)     (b)    +          
+sr_di<2>                      2     FB6_11       (b)     (b)    +          
+N_PZ_442                      2     FB6_12  T2   DGE/I/O I                 
+N_PZ_449                      2     FB6_13  N5   I/O     (b)               
+eem_oe_10                     1     FB6_14  R4   I/O     O                 
+dds_profile_2<2>              2     FB6_15  M5   I/O     O      +          
+eem_oe_11                     0     FB6_16  R5   I/O     O                 
+
+Signals Used by Logic in Function Block
+  1: eem_io_3           8: le_clk            15: sr_sr<4> 
+  2: eem_io_4           9: sr_di<12>         16: sr_sr<5> 
+  3: eem_io_5          10: sr_di<14>         17: sr_sr<6> 
+  4: eem_io_6          11: sr_di<22>         18: sr_sr<7> 
+  5: ifc_mode<0>       12: sr_di<23>         19: sr_sr<8> 
+  6: ifc_mode<1>       13: sr_sr<10>         20: variant 
+  7: ifc_mode<2>       14: sr_sr<2>         
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+dds_profile_3<0>  .......X..........X..................... 2       
+dds_profile_3<2>  .......X....X........................... 2       
+dds_io_update_1   ...X....XX.............................. 3       
+sr_di<7>          .......X.........X...................... 2       
+sr_di<6>          .......X........X....................... 2       
+sr_di<5>          .......X.......X........................ 2       
+sr_di<4>          .......X......X......................... 2       
+sr_di<2>          .......X.....X.......................... 2       
+N_PZ_442          ....X.....XX.......X.................... 4       
+N_PZ_449          XXX..X.................................. 4       
+eem_oe_10         .....XX................................. 2       
+dds_profile_2<2>  .......X....X........................... 2       
+eem_oe_11         ........................................ 0       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB7  ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               11/29
+Number of function block control terms used/remaining:        1/3
+Number of PLA product terms used/remaining:                   13/43
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+att_le<3>                     3     FB7_1   K4   I/O     O              +  
+(unused)                      0     FB7_2   L2   I/O           
+dds_sck_1                     3     FB7_3   K3   I/O     O                 
+dds_osk_2                     0     FB7_4   L1   I/O     O                 
+dds_sdi_1                     3     FB7_5   K5   I/O     O                 
+(unused)                      0     FB7_6   K2   I/O     I     
+(unused)                      0     FB7_7        (b)           
+(unused)                      0     FB7_8        (b)           
+(unused)                      0     FB7_9        (b)           
+(unused)                      0     FB7_10       (b)           
+dds_cs_n_1                    4     FB7_11  J4   I/O     O                 
+dds_drctl_2                   0     FB7_12  K1   I/O     O                 
+(unused)                      0     FB7_13  J3   I/O     I     
+(unused)                      0     FB7_14  J2   I/O     I     
+(unused)                      0     FB7_15  J5   I/O     I     
+(unused)                      0     FB7_16  J1   I/O     I     
+
+Signals Used by Logic in Function Block
+  1: N_PZ_449           5: eem_io_3           9: eem_io 
+  2: att_le<3>          6: eem_io_4          10: ifc_mode<1> 
+  3: eem_io_1           7: eem_io_5          11: sr_di<14> 
+  4: eem_io_2.PIN       8: eem_io_9         
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+att_le<3>         XX..XXX..X.............................. 6       
+dds_sck_1         ...X....XXX............................. 4       
+dds_osk_2         ........................................ 0       
+dds_sdi_1         ..X....X.XX............................. 4       
+dds_cs_n_1        ....XXX..XX............................. 5       
+dds_drctl_2       ........................................ 0       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB8  ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               7/33
+Number of function block control terms used/remaining:        2/2
+Number of PLA product terms used/remaining:                   6/50
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+dds_sync_sync_out_en          2     FB8_1   R6   I/O     O                 
+(unused)                      0     FB8_2   N6   I/O     I     
+eem_io_10                     2     FB8_3   R3   I/O     I/O                +  
+dds_profile_2<1>              2     FB8_4   M6   I/O     O      +          
+(unused)                      0     FB8_5   T3   I/O     I     
+(unused)                      0     FB8_6   P6   I/O     I     
+(unused)                      0     FB8_7        (b)           
+(unused)                      0     FB8_8        (b)           
+(unused)                      0     FB8_9        (b)           
+(unused)                      0     FB8_10       (b)           
+eem_oe_9                      0     FB8_11  T4   I/O     O                 
+(unused)                      0     FB8_12  P7   I/O     I     
+dds_sync_clk_out_en           2     FB8_13  T5   I/O     O                 
+(unused)                      0     FB8_14  N7   I/O     I     
+eem_oe_8                      0     FB8_15  R7   I/O     O                 
+eem_oe_12                     0     FB8_16  M7   I/O     O                 
+
+Signals Used by Logic in Function Block
+  1: eem_io_6           4: ifc_mode<2>        6: sr_sr<9> 
+  2: ifc_mode<0>        5: le_clk             7: variant 
+  3: ifc_mode<1>      
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+dds_sync_sync_out_en 
+                  .XXX..X................................. 4       
+eem_io_10         X.XX.................................... 3       
+dds_profile_2<1>  ....XX.................................. 2       
+eem_oe_9          ........................................ 0       
+dds_sync_clk_out_en 
+                  .XXX..X................................. 4       
+eem_oe_8          ........................................ 0       
+eem_oe_12         ........................................ 0       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB9  ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               17/23
+Number of function block control terms used/remaining:        1/3
+Number of PLA product terms used/remaining:                   11/45
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+dds_reset                     2     FB9_1   B13  I/O     O                 
+dds_led_2<1>                  2     FB9_2   B14  I/O     O                 
+dds_osk                       0     FB9_3   C13  I/O     O                 
+(unused)                      0     FB9_4   A15  I/O     I     
+dds_rf_sw_1                   1     FB9_5   C12  I/O     O                 
+(unused)                      0     FB9_6   B12  I/O           
+(unused)                      0     FB9_7        (b)           
+(unused)                      0     FB9_8        (b)           
+(unused)                      0     FB9_9        (b)           
+(unused)                      0     FB9_10       (b)           
+dds_rf_sw                     1     FB9_11  D13  I/O     O                 
+dds_led_2<0>                  1     FB9_12  A14  I/O     O                 
+dds_drhold                    0     FB9_13  E13  I/O     O                 
+dds_led_1<0>                  1     FB9_14  A13  I/O     O                 
+clk_mmcx_osc_sel              2     FB9_15  C11  I/O     O      +          
+dds_led_3<0>                  1     FB9_16  A12  I/O     O                 
+
+Signals Used by Logic in Function Block
+  1: dds_common_master_reset   7: eem_io_15         13: sr_di<2> 
+  2: dds_pll_lock_2            8: eem_io_7          14: sr_di<3> 
+  3: dds_smp_err_2             9: ifc_mode<0>       15: sr_di<6> 
+  4: eem_io_12                10: le_clk            16: sr_sr<21> 
+  5: eem_io_13                11: sr_di<0>          17: variant 
+  6: eem_io_14                12: sr_di<1>         
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+dds_reset         X......XX.......X....................... 4       
+dds_led_2<1>      .XX.....X.....X.X....................... 5       
+dds_osk           ........................................ 0       
+dds_rf_sw_1       ....X......X............................ 2       
+dds_rf_sw         ...X......X............................. 2       
+dds_led_2<0>      .....X......X........................... 2       
+dds_drhold        ........................................ 0       
+dds_led_1<0>      ....X......X............................ 2       
+clk_mmcx_osc_sel  .........X.....X........................ 2       
+dds_led_3<0>      ......X......X.......................... 2       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB10 ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               0/40
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   0/56
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB10_1  A16  I/O     I     
+(unused)                      0     FB10_2  B15  I/O     I     
+dds_drctl                     0     FB10_3  C14  I/O     O                 
+(unused)                      0     FB10_4  G11  I/O           
+(unused)                      0     FB10_5  B16  I/O     I     
+(unused)                      0     FB10_6  D15  I/O           
+(unused)                      0     FB10_7       (b)           
+(unused)                      0     FB10_8       (b)           
+(unused)                      0     FB10_9       (b)           
+(unused)                      0     FB10_10      (b)           
+(unused)                      0     FB10_11 E14  I/O     I     
+(unused)                      0     FB10_12 C16  I/O           
+(unused)                      0     FB10_13 F14  I/O           
+(unused)                      0     FB10_14 F13  I/O           
+(unused)                      0     FB10_15 E15  I/O           
+(unused)                      0     FB10_16 G13  I/O           
+
+Signals Used by Logic in Function Block
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+dds_drctl         ........................................ 0       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB11 ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               18/22
+Number of function block control terms used/remaining:        1/3
+Number of PLA product terms used/remaining:                   11/45
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+dds_led_3<1>                  2     FB11_1  B11  I/O     O                 
+(unused)                      0     FB11_2  D11  I/O     I     
+dds_led_1<1>                  2     FB11_3  A11  I/O     O                 
+dds_rf_sw_2                   1     FB11_4  D10  I/O     O                 
+dds_led<1>                    2     FB11_5  B10  I/O     O                 
+(unused)                      0     FB11_6  E12  I/O           
+(unused)                      0     FB11_7       (b)           
+(unused)                      0     FB11_8       (b)           
+(unused)                      0     FB11_9       (b)           
+(unused)                      0     FB11_10      (b)           
+(unused)                      0     FB11_11 F12  I/O           
+dds_common_io_reset           2     FB11_12 B9   I/O     O      +          
+(unused)                      0     FB11_13 C9   I/O     I     
+(unused)                      0     FB11_14 C10  I/O     I     
+dds_profile<0>                2     FB11_15 A9   I/O     O      +          
+dds_rf_sw_3                   1     FB11_16 D9   I/O     O                 
+
+Signals Used by Logic in Function Block
+  1: dds_pll_lock_1     7: eem_io_14         13: sr_di<4> 
+  2: dds_pll_lock_3     8: eem_io_15         14: sr_di<5> 
+  3: dds_pll_lock       9: ifc_mode<0>       15: sr_di<7> 
+  4: dds_smp_err_1     10: le_clk            16: sr_sr<20> 
+  5: dds_smp_err_3     11: sr_di<2>          17: sr_sr<8> 
+  6: dds_smp_err       12: sr_di<3>          18: variant 
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+dds_led_3<1>      .X..X...X.....X..X...................... 5       
+dds_led_1<1>      X..X....X....X...X...................... 5       
+dds_rf_sw_2       ......X...X............................. 2       
+dds_led<1>        ..X..X..X...X....X...................... 5       
+dds_common_io_reset 
+                  .........X.....X........................ 2       
+dds_profile<0>    .........X......X....................... 2       
+dds_rf_sw_3       .......X...X............................ 2       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB12 ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               2/38
+Number of function block control terms used/remaining:        1/3
+Number of PLA product terms used/remaining:                   2/54
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB12_1  F15  I/O           
+(unused)                      0     FB12_2  G14  I/O           
+(unused)                      0     FB12_3  E16  I/O           
+(unused)                      0     FB12_4  H12  I/O           
+dds_common_master_reset       2     FB12_5  F16  I/O     O      +          
+(unused)                      0     FB12_6  H16  I/O           
+(unused)                      0     FB12_7       (b)           
+(unused)                      0     FB12_8       (b)           
+(unused)                      0     FB12_9       (b)           
+(unused)                      0     FB12_10      (b)           
+(unused)                      0     FB12_11 G15  I/O           
+(unused)                      0     FB12_12 H13  I/O           
+(unused)                      0     FB12_13 G16  I/O           
+(unused)                      0     FB12_14 H14  I/O           
+(unused)                      0     FB12_15 H15  I/O           
+(unused)                      0     FB12_16 J12  I/O           
+
+Signals Used by Logic in Function Block
+  1: le_clk             2: sr_sr<19>        
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+dds_common_master_reset 
+                  XX...................................... 2       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB13 ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               10/30
+Number of function block control terms used/remaining:        1/3
+Number of PLA product terms used/remaining:                   11/45
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB13_1  R15  I/O     I     
+eem_io_2                      11    FB13_2  T16  I/O     I/O                +  
+(unused)                      0     FB13_3  N14  I/O           
+(unused)                      0     FB13_4  R16  I/O     I     
+fsen                          0     FB13_5  N15  I/O     O                 
+eem_oe_1                      0     FB13_6  M15  I/O     O                 
+(unused)                      0     FB13_7       (b)           
+(unused)                      0     FB13_8       (b)           
+(unused)                      0     FB13_9       (b)           
+(unused)                      0     FB13_10      (b)           
+(unused)                      0     FB13_11      (b)           
+(unused)                      0     FB13_12 M13  I/O           
+eem_oe_7                      0     FB13_13 P16  I/O     O                 
+eem_oe_3                      0     FB13_14 N16  I/O     O                 
+(unused)                      0     FB13_15 L14  I/O           
+(unused)                      0     FB13_16 M14  I/O           
+
+Signals Used by Logic in Function Block
+  1: att_s_out<3>       5: dds_sdo            8: eem_io_5 
+  2: dds_sdo_1          6: eem_io_3           9: ifc_mode<1> 
+  3: dds_sdo_2          7: eem_io_4          10: sr_sdo 
+  4: dds_sdo_3        
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+eem_io_2          XXXXXXXXXX.............................. 10      
+fsen              ........................................ 0       
+eem_oe_1          ........................................ 0       
+eem_oe_7          ........................................ 0       
+eem_oe_3          ........................................ 0       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB14 ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               1/39
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   1/55
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+eem_oe                        0     FB14_1  P15  I/O     O                 
+(unused)                      0     FB14_2  P14  I/O           
+(unused)                      0     FB14_3  P13  I/O           
+sr_sr<0>                      1     FB14_4  R13  I/O     I                 
+(unused)                      0     FB14_5  N13  I/O           
+(unused)                      0     FB14_6  R14  I/O     I     
+(unused)                      0     FB14_7       (b)           
+(unused)                      0     FB14_8       (b)           
+(unused)                      0     FB14_9       (b)           
+(unused)                      0     FB14_10      (b)           
+(unused)                      0     FB14_11      (b)           
+(unused)                      0     FB14_12 T15  I/O     I     
+(unused)                      0     FB14_13 R12  I/O     I     
+(unused)                      0     FB14_14 N11  I/O           
+(unused)                      0     FB14_15 M11  I/O           
+(unused)                      0     FB14_16 N10  I/O           
+
+Signals Used by Logic in Function Block
+  1: N_PZ_445         
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+eem_oe            ........................................ 0       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB15 ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               1/39
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   1/55
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+eem_oe_4                      0     FB15_1  L15  I/O     O                 
+(unused)                      0     FB15_2  L13  I/O           
+(unused)                      0     FB15_3  M12  I/O           
+eem_oe_5                      0     FB15_4  M16  I/O     O                 
+(unused)                      0     FB15_5  K14  I/O           
+eem_oe_6                      0     FB15_6  L16  I/O     O                 
+(unused)                      0     FB15_7       (b)           
+(unused)                      0     FB15_8       (b)           
+(unused)                      0     FB15_9       (b)           
+(unused)                      0     FB15_10      (b)           
+eem_oe_2                      1     FB15_11 K15  I/O     O                 
+(unused)                      0     FB15_12 L12  I/O           
+(unused)                      0     FB15_13 K16  I/O           
+(unused)                      0     FB15_14 J14  I/O           
+(unused)                      0     FB15_15 J15  I/O           
+(unused)                      0     FB15_16 J13  I/O           
+
+Signals Used by Logic in Function Block
+  1: ifc_mode<1>      
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+eem_oe_4          ........................................ 0       
+eem_oe_5          ........................................ 0       
+eem_oe_6          ........................................ 0       
+eem_oe_2          X....................................... 1       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB16 ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               13/27
+Number of function block control terms used/remaining:        2/2
+Number of PLA product terms used/remaining:                   8/48
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB16_1  P10  I/O           
+dds_reset_2                   2     FB16_2  R10  I/O     O                 
+dds_sync_sync_sel             2     FB16_3  T10  I/O     O      +          
+(unused)                      0     FB16_4  R9   I/O     I     
+att_rst_n                     2     FB16_5  N9   I/O     O      +          
+eem_oe_15                     0     FB16_6  M8   I/O     O                 
+(unused)                      0     FB16_7       (b)           
+(unused)                      0     FB16_8       (b)           
+(unused)                      0     FB16_9       (b)           
+(unused)                      0     FB16_10      (b)           
+dds_reset_3                   2     FB16_11 T8   I/O     O                 
+att_le<1>                     3     FB16_12 P8   I/O     O              +  
+eem_oe_13                     0     FB16_13 R8   I/O     O                 
+eem_oe_14                     0     FB16_14 T7   I/O     O                 
+(unused)                      0     FB16_15 N8   I/O           
+(unused)                      0     FB16_16 T6   I/O           
+
+Signals Used by Logic in Function Block
+  1: N_PZ_449                  6: eem_io_5          10: le_clk 
+  2: att_le<1>                 7: eem_io_7          11: sr_sr<18> 
+  3: dds_common_master_reset   8: ifc_mode<0>       12: sr_sr<19> 
+  4: eem_io_3                  9: ifc_mode<1>       13: variant 
+  5: eem_io_4                
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+dds_reset_2       ..X...XX....X........................... 4       
+dds_sync_sync_sel 
+                  .........XX............................. 2       
+att_rst_n         .........X.X............................ 2       
+eem_oe_15         ........................................ 0       
+dds_reset_3       ..X...XX....X........................... 4       
+att_le<1>         XX.XXX..X............................... 6       
+eem_oe_13         ........................................ 0       
+eem_oe_14         ........................................ 0       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*******************************  Equations  ********************************
+
+********** Mapped Logic **********
+
+
+assign N_PZ_442 = ((sr_di[22] && !sr_di[23])
+	|| (!ifc_mode[0] && !sr_di[23] && !variant));
+
+
+assign N_PZ_445 = ((ifc_mode[1] && eem_io_3 && !eem_io_4)
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5));
+
+
+assign N_PZ_449 = ((ifc_mode[1] && !eem_io_3 && eem_io_4)
+	|| (!eem_io_3 && eem_io_4 && !eem_io_5));
+
+
+assign att_clk = ((ifc_mode[1] && !eem_io_3 && eem_io_4 && eem_io)
+	|| (!eem_io_3 && eem_io_4 && eem_io && !eem_io_5));
+
+FTCPE FTCPE_att_le0 (att_le[0],att_le_T[0],eem_io,1'b0,!N_PZ_449,1'b1);
+assign att_le_T[0] = ((ifc_mode[1] && !eem_io_3 && eem_io_4 && att_le[0])
+	|| (!eem_io_3 && eem_io_4 && !eem_io_5 && att_le[0]));
+
+FTCPE FTCPE_att_le1 (att_le[1],att_le_T[1],eem_io,1'b0,!N_PZ_449,1'b1);
+assign att_le_T[1] = ((ifc_mode[1] && !eem_io_3 && eem_io_4 && att_le[1])
+	|| (!eem_io_3 && eem_io_4 && !eem_io_5 && att_le[1]));
+
+FTCPE FTCPE_att_le2 (att_le[2],att_le_T[2],eem_io,1'b0,!N_PZ_449,1'b1);
+assign att_le_T[2] = ((ifc_mode[1] && !eem_io_3 && eem_io_4 && att_le[2])
+	|| (!eem_io_3 && eem_io_4 && !eem_io_5 && att_le[2]));
+
+FTCPE FTCPE_att_le3 (att_le[3],att_le_T[3],eem_io,1'b0,!N_PZ_449,1'b1);
+assign att_le_T[3] = ((ifc_mode[1] && !eem_io_3 && eem_io_4 && att_le[3])
+	|| (!eem_io_3 && eem_io_4 && !eem_io_5 && att_le[3]));
+
+FDCPE FDCPE_att_rst_n (att_rst_n,!sr_sr[19],le_clk,1'b0,1'b0,1'b1);
+
+
+assign att_s_in[0] = eem_io_1;
+
+
+assign att_s_in[1] = att_s_out[0];
+
+
+assign att_s_in[2] = att_s_out[1];
+
+
+assign att_s_in[3] = att_s_out[2];
+
+
+assign clk_div_I = !((!sr_di[22] && sr_di[23]));
+assign clk_div = clk_div_OE ? clk_div_I : 1'bZ;
+assign clk_div_OE = !N_PZ_442;
+
+FDCPE FDCPE_clk_in_sel (clk_in_sel,sr_sr[17],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_clk_mmcx_osc_sel (clk_mmcx_osc_sel,sr_sr[21],le_clk,1'b0,1'b0,1'b1);
+
+
+assign clk_osc_en_n = !((!clk_in_sel && !clk_mmcx_osc_sel));
+
+FDCPE FDCPE_dds_common_io_reset (dds_common_io_reset,sr_sr[20],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_dds_common_master_reset (dds_common_master_reset,sr_sr[19],le_clk,1'b0,1'b0,1'b1);
+
+
+assign dds_cs_n_1 = !(((ifc_mode[1] && eem_io_5 && !sr_di[14])
+	|| (ifc_mode[1] && eem_io_3 && eem_io_4 && sr_di[14])
+	|| (!ifc_mode[1] && eem_io_3 && !eem_io_4 && eem_io_5)
+	|| (eem_io_3 && eem_io_4 && !eem_io_5 && sr_di[14])));
+
+
+assign dds_cs_n_2 = !(((ifc_mode[1] && eem_io_5 && !sr_di[15])
+	|| (ifc_mode[1] && eem_io_3 && eem_io_4 && sr_di[15])
+	|| (!ifc_mode[1] && !eem_io_3 && eem_io_4 && eem_io_5)
+	|| (eem_io_3 && eem_io_4 && !eem_io_5 && sr_di[15])));
+
+
+assign dds_cs_n_3 = !(((ifc_mode[1] && eem_io_5 && !sr_di[16])
+	|| (eem_io_3 && eem_io_4 && sr_di[16])
+	|| (!ifc_mode[1] && eem_io_3 && eem_io_4 && eem_io_5)));
+
+
+assign dds_cs_n = !(((ifc_mode[1] && eem_io_5 && !sr_di[13])
+	|| (ifc_mode[1] && eem_io_3 && eem_io_4 && sr_di[13])
+	|| (!ifc_mode[1] && !eem_io_3 && !eem_io_4 && eem_io_5)
+	|| (eem_io_3 && eem_io_4 && !eem_io_5 && sr_di[13])));
+
+
+assign dds_drctl_1 = !(1'b0);
+
+
+assign dds_drctl_2 = !(1'b0);
+
+
+assign dds_drctl_3 = !(1'b0);
+
+
+assign dds_drctl = !(1'b0);
+
+
+assign dds_drhold_1 = 1'b0;
+
+
+assign dds_drhold_2 = 1'b0;
+
+
+assign dds_drhold_3 = 1'b0;
+
+
+assign dds_drhold = 1'b0;
+
+
+assign dds_io_update_1 = ((sr_di[14] && sr_di[12])
+	|| (!sr_di[14] && eem_io_6));
+
+
+assign dds_io_update_2 = ((sr_di[15] && sr_di[12])
+	|| (!sr_di[15] && eem_io_6));
+
+
+assign dds_io_update_3 = ((sr_di[16] && sr_di[12])
+	|| (!sr_di[16] && eem_io_6));
+
+
+assign dds_io_update = ((sr_di[13] && sr_di[12])
+	|| (!sr_di[13] && eem_io_6));
+
+
+assign dds_led[0] = !((!eem_io_12 && !sr_di[0]));
+
+
+assign dds_led[1] = !(((!ifc_mode[0] && !variant && !sr_di[4])
+	|| (dds_pll_lock && !dds_smp_err && !sr_di[4])));
+
+
+assign dds_led_1[0] = !((!eem_io_13 && !sr_di[1]));
+
+
+assign dds_led_1[1] = !(((!ifc_mode[0] && !variant && !sr_di[5])
+	|| (dds_pll_lock_1 && !dds_smp_err_1 && !sr_di[5])));
+
+
+assign dds_led_2[0] = !((!eem_io_14 && !sr_di[2]));
+
+
+assign dds_led_2[1] = !(((!ifc_mode[0] && !variant && !sr_di[6])
+	|| (dds_pll_lock_2 && !dds_smp_err_2 && !sr_di[6])));
+
+
+assign dds_led_3[0] = !((!eem_io_15 && !sr_di[3]));
+
+
+assign dds_led_3[1] = !(((!ifc_mode[0] && !variant && !sr_di[7])
+	|| (dds_pll_lock_3 && !dds_smp_err_3 && !sr_di[7])));
+
+
+assign dds_osk_1 = !(1'b0);
+
+
+assign dds_osk_2 = !(1'b0);
+
+
+assign dds_osk_3 = !(1'b0);
+
+
+assign dds_osk = !(1'b0);
+
+FDCPE FDCPE_dds_profile0 (dds_profile[0],sr_sr[8],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_dds_profile1 (dds_profile[1],sr_sr[9],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_dds_profile2 (dds_profile[2],sr_sr[10],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_dds_profile_10 (dds_profile_1[0],sr_sr[8],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_dds_profile_11 (dds_profile_1[1],sr_sr[9],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_dds_profile_12 (dds_profile_1[2],sr_sr[10],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_dds_profile_20 (dds_profile_2[0],sr_sr[8],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_dds_profile_21 (dds_profile_2[1],sr_sr[9],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_dds_profile_22 (dds_profile_2[2],sr_sr[10],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_dds_profile_30 (dds_profile_3[0],sr_sr[8],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_dds_profile_31 (dds_profile_3[1],sr_sr[9],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_dds_profile_32 (dds_profile_3[2],sr_sr[10],le_clk,1'b0,1'b0,1'b1);
+
+
+assign dds_reset_1 = ((dds_common_master_reset)
+	|| (!ifc_mode[0] && !variant && eem_io_7));
+
+
+assign dds_reset_2 = ((dds_common_master_reset)
+	|| (!ifc_mode[0] && !variant && eem_io_7));
+
+
+assign dds_reset_3 = ((dds_common_master_reset)
+	|| (!ifc_mode[0] && !variant && eem_io_7));
+
+
+assign dds_reset = ((dds_common_master_reset)
+	|| (!ifc_mode[0] && !variant && eem_io_7));
+
+
+assign dds_rf_sw_1 = !((!eem_io_13 && !sr_di[1]));
+
+
+assign dds_rf_sw_2 = !((!eem_io_14 && !sr_di[2]));
+
+
+assign dds_rf_sw_3 = !((!eem_io_15 && !sr_di[3]));
+
+
+assign dds_rf_sw = !((!eem_io_12 && !sr_di[0]));
+
+
+assign dds_sck_1 = ((!ifc_mode[1] && eem_io)
+	|| (eem_io && sr_di[14])
+	|| (ifc_mode[1] && !sr_di[14] && eem_io_2.PIN));
+
+
+assign dds_sck_2 = ((!ifc_mode[1] && eem_io)
+	|| (eem_io && sr_di[15])
+	|| (ifc_mode[1] && !sr_di[15] && eem_io_2.PIN));
+
+
+assign dds_sck_3 = ((!ifc_mode[1] && eem_io)
+	|| (eem_io && sr_di[16])
+	|| (ifc_mode[1] && !sr_di[16] && eem_io_2.PIN));
+
+
+assign dds_sck = ((!ifc_mode[1] && eem_io)
+	|| (eem_io && sr_di[13])
+	|| (ifc_mode[1] && !sr_di[13] && eem_io_2.PIN));
+
+
+assign dds_sdi_1 = ((!ifc_mode[1] && eem_io_1)
+	|| (eem_io_1 && sr_di[14])
+	|| (ifc_mode[1] && !sr_di[14] && eem_io_9));
+
+
+assign dds_sdi_2 = ((!ifc_mode[1] && eem_io_1)
+	|| (eem_io_1 && sr_di[15])
+	|| (ifc_mode[1] && !sr_di[15] && eem_io_10.PIN));
+
+
+assign dds_sdi_3 = ((!ifc_mode[1] && eem_io_1)
+	|| (eem_io_1 && sr_di[16])
+	|| (ifc_mode[1] && !sr_di[16] && eem_io_11));
+
+
+assign dds_sdi = ((!ifc_mode[1] && eem_io_1)
+	|| (eem_io_1 && sr_di[13])
+	|| (ifc_mode[1] && !sr_di[13] && eem_io_8));
+
+
+assign dds_sync_clk_out_en = ((!ifc_mode[1] && ifc_mode[2] && ifc_mode[0])
+	|| (!ifc_mode[1] && ifc_mode[2] && variant));
+
+
+assign dds_sync_sync_out_en = ((!ifc_mode[1] && ifc_mode[2] && ifc_mode[0])
+	|| (!ifc_mode[1] && ifc_mode[2] && variant));
+
+FDCPE FDCPE_dds_sync_sync_sel (dds_sync_sync_sel,sr_sr[18],le_clk,1'b0,1'b0,1'b1);
+
+
+assign eem_io_10_I = eem_io_6;
+assign eem_io_10 = eem_io_10_OE ? eem_io_10_I : 1'bZ;
+assign eem_io_10_OE = (!ifc_mode[1] && ifc_mode[2]);
+
+
+assign eem_io_2_I = ((ifc_mode[1] && eem_io_3 && eem_io_4 && dds_sdo)
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && sr_sdo)
+	|| (ifc_mode[1] && !eem_io_3 && eem_io_4 && 
+	att_s_out[3])
+	|| (eem_io_3 && eem_io_4 && !eem_io_5 && dds_sdo)
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && sr_sdo)
+	|| (!eem_io_3 && eem_io_4 && !eem_io_5 && att_s_out[3])
+	|| (!ifc_mode[1] && eem_io_3 && eem_io_4 && eem_io_5 && 
+	dds_sdo_3)
+	|| (!ifc_mode[1] && eem_io_3 && !eem_io_4 && eem_io_5 && 
+	dds_sdo_1)
+	|| (!ifc_mode[1] && !eem_io_3 && eem_io_4 && eem_io_5 && 
+	dds_sdo_2)
+	|| (!ifc_mode[1] && !eem_io_3 && !eem_io_4 && eem_io_5 && 
+	dds_sdo));
+assign eem_io_2 = eem_io_2_OE ? eem_io_2_I : 1'bZ;
+assign eem_io_2_OE = !ifc_mode[1];
+
+
+assign eem_oe_10 = (!ifc_mode[1] && ifc_mode[2]);
+
+
+assign eem_oe_11 = 1'b0;
+
+
+assign eem_oe_12 = 1'b0;
+
+
+assign eem_oe_13 = 1'b0;
+
+
+assign eem_oe_14 = 1'b0;
+
+
+assign eem_oe_15 = 1'b0;
+
+
+assign eem_oe_1 = 1'b0;
+
+
+assign eem_oe_2 = !ifc_mode[1];
+
+
+assign eem_oe_3 = 1'b0;
+
+
+assign eem_oe_4 = 1'b0;
+
+
+assign eem_oe_5 = 1'b0;
+
+
+assign eem_oe_6 = 1'b0;
+
+
+assign eem_oe_7 = 1'b0;
+
+
+assign eem_oe_8 = 1'b0;
+
+
+assign eem_oe_9 = 1'b0;
+
+
+assign eem_oe = 1'b0;
+
+
+assign fsen = !(1'b0);
+
+FTCPE FTCPE_le_clk (le_clk,le_clk_T,eem_io,1'b0,!N_PZ_445,1'b1);
+assign le_clk_T = ((ifc_mode[1] && eem_io_3 && !eem_io_4 && le_clk)
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && le_clk));
+
+FDCPE FDCPE_sr_di0 (sr_di[0],sr_sr[0],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_sr_di1 (sr_di[1],sr_sr[1],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_sr_di2 (sr_di[2],sr_sr[2],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_sr_di3 (sr_di[3],sr_sr[3],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_sr_di4 (sr_di[4],sr_sr[4],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_sr_di5 (sr_di[5],sr_sr[5],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_sr_di6 (sr_di[6],sr_sr[6],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_sr_di7 (sr_di[7],sr_sr[7],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_sr_di12 (sr_di[12],sr_sr[12],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_sr_di13 (sr_di[13],sr_sr[13],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_sr_di14 (sr_di[14],sr_sr[14],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_sr_di15 (sr_di[15],sr_sr[15],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_sr_di16 (sr_di[16],sr_sr[16],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_sr_di22 (sr_di[22],sr_sr[22],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_sr_di23 (sr_di[23],sr_sr[23],le_clk,1'b0,1'b0,1'b1);
+
+FDCPE FDCPE_sr_sdo (sr_sdo,sr_sr[23],!eem_io,1'b0,1'b0,N_PZ_445);
+
+FDCPE FDCPE_sr_sr0 (sr_sr[0],eem_io_1,eem_io,1'b0,1'b0,N_PZ_445);
+
+FDCPE FDCPE_sr_sr1 (sr_sr[1],sr_sr_D[1],eem_io,1'b0,1'b0,1'b1);
+assign sr_sr_D[1] = !(((!eem_io_3 && !sr_sr[1])
+	|| (eem_io_4 && !sr_sr[1])
+	|| (!ifc_mode[1] && eem_io_5 && !sr_sr[1])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && !le_clk && 
+	!sr_sr[0])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && !le_clk && 
+	!sr_sr[0])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && le_clk && 
+	!eem_io_12 && !sr_di[0])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && le_clk && 
+	!eem_io_12 && !sr_di[0])));
+
+FDCPE FDCPE_sr_sr2 (sr_sr[2],sr_sr_D[2],eem_io,1'b0,1'b0,1'b1);
+assign sr_sr_D[2] = !(((!eem_io_3 && !sr_sr[2])
+	|| (eem_io_4 && !sr_sr[2])
+	|| (!ifc_mode[1] && eem_io_5 && !sr_sr[2])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && !le_clk && 
+	!sr_sr[1])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && !le_clk && 
+	!sr_sr[1])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && le_clk && 
+	!eem_io_13 && !sr_di[1])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && le_clk && 
+	!eem_io_13 && !sr_di[1])));
+
+FDCPE FDCPE_sr_sr3 (sr_sr[3],sr_sr_D[3],eem_io,1'b0,1'b0,1'b1);
+assign sr_sr_D[3] = !(((!eem_io_3 && !sr_sr[3])
+	|| (eem_io_4 && !sr_sr[3])
+	|| (!ifc_mode[1] && eem_io_5 && !sr_sr[3])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && !le_clk && 
+	!sr_sr[2])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && !le_clk && 
+	!sr_sr[2])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && le_clk && 
+	!eem_io_14 && !sr_di[2])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && le_clk && 
+	!eem_io_14 && !sr_di[2])));
+
+FDCPE FDCPE_sr_sr4 (sr_sr[4],sr_sr_D[4],eem_io,1'b0,1'b0,1'b1);
+assign sr_sr_D[4] = !(((!eem_io_3 && !sr_sr[4])
+	|| (eem_io_4 && !sr_sr[4])
+	|| (!ifc_mode[1] && eem_io_5 && !sr_sr[4])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && !le_clk && 
+	!sr_sr[3])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && !le_clk && 
+	!sr_sr[3])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && le_clk && 
+	!eem_io_15 && !sr_di[3])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && le_clk && 
+	!eem_io_15 && !sr_di[3])));
+
+FDCPE FDCPE_sr_sr5 (sr_sr[5],sr_sr_D[5],eem_io,1'b0,1'b0,1'b1);
+assign sr_sr_D[5] = ((!eem_io_3 && sr_sr[5])
+	|| (eem_io_4 && sr_sr[5])
+	|| (!ifc_mode[1] && eem_io_5 && sr_sr[5])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && le_clk && 
+	dds_smp_err)
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && !le_clk && 
+	sr_sr[4])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && le_clk && 
+	dds_smp_err)
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && !le_clk && 
+	sr_sr[4]));
+
+FDCPE FDCPE_sr_sr6 (sr_sr[6],sr_sr_D[6],eem_io,1'b0,1'b0,1'b1);
+assign sr_sr_D[6] = ((!eem_io_3 && sr_sr[6])
+	|| (eem_io_4 && sr_sr[6])
+	|| (!ifc_mode[1] && eem_io_5 && sr_sr[6])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && le_clk && 
+	dds_smp_err_1)
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && !le_clk && 
+	sr_sr[5])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && le_clk && 
+	dds_smp_err_1)
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && !le_clk && 
+	sr_sr[5]));
+
+FDCPE FDCPE_sr_sr7 (sr_sr[7],sr_sr_D[7],eem_io,1'b0,1'b0,1'b1);
+assign sr_sr_D[7] = ((!eem_io_3 && sr_sr[7])
+	|| (eem_io_4 && sr_sr[7])
+	|| (!ifc_mode[1] && eem_io_5 && sr_sr[7])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && le_clk && 
+	dds_smp_err_2)
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && !le_clk && 
+	sr_sr[6])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && le_clk && 
+	dds_smp_err_2)
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && !le_clk && 
+	sr_sr[6]));
+
+FDCPE FDCPE_sr_sr8 (sr_sr[8],sr_sr_D[8],eem_io,1'b0,1'b0,1'b1);
+assign sr_sr_D[8] = ((!eem_io_3 && sr_sr[8])
+	|| (eem_io_4 && sr_sr[8])
+	|| (!ifc_mode[1] && eem_io_5 && sr_sr[8])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && le_clk && 
+	dds_smp_err_3)
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && !le_clk && 
+	sr_sr[7])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && le_clk && 
+	dds_smp_err_3)
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && !le_clk && 
+	sr_sr[7]));
+
+FDCPE FDCPE_sr_sr9 (sr_sr[9],sr_sr_D[9],eem_io,1'b0,1'b0,1'b1);
+assign sr_sr_D[9] = ((!eem_io_3 && sr_sr[9])
+	|| (eem_io_4 && sr_sr[9])
+	|| (!ifc_mode[1] && eem_io_5 && sr_sr[9])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && le_clk && 
+	dds_pll_lock)
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && !le_clk && 
+	sr_sr[8])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && le_clk && 
+	dds_pll_lock)
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && !le_clk && 
+	sr_sr[8]));
+
+FDCPE FDCPE_sr_sr10 (sr_sr[10],sr_sr_D[10],eem_io,1'b0,1'b0,1'b1);
+assign sr_sr_D[10] = ((!eem_io_3 && sr_sr[10])
+	|| (eem_io_4 && sr_sr[10])
+	|| (!ifc_mode[1] && eem_io_5 && sr_sr[10])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && le_clk && 
+	dds_pll_lock_1)
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && !le_clk && 
+	sr_sr[9])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && le_clk && 
+	dds_pll_lock_1)
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && !le_clk && 
+	sr_sr[9]));
+
+FDCPE FDCPE_sr_sr11 (sr_sr[11],sr_sr_D[11],eem_io,1'b0,1'b0,1'b1);
+assign sr_sr_D[11] = ((!eem_io_3 && sr_sr[11])
+	|| (eem_io_4 && sr_sr[11])
+	|| (!ifc_mode[1] && eem_io_5 && sr_sr[11])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && le_clk && 
+	dds_pll_lock_2)
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && !le_clk && 
+	sr_sr[10])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && le_clk && 
+	dds_pll_lock_2)
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && !le_clk && 
+	sr_sr[10]));
+
+FDCPE FDCPE_sr_sr12 (sr_sr[12],sr_sr_D[12],eem_io,1'b0,1'b0,1'b1);
+assign sr_sr_D[12] = ((!eem_io_3 && sr_sr[12])
+	|| (eem_io_4 && sr_sr[12])
+	|| (!ifc_mode[1] && eem_io_5 && sr_sr[12])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && le_clk && 
+	dds_pll_lock_3)
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && !le_clk && 
+	sr_sr[11])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && le_clk && 
+	dds_pll_lock_3)
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && !le_clk && 
+	sr_sr[11]));
+
+FDCPE FDCPE_sr_sr13 (sr_sr[13],sr_sr_D[13],eem_io,1'b0,1'b0,1'b1);
+assign sr_sr_D[13] = ((!eem_io_3 && sr_sr[13])
+	|| (eem_io_4 && sr_sr[13])
+	|| (!ifc_mode[1] && eem_io_5 && sr_sr[13])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && le_clk && 
+	ifc_mode[0])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && !le_clk && 
+	sr_sr[12])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && le_clk && 
+	ifc_mode[0])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && !le_clk && 
+	sr_sr[12]));
+
+FDCPE FDCPE_sr_sr14 (sr_sr[14],sr_sr_D[14],eem_io,1'b0,1'b0,1'b1);
+assign sr_sr_D[14] = ((!eem_io_3 && sr_sr[14])
+	|| (eem_io_4 && sr_sr[14])
+	|| (!ifc_mode[1] && eem_io_5 && sr_sr[14])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && le_clk)
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && !le_clk && 
+	sr_sr[13])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && !le_clk && 
+	sr_sr[13]));
+
+FDCPE FDCPE_sr_sr15 (sr_sr[15],sr_sr_D[15],eem_io,1'b0,1'b0,1'b1);
+assign sr_sr_D[15] = ((!eem_io_3 && sr_sr[15])
+	|| (eem_io_4 && sr_sr[15])
+	|| (!ifc_mode[1] && eem_io_5 && sr_sr[15])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && le_clk && 
+	ifc_mode[2])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && !le_clk && 
+	sr_sr[14])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && le_clk && 
+	ifc_mode[2])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && !le_clk && 
+	sr_sr[14]));
+
+FDCPE FDCPE_sr_sr16 (sr_sr[16],sr_sr_D[16],eem_io,1'b0,1'b0,1'b1);
+assign sr_sr_D[16] = ((!eem_io_3 && sr_sr[16])
+	|| (eem_io_4 && sr_sr[16])
+	|| (!ifc_mode[1] && eem_io_5 && sr_sr[16])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && ifc_mode[3] && 
+	le_clk)
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && !le_clk && 
+	sr_sr[15])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && ifc_mode[3] && 
+	le_clk)
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && !le_clk && 
+	sr_sr[15]));
+
+FDCPE FDCPE_sr_sr17 (sr_sr[17],sr_sr_D[17],eem_io,1'b0,1'b0,1'b1);
+assign sr_sr_D[17] = ((!eem_io_3 && sr_sr[17])
+	|| (eem_io_4 && sr_sr[17])
+	|| (!ifc_mode[1] && eem_io_5 && sr_sr[17])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && sr_sr[16] && 
+	!le_clk)
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && sr_sr[16] && 
+	!le_clk));
+
+FDCPE FDCPE_sr_sr18 (sr_sr[18],sr_sr_D[18],eem_io,1'b0,1'b0,1'b1);
+assign sr_sr_D[18] = ((!eem_io_3 && sr_sr[18])
+	|| (eem_io_4 && sr_sr[18])
+	|| (!ifc_mode[1] && eem_io_5 && sr_sr[18])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && sr_sr[17] && 
+	!le_clk)
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && sr_sr[17] && 
+	!le_clk));
+
+FDCPE FDCPE_sr_sr19 (sr_sr[19],sr_sr_D[19],eem_io,1'b0,1'b0,1'b1);
+assign sr_sr_D[19] = ((!eem_io_3 && sr_sr[19])
+	|| (eem_io_4 && sr_sr[19])
+	|| (!ifc_mode[1] && eem_io_5 && sr_sr[19])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && sr_sr[18] && 
+	!le_clk)
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && sr_sr[18] && 
+	!le_clk));
+
+FDCPE FDCPE_sr_sr20 (sr_sr[20],sr_sr_D[20],eem_io,1'b0,1'b0,1'b1);
+assign sr_sr_D[20] = !(((!eem_io_3 && !sr_sr[20])
+	|| (eem_io_4 && !sr_sr[20])
+	|| (!ifc_mode[1] && eem_io_5 && !sr_sr[20])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && !sr_sr[19] && 
+	!le_clk)
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && !sr_sr[19] && 
+	!le_clk)));
+
+FDCPE FDCPE_sr_sr21 (sr_sr[21],sr_sr_D[21],eem_io,1'b0,1'b0,1'b1);
+assign sr_sr_D[21] = ((!eem_io_3 && sr_sr[21])
+	|| (eem_io_4 && sr_sr[21])
+	|| (!ifc_mode[1] && eem_io_5 && sr_sr[21])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && !le_clk && 
+	sr_sr[20])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && !le_clk && 
+	sr_sr[20]));
+
+FDCPE FDCPE_sr_sr22 (sr_sr[22],sr_sr_D[22],eem_io,1'b0,1'b0,1'b1);
+assign sr_sr_D[22] = ((!eem_io_3 && sr_sr[22])
+	|| (eem_io_4 && sr_sr[22])
+	|| (!ifc_mode[1] && eem_io_5 && sr_sr[22])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && !le_clk && 
+	sr_sr[21])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && !le_clk && 
+	sr_sr[21]));
+
+FDCPE FDCPE_sr_sr23 (sr_sr[23],sr_sr_D[23],eem_io,1'b0,1'b0,1'b1);
+assign sr_sr_D[23] = ((!eem_io_3 && sr_sr[23])
+	|| (eem_io_4 && sr_sr[23])
+	|| (!ifc_mode[1] && eem_io_5 && sr_sr[23])
+	|| (ifc_mode[1] && eem_io_3 && !eem_io_4 && !le_clk && 
+	sr_sr[22])
+	|| (eem_io_3 && !eem_io_4 && !eem_io_5 && !le_clk && 
+	sr_sr[22]));
+
+
+assign tp_1 = ((!ifc_mode[1] && eem_io)
+	|| (eem_io && sr_di[13])
+	|| (ifc_mode[1] && !sr_di[13] && eem_io_2.PIN));
+
+
+assign tp_2 = ((!ifc_mode[1] && eem_io_1)
+	|| (eem_io_1 && sr_di[13])
+	|| (ifc_mode[1] && !sr_di[13] && eem_io_8));
+
+
+assign tp_3 = dds_sdo;
+
+
+assign tp_4 = dds_drover;
+
+
+assign tp = !(((ifc_mode[1] && eem_io_5 && !sr_di[13])
+	|| (ifc_mode[1] && eem_io_3 && eem_io_4 && sr_di[13])
+	|| (!ifc_mode[1] && !eem_io_3 && !eem_io_4 && eem_io_5)
+	|| (eem_io_3 && eem_io_4 && !eem_io_5 && sr_di[13])));
+
+
+Register Legend:
+ FDCPE (Q,D,C,CLR,PRE,CE); 
+ FDDCPE (Q,D,C,CLR,PRE,CE); 
+ FTCPE (Q,D,C,CLR,PRE,CE); 
+ FTDCPE (Q,D,C,CLR,PRE,CE); 
+ LDCP  (Q,D,G,CLR,PRE); 
+
+******************************  Device Pin Out *****************************
+
+Device : XC2C256-6-FT256
+
+
+                     ___________________________________
+                    /                                   \
+                  T |  o o o o o o o o o o o o o o o o  |
+                  R |  o o o o o o o o o o o o o o o o  |
+                  P |  o o o o o o o o o o o o o o o o  |
+                  N |  o o o o o o o o o o o o o o o o  |
+                  M |  o o o o o o o o o o o o o o o o  |
+                  L |  o o o o o o o o o o o o o o o o  |
+                  K |  o o o o o o o o o o o o o o o o  |
+                  J |  o o o o o o o o o o o o o o o o  |
+                  H |  o o o o o o o o o o o o o o o o  |
+                  G |  o o o o o o o o o o o o o o o o  |
+                  F |  o o o o o o o o o o o o o o o o  |
+                  E |  o o o o o o o o o o o o o o o o  |
+                  D |  o o o o o o o o o o o o o o o o  |
+                  C |  o o o o o o o o o o o o o o o o  |
+                  B |  o o o o o o o o o o o o o o o o  |
+                  A |  o o o o o o o o o o o o o o o o  |
+                    \___________________________________/
+                       1   3   5   7   9   11  13  15  
+                         2   4   6   8   10  12  14  16  
+
+Pin Signal                         Pin Signal                        
+No. Name                           No. Name                          
+ A1 NC                               J1 dds_smp_err_1                 
+ A2 dds_sck                          J2 dds_sdo_2                     
+ A3 dds_sdo                          J3 dds_sdo_1                     
+ A4 tp                               J4 dds_cs_n_1                    
+ A5 tp_1                             J5 eem_io_9                      
+ A6 tp_3                             J6 VCCIO-3.3                     
+ A7 tp_4                             J7 GND                           
+ A8 dds_profile<2>                   J8 GND                           
+ A9 dds_profile<0>                   J9 GND                           
+A10 TDO                             J10 GND                           
+A11 dds_led_1<1>                    J11 VCCIO-3.3                     
+A12 dds_led_3<0>                    J12 WPU                           
+A13 dds_led_1<0>                    J13 WPU                           
+A14 dds_led_2<0>                    J14 WPU                           
+A15 variant                         J15 WPU                           
+A16 ifc_mode<2>                     J16 NC                            
+ B1 dds_io_update                    K1 dds_drctl_2                   
+ B2 dds_sdi                          K2 dds_pll_lock_1                
+ B3 dds_cs_n                         K3 dds_sck_1                     
+ B4 WPU                              K4 att_le<3>                     
+ B5 tp_2                             K5 dds_sdi_1                     
+ B6 clk_osc_en_n                     K6 VCCIO-3.3                     
+ B7 att_s_in<0>                      K7 GND                           
+ B8 dds_profile<1>                   K8 GND                           
+ B9 dds_common_io_reset              K9 GND                           
+B10 dds_led<1>                      K10 GND                           
+B11 dds_led_3<1>                    K11 VCCIO-3.3                     
+B12 WPU                             K12 NC                            
+B13 dds_reset                       K13 VCC                           
+B14 dds_led_2<1>                    K14 WPU                           
+B15 ifc_mode<3>                     K15 eem_oe_2                      
+B16 ifc_mode<1>                     K16 WPU                           
+ C1 WPU                              L1 dds_osk_2                     
+ C2 NC                               L2 WPU                           
+ C3 dds_osk_1                        L3 WPU                           
+ C4 dds_drctl_1                      L4 dds_drhold_2                  
+ C5 NC                               L5 att_s_in<3>                   
+ C6 NC                               L6 GND                           
+ C7 dds_drhold_1                     L7 VCCIO-3.3                     
+ C8 att_le<2>                        L8 VCCIO-3.3                     
+ C9 att_s_out<1>                     L9 VCCIO-3.3                     
+C10 att_s_out<0>                    L10 VCCIO-3.3                     
+C11 clk_mmcx_osc_sel                L11 GND                           
+C12 dds_rf_sw_1                     L12 WPU                           
+C13 dds_osk                         L13 WPU                           
+C14 dds_drctl                       L14 WPU                           
+C15 NC                              L15 eem_oe_4                      
+C16 WPU                             L16 eem_oe_6                      
+ D1 NC                               M1 dds_profile_2<0>              
+ D2 dds_profile_1<1>                 M2 eem_io                        
+ D3 dds_profile_1<0>                 M3 eem_io_8                      
+ D4 dds_smp_err                      M4 NC                            
+ D5 VCC                              M5 dds_profile_2<2>              
+ D6 NC                               M6 dds_profile_2<1>              
+ D7 att_s_in<2>                      M7 eem_oe_12                     
+ D8 att_s_in<1>                      M8 eem_oe_15                     
+ D9 dds_rf_sw_3                      M9 NC                            
+D10 dds_rf_sw_2                     M10 NC                            
+D11 dds_drover                      M11 WPU                           
+D12 VCC                             M12 WPU                           
+D13 dds_rf_sw                       M13 WPU                           
+D14 NC                              M14 WPU                           
+D15 WPU                             M15 eem_oe_1                      
+D16 NC                              M16 eem_oe_5                      
+ E1 NC                               N1 dds_drctl_3                   
+ E2 dds_profile_1<2>                 N2 dds_osk_3                     
+ E3 dds_io_update_3                  N3 dds_profile_3<0>              
+ E4 dds_pll_lock                     N4 dds_drhold_3                  
+ E5 clk_div                          N5 WPU                           
+ E6 NC                               N6 dds_smp_err_3                 
+ E7 NC                               N7 dds_pll_lock_2                
+ E8 att_s_out<2>                     N8 WPU                           
+ E9 att_clk                          N9 att_rst_n                     
+E10 att_le<0>                       N10 WPU                           
+E11 dds_led<0>                      N11 WPU                           
+E12 WPU                             N12 TMS                           
+E13 dds_drhold                      N13 WPU                           
+E14 ifc_mode<0>                     N14 WPU                           
+E15 WPU                             N15 fsen                          
+E16 WPU                             N16 eem_oe_3                      
+ F1 NC                               P1 dds_profile_3<1>              
+ F2 dds_reset_1                      P2 dds_profile_3<2>              
+ F3 WPU                              P3 VCC                           
+ F4 VCCAUX                           P4 dds_io_update_1               
+ F5 dds_sdi_3                        P5 WPU                           
+ F6 GND                              P6 dds_smp_err_2                 
+ F7 VCCIO-3.3                        P7 dds_pll_lock_3                
+ F8 VCCIO-3.3                        P8 att_le<1>                     
+ F9 VCCIO-3.3                        P9 NC                            
+F10 VCCIO-3.3                       P10 WPU                           
+F11 GND                             P11 NC                            
+F12 WPU                             P12 TCK                           
+F13 WPU                             P13 WPU                           
+F14 WPU                             P14 WPU                           
+F15 WPU                             P15 eem_oe                        
+F16 dds_common_master_reset         P16 eem_oe_7                      
+ G1 NC                               R1 eem_io_12                     
+ G2 NC                               R2 eem_io_11                     
+ G3 dds_sdo_3                        R3 eem_io_10                     
+ G4 dds_cs_n_3                       R4 eem_oe_10                     
+ G5 clk_in_sel                       R5 eem_oe_11                     
+ G6 VCCIO-3.3                        R6 dds_sync_sync_out_en          
+ G7 GND                              R7 eem_oe_8                      
+ G8 GND                              R8 eem_oe_13                     
+ G9 GND                              R9 att_s_out<3>                  
+G10 GND                             R10 dds_reset_2                   
+G11 WPU                             R11 TDI                           
+G12 NC                              R12 eem_io_6                      
+G13 WPU                             R13 eem_io_1                      
+G14 WPU                             R14 eem_io_5                      
+G15 WPU                             R15 eem_io_4                      
+G16 WPU                             R16 eem_io_3                      
+ H1 dds_cs_n_2                       T1 eem_io_13                     
+ H2 dds_sck_3                        T2 eem_io_14                     
+ H3 dds_sdi_2                        T3 eem_io_15                     
+ H4 dds_sck_2                        T4 eem_oe_9                      
+ H5 dds_io_update_2                  T5 dds_sync_clk_out_en           
+ H6 VCCIO-3.3                        T6 WPU                           
+ H7 GND                              T7 eem_oe_14                     
+ H8 GND                              T8 dds_reset_3                   
+ H9 GND                              T9 NC                            
+H10 GND                             T10 dds_sync_sync_sel             
+H11 VCCIO-3.3                       T11 NC                            
+H12 WPU                             T12 NC                            
+H13 WPU                             T13 NC                            
+H14 WPU                             T14 NC                            
+H15 WPU                             T15 eem_io_7                      
+H16 WPU                             T16 eem_io_2                      
+
+
+Legend :  NC  = Not Connected, unbonded pin
+        PGND  = Unused I/O configured as additional Ground pin
+         KPR  = Unused I/O with weak keeper (leave unconnected)
+         WPU  = Unused I/O with weak pull up (leave unconnected)
+         TIE  = Unused I/O floating -- must tie to VCC, GND or other signal
+         VCC  = Dedicated Power Pin
+      VCCAUX  = Power supply for JTAG pins
+   VCCIO-3.3  = I/O supply voltage for LVTTL, LVCMOS33, SSTL3_I
+   VCCIO-2.5  = I/O supply voltage for LVCMOS25, SSTL2_I
+   VCCIO-1.8  = I/O supply voltage for LVCMOS18
+   VCCIO-1.5  = I/O supply voltage for LVCMOS15, HSTL_I
+        VREF  = Reference voltage for indicated input standard
+       *VREF  = Reference voltage pin selected by software
+         GND  = Dedicated Ground Pin
+         TDI  = Test Data In, JTAG pin
+         TDO  = Test Data Out, JTAG pin
+         TCK  = Test Clock, JTAG pin
+         TMS  = Test Mode Select, JTAG pin
+  PROHIBITED  = User reserved pin
+****************************  Compiler Options  ****************************
+
+Following is a list of all global compiler options used by the fitter run.
+
+Device(s) Specified                         : xc2c256-6-ft256
+Optimization Method                         : SPEED
+Multi-Level Logic Optimization              : ON
+Ignore Timing Specifications                : OFF
+Default Register Power Up Value             : LOW
+Keep User Location Constraints              : ON
+What-You-See-Is-What-You-Get                : OFF
+Exhaustive Fitting                          : OFF
+Keep Unused Inputs                          : OFF
+Slew Rate                                   : FAST
+Set Unused I/O Pin Termination              : PULLUP
+Global Clock Optimization                   : ON
+Global Set/Reset Optimization               : ON
+Global Ouput Enable Optimization            : ON
+Enable Input Registers                      : ON
+Function Block Fan-in Limit                 : 38
+Use DATA_GATE Attribute                     : ON
+Set Tristate Outputs to Termination Mode    : FLOAT
+Default Voltage Standard for All Outputs    : LVCMOS33
+Input Limit                                 : 32
+Pterm Limit                                 : 36
